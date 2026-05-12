@@ -257,8 +257,27 @@ export default function Home() {
           </div>
           <div>
             <strong style={{ color: "white" }}>Connect</strong>
-            <p>LinkedIn · Instagram · Facebook</p>
-            <p>YouTube · X</p>
+            <div style={{ display: "grid", gap: "12px", marginTop: "14px" }}>
+  <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+    <Linkedin size={18} />
+    <span>LinkedIn</span>
+  </div>
+
+  <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+    <Instagram size={18} />
+    <span>Instagram</span>
+  </div>
+
+  <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+    <Facebook size={18} />
+    <span>Facebook</span>
+  </div>
+
+  <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+    <Youtube size={18} />
+    <span>YouTube</span>
+  </div>
+</div>
           </div>
           <div>
             <strong style={{ color: "white" }}>Contact</strong>
