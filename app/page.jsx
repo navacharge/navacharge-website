@@ -117,7 +117,7 @@ export default function Home() {
           {services.map(([title, text]) => (
             <div key={title} style={{
               background: "white", padding: "32px", borderRadius: "24px",
-              boxShadow: "0 12px 34px rgba(15,23,42,0.08)"
+              boxShadow: "0 12px 34px rgba(15,23,42,0.08)",
               transition: "all 0.25s ease",
              cursor: "pointer",
             }}
