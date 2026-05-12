@@ -272,6 +272,76 @@ export default function Home() {
     ))}
   </div>
 </section>
+{/* CONTACT SECTION */}
+<section
+  style={{
+    padding: "120px 48px",
+    textAlign: "center",
+  }}
+>
+  <h2
+    style={{
+      fontSize: "52px",
+      marginBottom: "24px",
+      color: "white",
+      fontWeight: "800",
+    }}
+  >
+    Let’s Talk
+  </h2>
+
+  <p
+    style={{
+      color: "#94a3b8",
+      maxWidth: "720px",
+      margin: "0 auto 48px auto",
+      lineHeight: "1.8",
+      fontSize: "18px",
+    }}
+  >
+    Need support, diagnostics insight, charging infrastructure
+    review, or practical field coordination?
+    NavaCharge is focused on clear technical visibility and
+    real-world EV charging environments.
+  </p>
+
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      gap: "18px",
+      flexWrap: "wrap",
+    }}
+  >
+    <a
+      href="mailto:hello@navacharge.ca"
+      style={{
+        background: "#2563eb",
+        color: "white",
+        padding: "16px 28px",
+        borderRadius: "14px",
+        textDecoration: "none",
+        fontWeight: "600",
+      }}
+    >
+      Email NavaCharge
+    </a>
+
+    <a
+      href="#"
+      style={{
+        border: "1px solid rgba(255,255,255,0.12)",
+        color: "white",
+        padding: "16px 28px",
+        borderRadius: "14px",
+        textDecoration: "none",
+        fontWeight: "600",
+      }}
+    >
+      LinkedIn
+    </a>
+  </div>
+</section>
 {/* FOOTER */}
 <footer
   style={{
