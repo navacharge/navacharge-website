@@ -118,7 +118,21 @@ export default function Home() {
             <div key={title} style={{
               background: "white", padding: "32px", borderRadius: "24px",
               boxShadow: "0 12px 34px rgba(15,23,42,0.08)"
-            }}>
+              transition: "all 0.25s ease",
+             cursor: "pointer",
+            }}
+          onMouseEnter={(e) => {
+          e.currentTarget.style.transform = "translateY(-6px)";
+          e.currentTarget.style.boxShadow =
+          "0 22px 44px rgba(15,23,42,0.16)";
+           }}
+
+        onMouseLeave={(e) => {
+        e.currentTarget.style.transform = "translateY(0px)";
+        e.currentTarget.style.boxShadow =
+       "0 12px 34px rgba(15,23,42,0.08)";
+        }}
+          >
               <div
   style={{
     width: "52px",
