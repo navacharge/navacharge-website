@@ -272,6 +272,51 @@ export default function Home() {
     ))}
   </div>
 </section>
+{/* FOOTER */}
+<footer
+  style={{
+    borderTop: "1px solid rgba(255,255,255,0.08)",
+    padding: "40px 48px",
+    color: "#94a3b8",
+    display: "flex",
+    justifyContent: "space-between",
+    gap: "24px",
+    flexWrap: "wrap",
+  }}
+>
+  <div>
+    <h3 style={{ color: "white", marginBottom: "12px" }}>
+      NavaCharge
+    </h3>
+    <p style={{ margin: 0 }}>
+      EV Charging Diagnostics & Infrastructure Support
+    </p>
+    <p style={{ marginTop: "10px" }}>Vancouver, BC, Canada</p>
+  </div>
+
+  <div>
+    <h4 style={{ color: "white", marginBottom: "12px" }}>
+      Connect
+    </h4>
+    <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
+      <span>LinkedIn</span>
+      <span>Instagram</span>
+      <span>Facebook</span>
+      <span>YouTube</span>
+      <span>X</span>
+    </div>
+  </div>
+
+  <div>
+    <h4 style={{ color: "white", marginBottom: "12px" }}>
+      Contact
+    </h4>
+    <p style={{ margin: 0 }}>hello@navacharge.ca</p>
+    <p style={{ marginTop: "10px" }}>
+      © 2026 NavaCharge. All rights reserved.
+    </p>
+  </div>
+</footer>   
     </main>
   );
 }
