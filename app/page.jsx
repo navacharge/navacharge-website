@@ -1,3 +1,14 @@
+import {
+  Wrench,
+  Cable,
+  Building2,
+  ShieldCheck,
+  Instagram,
+  Linkedin,
+  Facebook,
+  Youtube,
+} from "lucide-react";
+
 export default function Home() {
   const heroImage =
     "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=1600&q=80";
@@ -108,10 +119,24 @@ export default function Home() {
               background: "white", padding: "32px", borderRadius: "24px",
               boxShadow: "0 12px 34px rgba(15,23,42,0.08)"
             }}>
-              <div style={{
-                width: "48px", height: "48px", borderRadius: "14px",
-                background: "#dbeafe", marginBottom: "22px"
-              }} />
+              <div
+  style={{
+    width: "52px",
+    height: "52px",
+    borderRadius: "14px",
+    background: "#dbeafe",
+    marginBottom: "22px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  }}
+>
+  {title === "Diagnostics" && <Wrench color="#2563eb" />}
+  {title === "Infrastructure Support" && <Building2 color="#2563eb" />}
+  {title === "Cable Management" && <Cable color="#2563eb" />}
+  {title === "Client Portal" && <ShieldCheck color="#2563eb" />}
+</div>
+              
               <h3 style={{ fontSize: "24px", marginBottom: "14px" }}>{title}</h3>
               <p style={{ color: "#4b5563", lineHeight: "1.75" }}>{text}</p>
             </div>
