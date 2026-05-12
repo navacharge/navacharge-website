@@ -185,6 +185,93 @@ export default function Home() {
           ))}
         </div>
       </section>
+{/* SERVICES SECTION */}
+
+<section
+  style={{
+    padding: "100px 40px",
+    maxWidth: "1200px",
+    margin: "0 auto",
+  }}
+>
+  <h2
+    style={{
+      fontSize: "42px",
+      marginBottom: "20px",
+      textAlign: "center",
+    }}
+  >
+    Services
+  </h2>
+
+  <p
+    style={{
+      textAlign: "center",
+      color: "#94a3b8",
+      maxWidth: "700px",
+      margin: "0 auto 60px auto",
+      lineHeight: "1.7",
+    }}
+  >
+    Practical EV charging infrastructure support focused on diagnostics,
+    operational reliability, field coordination, and deployment visibility.
+  </p>
+
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+      gap: "24px",
+    }}
+  >
+    {[
+      {
+        title: "EV Charging Diagnostics",
+        desc: "Structured troubleshooting and field-oriented issue analysis for EV charging environments.",
+      },
+      {
+        title: "Infrastructure Support",
+        desc: "Operational support for charging deployments, site coordination, and infrastructure workflows.",
+      },
+      {
+        title: "Site Assessments",
+        desc: "Technical review of charging locations, hardware conditions, and deployment readiness.",
+      },
+      {
+        title: "Smart Cable Management",
+        desc: "Clean and practical cable management solutions for residential and commercial installations.",
+      },
+    ].map((service, index) => (
+      <div
+        key={index}
+        style={{
+          background: "#111827",
+          padding: "32px",
+          borderRadius: "20px",
+          border: "1px solid rgba(255,255,255,0.08)",
+        }}
+      >
+        <h3
+          style={{
+            fontSize: "22px",
+            marginBottom: "16px",
+          }}
+        >
+          {service.title}
+        </h3>
+
+        <p
+          style={{
+            color: "#94a3b8",
+            lineHeight: "1.7",
+          }}
+        >
+          {service.desc}
+        </p>
+      </div>
+    ))}
+  </div>
+</section>
     </main>
   );
 }
