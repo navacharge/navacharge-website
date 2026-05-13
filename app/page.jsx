@@ -319,7 +319,19 @@ url(${heroImage})
       </section>
 
       <section id="projects" style={{ maxWidth: "1220px", margin: "0 auto", padding: "20px 28px 90px" }}>
-        <h2 style={{ fontSize: "46px", marginBottom: "34px" }}>Field Work & Project Areas</h2>
+        <h2 style={{ fontSize: "52px", marginBottom: "34px" }}>Field Operations & Infrastructure Support</h2>
+         <p
+           style={{
+           color: "#4b5563",
+           maxWidth: "760px",
+           lineHeight: "1.85",
+           fontSize: "18px",
+           marginBottom: "42px",
+            }}
+         >
+  Practical EV charging support workflows focused on diagnostics visibility,
+  cable organization, field coordination, and real-world operational environments.
+</p>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: "22px" }}>
           {projectAreas.map(([title, text]) => (
