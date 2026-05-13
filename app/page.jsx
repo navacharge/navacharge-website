@@ -127,8 +127,12 @@ url(${heroImage})
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))", gap: "22px" }}>
           {services.map(([title, text]) => (
             <div key={title} style={{
-              background: "white", padding: "32px", borderRadius: "24px",
-              boxShadow: "0 12px 34px rgba(15,23,42,0.08)",
+              background: "white", 
+              backgroundImage:
+                 "linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(248,250,252,1) 100%)",
+              padding: "32px", borderRadius: "24px",
+              boxShadow:
+                 "0 16px 40px rgba(15,23,42,0.08), 0 2px 8px rgba(15,23,42,0.04)",
               transition: "all 0.25s ease",
              cursor: "pointer",
             }}
