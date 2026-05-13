@@ -279,7 +279,7 @@ url(${heroImage})
           <div>
             <p style={{ color: "#2563eb", fontWeight: "800" }}>Client Portal Preview</p>
             <h2 style={{ fontSize: "46px", lineHeight: "1.1", marginBottom: "22px" }}>
-              TStructured client workflows for EV charging support operations.
+              Structured client workflows for EV charging support operations.
             </h2>
             <p style={{ color: "#4b5563", lineHeight: "1.8", fontSize: "18px" }}>
               Clients can submit structured requests, upload field photos,
