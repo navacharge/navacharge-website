@@ -195,8 +195,15 @@ url(${heroImage})
       </section>
 
       <section id="services" style={{ maxWidth: "1220px", margin: "0 auto", padding: "40px 28px 90px" }}>
-        <h2 style={{ fontSize: "46px", marginBottom: "14px" }}>Services</h2>
-        <p style={{ color: "#4b5563", maxWidth: "700px", lineHeight: "1.8", marginBottom: "42px", fontSize: "18px" }}>
+        <h2
+          style={{
+              fontSize: "52px",
+              marginBottom: "18px",
+              letterSpacing: "-1.2px",
+              lineHeight: "1.05",
+               }}
+        >Services</h2>
+        <p style={{ color: "#4b5563", maxWidth: "700px", lineHeight: "1.8", marginBottom: "42px", fontSize: "19px" }}>
           Clean, practical, and structured support for real-world EV charging environments.
         </p>
 
