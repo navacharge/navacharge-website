@@ -151,7 +151,9 @@ url(${heroImage})
                    boxShadow:
                    "0 14px 34px rgba(37,99,235,0.35)",
                 color: "white", padding: "16px 26px",
-                borderRadius: "13px", textDecoration: "none", fontWeight: "800"
+                borderRadius: "13px", textDecoration: "none", 
+                transition: "all 0.25s ease",
+                fontWeight: "800"
               }}>Open Client Portal</a>
 
               <a href="#services" style={{
@@ -160,7 +162,9 @@ url(${heroImage})
                 background: "rgba(255,255,255,0.06)",
                 border: "1px solid rgba(255,255,255,0.08)",
                 backdropFilter: "blur(6px)",
-                textDecoration: "none", fontWeight: "800"
+                textDecoration: "none", 
+                transition: "all 0.25s ease",
+                fontWeight: "800"
               }}>Explore Services</a>
             </div>
           </div>
