@@ -11,7 +11,7 @@ export default function RequestPage() {
     >
       <div
         style={{
-          maxWidth: "920px",
+          maxWidth: "820px",
           margin: "0 auto",
           background: "white",
           borderRadius: "34px",
