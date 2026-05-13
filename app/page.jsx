@@ -84,8 +84,9 @@ url(${heroImage})
             </h1>
 
             <p style={{ fontSize: "clamp(16px, 2vw, 21px)", lineHeight: "1.75", color: "#dbeafe", marginBottom: "36px" }}>
-              NavaCharge helps EV charging owners and operators improve diagnostics,
-              site organization, field visibility, and customer support workflows.
+              Structured EV charging support workflows, diagnostics visibility,
+              operational coordination, and field-focused infrastructure support
+              for real-world charging environments.
             </p>
 
             <div
