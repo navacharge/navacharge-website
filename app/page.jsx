@@ -380,7 +380,10 @@ url(${heroImage})
           </div>
 
           <a href="mailto:hello@navacharge.ca" style={{
-            background: "#2563eb", color: "white", padding: "16px 28px",
+            background:
+               "linear-gradient(135deg,#2563eb 0%,#3b82f6 100%)",
+            boxShadow:
+               "0 16px 36px rgba(37,99,235,0.32)", color: "white", padding: "16px 28px",
             borderRadius: "14px", textDecoration: "none", fontWeight: "800"
           }}>
             Submit Support Request
