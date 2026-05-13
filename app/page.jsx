@@ -96,8 +96,8 @@ url(${heroImage})
             <div
                style={{
                position: "absolute",
-               right: "60px",
-               bottom: "50px",
+               right: "40px",
+               bottom: "40px",
                width: "280px",
                background: "rgba(255,255,255,0.08)",
                backdropFilter: "blur(14px)",
