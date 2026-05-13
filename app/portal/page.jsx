@@ -203,12 +203,15 @@ export default function PortalPage() {
               }}
             >
               {tickets.map((ticket) => (
-                <div
+                <a
+                  href="/ticket"
                   key={ticket.id}
                   style={{
                     padding: "22px",
                     borderRadius: "20px",
                     background: "#f8fafc",
+                    textDecoration: "none",
+                    display: "block",
                     border:
                       "1px solid rgba(15,23,42,0.06)",
                   }}
@@ -252,7 +255,7 @@ export default function PortalPage() {
                     >
                       {ticket.status}
                     </div>
-                  </div>
+                  </a>
                 </div>
               ))}
             </div>
