@@ -172,7 +172,13 @@ url(${heroImage})
           display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(180px,1fr))",
           gap: "18px"
         }}>
-          {["Field Diagnostics", "Support Tickets", "Site Reviews", "Cable Solutions", "Client Portal"].map((item) => (
+          {[
+            "Field Diagnostics",
+            "Structured Tickets",
+            "Site Review Workflow",
+            "Cable Management",
+            "Client Portal Access"
+           ].map((item) => (
             <div key={item} style={{
               background: "white", padding: "24px", borderRadius: "20px",
               boxShadow: "0 12px 34px rgba(15,23,42,0.08)", fontWeight: "800",
