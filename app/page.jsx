@@ -33,13 +33,17 @@ export default function Home() {
     <main style={{ background: "#f6f3ec", color: "#111827", fontFamily: "Arial, sans-serif" }}>
       <nav style={{
         position: "sticky", top: 0, zIndex: 1000, background: "rgba(246,243,236,0.92)",
-        backdropFilter: "blur(14px)", borderBottom: "1px solid rgba(0,0,0,0.06)"
+        backdropFilter: "blur(14px)",
+        boxShadow: "0 6px 24px rgba(15,23,42,0.06)",
+        borderBottom: "1px solid rgba(0,0,0,0.06)"
       }}>
         <div style={{
-          maxWidth: "1220px", margin: "0 auto", padding: "20px 28px",
+          maxWidth: "1220px", margin: "0 auto", padding: "18px 34px",
           display: "flex", justifyContent: "space-between", alignItems: "center"
         }}>
-          <strong style={{ fontSize: "23px" }}>NavaCharge</strong>
+          <strong style={{ fontSize: "26px",
+                           letterSpacing: "-0.6px"
+                         }}>NavaCharge</strong>
 
           <div style={{ display: "flex", gap: "28px", alignItems: "center", fontSize: "14px" }}>
             <a href="#services" style={{ color: "#111827", textDecoration: "none", fontWeight: "500", transition: "opacity 0.2s ease" }}>Services</a>
