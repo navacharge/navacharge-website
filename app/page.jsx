@@ -57,7 +57,18 @@ export default function Home() {
       <section style={{ maxWidth: "1220px", margin: "0 auto", padding: "58px 28px 70px" }}>
         <div style={{
           minHeight: "640px", borderRadius: "34px", overflow: "hidden",
-          backgroundImage: `linear-gradient(90deg, rgba(8,15,31,0.92), rgba(8,15,31,0.58), rgba(8,15,31,0.18)), url(${heroImage})`,
+            boxShadow: "0 40px 120px rgba(15,23,42,0.28)",
+            border: "1px solid rgba(255,255,255,0.06)",
+          backgroundImage: `
+           linear-gradient(
+           135deg,
+           rgba(2,6,23,0.94) 0%,
+           rgba(15,23,42,0.82) 35%,
+           rgba(15,23,42,0.38) 70%,
+           rgba(15,23,42,0.12) 100%
+           ),
+url(${heroImage})
+`,
           backgroundSize: "cover", backgroundPosition: "center",
           color: "white", padding: "76px", display: "flex", alignItems: "center"
         }}>
