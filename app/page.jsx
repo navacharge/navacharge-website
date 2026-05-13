@@ -247,7 +247,10 @@ url(${heroImage})
           {projectAreas.map(([title, text]) => (
             <div key={title} style={{
               background: "white", borderRadius: "24px", overflow: "hidden", padding: "32px",
-              boxShadow: "0 12px 34px rgba(15,23,42,0.08)"
+              boxShadow:
+                "0 18px 46px rgba(15,23,42,0.10), 0 2px 8px rgba(15,23,42,0.05)",
+                transition: "all 0.25s ease",
+                cursor: "pointer",
             }}>
               <div
                 style={{
