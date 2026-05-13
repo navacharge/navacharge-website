@@ -22,7 +22,7 @@ export default function RequestPage() {
       >
         <div style={{ marginBottom: "40px" }}>
           <a
-            href="/portal"
+            href="/"
             style={{
             display: "inline-block",
             padding: "14px 22px",
@@ -34,7 +34,7 @@ export default function RequestPage() {
             marginBottom: "28px",
             }}
            >
-          ← Back to Portal
+          ← Back to Website
          </a>
           <h1
             style={{
