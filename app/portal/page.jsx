@@ -123,7 +123,8 @@ export default function PortalPage() {
             "Reports",
             "Site Visits",
           ].map((item) => (
-            <div
+            <a
+              href="/portal"
               key={item}
               style={{
                 padding: "14px 16px",
@@ -135,10 +136,12 @@ export default function PortalPage() {
                     : "#f8fafc",
                 fontWeight: "600",
                 color: "#0f172a",
+                textDecoration: "none",
+                display: "block",
               }}
             >
               {item}
-            </div>
+            </a>
           ))}
         </div>
 
