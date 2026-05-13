@@ -88,13 +88,20 @@ url(${heroImage})
 
             <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
               <a href="#portal" style={{
-                background: "#2563eb", color: "white", padding: "16px 26px",
+                background:
+                  "linear-gradient(135deg,#2563eb 0%,#3b82f6 100%)",
+                   boxShadow:
+                   "0 14px 34px rgba(37,99,235,0.35)",
+                color: "white", padding: "16px 26px",
                 borderRadius: "13px", textDecoration: "none", fontWeight: "800"
               }}>Open Client Portal</a>
 
               <a href="#services" style={{
                 color: "white", padding: "16px 26px", borderRadius: "13px",
-                border: "1px solid rgba(255,255,255,0.35)", textDecoration: "none", fontWeight: "800"
+                border: "1px solid rgba(255,255,255,0.35)",
+                background: "rgba(255,255,255,0.04)",
+                backdropFilter: "blur(6px)",
+                textDecoration: "none", fontWeight: "800"
               }}>Explore Services</a>
             </div>
           </div>
