@@ -279,11 +279,12 @@ url(${heroImage})
           <div>
             <p style={{ color: "#2563eb", fontWeight: "800" }}>Client Portal Preview</p>
             <h2 style={{ fontSize: "46px", lineHeight: "1.1", marginBottom: "22px" }}>
-              Ticket-first support, built for EV charging issues.
+              TStructured client workflows for EV charging support operations.
             </h2>
             <p style={{ color: "#4b5563", lineHeight: "1.8", fontSize: "18px" }}>
-              Customers will be able to submit support requests, upload photos,
-              request site visits, and review notes or reports as the platform grows.
+              Clients can submit structured requests, upload field photos,
+              track diagnostics progress, review technician notes,
+              and maintain a clearer support history over time.
             </p>
           </div>
 
