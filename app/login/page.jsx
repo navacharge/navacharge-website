@@ -107,7 +107,6 @@ export default function LoginPage() {
             />
           </div>
       
-            Access Client Portal
           <a
             href="/portal"
             style={{
