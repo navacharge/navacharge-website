@@ -256,7 +256,6 @@ export default function PortalPage() {
                       {ticket.status}
                     </div>
                   </a>
-                </div>
               ))}
             </div>
           </div>
