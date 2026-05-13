@@ -106,23 +106,7 @@ export default function LoginPage() {
               }}
             />
           </div>
-
-          <button
-            style={{
-              marginTop: "10px",
-              background:
-                "linear-gradient(135deg,#2563eb 0%,#3b82f6 100%)",
-              color: "white",
-              border: "none",
-              padding: "16px",
-              borderRadius: "14px",
-              fontWeight: "800",
-              fontSize: "15px",
-              cursor: "pointer",
-              boxShadow:
-                "0 18px 40px rgba(37,99,235,0.28)",
-            }}
-          >
+      
             Access Client Portal
           <a
             href="/portal"
