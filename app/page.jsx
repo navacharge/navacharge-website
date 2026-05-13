@@ -146,7 +146,7 @@ url(${heroImage})
         </div>
       </div>
             <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
-              <a href="#portal" style={{
+              <a href="/login" style={{
                 background:
                   "linear-gradient(135deg,#2563eb 0%,#3b82f6 100%)",
                    boxShadow:
