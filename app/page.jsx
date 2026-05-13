@@ -373,7 +373,7 @@ url(${heroImage})
         </div>
       </section>
 
-      <footer style={{ background: "#0f172a", color: "#cbd5e1", padding: "56px 32px" }}>
+      <footer style={{ background: "#0f172a", color: "#94a3b8", padding: "56px 32px" }}>
         <div style={{
           maxWidth: "1220px", margin: "0 auto", display: "grid",
           gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))", gap: "28px"
@@ -391,7 +391,7 @@ url(${heroImage})
             <p>Vancouver, BC, Canada</p>
           </div>
           <div>
-            <strong style={{ color: "white" }}>Navigation</strong>
+            <strong style={{ color: "#f8fafc" }}>Navigation</strong>
             <p>Services</p>
             <p>Projects</p>
             <p>Client Portal</p>
