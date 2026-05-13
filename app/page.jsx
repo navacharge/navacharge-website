@@ -270,11 +270,11 @@ url(${heroImage})
             padding: "30px", boxShadow: "0 28px 70px rgba(15,23,42,0.22)"
           }}>
             {[
-              "Ticket #NC-1024 — New Request",
-              "Photos Uploaded — Charger Area",
-              "Status — In Review",
-              "Site Visit — Pending Schedule",
-              "Diagnostic Notes — Draft Report"
+              "Ticket #NC-1024 • New Request",
+              "Photos Uploaded • Charging Area",
+              "Technician Assigned • Field Review",
+              "Site Visit Scheduled • May 18",
+              "Diagnostics Report • Draft Ready",
              ].map((item) => (
               <div key={item} style={{
                 background: "rgba(255,255,255,0.06)", 
