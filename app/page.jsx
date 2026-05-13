@@ -75,7 +75,7 @@ export default function Home() {
            ),
 url(${heroImage})
 `,
-          backgroundSize: "cover", backgroundPosition: "center",
+          backgroundSize: "cover", backgroundPosition: "center", backgroundAttachment: "fixed",
           color: "white", padding: "76px", display: "flex", alignItems: "center"
         }}>
           <div style={{ maxWidth: "680px" }}>
