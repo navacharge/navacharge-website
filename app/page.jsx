@@ -246,9 +246,20 @@ url(${heroImage})
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: "22px" }}>
           {projectAreas.map(([title, text]) => (
             <div key={title} style={{
-              background: "white", borderRadius: "24px", padding: "32px",
+              background: "white", borderRadius: "24px", overflow: "hidden", padding: "32px",
               boxShadow: "0 12px 34px rgba(15,23,42,0.08)"
             }}>
+              <div
+                style={{
+                height: "180px",
+                borderRadius: "18px",
+                marginBottom: "22px",
+                backgroundImage:
+                "url(https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=1200&q=80)",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                 }}
+              />
               <h3 style={{ fontSize: "24px", marginBottom: "14px" }}>{title}</h3>
               <p style={{ color: "#4b5563", lineHeight: "1.75" }}>{text}</p>
             </div>
