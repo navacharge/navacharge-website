@@ -227,7 +227,7 @@ url(${heroImage})
                 backdropFilter: "blur(8px)",
                 transition: "all 0.25s ease",
                 border: "1px solid rgba(255,255,255,0.08)",
-                borderRadius: "16px", padding: "18px", marginBottom: "14px", color: "#dbeafe"
+                borderRadius: "16px", padding: "18px", marginBottom: "14px", color: "#dbeafe",
                 fontWeight: "600",
                 letterSpacing: "0.2px",
               }}>
