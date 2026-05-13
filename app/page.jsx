@@ -351,7 +351,8 @@ url(${heroImage})
 
       <section id="contact" style={{ maxWidth: "1220px", margin: "0 auto", padding: "30px 28px 100px" }}>
         <div style={{
-          background: "#111827", color: "white", borderRadius: "30px", padding: "58px",
+          background:
+             "linear-gradient(135deg,#0f172a 0%,#111827 55%,#1e293b 100%)", color: "white", borderRadius: "34px", padding: "68px",
           display: "flex", justifyContent: "space-between", gap: "30px", flexWrap: "wrap",
           alignItems: "center"
         }}>
