@@ -247,7 +247,7 @@ url(${heroImage})
           <div>
             <h2 style={{ fontSize: "44px", marginBottom: "14px" }}>Need support?</h2>
             <p style={{ color: "#cbd5e1", lineHeight: "1.8", maxWidth: "620px" }}>
-              Submit a structured request and start with clear information, not phone-call chaos.
+              Start with a structured support request. Share the issue, charger details, photos, and site context so the first response is useful.
             </p>
           </div>
 
@@ -255,7 +255,7 @@ url(${heroImage})
             background: "#2563eb", color: "white", padding: "16px 28px",
             borderRadius: "14px", textDecoration: "none", fontWeight: "800"
           }}>
-            Email NavaCharge
+            Submit Support Request
           </a>
         </div>
       </section>
