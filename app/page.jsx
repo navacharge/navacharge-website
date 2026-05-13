@@ -254,8 +254,12 @@ url(${heroImage})
                 height: "180px",
                 borderRadius: "18px",
                 marginBottom: "22px",
-                backgroundImage:
-                "url(https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=1200&q=80)",
+               backgroundImage:
+                  title === "Site Review"
+                  ? "url(https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=1200&q=80)"
+                  : title === "Cable Setup"
+                  ? "url(https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&fit=crop&w=1200&q=80)"
+                  : "url(https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=80)",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                  }}
