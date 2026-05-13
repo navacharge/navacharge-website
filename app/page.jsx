@@ -48,9 +48,9 @@ export default function Home() {
           <div style={{ display: "flex", gap: "28px", alignItems: "center", fontSize: "14px" }}>
             <a href="#services" style={{ color: "#111827", textDecoration: "none", fontWeight: "500", transition: "opacity 0.2s ease" }}>Services</a>
             <a href="#projects" style={{ color: "#111827", textDecoration: "none", fontWeight: "500", transition: "opacity 0.2s ease" }}>Projects</a>
-            <a href="#portal" style={{ color: "#111827", textDecoration: "none", fontWeight: "500", transition: "opacity 0.2s ease" }}>Portal</a>
+            <a href="/login" style={{ color: "#111827", textDecoration: "none", fontWeight: "500", transition: "opacity 0.2s ease" }}>Portal</a>
             <a href="#contact" style={{ color: "#111827", textDecoration: "none", fontWeight: "500", transition: "opacity 0.2s ease" }}>Contact</a>
-            <a href="#contact" style={{
+            <a href="/request" style={{
               background: "#2563eb", 
               boxShadow: "0 10px 26px rgba(37,99,235,0.28)",
               color: "white", padding: "12px 18px",
