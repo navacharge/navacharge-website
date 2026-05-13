@@ -78,7 +78,7 @@ url(${heroImage})
           backgroundSize: "cover", backgroundPosition: "center", backgroundAttachment: "fixed",
           color: "white", padding: "76px", display: "flex", alignItems: "center"
         }}>
-          <div style={{ maxWidth: "680px" }}>
+          <div style={{ maxWidth: "620px" }}>
             <p style={{ color: "#93c5fd", fontWeight: "700", marginBottom: "22px" }}>
               EV Charging Diagnostics & Infrastructure Support
             </p>
@@ -87,7 +87,7 @@ url(${heroImage})
               Practical Support for Better EV Charging Environments
             </h1>
 
-            <p style={{ fontSize: "clamp(16px, 2vw, 21px)", lineHeight: "1.75", color: "#dbeafe", marginBottom: "36px" }}>
+            <p style={{ fontSize: "clamp(16px, 2vw, 21px)", lineHeight: "1.9",, color: "#dbeafe", marginBottom: "36px" }}>
               Structured EV charging support workflows, diagnostics visibility,
               operational coordination, and field-focused infrastructure support
               for real-world charging environments.
