@@ -153,7 +153,8 @@ url(${heroImage})
               <a href="#services" style={{
                 color: "white", padding: "16px 26px", borderRadius: "13px",
                 border: "1px solid rgba(255,255,255,0.35)",
-                background: "rgba(255,255,255,0.04)",
+                background: "rgba(255,255,255,0.06)",
+                border: "1px solid rgba(255,255,255,0.08)",
                 backdropFilter: "blur(6px)",
                 textDecoration: "none", fontWeight: "800"
               }}>Explore Services</a>
