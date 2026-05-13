@@ -141,7 +141,7 @@ export default function RequestPage() {
 
           {/* BUTTON */}
           <a
-            href="/portal"
+            href="/ticket"
             style={{
               marginTop: "12px",
               background:
