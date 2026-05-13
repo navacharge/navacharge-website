@@ -55,13 +55,6 @@ export default function TicketPage() {
             }}
           >
             <div>
-              <p
-                style={{
-                  color: "#2563eb",
-                  fontWeight: "700",
-                  marginBottom: "12px",
-                }}
-              >
                 <a
                    href="/portal"
                    style={{
@@ -74,6 +67,14 @@ export default function TicketPage() {
                   >
                   ← Back to Portal
                 </a>
+
+                <p
+                   style={{
+                   color: "#2563eb",
+                   fontWeight: "700",
+                   marginBottom: "12px",
+                 }}
+               >
                 Ticket #NC-1042
               </p>
 
