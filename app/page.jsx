@@ -88,6 +88,57 @@ url(${heroImage})
               site organization, field visibility, and customer support workflows.
             </p>
 
+            <div
+               style={{
+               position: "absolute",
+               right: "60px",
+               bottom: "50px",
+               width: "320px",
+               background: "rgba(255,255,255,0.08)",
+               backdropFilter: "blur(14px)",
+               border: "1px solid rgba(255,255,255,0.12)",
+               borderRadius: "24px",
+               padding: "24px",
+               boxShadow: "0 30px 60px rgba(0,0,0,0.35)",
+               }}
+              >
+           <p
+         style={{
+         color: "#93c5fd",
+         fontWeight: "700",
+         marginBottom: "12px",
+           }}
+         >
+         Reliability Workflow
+        </p>
+
+       <div
+         style={{
+         display: "grid",
+         gap: "12px",
+        }}
+       >
+        {[
+          "Support Request Received",
+          "Site Review In Progress",
+          "Diagnostics Notes Added",
+          "Customer Follow-up Pending",
+          ].map((item) => (
+      <div
+        key={item}
+        style={{
+          background: "rgba(255,255,255,0.06)",
+          padding: "14px",
+          borderRadius: "14px",
+          color: "#dbeafe",
+          fontSize: "14px",
+        }}
+      >
+        {item}
+       </div>
+        ))}
+        </div>
+      </div>
             <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
               <a href="#portal" style={{
                 background:
