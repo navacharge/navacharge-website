@@ -278,13 +278,20 @@ url(${heroImage})
         </div>
       </section>
 
-      <footer style={{ background: "#0f172a", color: "#cbd5e1", padding: "42px 28px" }}>
+      <footer style={{ background: "#0f172a", color: "#cbd5e1", padding: "56px 32px" }}>
         <div style={{
           maxWidth: "1220px", margin: "0 auto", display: "grid",
           gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))", gap: "28px"
         }}>
           <div>
-            <strong style={{ color: "white", fontSize: "20px" }}>NavaCharge</strong>
+            <strong
+              style={{
+              color: "white",
+              fontSize: "22px",
+              fontWeight: "700",
+              letterSpacing: "-0.5px",
+              }}
+             >NavaCharge</strong>
             <p>EV Charging Diagnostics & Infrastructure Support</p>
             <p>Vancouver, BC, Canada</p>
           </div>
