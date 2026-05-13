@@ -24,6 +24,21 @@ export default function LoginPage() {
         }}
       >
         <div style={{ marginBottom: "34px" }}>
+          <a
+            href="/"
+            style={{
+            display: "inline-block",
+            padding: "12px 20px",
+            borderRadius: "999px",
+            border: "1px solid #2563eb",
+            color: "#2563eb",
+            fontWeight: "800",
+            textDecoration: "none",
+            marginBottom: "26px",
+             }}
+            >
+         ← Back to Website
+        </a>
           <h1
             style={{
               fontSize: "38px",
