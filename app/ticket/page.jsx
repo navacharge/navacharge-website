@@ -62,6 +62,18 @@ export default function TicketPage() {
                   marginBottom: "12px",
                 }}
               >
+                <a
+                   href="/portal"
+                   style={{
+                   display: "inline-block",
+                   marginBottom: "22px",
+                   color: "#2563eb",
+                   fontWeight: "800",
+                   textDecoration: "none",
+                   }}
+                  >
+                  ← Back to Portal
+                </a>
                 Ticket #NC-1042
               </p>
 
