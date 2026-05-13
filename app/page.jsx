@@ -204,7 +204,13 @@ url(${heroImage})
             background: "#111827", color: "white", borderRadius: "28px",
             padding: "30px", boxShadow: "0 28px 70px rgba(15,23,42,0.22)"
           }}>
-            {["New Support Ticket", "Upload Charger Photos", "Site Visit Request", "Diagnostic Notes", "Service Result"].map((item) => (
+            {[
+              "Ticket #NC-1024 — New Request",
+              "Photos Uploaded — Charger Area",
+              "Status — In Review",
+              "Site Visit — Pending Schedule",
+              "Diagnostic Notes — Draft Report"
+             ].map((item) => (
               <div key={item} style={{
                 background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.08)",
                 borderRadius: "16px", padding: "18px", marginBottom: "14px", color: "#dbeafe"
