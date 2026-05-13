@@ -98,12 +98,12 @@ url(${heroImage})
                position: "absolute",
                right: "60px",
                bottom: "50px",
-               width: "320px",
+               width: "280px",
                background: "rgba(255,255,255,0.08)",
                backdropFilter: "blur(14px)",
                border: "1px solid rgba(255,255,255,0.12)",
                borderRadius: "24px",
-               padding: "24px",
+               padding: "20px",
                boxShadow: "0 30px 60px rgba(0,0,0,0.35)",
                }}
               >
@@ -136,7 +136,7 @@ url(${heroImage})
           padding: "14px",
           borderRadius: "14px",
           color: "#dbeafe",
-          fontSize: "14px",
+          fontSize: "13px",
         }}
       >
         {item}
