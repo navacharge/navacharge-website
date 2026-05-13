@@ -226,7 +226,10 @@ url(${heroImage})
     width: "52px",
     height: "52px",
     borderRadius: "14px",
-    background: "#dbeafe",
+    background:
+      "linear-gradient(135deg,#dbeafe 0%,#bfdbfe 100%)",
+    boxShadow:
+      "0 10px 24px rgba(37,99,235,0.14)",
     marginBottom: "22px",
     display: "flex",
     alignItems: "center",
