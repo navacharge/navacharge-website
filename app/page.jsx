@@ -77,11 +77,11 @@ url(${heroImage})
               EV Charging Diagnostics & Infrastructure Support
             </p>
 
-            <h1 style={{ fontSize: "68px", lineHeight: "1.02", margin: "0 0 28px", fontWeight: "900" }}>
+            <h1 style={{ fontSize: "clamp(40px, 7vw, 68px)", lineHeight: "1.02", margin: "0 0 28px", fontWeight: "900" }}>
               Practical Support for Better EV Charging Environments
             </h1>
 
-            <p style={{ fontSize: "21px", lineHeight: "1.75", color: "#dbeafe", marginBottom: "36px" }}>
+            <p style={{ fontSize: "clamp(16px, 2vw, 21px)", lineHeight: "1.75", color: "#dbeafe", marginBottom: "36px" }}>
               NavaCharge helps EV charging owners and operators improve diagnostics,
               site organization, field visibility, and customer support workflows.
             </p>
