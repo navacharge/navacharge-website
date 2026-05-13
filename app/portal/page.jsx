@@ -52,21 +52,23 @@ export default function PortalPage() {
           </p>
         </div>
 
-        <button
-          style={{
-            background:
-              "linear-gradient(135deg,#2563eb 0%,#3b82f6 100%)",
-            color: "white",
-            border: "none",
-            padding: "14px 22px",
-            borderRadius: "14px",
-            fontWeight: "700",
-            cursor: "pointer",
-            boxShadow: "0 14px 30px rgba(37,99,235,0.28)",
-          }}
-        >
+        <a
+           href="/request"
+           style={{
+           background:
+             "linear-gradient(135deg,#2563eb 0%,#3b82f6 100%)",
+           color: "white",
+           border: "none",
+           padding: "14px 22px",
+           borderRadius: "14px",
+           fontWeight: "700",
+           cursor: "pointer",
+           boxShadow: "0 14px 30px rgba(37,99,235,0.28)",
+           textDecoration: "none",
+           }}
+          >
           New Support Request
-        </button>
+        </a>
       </div>
 
       {/* DASHBOARD */}
