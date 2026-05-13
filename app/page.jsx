@@ -99,12 +99,13 @@ url(${heroImage})
                right: "40px",
                bottom: "40px",
                width: "280px",
-               background: "rgba(255,255,255,0.08)",
-               backdropFilter: "blur(14px)",
+               background:
+                   "linear-gradient(135deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0.06) 100%)",
+               backdropFilter: "blur(18px)",
                border: "1px solid rgba(255,255,255,0.12)",
                borderRadius: "24px",
                padding: "20px",
-               boxShadow: "0 30px 60px rgba(0,0,0,0.35)",
+               boxShadow: "0 40px 80px rgba(0,0,0,0.38)",
                }}
               >
            <p
