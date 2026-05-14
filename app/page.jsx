@@ -170,11 +170,17 @@ url(${heroImage})
     maxWidth: "1280px",
     margin: "0 auto",
     padding: "90px 32px 130px",
+    position: "relative",
   }}
 >
-  <div style={{ position: "relative", minHeight: "620px" }}>
+  <div
+    style={{
+      position: "relative",
+      minHeight: "560px",
+    }}
+  >
     <svg
-      viewBox="0 0 1280 620"
+      viewBox="0 0 1280 560"
       style={{
         position: "absolute",
         inset: 0,
@@ -184,60 +190,63 @@ url(${heroImage})
       }}
       fill="none"
     >
-      {/* Main connector line */}
       <path
-        d="M40 210 
-           C40 150 80 130 135 130 
-           H470 
-           C535 130 535 75 535 45
-           M535 130
-           H1180
-           C1230 130 1245 160 1245 205
-           V430
-           C1245 480 1215 505 1165 505
-           H680
-           C610 505 610 555 540 555
-           H40"
+        d="
+          M80 200
+          C80 150 115 130 165 130
+          H515
+          C560 130 565 110 565 70
+          V35
+
+          M565 130
+          H1180
+          C1230 130 1250 160 1250 210
+          V405
+          C1250 455 1220 480 1170 480
+          H720
+          C660 480 650 520 590 520
+          H250
+        "
         stroke="#2f6f8f"
-        strokeWidth="3"
+        strokeWidth="2.5"
         strokeLinecap="round"
         strokeLinejoin="round"
-        opacity="0.9"
       />
 
-      {/* connector icon */}
-      <rect x="27" y="185" width="28" height="58" rx="14" stroke="#2f6f8f" strokeWidth="3" />
-      <line x1="37" y1="198" x2="37" y2="214" stroke="#2f6f8f" strokeWidth="3" />
-      <line x1="47" y1="198" x2="47" y2="214" stroke="#2f6f8f" strokeWidth="3" />
+      {/* EV connector left */}
+      <rect x="62" y="175" width="36" height="62" rx="16" stroke="#2f6f8f" strokeWidth="2.5" />
+      <line x1="75" y1="190" x2="75" y2="210" stroke="#2f6f8f" strokeWidth="2.5" />
+      <line x1="86" y1="190" x2="86" y2="210" stroke="#2f6f8f" strokeWidth="2.5" />
 
-      {/* top plug */}
-      <rect x="522" y="18" width="26" height="32" rx="8" stroke="#2f6f8f" strokeWidth="3" />
-      <line x1="530" y1="9" x2="530" y2="18" stroke="#2f6f8f" strokeWidth="3" />
-      <line x1="540" y1="9" x2="540" y2="18" stroke="#2f6f8f" strokeWidth="3" />
+      {/* small plug top */}
+      <rect x="552" y="18" width="28" height="34" rx="8" stroke="#2f6f8f" strokeWidth="2.5" />
+      <line x1="560" y1="8" x2="560" y2="18" stroke="#2f6f8f" strokeWidth="2.5" />
+      <line x1="572" y1="8" x2="572" y2="18" stroke="#2f6f8f" strokeWidth="2.5" />
 
       {/* icon 1 charger */}
-      <rect x="145" y="220" width="44" height="92" rx="8" stroke="#2f6f8f" strokeWidth="3" />
-      <rect x="157" y="238" width="20" height="18" rx="3" stroke="#2f6f8f" strokeWidth="3" />
-      <line x1="167" y1="270" x2="167" y2="300" stroke="#2f6f8f" strokeWidth="3" />
+      <rect x="145" y="215" width="45" height="92" rx="8" stroke="#2f6f8f" strokeWidth="2.5" />
+      <rect x="157" y="233" width="21" height="18" rx="3" stroke="#2f6f8f" strokeWidth="2.5" />
+      <line x1="168" y1="265" x2="168" y2="295" stroke="#2f6f8f" strokeWidth="2.5" />
 
-      {/* icon 2 RMA unit */}
-      <rect x="455" y="235" width="82" height="54" rx="10" stroke="#2f6f8f" strokeWidth="3" />
-      <path d="M455 260 H537" stroke="#2f6f8f" strokeWidth="3" />
-      <path d="M485 220 C500 208 520 208 535 220" stroke="#2f6f8f" strokeWidth="3" />
+      {/* icon 2 RMA / vehicle */}
+      <path d="M455 285 H535 V255 H505 L485 235 H455 V285Z" stroke="#2f6f8f" strokeWidth="2.5" />
+      <circle cx="475" cy="285" r="10" stroke="#2f6f8f" strokeWidth="2.5" />
+      <circle cx="515" cy="285" r="10" stroke="#2f6f8f" strokeWidth="2.5" />
+      <path d="M535 255 C560 255 570 240 570 220" stroke="#2f6f8f" strokeWidth="2.5" />
 
       {/* icon 3 buildings */}
-      <rect x="755" y="225" width="36" height="90" rx="4" stroke="#2f6f8f" strokeWidth="3" />
-      <rect x="805" y="245" width="42" height="70" rx="4" stroke="#2f6f8f" strokeWidth="3" />
-      <path d="M870 315 V235 L905 260 V315" stroke="#2f6f8f" strokeWidth="3" />
-      <path d="M766 245 H780 M766 265 H780 M766 285 H780" stroke="#2f6f8f" strokeWidth="3" />
+      <rect x="740" y="220" width="36" height="88" rx="4" stroke="#2f6f8f" strokeWidth="2.5" />
+      <rect x="790" y="240" width="42" height="68" rx="4" stroke="#2f6f8f" strokeWidth="2.5" />
+      <path d="M855 308 V235 L895 260 V308" stroke="#2f6f8f" strokeWidth="2.5" />
+      <path d="M750 242 H764 M750 264 H764 M750 286 H764" stroke="#2f6f8f" strokeWidth="2.5" />
 
       {/* icon 4 tower */}
-      <path d="M1085 315 L1135 220 L1185 315" stroke="#2f6f8f" strokeWidth="3" />
-      <path d="M1102 280 H1168 M1115 250 H1155 M1100 315 H1170" stroke="#2f6f8f" strokeWidth="3" />
-      <path d="M1135 220 V315" stroke="#2f6f8f" strokeWidth="3" />
+      <path d="M1065 310 L1120 215 L1175 310" stroke="#2f6f8f" strokeWidth="2.5" />
+      <path d="M1084 278 H1156 M1098 248 H1142 M1080 310 H1160" stroke="#2f6f8f" strokeWidth="2.5" />
+      <path d="M1120 215 V310" stroke="#2f6f8f" strokeWidth="2.5" />
     </svg>
 
-    <div style={{ textAlign: "center", paddingTop: "95px", marginBottom: "130px" }}>
+    <div style={{ textAlign: "center", paddingTop: "120px", marginBottom: "165px" }}>
       <p
         style={{
           letterSpacing: "7px",
@@ -266,8 +275,8 @@ url(${heroImage})
       style={{
         display: "grid",
         gridTemplateColumns: "repeat(4, 1fr)",
-        gap: "44px",
-        padding: "0 70px",
+        gap: "52px",
+        padding: "0 90px",
       }}
     >
       {[
@@ -297,7 +306,7 @@ url(${heroImage})
             style={{
               fontSize: "24px",
               lineHeight: "1.15",
-              marginBottom: "16px",
+              marginBottom: "14px",
               color: "#0f172a",
             }}
           >
