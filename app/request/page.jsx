@@ -156,7 +156,7 @@ export default function RequestPage() {
 
           {/* BUTTON */}
           <a
-            href="/ticket"
+            href="/request/success"
             style={{
               marginTop: "12px",
               background:
