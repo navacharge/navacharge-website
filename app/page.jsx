@@ -172,6 +172,58 @@ url(${heroImage})
     padding: "80px 32px",
   }}
 >
+  <div
+    style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      gap: "18px",
+      flexWrap: "wrap",
+    }}
+  >
+    {[
+      "Diagnostics",
+      "RMA Validation",
+      "Site Reliability",
+      "Infrastructure Review",
+      "Cable Management",
+      "Support Coordination",
+    ].map((item, index) => (
+      <div
+        key={item}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "18px",
+        }}
+      >
+        <div
+          style={{
+            background: "white",
+            borderRadius: "18px",
+            padding: "18px 22px",
+            boxShadow: "0 10px 30px rgba(15,23,42,0.08)",
+            border: "1px solid rgba(15,23,42,0.06)",
+            fontWeight: "700",
+            color: "#111827",
+            whiteSpace: "nowrap",
+          }}
+        >
+          {item}
+        </div>
+
+        {index !== 5 && (
+          <div
+            style={{
+              width: "40px",
+              height: "2px",
+              background: "#cbd5e1",
+            }}
+          />
+        )}
+      </div>
+    ))}
+  </div>
 </section>
      <section style={{ background: "#0f172a", color: "white", padding: "90px 28px" }}>
         <div style={{
