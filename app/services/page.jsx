@@ -82,6 +82,65 @@ export default function ServicesPage() {
     </div>
   ))}
 </div>
+        <section
+  style={{
+    marginTop: "80px",
+    background: "#0f172a",
+    color: "white",
+    borderRadius: "34px",
+    padding: "56px",
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))",
+    gap: "36px",
+    alignItems: "center",
+  }}
+>
+  <div>
+    <p style={{ color: "#93c5fd", fontWeight: "800", marginBottom: "18px" }}>
+      Support Workflow
+    </p>
+
+    <h2 style={{ fontSize: "42px", lineHeight: "1.1", marginBottom: "22px" }}>
+      Structured support for real charging environments.
+    </h2>
+
+    <p style={{ color: "#cbd5e1", lineHeight: "1.8", fontSize: "18px" }}>
+      NavaCharge focuses on practical visibility: what happened, where it happened,
+      what was observed, and what needs to happen next.
+    </p>
+  </div>
+
+  <div
+    style={{
+      background: "rgba(255,255,255,0.06)",
+      border: "1px solid rgba(255,255,255,0.08)",
+      borderRadius: "26px",
+      padding: "28px",
+      display: "grid",
+      gap: "14px",
+    }}
+  >
+    {[
+      "Request received",
+      "Field information reviewed",
+      "Diagnostics notes prepared",
+      "Follow-up action defined",
+    ].map((item) => (
+      <div
+        key={item}
+        style={{
+          background: "rgba(255,255,255,0.07)",
+          padding: "16px",
+          borderRadius: "16px",
+          color: "#dbeafe",
+          fontWeight: "700",
+        }}
+      >
+        {item}
+      </div>
+    ))}
+  </div>
+</section>
       </div>
     </main>
   );
