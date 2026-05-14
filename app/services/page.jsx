@@ -15,7 +15,7 @@ export default function ServicesPage() {
       <div style={{ maxWidth: "1180px", margin: "0 auto" }}>
         <section
           style={{
-            minHeight: "220px",
+            minHeight: "180px",
             borderRadius: "34px",
             overflow: "hidden",
             padding: "42px 48px",
@@ -37,16 +37,7 @@ export default function ServicesPage() {
           }}
         >
           <div style={{ maxWidth: "680px" }}>
-            <p
-              style={{
-                color: "#93c5fd",
-                fontWeight: "800",
-                marginBottom: "18px",
-              }}
-            >
-              EV Charging Services
-            </p>
-
+            
             <h1
               style={{
                 fontSize: "46px",
