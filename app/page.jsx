@@ -169,9 +169,8 @@ url(${heroImage})
           {[
             "Field Diagnostics",
             "Structured Tickets",
-            "Site Review Workflow",
-            "Cable Management",
-            "Client Portal Access"
+            "Reliability Visibility",
+            "Client Portal"
            ].map((item) => (
             <div key={item} style={{
               background: "white", padding: "34px 28px", borderRadius: "20px",
