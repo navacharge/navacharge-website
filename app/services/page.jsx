@@ -9,7 +9,7 @@ export default function ServicesPage() {
         background: "#f6f3ec",
         color: "#111827",
         fontFamily: "Arial, sans-serif",
-        padding: "70px 32px 100px",
+        padding: "48px 32px 70px",
       }}
     >
       <div style={{ maxWidth: "1180px", margin: "0 auto" }}>
@@ -64,10 +64,10 @@ export default function ServicesPage() {
 
         <div
           style={{
-            marginTop: "70px",
+            marginTop: "42px",
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))",
-            gap: "28px",
+            gap: "20px",
           }}
         >
           {[
@@ -100,7 +100,7 @@ export default function ServicesPage() {
               key={title}
               style={{
                 background: "white",
-                padding: "38px",
+                padding: "30px",
                 borderRadius: "30px",
                 boxShadow: "0 18px 44px rgba(15,23,42,0.06)",
                 border: "1px solid rgba(15,23,42,0.04)",
@@ -108,7 +108,7 @@ export default function ServicesPage() {
             >
               <h2
                 style={{
-                  fontSize: "31px",
+                  fontSize: "26px",
                   lineHeight: "1.1",
                   marginBottom: "20px",
                   letterSpacing: "-1px",
