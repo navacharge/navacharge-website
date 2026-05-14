@@ -115,6 +115,7 @@ url(${heroImage})
                 transition: "all 0.25s ease",
                 fontWeight: "800"
               }}>Explore Services</a>
+              </div>
            </div>
         </div>
       </section>
