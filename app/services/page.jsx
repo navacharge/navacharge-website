@@ -57,7 +57,7 @@ export default function ServicesPage() {
                 maxWidth: "620px",
               }}
             >
-              Practical EV charging service across diagnostics, reliability, site review, and cable management.
+              Practical infrastructure support services
             </p>
           </div>
         </section>
