@@ -166,53 +166,6 @@ url(${heroImage})
 </div>
 </section>
 
-      <section style={{ maxWidth: "1220px", margin: "0 auto", padding: "10px 28px 80px" }}>
-        <div style={{
-          display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(180px,1fr))",
-          gap: "18px"
-        }}>
-          {[
-            "Field Diagnostics",
-            "Structured Tickets",
-            "Reliability Visibility",
-            "Client Portal"
-           ].map((item) => (
-            <div key={item} style={{
-              background: "white", padding: "34px 28px", borderRadius: "20px",
-              boxShadow: "0 12px 34px rgba(15,23,42,0.08)", fontWeight: "800",
-              textAlign: "left"
-            }}>
-              <div style={{
-                  width: "54px",
-                  height: "54px",
-                  borderRadius: "14px",
-                  marginBottom: "22px",
-                  background: "linear-gradient(135deg,#eff6ff 0%,#dbeafe 100%)",
-                  border: "1px solid #bfdbfe",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: "22px",
-                  color: "#2563eb",
-                  fontWeight: "700"
-                   }}>
-                  ⬡
-                </div>
-              {item}
-               <p style={{
-                  marginTop: "14px",
-                  color: "#64748b",
-                  lineHeight: "1.7",
-                  fontSize: "14px",
-                  fontWeight: "500"
-                   }}>
-                        Structured infrastructure support and operational visibility workflows.
-                  </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       <section id="services" style={{ maxWidth: "1220px", margin: "0 auto", padding: "40px 28px 90px" }}>
         <h2
           style={{
