@@ -78,7 +78,15 @@ url(${heroImage})
           backgroundSize: "cover", backgroundPosition: "center", backgroundAttachment: "fixed",
           color: "white", padding: "86px 72px", display: "flex", alignItems: "flex-end"
         }}>
-          <div style={{ maxWidth: "520px" }}>
+          <div
+              style={{
+              maxWidth: "520px",
+              height: "100%",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+           }}
+          >
             <p style={{ color: "#93c5fd", fontWeight: "700", marginBottom: "22px" }}>
               EV Charging Diagnostics & Infrastructure Support
             </p>
