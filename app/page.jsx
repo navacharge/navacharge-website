@@ -165,22 +165,33 @@ url(${heroImage})
   </div>
 </div>
 </section>
-    <section
+   <section
   style={{
     maxWidth: "1280px",
     margin: "0 auto",
-    padding: "20px 32px 110px",
+    padding: "20px 32px 120px",
     position: "relative",
   }}
 >
-  <div
-    style={{
-      position: "relative",
-      minHeight: "520px",
-    }}
-  >
+  <div style={{ position: "relative", minHeight: "620px" }}>
+    <div
+      style={{
+        position: "absolute",
+        top: "0",
+        left: "50%",
+        transform: "translateX(-50%)",
+        letterSpacing: "7px",
+        fontSize: "13px",
+        fontWeight: "800",
+        color: "#2f6f8f",
+        zIndex: 2,
+      }}
+    >
+      OUR FOCUS
+    </div>
+
     <svg
-      viewBox="0 0 1280 520"
+      viewBox="0 0 1280 620"
       style={{
         position: "absolute",
         inset: 0,
@@ -192,22 +203,20 @@ url(${heroImage})
     >
       <path
         d="
-          M640 0
-          V95
-          C640 125 620 135 590 135
-          H160
-          C95 135 70 165 70 220
-          V330
-          C70 385 100 410 155 410
-          H620
-          C690 410 690 370 760 370
+          M640 88
+          V145
+          C640 170 615 180 580 180
+          H150
+          C90 180 60 215 60 275
+          V390
+          C60 455 95 490 160 490
+          H610
+          C690 490 690 445 770 445
           H1180
-          C1235 370 1250 340 1250 295
-          V190
-          C1250 150 1230 135 1190 135
+          C1235 445 1250 410 1250 360
+          V230
+          C1250 195 1230 180 1195 180
           H760
-          C700 135 700 170 760 170
-          H1180
         "
         stroke="#2f6f8f"
         strokeWidth="2.5"
@@ -216,55 +225,28 @@ url(${heroImage})
         opacity="0.9"
       />
 
+      <line x1="630" y1="22" x2="630" y2="42" stroke="#2f6f8f" strokeWidth="2.5" />
+      <line x1="650" y1="22" x2="650" y2="42" stroke="#2f6f8f" strokeWidth="2.5" />
+
       <rect
-        x="625"
-        y="8"
-        width="30"
-        height="38"
-        rx="9"
+        x="622"
+        y="42"
+        width="36"
+        height="46"
+        rx="10"
         stroke="#2f6f8f"
         strokeWidth="2.5"
         fill="#f6f3ec"
-      />
-
-      <line
-        x1="634"
-        y1="18"
-        x2="634"
-        y2="34"
-        stroke="#2f6f8f"
-        strokeWidth="2.5"
-      />
-
-      <line
-        x1="646"
-        y1="18"
-        x2="646"
-        y2="34"
-        stroke="#2f6f8f"
-        strokeWidth="2.5"
       />
     </svg>
 
     <div
       style={{
         textAlign: "center",
-        paddingTop: "118px",
-        marginBottom: "145px",
+        paddingTop: "145px",
+        marginBottom: "170px",
       }}
     >
-      <p
-        style={{
-          letterSpacing: "7px",
-          fontSize: "13px",
-          fontWeight: "800",
-          color: "#2f6f8f",
-          marginBottom: "18px",
-        }}
-      >
-        OUR FOCUS
-      </p>
-
       <h2
         style={{
           fontSize: "42px",
@@ -308,36 +290,15 @@ url(${heroImage})
         ],
       ].map(([title, text, link]) => (
         <div key={title}>
-          <h3
-            style={{
-              fontSize: "24px",
-              lineHeight: "1.15",
-              marginBottom: "14px",
-              color: "#0f172a",
-            }}
-          >
+          <h3 style={{ fontSize: "24px", marginBottom: "14px", color: "#0f172a" }}>
             {title}
           </h3>
 
-          <p
-            style={{
-              color: "#334155",
-              lineHeight: "1.7",
-              fontSize: "16px",
-              marginBottom: "18px",
-            }}
-          >
+          <p style={{ color: "#334155", lineHeight: "1.7", fontSize: "16px", marginBottom: "18px" }}>
             {text}
           </p>
 
-          <a
-            href="/services"
-            style={{
-              color: "#2f6f8f",
-              fontWeight: "800",
-              textDecoration: "none",
-            }}
-          >
+          <a href="/services" style={{ color: "#2f6f8f", fontWeight: "800", textDecoration: "none" }}>
             {link}
           </a>
         </div>
