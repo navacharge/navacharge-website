@@ -93,31 +93,7 @@ url(${heroImage})
               for real-world charging environments.
             </p>
 
-            <div
-               style={{
-               position: "absolute",
-               right: "40px",
-               bottom: "40px",
-               width: "280px",
-               background:
-                   "linear-gradient(135deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0.06) 100%)",
-               backdropFilter: "blur(18px)",
-               border: "1px solid rgba(255,255,255,0.12)",
-               borderRadius: "24px",
-               padding: "20px",
-               boxShadow: "0 40px 80px rgba(0,0,0,0.38)",
-               }}
-              >
-           <p
-         style={{
-         color: "#93c5fd",
-         fontWeight: "700",
-         marginBottom: "12px",
-           }}
-         >
-         Reliability Workflow
-        </p>
-      <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
+            <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
               <a href="/login" style={{
                 background:
                   "linear-gradient(135deg,#2563eb 0%,#3b82f6 100%)",
