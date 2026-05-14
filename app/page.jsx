@@ -169,69 +169,92 @@ url(${heroImage})
   style={{
     maxWidth: "1220px",
     margin: "0 auto",
-    padding: "90px 32px 120px",
+    padding: "70px 32px 120px",
+    position: "relative",
   }}
 >
-  <div style={{ textAlign: "center", marginBottom: "70px" }}>
-    <p
-      style={{
-        letterSpacing: "6px",
-        fontSize: "13px",
-        fontWeight: "800",
-        color: "#2563eb",
-        marginBottom: "18px",
-      }}
-    >
-      OUR FOCUS
-    </p>
-
-    <h2
-      style={{
-        fontSize: "44px",
-        lineHeight: "1.1",
-        margin: 0,
-        color: "#0f172a",
-      }}
-    >
-      EV charging reliability, made visible.
-    </h2>
-  </div>
-
-  <div style={{ position: "relative", paddingTop: "80px" }}>
+  <div
+    style={{
+      position: "relative",
+      padding: "80px 40px 70px",
+      borderRadius: "34px",
+      overflow: "hidden",
+    }}
+  >
     <svg
-      viewBox="0 0 1200 220"
+      viewBox="0 0 1200 520"
       style={{
+        position: "absolute",
+        inset: 0,
         width: "100%",
-        height: "220px",
-        display: "block",
+        height: "100%",
+        pointerEvents: "none",
       }}
       fill="none"
     >
       <path
-        d="M40 120 C180 120 160 40 280 40 L520 40 C640 40 620 120 760 120 L1160 120"
+        d="M80 70 
+           C80 35 110 25 150 25 
+           H480 
+           C560 25 560 95 640 95 
+           H1090 
+           C1145 95 1160 125 1160 170 
+           V390
+           C1160 440 1130 460 1080 460
+           H640
+           C570 460 570 500 500 500
+           H120"
         stroke="#2563eb"
-        strokeWidth="3"
+        strokeWidth="2.5"
         strokeLinecap="round"
         opacity="0.55"
       />
 
-      <circle cx="40" cy="120" r="14" stroke="#2563eb" strokeWidth="3" />
-      <rect x="25" y="104" width="30" height="32" rx="8" stroke="#2563eb" strokeWidth="3" />
-      <line x1="35" y1="112" x2="35" y2="122" stroke="#2563eb" strokeWidth="3" />
-      <line x1="45" y1="112" x2="45" y2="122" stroke="#2563eb" strokeWidth="3" />
-
-      <circle cx="280" cy="40" r="7" fill="#2563eb" />
-      <circle cx="520" cy="40" r="7" fill="#2563eb" />
-      <circle cx="760" cy="120" r="7" fill="#2563eb" />
-      <circle cx="1160" cy="120" r="7" fill="#2563eb" />
+      <rect
+        x="58"
+        y="55"
+        width="44"
+        height="68"
+        rx="18"
+        stroke="#2563eb"
+        strokeWidth="2.5"
+        opacity="0.8"
+      />
+      <line x1="73" y1="75" x2="73" y2="94" stroke="#2563eb" strokeWidth="2.5" />
+      <line x1="87" y1="75" x2="87" y2="94" stroke="#2563eb" strokeWidth="2.5" />
     </svg>
+
+    <div style={{ textAlign: "center", marginBottom: "70px" }}>
+      <p
+        style={{
+          letterSpacing: "6px",
+          fontSize: "13px",
+          fontWeight: "800",
+          color: "#2563eb",
+          marginBottom: "16px",
+        }}
+      >
+        OUR FOCUS
+      </p>
+
+      <h2
+        style={{
+          fontSize: "44px",
+          lineHeight: "1.1",
+          margin: 0,
+          color: "#0f172a",
+        }}
+      >
+        EV charging reliability, made visible.
+      </h2>
+    </div>
 
     <div
       style={{
         display: "grid",
-        gridTemplateColumns: "repeat(4, 1fr)",
-        gap: "34px",
-        marginTop: "20px",
+        gridTemplateColumns: "repeat(4,1fr)",
+        gap: "46px",
+        marginTop: "120px",
       }}
     >
       {[
