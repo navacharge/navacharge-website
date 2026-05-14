@@ -156,9 +156,10 @@ url(${heroImage})
     >
       Explore Services
     </a>
+    </div>
   </div>
 </div>
-      </section>
+</section>
 
       <section style={{ maxWidth: "1220px", margin: "0 auto", padding: "10px 28px 80px" }}>
         <div style={{
