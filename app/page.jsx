@@ -165,63 +165,15 @@ url(${heroImage})
   </div>
 </div>
 </section>
-
-      <section id="services" style={{ maxWidth: "1220px", margin: "0 auto", padding: "40px 28px 90px" }}>
-        <h2
-          style={{
-              fontSize: "52px",
-              marginBottom: "18px",
-              letterSpacing: "-1.2px",
-              lineHeight: "1.05",
-               }}
-        >Services</h2>
-        <p style={{ color: "#4b5563", maxWidth: "700px", lineHeight: "1.8", marginBottom: "42px", fontSize: "19px" }}>
-          Clean, practical, and structured support for real-world EV charging environments.
-        </p>
-
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))", gap: "22px" }}>
-          {services.map(([title, text]) => (
-            <div key={title} style={{
-              background: "white", 
-              backgroundImage:
-                 "linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(248,250,252,1) 100%)",
-              padding: "32px", borderRadius: "24px",
-              boxShadow:
-                 "0 16px 40px rgba(15,23,42,0.08), 0 2px 8px rgba(15,23,42,0.04)",
-              transition: "all 0.25s ease",
-             cursor: "pointer",
-            }}
-          
-          >
-              <div
+     <section
   style={{
-    width: "52px",
-    height: "52px",
-    borderRadius: "14px",
-    background:
-      "linear-gradient(135deg,#dbeafe 0%,#bfdbfe 100%)",
-    boxShadow:
-      "0 10px 24px rgba(37,99,235,0.14)",
-    marginBottom: "22px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
+    maxWidth: "1200px",
+    margin: "0 auto",
+    padding: "80px 32px",
   }}
 >
-  {title === "Diagnostics" && <Wrench color="#2563eb" />}
-  {title === "Infrastructure Support" && <Building2 color="#2563eb" />}
-  {title === "Cable Management" && <Cable color="#2563eb" />}
-  {title === "Client Portal" && <ShieldCheck color="#2563eb" />}
-</div>
-              
-              <h3 style={{ fontSize: "24px", marginBottom: "14px" }}>{title}</h3>
-              <p style={{ color: "#4b5563", lineHeight: "1.75" }}>{text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section style={{ background: "#0f172a", color: "white", padding: "90px 28px" }}>
+</section>
+     <section style={{ background: "#0f172a", color: "white", padding: "90px 28px" }}>
         <div style={{
           maxWidth: "1220px", margin: "0 auto", display: "grid",
           gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))", gap: "34px", alignItems: "center"
