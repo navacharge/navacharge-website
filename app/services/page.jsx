@@ -15,10 +15,10 @@ export default function ServicesPage() {
       <div style={{ maxWidth: "1180px", margin: "0 auto" }}>
         <section
           style={{
-            minHeight: "320px",
+            minHeight: "220px",
             borderRadius: "34px",
             overflow: "hidden",
-            padding: "56px",
+            padding: "42px 48px",
             display: "flex",
             alignItems: "center",
             color: "white",
@@ -49,13 +49,13 @@ export default function ServicesPage() {
 
             <h1
               style={{
-                fontSize: "56px",
+                fontSize: "46px",
                 lineHeight: "1.05",
                 marginBottom: "22px",
                 letterSpacing: "-1.5px",
               }}
             >
-              Practical support for real charging environments.
+              Services
             </h1>
 
             <p
@@ -66,9 +66,7 @@ export default function ServicesPage() {
                 maxWidth: "620px",
               }}
             >
-              Structured EV charging support focused on diagnostics,
-              reliability, site visibility, cable organization, and field
-              coordination.
+              Practical EV charging service across diagnostics, reliability, site review, and cable management.
             </p>
           </div>
         </section>
