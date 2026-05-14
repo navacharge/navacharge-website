@@ -9,7 +9,7 @@ export default function ServicesPage() {
         padding: "80px 32px",
       }}
     >
-      <div style={{ maxWidth: "1120px", margin: "0 auto" }}>
+      <div style={{ maxWidth: "1180px", margin: "0 auto" }}>
         <a
           href="/"
           style={{
@@ -18,129 +18,108 @@ export default function ServicesPage() {
             color: "#2563eb",
             fontWeight: "800",
             textDecoration: "none",
+            fontSize: "15px",
           }}
         >
           ← Back to Website
         </a>
 
-        <h1 style={{ fontSize: "56px", marginBottom: "20px" }}>
+        <h1
+          style={{
+            fontSize: "64px",
+            marginBottom: "20px",
+            letterSpacing: "-2px",
+          }}
+        >
           Services
         </h1>
 
-        <p style={{ fontSize: "19px", color: "#4b5563", lineHeight: "1.8", maxWidth: "760px" }}>
-          Structured EV charging support for diagnostics, infrastructure visibility,
-          cable management, and client support workflows.
+        <p
+          style={{
+            fontSize: "20px",
+            color: "#4b5563",
+            lineHeight: "1.9",
+            maxWidth: "760px",
+            marginBottom: "70px",
+          }}
+        >
+          Structured EV charging support focused on diagnostics,
+          operational visibility, infrastructure coordination,
+          and real-world charging environments.
         </p>
+
         <div
-  style={{
-    marginTop: "70px",
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))",
-    gap: "24px",
-  }}
->
-  {[
-    [
-      "Diagnostics Support",
-      "Structured charger issue review and field-focused operational diagnostics.",
-    ],
-    [
-      "Infrastructure Visibility",
-      "Support workflows for charging environments, operational flow, and site coordination.",
-    ],
-    [
-      "Cable Management",
-      "Cleaner charging layouts with practical cable routing and wall-arm concepts.",
-    ],
-  ].map(([title, text]) => (
-    <div
-      key={title}
-      style={{
-        background: "white",
-        padding: "34px",
-        borderRadius: "28px",
-        boxShadow: "0 18px 44px rgba(15,23,42,0.08)",
-      }}
-    >
-      <h2
-        style={{
-          fontSize: "28px",
-          marginBottom: "18px",
-        }}
-      >
-        {title}
-      </h2>
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))",
+            gap: "28px",
+          }}
+        >
+          {[
+            [
+              "EV Charger Diagnostics",
+              "Structured troubleshooting for charger behavior, interruptions, and operational issues.",
+            ],
 
-      <p
-        style={{
-          color: "#4b5563",
-          lineHeight: "1.8",
-        }}
-      >
-        {text}
-      </p>
-    </div>
-  ))}
-</div>
-        <section
-  style={{
-    marginTop: "80px",
-    background: "#0f172a",
-    color: "white",
-    borderRadius: "34px",
-    padding: "56px",
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))",
-    gap: "36px",
-    alignItems: "center",
-  }}
->
-  <div>
-    <p style={{ color: "#93c5fd", fontWeight: "800", marginBottom: "18px" }}>
-      Support Workflow
-    </p>
+            [
+              "RMA Inspection & Validation",
+              "Returned unit inspection, issue isolation, functional validation, and redeployment readiness.",
+            ],
 
-    <h2 style={{ fontSize: "42px", lineHeight: "1.1", marginBottom: "22px" }}>
-      Structured support for real charging environments.
-    </h2>
+            [
+              "Charging Site Reliability",
+              "Support focused on uptime, operational continuity, and infrastructure visibility.",
+            ],
 
-    <p style={{ color: "#cbd5e1", lineHeight: "1.8", fontSize: "18px" }}>
-      NavaCharge focuses on practical visibility: what happened, where it happened,
-      what was observed, and what needs to happen next.
-    </p>
-  </div>
+            [
+              "Cable Management",
+              "Cleaner charging layouts through practical routing and wall-arm concepts.",
+            ],
 
-  <div
-    style={{
-      background: "rgba(255,255,255,0.06)",
-      border: "1px solid rgba(255,255,255,0.08)",
-      borderRadius: "26px",
-      padding: "28px",
-      display: "grid",
-      gap: "14px",
-    }}
-  >
-    {[
-      "Request received",
-      "Field information reviewed",
-      "Diagnostics notes prepared",
-      "Follow-up action defined",
-    ].map((item) => (
-      <div
-        key={item}
-        style={{
-          background: "rgba(255,255,255,0.07)",
-          padding: "16px",
-          borderRadius: "16px",
-          color: "#dbeafe",
-          fontWeight: "700",
-        }}
-      >
-        {item}
-      </div>
-    ))}
-  </div>
-</section>
+            [
+              "Field Support Coordination",
+              "Site observations, issue documentation, technician coordination, and support follow-up.",
+            ],
+
+            [
+              "Infrastructure Review",
+              "Review of charger placement, accessibility, cable flow, and usability conditions.",
+            ],
+          ].map(([title, text]) => (
+            <div
+              key={title}
+              style={{
+                background: "white",
+                padding: "38px",
+                borderRadius: "30px",
+                boxShadow: "0 18px 44px rgba(15,23,42,0.06)",
+                border: "1px solid rgba(15,23,42,0.04)",
+                transition: "all 0.25s ease",
+              }}
+            >
+              <h2
+                style={{
+                  fontSize: "31px",
+                  lineHeight: "1.1",
+                  marginBottom: "20px",
+                  letterSpacing: "-1px",
+                }}
+              >
+                {title}
+              </h2>
+
+              <p
+                style={{
+                  color: "#4b5563",
+                  lineHeight: "1.9",
+                  fontSize: "17px",
+                }}
+              >
+                {text}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </main>
   );
