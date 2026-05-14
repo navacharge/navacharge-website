@@ -167,22 +167,14 @@ url(${heroImage})
 </section>
      <section
   style={{
-    maxWidth: "1220px",
+    maxWidth: "1280px",
     margin: "0 auto",
-    padding: "70px 32px 120px",
-    position: "relative",
+    padding: "90px 32px 130px",
   }}
 >
-  <div
-    style={{
-      position: "relative",
-      padding: "80px 40px 70px",
-      borderRadius: "34px",
-      overflow: "hidden",
-    }}
-  >
+  <div style={{ position: "relative", minHeight: "620px" }}>
     <svg
-      viewBox="0 0 1200 520"
+      viewBox="0 0 1280 620"
       style={{
         position: "absolute",
         inset: 0,
@@ -192,46 +184,67 @@ url(${heroImage})
       }}
       fill="none"
     >
+      {/* Main connector line */}
       <path
-        d="M80 70 
-           C80 35 110 25 150 25 
-           H480 
-           C560 25 560 95 640 95 
-           H1090 
-           C1145 95 1160 125 1160 170 
-           V390
-           C1160 440 1130 460 1080 460
-           H640
-           C570 460 570 500 500 500
-           H120"
-        stroke="#2563eb"
-        strokeWidth="2.5"
+        d="M40 210 
+           C40 150 80 130 135 130 
+           H470 
+           C535 130 535 75 535 45
+           M535 130
+           H1180
+           C1230 130 1245 160 1245 205
+           V430
+           C1245 480 1215 505 1165 505
+           H680
+           C610 505 610 555 540 555
+           H40"
+        stroke="#2f6f8f"
+        strokeWidth="3"
         strokeLinecap="round"
-        opacity="0.55"
+        strokeLinejoin="round"
+        opacity="0.9"
       />
 
-      <rect
-        x="58"
-        y="55"
-        width="44"
-        height="68"
-        rx="18"
-        stroke="#2563eb"
-        strokeWidth="2.5"
-        opacity="0.8"
-      />
-      <line x1="73" y1="75" x2="73" y2="94" stroke="#2563eb" strokeWidth="2.5" />
-      <line x1="87" y1="75" x2="87" y2="94" stroke="#2563eb" strokeWidth="2.5" />
+      {/* connector icon */}
+      <rect x="27" y="185" width="28" height="58" rx="14" stroke="#2f6f8f" strokeWidth="3" />
+      <line x1="37" y1="198" x2="37" y2="214" stroke="#2f6f8f" strokeWidth="3" />
+      <line x1="47" y1="198" x2="47" y2="214" stroke="#2f6f8f" strokeWidth="3" />
+
+      {/* top plug */}
+      <rect x="522" y="18" width="26" height="32" rx="8" stroke="#2f6f8f" strokeWidth="3" />
+      <line x1="530" y1="9" x2="530" y2="18" stroke="#2f6f8f" strokeWidth="3" />
+      <line x1="540" y1="9" x2="540" y2="18" stroke="#2f6f8f" strokeWidth="3" />
+
+      {/* icon 1 charger */}
+      <rect x="145" y="220" width="44" height="92" rx="8" stroke="#2f6f8f" strokeWidth="3" />
+      <rect x="157" y="238" width="20" height="18" rx="3" stroke="#2f6f8f" strokeWidth="3" />
+      <line x1="167" y1="270" x2="167" y2="300" stroke="#2f6f8f" strokeWidth="3" />
+
+      {/* icon 2 RMA unit */}
+      <rect x="455" y="235" width="82" height="54" rx="10" stroke="#2f6f8f" strokeWidth="3" />
+      <path d="M455 260 H537" stroke="#2f6f8f" strokeWidth="3" />
+      <path d="M485 220 C500 208 520 208 535 220" stroke="#2f6f8f" strokeWidth="3" />
+
+      {/* icon 3 buildings */}
+      <rect x="755" y="225" width="36" height="90" rx="4" stroke="#2f6f8f" strokeWidth="3" />
+      <rect x="805" y="245" width="42" height="70" rx="4" stroke="#2f6f8f" strokeWidth="3" />
+      <path d="M870 315 V235 L905 260 V315" stroke="#2f6f8f" strokeWidth="3" />
+      <path d="M766 245 H780 M766 265 H780 M766 285 H780" stroke="#2f6f8f" strokeWidth="3" />
+
+      {/* icon 4 tower */}
+      <path d="M1085 315 L1135 220 L1185 315" stroke="#2f6f8f" strokeWidth="3" />
+      <path d="M1102 280 H1168 M1115 250 H1155 M1100 315 H1170" stroke="#2f6f8f" strokeWidth="3" />
+      <path d="M1135 220 V315" stroke="#2f6f8f" strokeWidth="3" />
     </svg>
 
-    <div style={{ textAlign: "center", marginBottom: "70px" }}>
+    <div style={{ textAlign: "center", paddingTop: "95px", marginBottom: "130px" }}>
       <p
         style={{
-          letterSpacing: "6px",
+          letterSpacing: "7px",
           fontSize: "13px",
           fontWeight: "800",
-          color: "#2563eb",
-          marginBottom: "16px",
+          color: "#334155",
+          marginBottom: "18px",
         }}
       >
         OUR FOCUS
@@ -239,7 +252,7 @@ url(${heroImage})
 
       <h2
         style={{
-          fontSize: "44px",
+          fontSize: "42px",
           lineHeight: "1.1",
           margin: 0,
           color: "#0f172a",
@@ -252,35 +265,39 @@ url(${heroImage})
     <div
       style={{
         display: "grid",
-        gridTemplateColumns: "repeat(4,1fr)",
-        gap: "46px",
-        marginTop: "120px",
+        gridTemplateColumns: "repeat(4, 1fr)",
+        gap: "44px",
+        padding: "0 70px",
       }}
     >
       {[
         [
           "Diagnostics",
           "Charger behavior, interruptions, and field observations reviewed with structure.",
+          "Explore diagnostics →",
         ],
         [
-          "Validation",
+          "RMA validation",
           "Returned units, issue isolation, functional checks, and redeployment readiness.",
+          "View validation →",
         ],
         [
-          "Reliability",
+          "Site reliability",
           "Operational continuity, uptime awareness, and site-level support visibility.",
+          "Improve uptime →",
         ],
         [
-          "Infrastructure",
-          "Cable flow, placement, usability, and support coordination for real sites.",
+          "Infrastructure support",
+          "Cable flow, placement, usability, and coordination for real charging sites.",
+          "View services →",
         ],
-      ].map(([title, text]) => (
+      ].map(([title, text, link]) => (
         <div key={title}>
           <h3
             style={{
               fontSize: "24px",
               lineHeight: "1.15",
-              marginBottom: "14px",
+              marginBottom: "16px",
               color: "#0f172a",
             }}
           >
@@ -289,14 +306,25 @@ url(${heroImage})
 
           <p
             style={{
-              color: "#475569",
-              lineHeight: "1.75",
+              color: "#334155",
+              lineHeight: "1.7",
               fontSize: "16px",
-              margin: 0,
+              marginBottom: "18px",
             }}
           >
             {text}
           </p>
+
+          <a
+            href="/services"
+            style={{
+              color: "#2f6f8f",
+              fontWeight: "800",
+              textDecoration: "none",
+            }}
+          >
+            {link}
+          </a>
         </div>
       ))}
     </div>
