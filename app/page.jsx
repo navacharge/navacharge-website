@@ -76,18 +76,18 @@ export default function Home() {
 url(${heroImage})
 `,
           backgroundSize: "cover", backgroundPosition: "center", backgroundAttachment: "fixed",
-          color: "white", padding: "76px", display: "flex", alignItems: "center"
+          color: "white", padding: "86px 72px", display: "flex", alignItems: "flex-end"
         }}>
           <div style={{ maxWidth: "520px" }}>
             <p style={{ color: "#93c5fd", fontWeight: "700", marginBottom: "22px" }}>
               EV Charging Diagnostics & Infrastructure Support
             </p>
 
-            <h1 style={{ fontSize: "clamp(38px, 6vw, 58px)", lineHeight: "1.02", margin: "0 0 22px", fontWeight: "900" }}>
+            <h1 style={{ fontSize: "clamp(36px, 4.8vw, 50px)", lineHeight: "1.02", margin: "0 0 22px", fontWeight: "800" }}>
               Practical EV Charging Support
             </h1>
 
-            <p style={{ fontSize: "clamp(16px, 2vw, 21px)", lineHeight: "1.9", color: "#dbeafe", marginBottom: "36px" }}>
+            <p style={{ fontSize: "clamp(16px, 2vw, 21px)", lineHeight: "1.9", color: "#dbeafe", marginBottom: "44px" }}>
               Structured EV charging support focused on diagnostics,
               field coordination, and real-world charging environments.
             </p>
