@@ -60,9 +60,9 @@ export default function Home() {
         </div>
       </nav>
 
-      <section style={{ maxWidth: "1120px", margin: "0 auto", padding: "88px 28px 96px" }}>
+      <section style={{ maxWidth: "1280px", margin: "0 auto", padding: "88px 28px 96px" }}>
         <div style={{
-          minHeight: "640px", borderRadius: "34px", overflow: "hidden",
+          minHeight: "420px", borderRadius: "34px", overflow: "hidden",
             boxShadow: "0 40px 120px rgba(15,23,42,0.28)",
             border: "1px solid rgba(255,255,255,0.06)",
           backgroundImage: `
@@ -76,12 +76,12 @@ export default function Home() {
 url(${heroImage})
 `,
           backgroundSize: "cover", backgroundPosition: "center", backgroundAttachment: "fixed",
-          color: "white", padding: "86px 72px", display: "flex", alignItems: "flex-end"
+          color: "white", padding: "64px 72px", display: "flex", alignItems: "flex-end"
         }}>
           <div
   style={{
     maxWidth: "520px",
-    minHeight: "720px",
+    minHeight: "420px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
