@@ -79,52 +79,85 @@ url(${heroImage})
           color: "white", padding: "86px 72px", display: "flex", alignItems: "flex-end"
         }}>
           <div
-              style={{
-              maxWidth: "520px",
-              minHeight: "420px",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
-           }}
-          >
-            <p style={{ color: "#93c5fd", fontWeight: "700", marginBottom: "22px" }}>
-              EV Charging Diagnostics & Infrastructure Support
-            </p>
+  style={{
+    maxWidth: "520px",
+    minHeight: "420px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+  }}
+>
+  <div>
+    <p
+      style={{
+        color: "#93c5fd",
+        fontWeight: "700",
+        marginBottom: "22px",
+      }}
+    >
+      EV Charging Diagnostics & Infrastructure Support
+    </p>
 
-            <h1 style={{ fontSize: "clamp(36px, 4.8vw, 50px)", lineHeight: "1.02", margin: "0 0 22px", fontWeight: "800" }}>
-              Practical EV Charging Support
-            </h1>
+    <h1
+      style={{
+        fontSize: "clamp(36px, 4.8vw, 50px)",
+        lineHeight: "1.02",
+        margin: "0 0 22px",
+        fontWeight: "800",
+      }}
+    >
+      Practical EV Charging Support
+    </h1>
 
-            <p style={{ fontSize: "clamp(16px, 2vw, 21px)", lineHeight: "1.9", color: "#dbeafe", marginBottom: "44px" }}>
-              Structured EV charging support focused on diagnostics,
-              field coordination, and real-world charging environments.
-            </p>
+    <p
+      style={{
+        fontSize: "clamp(16px, 2vw, 21px)",
+        lineHeight: "1.9",
+        color: "#dbeafe",
+      }}
+    >
+      Structured EV charging support focused on diagnostics,
+      field coordination, and real-world charging environments.
+    </p>
+  </div>
 
-            <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
-              <a href="/login" style={{
-                background:
-                  "linear-gradient(135deg,#2563eb 0%,#3b82f6 100%)",
-                   boxShadow:
-                   "0 14px 34px rgba(37,99,235,0.35)",
-                color: "white", padding: "14px 22px",
-                borderRadius: "13px", textDecoration: "none", 
-                transition: "all 0.25s ease",
-                fontWeight: "800"
-              }}>Open Client Portal</a>
+  <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
+    <a
+      href="/login"
+      style={{
+        background:
+          "linear-gradient(135deg,#2563eb 0%,#3b82f6 100%)",
+        boxShadow:
+          "0 14px 34px rgba(37,99,235,0.35)",
+        color: "white",
+        padding: "14px 22px",
+        borderRadius: "13px",
+        textDecoration: "none",
+        transition: "all 0.25s ease",
+        fontWeight: "800",
+      }}
+    >
+      Open Client Portal
+    </a>
 
-              <a href="#services" style={{
-                color: "white", padding: "14px 22px", borderRadius: "13px",
-                border: "1px solid rgba(255,255,255,0.35)",
-                background: "rgba(255,255,255,0.06)",
-                border: "1px solid rgba(255,255,255,0.08)",
-                backdropFilter: "blur(6px)",
-                textDecoration: "none", 
-                transition: "all 0.25s ease",
-                fontWeight: "800"
-              }}>Explore Services</a>
-              </div>
-           </div>
-        </div>
+    <a
+      href="#services"
+      style={{
+        color: "white",
+        padding: "14px 22px",
+        borderRadius: "13px",
+        border: "1px solid rgba(255,255,255,0.08)",
+        background: "rgba(255,255,255,0.06)",
+        backdropFilter: "blur(6px)",
+        textDecoration: "none",
+        transition: "all 0.25s ease",
+        fontWeight: "800",
+      }}
+    >
+      Explore Services
+    </a>
+  </div>
+</div>
       </section>
 
       <section style={{ maxWidth: "1220px", margin: "0 auto", padding: "10px 28px 80px" }}>
