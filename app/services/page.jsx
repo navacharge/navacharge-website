@@ -1,4 +1,7 @@
 export default function ServicesPage() {
+  const servicesHero =
+    "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=1600&q=80";
+
   return (
     <main
       style={{
@@ -6,50 +9,73 @@ export default function ServicesPage() {
         background: "#f6f3ec",
         color: "#111827",
         fontFamily: "Arial, sans-serif",
-        padding: "80px 32px",
+        padding: "70px 32px 100px",
       }}
     >
       <div style={{ maxWidth: "1180px", margin: "0 auto" }}>
-        <a
-          href="/"
+        <section
           style={{
-            display: "inline-block",
-            marginBottom: "40px",
-            color: "#2563eb",
-            fontWeight: "800",
-            textDecoration: "none",
-            fontSize: "15px",
+            minHeight: "320px",
+            borderRadius: "34px",
+            overflow: "hidden",
+            padding: "56px",
+            display: "flex",
+            alignItems: "center",
+            color: "white",
+            boxShadow: "0 30px 80px rgba(15,23,42,0.18)",
+            backgroundImage: `
+              linear-gradient(
+                135deg,
+                rgba(2,6,23,0.90) 0%,
+                rgba(15,23,42,0.70) 42%,
+                rgba(15,23,42,0.28) 100%
+              ),
+              url(${servicesHero})
+            `,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         >
-          ← Back to Website
-        </a>
+          <div style={{ maxWidth: "680px" }}>
+            <p
+              style={{
+                color: "#93c5fd",
+                fontWeight: "800",
+                marginBottom: "18px",
+              }}
+            >
+              EV Charging Services
+            </p>
 
-        <h1
-          style={{
-            fontSize: "64px",
-            marginBottom: "20px",
-            letterSpacing: "-2px",
-          }}
-        >
-          Services
-        </h1>
+            <h1
+              style={{
+                fontSize: "56px",
+                lineHeight: "1.05",
+                marginBottom: "22px",
+                letterSpacing: "-1.5px",
+              }}
+            >
+              Practical support for real charging environments.
+            </h1>
 
-        <p
-          style={{
-            fontSize: "20px",
-            color: "#4b5563",
-            lineHeight: "1.9",
-            maxWidth: "760px",
-            marginBottom: "70px",
-          }}
-        >
-          Structured EV charging support focused on diagnostics,
-          operational visibility, infrastructure coordination,
-          and real-world charging environments.
-        </p>
+            <p
+              style={{
+                fontSize: "18px",
+                color: "#dbeafe",
+                lineHeight: "1.8",
+                maxWidth: "620px",
+              }}
+            >
+              Structured EV charging support focused on diagnostics,
+              reliability, site visibility, cable organization, and field
+              coordination.
+            </p>
+          </div>
+        </section>
 
         <div
           style={{
+            marginTop: "70px",
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))",
             gap: "28px",
@@ -60,27 +86,22 @@ export default function ServicesPage() {
               "EV Charger Diagnostics",
               "Structured troubleshooting for charger behavior, interruptions, and operational issues.",
             ],
-
             [
               "RMA Inspection & Validation",
               "Returned unit inspection, issue isolation, functional validation, and redeployment readiness.",
             ],
-
             [
               "Charging Site Reliability",
               "Support focused on uptime, operational continuity, and infrastructure visibility.",
             ],
-
             [
               "Cable Management",
               "Cleaner charging layouts through practical routing and wall-arm concepts.",
             ],
-
             [
               "Field Support Coordination",
               "Site observations, issue documentation, technician coordination, and support follow-up.",
             ],
-
             [
               "Infrastructure Review",
               "Review of charger placement, accessibility, cable flow, and usability conditions.",
@@ -94,7 +115,6 @@ export default function ServicesPage() {
                 borderRadius: "30px",
                 boxShadow: "0 18px 44px rgba(15,23,42,0.06)",
                 border: "1px solid rgba(15,23,42,0.04)",
-                transition: "all 0.25s ease",
               }}
             >
               <h2
