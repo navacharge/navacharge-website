@@ -195,17 +195,19 @@ url(${heroImage})
           M640 0
           V95
           C640 125 620 135 590 135
-          H125
-          C75 135 55 160 55 210
-          V325
-          C55 380 85 405 140 405
+          H160
+          C95 135 70 165 70 220
+          V330
+          C70 385 100 410 155 410
           H620
-          C690 405 690 365 760 365
+          C690 410 690 370 760 370
           H1180
-          C1235 365 1250 335 1250 290
-          V180
-          C1250 145 1230 135 1195 135
-          H690
+          C1235 370 1250 340 1250 295
+          V190
+          C1250 150 1230 135 1190 135
+          H760
+          C700 135 700 170 760 170
+          H1180
         "
         stroke="#2f6f8f"
         strokeWidth="2.5"
@@ -216,15 +218,32 @@ url(${heroImage})
 
       <rect
         x="625"
-        y="0"
+        y="8"
         width="30"
         height="38"
         rx="9"
         stroke="#2f6f8f"
         strokeWidth="2.5"
+        fill="#f6f3ec"
       />
-      <line x1="634" y1="-10" x2="634" y2="0" stroke="#2f6f8f" strokeWidth="2.5" />
-      <line x1="646" y1="-10" x2="646" y2="0" stroke="#2f6f8f" strokeWidth="2.5" />
+
+      <line
+        x1="634"
+        y1="18"
+        x2="634"
+        y2="34"
+        stroke="#2f6f8f"
+        strokeWidth="2.5"
+      />
+
+      <line
+        x1="646"
+        y1="18"
+        x2="646"
+        y2="34"
+        stroke="#2f6f8f"
+        strokeWidth="2.5"
+      />
     </svg>
 
     <div
@@ -239,7 +258,7 @@ url(${heroImage})
           letterSpacing: "7px",
           fontSize: "13px",
           fontWeight: "800",
-          color: "#334155",
+          color: "#2f6f8f",
           marginBottom: "18px",
         }}
       >
