@@ -81,7 +81,7 @@ url(${heroImage})
           <div
               style={{
               maxWidth: "520px",
-              height: "100%",
+              minHeight: "420px",
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
