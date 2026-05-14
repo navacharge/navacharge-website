@@ -167,62 +167,116 @@ url(${heroImage})
 </section>
      <section
   style={{
-    maxWidth: "1200px",
+    maxWidth: "1220px",
     margin: "0 auto",
-    padding: "80px 32px",
+    padding: "90px 32px 120px",
   }}
 >
-  <div
-    style={{
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
-      gap: "18px",
-      flexWrap: "wrap",
-    }}
-  >
-    {[
-      "Diagnostics",
-      "RMA Validation",
-      "Site Reliability",
-      "Infrastructure Review",
-      "Cable Management",
-      "Support Coordination",
-    ].map((item, index) => (
-      <div
-        key={item}
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "18px",
-        }}
-      >
-        <div
-          style={{
-            background: "white",
-            borderRadius: "18px",
-            padding: "18px 22px",
-            boxShadow: "0 10px 30px rgba(15,23,42,0.08)",
-            border: "1px solid rgba(15,23,42,0.06)",
-            fontWeight: "700",
-            color: "#111827",
-            whiteSpace: "nowrap",
-          }}
-        >
-          {item}
-        </div>
+  <div style={{ textAlign: "center", marginBottom: "70px" }}>
+    <p
+      style={{
+        letterSpacing: "6px",
+        fontSize: "13px",
+        fontWeight: "800",
+        color: "#2563eb",
+        marginBottom: "18px",
+      }}
+    >
+      OUR FOCUS
+    </p>
 
-        {index !== 5 && (
-          <div
+    <h2
+      style={{
+        fontSize: "44px",
+        lineHeight: "1.1",
+        margin: 0,
+        color: "#0f172a",
+      }}
+    >
+      EV charging reliability, made visible.
+    </h2>
+  </div>
+
+  <div style={{ position: "relative", paddingTop: "80px" }}>
+    <svg
+      viewBox="0 0 1200 220"
+      style={{
+        width: "100%",
+        height: "220px",
+        display: "block",
+      }}
+      fill="none"
+    >
+      <path
+        d="M40 120 C180 120 160 40 280 40 L520 40 C640 40 620 120 760 120 L1160 120"
+        stroke="#2563eb"
+        strokeWidth="3"
+        strokeLinecap="round"
+        opacity="0.55"
+      />
+
+      <circle cx="40" cy="120" r="14" stroke="#2563eb" strokeWidth="3" />
+      <rect x="25" y="104" width="30" height="32" rx="8" stroke="#2563eb" strokeWidth="3" />
+      <line x1="35" y1="112" x2="35" y2="122" stroke="#2563eb" strokeWidth="3" />
+      <line x1="45" y1="112" x2="45" y2="122" stroke="#2563eb" strokeWidth="3" />
+
+      <circle cx="280" cy="40" r="7" fill="#2563eb" />
+      <circle cx="520" cy="40" r="7" fill="#2563eb" />
+      <circle cx="760" cy="120" r="7" fill="#2563eb" />
+      <circle cx="1160" cy="120" r="7" fill="#2563eb" />
+    </svg>
+
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(4, 1fr)",
+        gap: "34px",
+        marginTop: "20px",
+      }}
+    >
+      {[
+        [
+          "Diagnostics",
+          "Charger behavior, interruptions, and field observations reviewed with structure.",
+        ],
+        [
+          "Validation",
+          "Returned units, issue isolation, functional checks, and redeployment readiness.",
+        ],
+        [
+          "Reliability",
+          "Operational continuity, uptime awareness, and site-level support visibility.",
+        ],
+        [
+          "Infrastructure",
+          "Cable flow, placement, usability, and support coordination for real sites.",
+        ],
+      ].map(([title, text]) => (
+        <div key={title}>
+          <h3
             style={{
-              width: "40px",
-              height: "2px",
-              background: "#cbd5e1",
+              fontSize: "24px",
+              lineHeight: "1.15",
+              marginBottom: "14px",
+              color: "#0f172a",
             }}
-          />
-        )}
-      </div>
-    ))}
+          >
+            {title}
+          </h3>
+
+          <p
+            style={{
+              color: "#475569",
+              lineHeight: "1.75",
+              fontSize: "16px",
+              margin: 0,
+            }}
+          >
+            {text}
+          </p>
+        </div>
+      ))}
+    </div>
   </div>
 </section>
      <section style={{ background: "#0f172a", color: "white", padding: "90px 28px" }}>
