@@ -69,8 +69,8 @@ export default function Home() {
            linear-gradient(
            135deg,
            rgba(2,6,23,0.94) 0%,
-           rgba(15,23,42,0.82) 35%,
-           rgba(15,23,42,0.38) 70%,
+           rgba(15,23,42,0.68) 35%,
+           rgba(15,23,42,0.24) 70%,
            rgba(15,23,42,0.12) 100%
            ),
 url(${heroImage})
@@ -83,7 +83,7 @@ url(${heroImage})
               EV Charging Diagnostics & Infrastructure Support
             </p>
 
-            <h1 style={{ fontSize: "clamp(38px, 6vw, 58px)", lineHeight: "1.02", margin: "0 0 28px", fontWeight: "900" }}>
+            <h1 style={{ fontSize: "clamp(38px, 6vw, 58px)", lineHeight: "1.02", margin: "0 0 22px", fontWeight: "900" }}>
               Practical EV Charging Support
             </h1>
 
@@ -98,14 +98,14 @@ url(${heroImage})
                   "linear-gradient(135deg,#2563eb 0%,#3b82f6 100%)",
                    boxShadow:
                    "0 14px 34px rgba(37,99,235,0.35)",
-                color: "white", padding: "16px 26px",
+                color: "white", padding: "14px 22px",
                 borderRadius: "13px", textDecoration: "none", 
                 transition: "all 0.25s ease",
                 fontWeight: "800"
               }}>Open Client Portal</a>
 
               <a href="#services" style={{
-                color: "white", padding: "16px 26px", borderRadius: "13px",
+                color: "white", padding: "14px 22px", borderRadius: "13px",
                 border: "1px solid rgba(255,255,255,0.35)",
                 background: "rgba(255,255,255,0.06)",
                 border: "1px solid rgba(255,255,255,0.08)",
