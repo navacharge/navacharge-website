@@ -52,10 +52,6 @@ export default function ServicesPage() {
       "Cable Management",
       "Cleaner charging layouts with practical cable routing and wall-arm concepts.",
     ],
-    [
-      "Client Support Portal",
-      "Structured support requests, uploads, ticket visibility, and diagnostics communication.",
-    ],
   ].map(([title, text]) => (
     <div
       key={title}
