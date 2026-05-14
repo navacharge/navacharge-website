@@ -174,11 +174,36 @@ url(${heroImage})
             "Client Portal Access"
            ].map((item) => (
             <div key={item} style={{
-              background: "white", padding: "24px", borderRadius: "20px",
+              background: "white", padding: "34px 28px", borderRadius: "20px",
               boxShadow: "0 12px 34px rgba(15,23,42,0.08)", fontWeight: "800",
-              textAlign: "center"
+              textAlign: "left"
             }}>
+              <div style={{
+                  width: "54px",
+                  height: "54px",
+                  borderRadius: "14px",
+                  marginBottom: "22px",
+                  background: "linear-gradient(135deg,#eff6ff 0%,#dbeafe 100%)",
+                  border: "1px solid #bfdbfe",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: "22px",
+                  color: "#2563eb",
+                  fontWeight: "700"
+                   }}>
+                  ⬡
+                </div>
               {item}
+               <p style={{
+                  marginTop: "14px",
+                  color: "#64748b",
+                  lineHeight: "1.7",
+                  fontSize: "14px",
+                  fontWeight: "500"
+                   }}>
+                        Structured infrastructure support and operational visibility workflows.
+                  </p>
             </div>
           ))}
         </div>
