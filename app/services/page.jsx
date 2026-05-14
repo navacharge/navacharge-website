@@ -98,18 +98,6 @@ export default function ServicesPage() {
           ].map(([title, text]) => (
             <div
   key={title}
-  onMouseEnter={(e) => {
-    e.currentTarget.style.transform = "translateY(-6px)";
-    e.currentTarget.style.background = "#eef4ff";
-    e.currentTarget.style.boxShadow =
-      "0 26px 60px rgba(37,99,235,0.14)";
-  }}
-  onMouseLeave={(e) => {
-    e.currentTarget.style.transform = "translateY(0px)";
-    e.currentTarget.style.background = "white";
-    e.currentTarget.style.boxShadow =
-      "0 18px 44px rgba(15,23,42,0.06)";
-  }}
   style={{
     background: "white",
     padding: "30px",
