@@ -60,7 +60,7 @@ export default function Home() {
         </div>
       </nav>
 
-      <section style={{ maxWidth: "1220px", margin: "0 auto", padding: "58px 28px 70px" }}>
+      <section style={{ maxWidth: "1120px", margin: "0 auto", padding: "88px 28px 96px" }}>
         <div style={{
           minHeight: "640px", borderRadius: "34px", overflow: "hidden",
             boxShadow: "0 40px 120px rgba(15,23,42,0.28)",
