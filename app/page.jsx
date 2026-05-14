@@ -117,35 +117,7 @@ url(${heroImage})
          >
          Reliability Workflow
         </p>
-
-       <div
-         style={{
-         display: "grid",
-         gap: "12px",
-        }}
-       >
-        {[
-          "Support Request Received",
-          "Site Review In Progress",
-          "Diagnostics Notes Added",
-          "Customer Follow-up Pending",
-          ].map((item) => (
-      <div
-        key={item}
-        style={{
-          background: "rgba(255,255,255,0.06)",
-          padding: "14px",
-          borderRadius: "14px",
-          color: "#dbeafe",
-          fontSize: "13px",
-        }}
-      >
-        {item}
-       </div>
-        ))}
-        </div>
-      </div>
-            <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
+      <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
               <a href="/login" style={{
                 background:
                   "linear-gradient(135deg,#2563eb 0%,#3b82f6 100%)",
