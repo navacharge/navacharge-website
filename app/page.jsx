@@ -290,7 +290,7 @@ url(${heroImage})
     }
 
  .infra {
-  top: 960px;
+  top: 1000px;
   left: 135px;
 }
 
