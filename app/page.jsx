@@ -176,7 +176,7 @@ url(${heroImage})
     .focus-wrap {
       position: relative;
       max-width: 1180px;
-      height: 920px;
+      height: 900px;
       margin: 0 auto;
     }
 
@@ -186,7 +186,7 @@ url(${heroImage})
       font-weight: 800;
       letter-spacing: 6px;
       color: #2f6f8f;
-      margin-bottom: 30px;
+      margin: 0;
     }
 
     .plug {
@@ -199,11 +199,11 @@ url(${heroImage})
       border: 4px solid #2f6f8f;
       border-radius: 14px;
       background: #f6f3ec;
-      z-index: 5;
+      z-index: 3;
     }
 
-    .plug:before,
-    .plug:after {
+    .plug::before,
+    .plug::after {
       content: "";
       position: absolute;
       top: -32px;
@@ -212,12 +212,12 @@ url(${heroImage})
       background: #2f6f8f;
     }
 
-    .plug:before { left: 13px; }
-    .plug:after { right: 13px; }
+    .plug::before { left: 13px; }
+    .plug::after { right: 13px; }
 
     .focus-headline {
       position: absolute;
-      top: 180px;
+      top: 185px;
       left: 50%;
       transform: translateX(-50%);
       width: 100%;
@@ -237,20 +237,16 @@ url(${heroImage})
       pointer-events: none;
     }
 
-    .focus-card {
+    .focus-item {
       position: absolute;
+      z-index: 3;
       width: 360px;
-      min-height: 190px;
-      padding: 28px 32px;
-      background: rgba(255,255,255,0.62);
-      border-radius: 28px;
-      box-shadow: 0 18px 40px rgba(15,23,42,0.08);
-      z-index: 2;
+      background: transparent;
     }
 
-    .focus-card h3 {
-      margin: 0 0 20px;
-      font-size: 28px;
+    .focus-item h3 {
+      margin: 0 0 22px;
+      font-size: 30px;
       font-weight: 800;
       color: #0f172a;
       display: flex;
@@ -258,7 +254,7 @@ url(${heroImage})
       gap: 12px;
     }
 
-    .focus-card h3:before {
+    .focus-item h3::before {
       content: "";
       width: 13px;
       height: 13px;
@@ -267,40 +263,40 @@ url(${heroImage})
       flex-shrink: 0;
     }
 
-    .focus-card p {
+    .focus-item p {
       margin: 0;
-      font-size: 16px;
-      line-height: 1.65;
+      font-size: 17px;
+      line-height: 1.7;
       color: #334155;
     }
 
-    .focus-card a {
+    .focus-item a {
       display: inline-block;
-      margin-top: 18px;
-      font-size: 18px;
+      margin-top: 24px;
+      font-size: 20px;
       font-weight: 800;
       color: #2f6f8f;
       text-decoration: none;
     }
 
     .diagnostic {
-      top: 315px;
-      left: 55px;
+      top: 330px;
+      left: 95px;
     }
 
     .rma {
-      top: 330px;
-      right: 70px;
+      top: 345px;
+      right: 120px;
     }
 
     .site {
-      top: 635px;
-      left: 70px;
+      top: 650px;
+      left: 105px;
     }
 
     .infra {
-      top: 650px;
-      right: 95px;
+      top: 665px;
+      right: 135px;
     }
 
     @media (max-width: 900px) {
@@ -317,65 +313,65 @@ url(${heroImage})
         position: static;
         transform: none;
         font-size: 30px;
-        margin: 30px 0;
+        margin: 40px 0;
       }
 
-      .focus-card {
+      .focus-item {
         position: static;
         width: 100%;
         max-width: 520px;
-        margin: 24px auto;
+        margin: 0 auto 42px;
       }
     }
   `}</style>
 
   <div className="focus-wrap">
-    <div className="focus-title">OUR FOCUS</div>
+    <h2 className="focus-title">OUR FOCUS</h2>
 
     <div className="plug" />
 
     <svg
       className="focus-path"
-      viewBox="0 0 1180 920"
+      viewBox="0 0 1180 900"
       preserveAspectRatio="none"
       fill="none"
     >
       <path
         d="
           M590 120
-          V155
-          H1000
-          C1085 155 1130 195 1130 260
-          C1130 325 1085 360 1000 360
+          V150
+          H1010
+          C1085 150 1135 190 1135 260
+          C1135 330 1085 365 1010 365
 
           H120
-          C65 360 35 395 35 455
-          V515
-          C35 590 75 625 145 625
+          C55 365 30 400 30 465
+          V540
+          C30 610 70 640 140 640
 
-          H400
-          C485 625 525 585 565 510
-          L625 405
-          C650 370 695 345 760 345
+          H395
+          C480 640 520 600 560 525
+          L620 420
+          C650 370 700 340 775 340
 
-          H1000
-          C1085 345 1130 390 1130 465
-          V585
-          C1130 665 1085 705 1000 705
+          H1010
+          C1085 340 1135 385 1135 465
+          V570
+          C1135 660 1085 700 1000 700
 
           H120
-          C65 705 35 740 35 805
-          V830
-          C35 890 75 910 145 910
+          C55 700 30 735 30 805
+          V825
+          C30 880 70 905 140 905
 
-          H400
-          C485 910 525 875 565 800
-          L625 695
-          C650 655 695 630 760 630
+          H395
+          C480 905 520 870 560 795
+          L620 690
+          C650 645 700 620 775 620
 
-          H955
-          C1030 630 1075 675 1075 750
-          V900
+          H950
+          C1030 620 1075 665 1075 745
+          V885
         "
         stroke="#2f6f8f"
         strokeWidth="6"
@@ -384,11 +380,11 @@ url(${heroImage})
       />
     </svg>
 
-    <h2 className="focus-headline">
+    <div className="focus-headline">
       EV charging reliability, made visible
-    </h2>
+    </div>
 
-    <div className="focus-card diagnostic">
+    <div className="focus-item diagnostic">
       <h3>Diagnostic</h3>
       <p>
         Charger behavior, interruptions,
@@ -400,7 +396,7 @@ url(${heroImage})
       <a href="#diagnostic">Explore →</a>
     </div>
 
-    <div className="focus-card rma">
+    <div className="focus-item rma">
       <h3>RMA validation</h3>
       <p>
         Returned units, issue isolation,
@@ -412,7 +408,7 @@ url(${heroImage})
       <a href="#rma">View →</a>
     </div>
 
-    <div className="focus-card site">
+    <div className="focus-item site">
       <h3>Site reliability</h3>
       <p>
         Operational continuity, uptime
@@ -424,7 +420,7 @@ url(${heroImage})
       <a href="#site">Improve →</a>
     </div>
 
-    <div className="focus-card infra">
+    <div className="focus-item infra">
       <h3>Infrastructure</h3>
       <p>
         Cable flow, placement, usability,
