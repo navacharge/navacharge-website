@@ -199,20 +199,22 @@ url(${heroImage})
   border: 5px solid #071b33;
   border-radius: 0 0 22px 22px;
   background: #f6f3ec;
-  overflow: hidden;
+  overflow: visible;
   z-index: 3;
 }
 
     .plug::before,
-    .plug::after {
-      content: "";
-      position: absolute;
-      top: -38px;
-      width: 5px;
-      height: 38px;
-      background: #071b33;
-      border-radius: 5px;
-    }
+    .plug::before {
+  content: "";
+  position: absolute;
+  top: -38px;
+  left: 14px;
+  width: 5px;
+  height: 38px;
+  background: #071b33;
+  border-radius: 5px;
+  box-shadow: 20px 0 0 #071b33;
+}
 
     .plug::before { left: 14px; }
     .plug::after { right: 14px; }
@@ -345,7 +347,7 @@ url(${heroImage})
    <svg className="cable" viewBox="0 0 980 1500" fill="none">
   <path
     d="
-      M490 128
+      M490 150
       V205
 
       C490 235 515 250 550 250
