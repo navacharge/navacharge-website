@@ -189,9 +189,25 @@ url(${heroImage})
       margin: 0;
     }
 
+    .focus-headline {
+      position: absolute;
+      top: 170px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: max-content;
+      max-width: 90%;
+      text-align: center;
+      font-size: 36px;
+      font-weight: 800;
+      color: #0f172a;
+      z-index: 4;
+      background: #f6f3ec;
+      padding: 0 24px;
+    }
+
     .plug {
       position: absolute;
-      top: 70px;
+      top: 68px;
       left: 50%;
       width: 52px;
       height: 50px;
@@ -224,28 +240,16 @@ url(${heroImage})
       pointer-events: none;
     }
 
-    .focus-headline {
-      position: absolute;
-      top: 185px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      text-align: center;
-      font-size: 36px;
-      font-weight: 800;
-      color: #0f172a;
-      z-index: 3;
-    }
-
     .focus-item {
       position: absolute;
-      z-index: 3;
+      z-index: 4;
       width: 360px;
-      background: transparent;
+      background: #f6f3ec;
+      padding: 8px 14px 12px;
     }
 
     .focus-item h3 {
-      margin: 0 0 22px;
+      margin: 0 0 20px;
       font-size: 30px;
       font-weight: 800;
       color: #0f172a;
@@ -272,7 +276,7 @@ url(${heroImage})
 
     .focus-item a {
       display: inline-block;
-      margin-top: 24px;
+      margin-top: 22px;
       font-size: 20px;
       font-weight: 800;
       color: #2f6f8f;
@@ -280,23 +284,23 @@ url(${heroImage})
     }
 
     .diagnostic {
-      top: 370px;
-      left: 110px;
+      top: 355px;
+      left: 105px;
     }
 
     .rma {
-      top: 390px;
-      right: 125px;
+      top: 375px;
+      right: 115px;
     }
 
     .site {
-      top: 690px;
-      left: 115px;
+      top: 670px;
+      left: 105px;
     }
 
     .infra {
-      top: 705px;
-      right: 135px;
+      top: 690px;
+      right: 125px;
     }
 
     @media (max-width: 900px) {
@@ -312,6 +316,8 @@ url(${heroImage})
       .focus-headline {
         position: static;
         transform: none;
+        width: auto;
+        max-width: none;
         font-size: 30px;
         margin: 40px 0;
       }
@@ -338,39 +344,39 @@ url(${heroImage})
     >
       <path
         d="
-          M590 120
-          V155
-          H1005
-          C1095 155 1135 200 1135 270
-          C1135 340 1095 375 1005 375
+          M590 118
+          V150
+          H1000
+          C1090 150 1135 195 1135 270
+          C1135 340 1090 375 1000 375
 
           H120
-          C60 375 35 410 35 475
+          C60 375 35 410 35 480
           V555
           C35 625 75 660 145 660
 
           H390
           C475 660 520 625 565 545
           L635 425
-          C665 375 710 355 785 355
+          C665 375 710 350 785 350
 
           H1000
-          C1085 355 1125 400 1125 485
-          V575
-          C1125 660 1085 700 1000 700
+          C1090 350 1135 395 1135 480
+          V585
+          C1135 665 1090 705 1000 705
 
           H120
-          C60 700 35 735 35 805
+          C60 705 35 740 35 810
           V855
-          C35 915 75 945 145 945
+          C35 920 75 945 145 945
 
           H390
           C475 945 520 910 565 830
           L635 710
-          C665 660 710 640 785 640
+          C665 660 710 635 785 635
 
           H950
-          C1035 640 1075 685 1075 765
+          C1035 635 1075 680 1075 765
           V940
         "
         stroke="#2f6f8f"
