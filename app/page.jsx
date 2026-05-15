@@ -169,14 +169,14 @@ url(${heroImage})
   <style>{`
     .focus-section {
       background: #f6f3ec;
-      padding: 70px 20px 120px;
+      padding: 90px 20px 140px;
       overflow: hidden;
     }
 
     .focus-wrap {
       position: relative;
       max-width: 1180px;
-      height: 900px;
+      height: 920px;
       margin: 0 auto;
     }
 
@@ -280,22 +280,22 @@ url(${heroImage})
     }
 
     .diagnostic {
-      top: 330px;
-      left: 95px;
+      top: 360px;
+      left: 105px;
     }
 
     .rma {
-      top: 345px;
+      top: 385px;
       right: 120px;
     }
 
     .site {
-      top: 650px;
-      left: 105px;
+      top: 675px;
+      left: 115px;
     }
 
     .infra {
-      top: 665px;
+      top: 700px;
       right: 135px;
     }
 
@@ -332,46 +332,46 @@ url(${heroImage})
 
     <svg
       className="focus-path"
-      viewBox="0 0 1180 900"
+      viewBox="0 0 1180 920"
       preserveAspectRatio="none"
       fill="none"
     >
       <path
         d="
           M590 120
-          V150
+          V155
           H1010
-          C1085 150 1135 190 1135 260
-          C1135 330 1085 365 1010 365
+          C1085 155 1135 195 1135 265
+          C1135 335 1085 375 1010 375
 
           H120
-          C55 365 30 400 30 465
-          V540
-          C30 610 70 640 140 640
+          C60 375 35 415 35 485
+          V565
+          C35 635 75 670 145 670
 
-          H395
-          C480 640 520 600 560 525
-          L620 420
-          C650 370 700 340 775 340
+          H405
+          C485 670 530 630 570 555
+          L640 425
+          C665 380 710 355 785 355
 
           H1010
-          C1085 340 1135 385 1135 465
-          V570
-          C1135 660 1085 700 1000 700
+          C1085 355 1135 400 1135 480
+          V610
+          C1135 690 1085 730 1000 730
 
           H120
-          C55 700 30 735 30 805
-          V825
-          C30 880 70 905 140 905
+          C60 730 35 770 35 840
+          V865
+          C35 920 75 945 145 945
 
-          H395
-          C480 905 520 870 560 795
-          L620 690
-          C650 645 700 620 775 620
+          H405
+          C485 945 530 910 570 835
+          L640 705
+          C665 660 710 635 785 635
 
           H950
-          C1030 620 1075 665 1075 745
-          V885
+          C1030 635 1075 680 1075 760
+          V900
         "
         stroke="#2f6f8f"
         strokeWidth="6"
