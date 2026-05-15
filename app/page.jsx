@@ -168,104 +168,163 @@ url(${heroImage})
    <section className="focus-section">
   <style>{`
     .focus-section {
-      width: 100%;
       background: #f6f3ec;
-      padding: 80px 24px 140px;
+      padding: 70px 20px 120px;
       overflow: hidden;
     }
 
     .focus-wrap {
+      position: relative;
       max-width: 1180px;
+      height: 920px;
       margin: 0 auto;
     }
 
     .focus-title {
       text-align: center;
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 800;
       letter-spacing: 6px;
       color: #2f6f8f;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
+
+    .plug {
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      width: 52px;
+      height: 50px;
+      transform: translateX(-50%);
+      border: 4px solid #2f6f8f;
+      border-radius: 14px;
+      background: #f6f3ec;
+      z-index: 5;
+    }
+
+    .plug:before,
+    .plug:after {
+      content: "";
+      position: absolute;
+      top: -32px;
+      width: 4px;
+      height: 30px;
+      background: #2f6f8f;
+    }
+
+    .plug:before { left: 13px; }
+    .plug:after { right: 13px; }
 
     .focus-headline {
+      position: absolute;
+      top: 180px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
       text-align: center;
-      font-size: 42px;
+      font-size: 36px;
       font-weight: 800;
       color: #0f172a;
-      margin: 0 0 70px;
+      z-index: 3;
     }
 
-    .focus-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 32px;
+    .focus-path {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
     }
 
     .focus-card {
-      background: rgba(255, 255, 255, 0.72);
+      position: absolute;
+      width: 360px;
+      min-height: 190px;
+      padding: 28px 32px;
+      background: rgba(255,255,255,0.62);
       border-radius: 28px;
-      padding: 34px 38px;
-      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
-      backdrop-filter: blur(4px);
+      box-shadow: 0 18px 40px rgba(15,23,42,0.08);
+      z-index: 2;
     }
 
     .focus-card h3 {
-      margin: 0 0 22px;
-      font-size: 30px;
-      line-height: 1.1;
+      margin: 0 0 20px;
+      font-size: 28px;
       font-weight: 800;
       color: #0f172a;
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
     }
 
-    .focus-card h3::before {
+    .focus-card h3:before {
       content: "";
       width: 13px;
       height: 13px;
-      border-radius: 50%;
       background: #2f6f8f;
-      flex: 0 0 auto;
+      border-radius: 50%;
+      flex-shrink: 0;
     }
 
     .focus-card p {
       margin: 0;
-      font-size: 17px;
-      line-height: 1.75;
+      font-size: 16px;
+      line-height: 1.65;
       color: #334155;
     }
 
     .focus-card a {
       display: inline-block;
-      margin-top: 22px;
-      font-size: 19px;
+      margin-top: 18px;
+      font-size: 18px;
       font-weight: 800;
       color: #2f6f8f;
       text-decoration: none;
     }
 
-    @media (max-width: 760px) {
-      .focus-section {
-        padding: 60px 18px 90px;
+    .diagnostic {
+      top: 315px;
+      left: 55px;
+    }
+
+    .rma {
+      top: 330px;
+      right: 70px;
+    }
+
+    .site {
+      top: 635px;
+      left: 70px;
+    }
+
+    .infra {
+      top: 650px;
+      right: 95px;
+    }
+
+    @media (max-width: 900px) {
+      .focus-wrap {
+        height: auto;
+      }
+
+      .focus-path,
+      .plug {
+        display: none;
       }
 
       .focus-headline {
+        position: static;
+        transform: none;
         font-size: 30px;
-        margin-bottom: 40px;
-      }
-
-      .focus-grid {
-        grid-template-columns: 1fr;
+        margin: 30px 0;
       }
 
       .focus-card {
-        padding: 28px 24px;
-      }
-
-      .focus-card h3 {
-        font-size: 26px;
+        position: static;
+        width: 100%;
+        max-width: 520px;
+        margin: 24px auto;
       }
     }
   `}</style>
@@ -273,58 +332,108 @@ url(${heroImage})
   <div className="focus-wrap">
     <div className="focus-title">OUR FOCUS</div>
 
+    <div className="plug" />
+
+    <svg
+      className="focus-path"
+      viewBox="0 0 1180 920"
+      preserveAspectRatio="none"
+      fill="none"
+    >
+      <path
+        d="
+          M590 120
+          V155
+          H1000
+          C1085 155 1130 195 1130 260
+          C1130 325 1085 360 1000 360
+
+          H120
+          C65 360 35 395 35 455
+          V515
+          C35 590 75 625 145 625
+
+          H400
+          C485 625 525 585 565 510
+          L625 405
+          C650 370 695 345 760 345
+
+          H1000
+          C1085 345 1130 390 1130 465
+          V585
+          C1130 665 1085 705 1000 705
+
+          H120
+          C65 705 35 740 35 805
+          V830
+          C35 890 75 910 145 910
+
+          H400
+          C485 910 525 875 565 800
+          L625 695
+          C650 655 695 630 760 630
+
+          H955
+          C1030 630 1075 675 1075 750
+          V900
+        "
+        stroke="#2f6f8f"
+        strokeWidth="6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+
     <h2 className="focus-headline">
       EV charging reliability, made visible
     </h2>
 
-    <div className="focus-grid">
-      <div className="focus-card">
-        <h3>Diagnostic</h3>
-        <p>
-          Charger behavior, interruptions,
-          <br />
-          and field observations reviewed
-          <br />
-          with structure.
-        </p>
-        <a href="#diagnostic">Explore diagnostics →</a>
-      </div>
+    <div className="focus-card diagnostic">
+      <h3>Diagnostic</h3>
+      <p>
+        Charger behavior, interruptions,
+        <br />
+        and field observations reviewed
+        <br />
+        with structure.
+      </p>
+      <a href="#diagnostic">Explore →</a>
+    </div>
 
-      <div className="focus-card">
-        <h3>RMA validation</h3>
-        <p>
-          Returned units, issue isolation,
-          <br />
-          functional checks, and
-          <br />
-          redeployment readiness.
-        </p>
-        <a href="#rma">View validation →</a>
-      </div>
+    <div className="focus-card rma">
+      <h3>RMA validation</h3>
+      <p>
+        Returned units, issue isolation,
+        <br />
+        functional checks, and
+        <br />
+        redeployment readiness.
+      </p>
+      <a href="#rma">View →</a>
+    </div>
 
-      <div className="focus-card">
-        <h3>Site reliability</h3>
-        <p>
-          Operational continuity, uptime
-          <br />
-          awareness, and site-level
-          <br />
-          support visibility.
-        </p>
-        <a href="#site">Improve uptime →</a>
-      </div>
+    <div className="focus-card site">
+      <h3>Site reliability</h3>
+      <p>
+        Operational continuity, uptime
+        <br />
+        awareness, and site-level
+        <br />
+        support visibility.
+      </p>
+      <a href="#site">Improve →</a>
+    </div>
 
-      <div className="focus-card">
-        <h3>Infrastructure</h3>
-        <p>
-          Cable flow, placement, usability,
-          <br />
-          and coordination for real
-          <br />
-          charging sites.
-        </p>
-        <a href="#infra">View service →</a>
-      </div>
+    <div className="focus-card infra">
+      <h3>Infrastructure</h3>
+      <p>
+        Cable flow, placement, usability,
+        <br />
+        and coordination for real
+        <br />
+        charging sites.
+      </p>
+      <a href="#infra">View service →</a>
     </div>
   </div>
 </section>
