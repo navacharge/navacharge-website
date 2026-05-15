@@ -289,8 +289,8 @@ url(${heroImage})
       left: 135px;
     }
 
-    .infra {
-  top: 1115px;
+ .infra {
+  top: 1060px;
   left: 135px;
 }
 
