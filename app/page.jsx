@@ -190,17 +190,18 @@ url(${heroImage})
     }
 
     .plug {
-      position: absolute;
-      top: 70px;
-      left: 50%;
-      width: 58px;
-      height: 58px;
-      transform: translateX(-50%);
-      border: 5px solid #071b33;
-      border-radius: 0 0 22px 22px;
-      background: inherit;
-      z-index: 3;
-    }
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  width: 58px;
+  height: 58px;
+  transform: translateX(-50%);
+  border: 5px solid #071b33;
+  border-radius: 0 0 22px 22px;
+  background: #f6f3ec;
+  overflow: hidden;
+  z-index: 3;
+}
 
     .plug::before,
     .plug::after {
