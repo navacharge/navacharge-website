@@ -165,73 +165,63 @@ url(${heroImage})
   </div>
 </div>
 </section>
- <section className="focus-section">
+ <section className="focus-flow">
   <style>{`
-    .focus-section {
-      background: #f6f3ec;
-      padding: 70px 20px 130px;
+    .focus-flow {
+      background: #fbfaf7;
+      padding: 80px 20px 120px;
       overflow: hidden;
     }
 
     .focus-wrap {
       position: relative;
-      max-width: 1180px;
-      height: 980px;
+      max-width: 980px;
+      height: 1280px;
       margin: 0 auto;
     }
 
     .focus-title {
       text-align: center;
-      font-size: 24px;
+      letter-spacing: 10px;
+      font-size: 28px;
       font-weight: 800;
-      letter-spacing: 6px;
-      color: #2f6f8f;
-      margin: 0;
-    }
-
-    .focus-headline {
-      position: absolute;
-      top: 170px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: max-content;
-      max-width: 90%;
-      text-align: center;
-      font-size: 36px;
-      font-weight: 800;
-      color: #0f172a;
-      z-index: 4;
-      background: #f6f3ec;
-      padding: 0 24px;
+      color: #071b33;
+      margin: 0 0 28px;
     }
 
     .plug {
       position: absolute;
-      top: 68px;
+      top: 70px;
       left: 50%;
-      width: 52px;
-      height: 50px;
+      width: 58px;
+      height: 58px;
       transform: translateX(-50%);
-      border: 4px solid #2f6f8f;
-      border-radius: 14px;
-      background: #f6f3ec;
-      z-index: 4;
+      border: 5px solid #071b33;
+      border-radius: 0 0 22px 22px;
+      background: #fbfaf7;
+      z-index: 3;
     }
 
     .plug::before,
     .plug::after {
       content: "";
       position: absolute;
-      top: -32px;
-      width: 4px;
-      height: 30px;
-      background: #2f6f8f;
+      top: -38px;
+      width: 5px;
+      height: 38px;
+      background: #071b33;
+      border-radius: 5px;
     }
 
-    .plug::before { left: 13px; }
-    .plug::after { right: 13px; }
+    .plug::before {
+      left: 14px;
+    }
 
-    .focus-path {
+    .plug::after {
+      right: 14px;
+    }
+
+    .cable {
       position: absolute;
       inset: 0;
       width: 100%;
@@ -242,65 +232,100 @@ url(${heroImage})
 
     .focus-item {
       position: absolute;
-      z-index: 4;
-      width: 360px;
-      background: #f6f3ec;
-      padding: 8px 14px 12px;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 90px 1fr 1px 180px;
+      align-items: center;
+      gap: 34px;
+      width: 760px;
+      min-height: 150px;
+      color: #071b33;
+    }
+
+    .focus-item svg {
+      width: 58px;
+      height: 58px;
+      stroke: #071b33;
+      stroke-width: 4;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
 
     .focus-item h3 {
-      margin: 0 0 20px;
+      margin: 0 0 16px;
       font-size: 30px;
       font-weight: 800;
-      color: #0f172a;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .focus-item h3::before {
-      content: "";
-      width: 13px;
-      height: 13px;
-      background: #2f6f8f;
-      border-radius: 50%;
-      flex-shrink: 0;
     }
 
     .focus-item p {
       margin: 0;
       font-size: 17px;
-      line-height: 1.7;
-      color: #334155;
+      line-height: 1.6;
+      color: #10243c;
     }
 
-    .focus-item a {
-      display: inline-block;
-      margin-top: 22px;
-      font-size: 20px;
+    .divider {
+      width: 1px;
+      height: 86px;
+      background: rgba(7, 27, 51, 0.25);
+    }
+
+    .focus-link {
+      font-size: 22px;
       font-weight: 800;
-      color: #2f6f8f;
+      color: #071b33;
       text-decoration: none;
+      white-space: nowrap;
     }
 
     .diagnostic {
-      top: 355px;
-      left: 105px;
+      top: 265px;
+      left: 135px;
     }
 
     .rma {
-      top: 375px;
-      right: 115px;
+      top: 495px;
+      left: 135px;
     }
 
     .site {
-      top: 670px;
-      left: 105px;
+      top: 725px;
+      left: 135px;
     }
 
     .infra {
-      top: 690px;
-      right: 125px;
+      top: 955px;
+      left: 135px;
+    }
+
+    .dot {
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #071b33;
+      z-index: 3;
+    }
+
+    .dot-1 {
+      top: 424px;
+      left: 90px;
+    }
+
+    .dot-2 {
+      top: 654px;
+      right: 150px;
+    }
+
+    .dot-3 {
+      top: 884px;
+      left: 90px;
+    }
+
+    .dot-4 {
+      right: 88px;
+      bottom: 24px;
     }
 
     @media (max-width: 900px) {
@@ -308,25 +333,34 @@ url(${heroImage})
         height: auto;
       }
 
-      .focus-path,
-      .plug {
+      .cable,
+      .dot {
         display: none;
       }
 
-      .focus-headline {
-        position: static;
-        transform: none;
-        width: auto;
-        max-width: none;
-        font-size: 30px;
-        margin: 40px 0;
+      .plug {
+        position: relative;
+        top: auto;
+        left: 50%;
+        margin-bottom: 60px;
       }
 
       .focus-item {
-        position: static;
+        position: relative;
+        top: auto;
+        left: auto;
         width: 100%;
-        max-width: 520px;
-        margin: 0 auto 42px;
+        grid-template-columns: 64px 1fr;
+        margin: 0 auto 56px;
+      }
+
+      .divider,
+      .focus-link {
+        grid-column: 2;
+      }
+
+      .divider {
+        display: none;
       }
     }
   `}</style>
@@ -336,106 +370,122 @@ url(${heroImage})
 
     <div className="plug" />
 
-    <svg
-      className="focus-path"
-      viewBox="0 0 1180 980"
-      preserveAspectRatio="xMidYMid meet"
-      fill="none"
-    >
+    <svg className="cable" viewBox="0 0 980 1280" fill="none">
       <path
         d="
-          M590 118
-          V150
-          H1000
-          C1090 150 1135 195 1135 270
-          C1135 340 1090 375 1000 375
-
-          H120
-          C60 375 35 410 35 480
-          V555
-          C35 625 75 660 145 660
-
-          H390
-          C475 660 520 625 565 545
-          L635 425
-          C665 375 710 350 785 350
-
-          H1000
-          C1090 350 1135 395 1135 480
-          V585
-          C1135 665 1090 705 1000 705
-
-          H120
-          C60 705 35 740 35 810
-          V855
-          C35 920 75 945 145 945
-
-          H390
-          C475 945 520 910 565 830
-          L635 710
-          C665 660 710 635 785 635
-
-          H950
-          C1035 635 1075 680 1075 765
-          V940
+          M490 128
+          V205
+          C490 230 510 245 540 245
+          H835
+          C900 245 940 285 940 350
+          V365
+          C940 430 900 470 835 470
+          H115
+          C65 470 35 500 35 550
+          V570
+          C35 620 65 650 115 650
+          H835
+          C900 650 940 690 940 755
+          V770
+          C940 835 900 875 835 875
+          H115
+          C65 875 35 905 35 955
+          V980
+          C35 1030 65 1060 115 1060
+          H835
+          C900 1060 940 1100 940 1165
+          V1245
         "
-        stroke="#2f6f8f"
-        strokeWidth="6"
+        stroke="#071b33"
+        strokeWidth="5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
     </svg>
 
-    <div className="focus-headline">
-      EV charging reliability, made visible
-    </div>
+    <span className="dot dot-1" />
+    <span className="dot dot-2" />
+    <span className="dot dot-3" />
+    <span className="dot dot-4" />
 
     <div className="focus-item diagnostic">
-      <h3>Diagnostic</h3>
-      <p>
-        Charger behavior, interruptions,
-        <br />
-        and field observations reviewed
-        <br />
-        with structure.
-      </p>
-      <a href="#diagnostic">Explore →</a>
+      <svg viewBox="0 0 64 64">
+        <circle cx="26" cy="26" r="20" />
+        <path d="M14 27h8l4-8 6 16 4-8h8" />
+        <path d="M42 42l14 14" />
+      </svg>
+
+      <div>
+        <h3>Diagnostic</h3>
+        <p>
+          Charger behavior, interruptions,<br />
+          and field observations reviewed<br />
+          with structure.
+        </p>
+      </div>
+
+      <span className="divider" />
+      <a className="focus-link" href="#diagnostic">Explore →</a>
     </div>
 
     <div className="focus-item rma">
-      <h3>RMA validation</h3>
-      <p>
-        Returned units, issue isolation,
-        <br />
-        functional checks, and
-        <br />
-        redeployment readiness.
-      </p>
-      <a href="#rma">View →</a>
+      <svg viewBox="0 0 64 64">
+        <rect x="16" y="14" width="32" height="42" rx="4" />
+        <path d="M24 14v-4h16v4" />
+        <path d="M24 36l6 6 12-14" />
+      </svg>
+
+      <div>
+        <h3>RMA validation</h3>
+        <p>
+          Returned units, issue isolation,<br />
+          functional checks, and<br />
+          redeployment readiness.
+        </p>
+      </div>
+
+      <span className="divider" />
+      <a className="focus-link" href="#rma">View →</a>
     </div>
 
     <div className="focus-item site">
-      <h3>Site reliability</h3>
-      <p>
-        Operational continuity, uptime
-        <br />
-        awareness, and site-level
-        <br />
-        support visibility.
-      </p>
-      <a href="#site">Improve →</a>
+      <svg viewBox="0 0 64 64">
+        <path d="M32 8l22 8v15c0 14-9 23-22 29C19 54 10 45 10 31V16l22-8z" />
+      </svg>
+
+      <div>
+        <h3>Site reliability</h3>
+        <p>
+          Operational continuity, uptime<br />
+          awareness, and site-level<br />
+          support visibility.
+        </p>
+      </div>
+
+      <span className="divider" />
+      <a className="focus-link" href="#site">Improve →</a>
     </div>
 
     <div className="focus-item infra">
-      <h3>Infrastructure</h3>
-      <p>
-        Cable flow, placement, usability,
-        <br />
-        and coordination for real
-        <br />
-        charging sites.
-      </p>
-      <a href="#infra">View service →</a>
+      <svg viewBox="0 0 64 64">
+        <rect x="14" y="10" width="26" height="44" rx="3" />
+        <path d="M20 22h14" />
+        <path d="M26 34h8l-7 14h8" />
+        <path d="M42 28h8v10c0 5 8 5 8 0V20" />
+        <path d="M54 20v-6" />
+      </svg>
+
+      <div>
+        <h3>Infrastructure</h3>
+        <p>
+          Cable flow, placement, usability,<br />
+          and coordination for real<br />
+          charging sites.
+        </p>
+      </div>
+
+      <span className="divider" />
+      <a className="focus-link" href="#infra">View service →</a>
     </div>
   </div>
 </section>
