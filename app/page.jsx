@@ -288,7 +288,7 @@ url(${heroImage})
     }
 
     .site {
-      top: 735px;
+      top: 770px;
       left: 135px;
     }
 
