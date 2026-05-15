@@ -196,9 +196,9 @@ url(${heroImage})
   width: 58px;
   height: 58px;
   transform: translateX(-50%);
-  border: 5px solid #071b33;
+  border: 5px solid #2f6f8f;
   border-radius: 0 0 22px 22px;
-  background: #f6f3ec;
+  background: #2f6f8f;
   overflow: visible;
   z-index: 3;
 }
@@ -213,7 +213,7 @@ url(${heroImage})
   height: 38px;
   background: #071b33;
   border-radius: 5px;
-  box-shadow: 20px 0 0 #071b33;
+  box-shadow: 20px 0 0 #2f6f8f;
 }
 
     .plug::before { left: 14px; }
