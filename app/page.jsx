@@ -275,7 +275,7 @@ url(${heroImage})
     }
 
     .diagnostic {
-      top: 265px;
+      top: 250px;
       left: 135px;
     }
 
