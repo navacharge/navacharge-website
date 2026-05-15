@@ -165,7 +165,7 @@ url(${heroImage})
   </div>
 </div>
 </section>
-   <section className="focus-section">
+  <section className="focus-section">
   <style>{`
     .focus-section {
       background: #f6f3ec;
