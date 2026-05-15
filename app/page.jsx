@@ -173,12 +173,12 @@ url(${heroImage})
       overflow: hidden;
     }
 
-    .focus-wrap {
-      position: relative;
-      max-width: 980px;
-      height: 1420px;
-      margin: 0 auto;
-    }
+   .focus-wrap {
+  position: relative;
+  max-width: 980px;
+  height: 1500px;
+  margin: 0 auto;
+}
 
     .focus-title {
       text-align: center;
@@ -290,9 +290,9 @@ url(${heroImage})
     }
 
     .infra {
-      top: 1045px;
-      left: 135px;
-    }
+  top: 1115px;
+  left: 135px;
+}
 
     @media (max-width: 900px) {
       .focus-wrap {
@@ -335,48 +335,48 @@ url(${heroImage})
 
     <div className="plug" />
 
-    <svg className="cable" viewBox="0 0 980 1420" fill="none">
-      <path
-        d="
-          M490 128
-          V205
+   <svg className="cable" viewBox="0 0 980 1500" fill="none">
+  <path
+    d="
+      M490 128
+      V205
 
-          C490 235 515 250 550 250
-          H835
+      C490 235 515 250 550 250
+      H835
 
-          C905 250 945 290 945 360
-          V385
+      C905 250 945 290 945 360
+      V385
 
-          C945 455 905 495 835 495
-          H120
+      C945 455 905 495 835 495
+      H120
 
-          C65 495 35 525 35 580
-          V605
+      C65 495 35 525 35 580
+      V605
 
-          C35 660 65 690 120 690
-          H835
+      C35 660 65 690 120 690
+      H835
 
-          C905 690 945 730 945 800
-          V825
+      C905 690 945 730 945 800
+      V825
 
-          C945 895 905 935 835 935
-          H120
+      C945 895 905 935 835 935
+      H120
 
-          C65 935 35 965 35 1020
-          V1045
+      C65 935 35 965 35 1025
+      V1110
 
-          C35 1100 65 1130 120 1130
-          H835
+      C35 1170 65 1200 120 1200
+      H835
 
-          C905 1130 945 1170 945 1240
-          V1330
-        "
-        stroke="#071b33"
-        strokeWidth="5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
+      C905 1200 945 1240 945 1310
+      V1410
+    "
+    stroke="#071b33"
+    strokeWidth="5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+</svg>
 
     <div className="focus-item diagnostic">
       <svg viewBox="0 0 64 64">
