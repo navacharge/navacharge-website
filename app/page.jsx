@@ -169,14 +169,14 @@ url(${heroImage})
   <style>{`
     .focus-section {
       background: #f6f3ec;
-      padding: 90px 20px 140px;
+      padding: 70px 20px 130px;
       overflow: hidden;
     }
 
     .focus-wrap {
       position: relative;
       max-width: 1180px;
-      height: 920px;
+      height: 980px;
       margin: 0 auto;
     }
 
@@ -199,7 +199,7 @@ url(${heroImage})
       border: 4px solid #2f6f8f;
       border-radius: 14px;
       background: #f6f3ec;
-      z-index: 3;
+      z-index: 4;
     }
 
     .plug::before,
@@ -215,6 +215,15 @@ url(${heroImage})
     .plug::before { left: 13px; }
     .plug::after { right: 13px; }
 
+    .focus-path {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
     .focus-headline {
       position: absolute;
       top: 185px;
@@ -226,15 +235,6 @@ url(${heroImage})
       font-weight: 800;
       color: #0f172a;
       z-index: 3;
-    }
-
-    .focus-path {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      pointer-events: none;
     }
 
     .focus-item {
@@ -280,22 +280,22 @@ url(${heroImage})
     }
 
     .diagnostic {
-      top: 360px;
-      left: 105px;
+      top: 370px;
+      left: 110px;
     }
 
     .rma {
-      top: 385px;
-      right: 120px;
+      top: 390px;
+      right: 125px;
     }
 
     .site {
-      top: 675px;
+      top: 690px;
       left: 115px;
     }
 
     .infra {
-      top: 700px;
+      top: 705px;
       right: 135px;
     }
 
@@ -332,46 +332,46 @@ url(${heroImage})
 
     <svg
       className="focus-path"
-      viewBox="0 0 1180 920"
-      preserveAspectRatio="none"
+      viewBox="0 0 1180 980"
+      preserveAspectRatio="xMidYMid meet"
       fill="none"
     >
       <path
         d="
           M590 120
           V155
-          H1010
-          C1085 155 1135 195 1135 265
-          C1135 335 1085 375 1010 375
+          H1005
+          C1095 155 1135 200 1135 270
+          C1135 340 1095 375 1005 375
 
           H120
-          C60 375 35 415 35 485
-          V565
-          C35 635 75 670 145 670
+          C60 375 35 410 35 475
+          V555
+          C35 625 75 660 145 660
 
-          H405
-          C485 670 530 630 570 555
-          L640 425
-          C665 380 710 355 785 355
+          H390
+          C475 660 520 625 565 545
+          L635 425
+          C665 375 710 355 785 355
 
-          H1010
-          C1085 355 1135 400 1135 480
-          V610
-          C1135 690 1085 730 1000 730
+          H1000
+          C1085 355 1125 400 1125 485
+          V575
+          C1125 660 1085 700 1000 700
 
           H120
-          C60 730 35 770 35 840
-          V865
-          C35 920 75 945 145 945
+          C60 700 35 735 35 805
+          V855
+          C35 915 75 945 145 945
 
-          H405
-          C485 945 530 910 570 835
-          L640 705
-          C665 660 710 635 785 635
+          H390
+          C475 945 520 910 565 830
+          L635 710
+          C665 660 710 640 785 640
 
           H950
-          C1030 635 1075 680 1075 760
-          V900
+          C1035 640 1075 685 1075 765
+          V940
         "
         stroke="#2f6f8f"
         strokeWidth="6"
