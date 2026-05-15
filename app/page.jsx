@@ -380,7 +380,7 @@ url(${heroImage})
       C905 1200 945 1240 945 1310
       V1410
     "
-    stroke="#071b33"
+    stroke="#2563eb"
     strokeWidth="5"
     strokeLinecap="round"
     strokeLinejoin="round"
