@@ -165,311 +165,328 @@ url(${heroImage})
   </div>
 </div>
 </section>
-   export default function OurFocus() {
-  return (
-    <section className="focus-section">
-      <style>{`
-        .focus-section {
-          width: 100%;
-          background: #f6f3ec;
-          padding: 80px 24px 140px;
-          overflow: hidden;
-        }
+   <section className="focus-section">
+  <style>{`
+    .focus-section {
+      width: 100%;
+      background: #f6f3ec;
+      padding: 80px 24px 140px;
+      overflow: hidden;
+    }
 
-        .focus-wrap {
-          position: relative;
-          max-width: 1180px;
-          height: 980px;
-          margin: 0 auto;
-        }
+    .focus-wrap {
+      position: relative;
+      max-width: 1180px;
+      height: 980px;
+      margin: 0 auto;
+    }
 
-        .focus-title {
-          text-align: center;
-          font-size: 22px;
-          font-weight: 800;
-          letter-spacing: 6px;
-          color: #2f6f8f;
-          margin-bottom: 28px;
-        }
+    .focus-title {
+      text-align: center;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 6px;
+      color: #2f6f8f;
+      margin-bottom: 28px;
+    }
 
-        .plug {
-          position: absolute;
-          top: 56px;
-          left: 50%;
-          width: 52px;
-          height: 50px;
-          transform: translateX(-50%);
-          border: 4px solid #2f6f8f;
-          border-radius: 14px;
-          background: #f6f3ec;
-          z-index: 4;
-        }
+    .plug {
+      position: absolute;
+      top: 56px;
+      left: 50%;
+      width: 52px;
+      height: 50px;
+      transform: translateX(-50%);
+      border: 4px solid #2f6f8f;
+      border-radius: 14px;
+      background: #f6f3ec;
+      z-index: 4;
+    }
 
-        .plug::before,
-        .plug::after {
-          content: "";
-          position: absolute;
-          top: -31px;
-          width: 4px;
-          height: 30px;
-          background: #2f6f8f;
-          border-radius: 4px;
-        }
+    .plug::before,
+    .plug::after {
+      content: "";
+      position: absolute;
+      top: -31px;
+      width: 4px;
+      height: 30px;
+      background: #2f6f8f;
+      border-radius: 4px;
+    }
 
-        .plug::before {
-          left: 13px;
-        }
+    .plug::before {
+      left: 13px;
+    }
 
-        .plug::after {
-          right: 13px;
-        }
+    .plug::after {
+      right: 13px;
+    }
 
-        .focus-headline {
-          position: absolute;
-          top: 170px;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 100%;
-          text-align: center;
-          font-size: 42px;
-          font-weight: 800;
-          color: #0f172a;
-          z-index: 3;
-        }
+    .focus-headline {
+      position: absolute;
+      top: 170px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      text-align: center;
+      font-size: 42px;
+      font-weight: 800;
+      color: #0f172a;
+      z-index: 3;
+    }
 
-        .focus-path {
-          position: absolute;
-          inset: 0;
-          width: 100%;
-          height: 100%;
-          z-index: 1;
-          pointer-events: none;
-        }
+    .focus-path {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
 
-        .focus-card {
-          position: absolute;
-          width: 390px;
-          min-height: 210px;
-          background: rgba(255, 255, 255, 0.72);
-          border-radius: 28px;
-          padding: 32px 36px;
-          box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
-          z-index: 2;
-        }
+    .focus-card {
+      position: absolute;
+      width: 390px;
+      min-height: 210px;
+      background: rgba(255, 255, 255, 0.72);
+      border-radius: 28px;
+      padding: 32px 36px;
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+      z-index: 2;
+      backdrop-filter: blur(4px);
+    }
 
-        .focus-card h3 {
-          margin: 0 0 22px;
-          font-size: 30px;
-          line-height: 1.1;
-          font-weight: 800;
-          color: #0f172a;
-          display: flex;
-          align-items: center;
-          gap: 14px;
-        }
+    .focus-card h3 {
+      margin: 0 0 22px;
+      font-size: 30px;
+      line-height: 1.1;
+      font-weight: 800;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
 
-        .focus-card h3::before {
-          content: "";
-          width: 13px;
-          height: 13px;
-          border-radius: 50%;
-          background: #2f6f8f;
-          flex: 0 0 auto;
-        }
+    .focus-card h3::before {
+      content: "";
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: #2f6f8f;
+      flex: 0 0 auto;
+    }
 
-        .focus-card p {
-          margin: 0;
-          font-size: 17px;
-          line-height: 1.75;
-          color: #334155;
-        }
+    .focus-card p {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.75;
+      color: #334155;
+    }
 
-        .focus-card a {
-          display: inline-block;
-          margin-top: 22px;
-          font-size: 19px;
-          font-weight: 800;
-          color: #2f6f8f;
-          text-decoration: none;
-        }
+    .focus-card a {
+      display: inline-block;
+      margin-top: 22px;
+      font-size: 19px;
+      font-weight: 800;
+      color: #2f6f8f;
+      text-decoration: none;
+    }
 
-        .diagnostic {
-          top: 310px;
-          left: 70px;
-        }
+    .diagnostic {
+      top: 310px;
+      left: 70px;
+    }
 
-        .rma {
-          top: 320px;
-          right: 80px;
-        }
+    .rma {
+      top: 320px;
+      right: 80px;
+    }
 
-        .site {
-          top: 640px;
-          left: 70px;
-        }
+    .site {
+      top: 640px;
+      left: 70px;
+    }
 
-        .infra {
-          top: 655px;
-          right: 80px;
-        }
+    .infra {
+      top: 655px;
+      right: 80px;
+    }
 
-        @media (max-width: 900px) {
-          .focus-wrap {
-            height: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-          }
+    @media (max-width: 900px) {
+      .focus-wrap {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
 
-          .focus-title {
-            margin-bottom: 90px;
-          }
+      .focus-title {
+        margin-bottom: 90px;
+      }
 
-          .plug {
-            top: 52px;
-          }
+      .plug {
+        top: 52px;
+      }
 
-          .focus-headline {
-            position: relative;
-            top: auto;
-            left: auto;
-            transform: none;
-            font-size: 32px;
-            margin-bottom: 30px;
-          }
+      .focus-headline {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        font-size: 32px;
+        margin-bottom: 30px;
+      }
 
-          .focus-path {
-            display: none;
-          }
+      .focus-path {
+        display: none;
+      }
 
-          .focus-card {
-            position: relative;
-            top: auto;
-            left: auto;
-            right: auto;
-            width: 100%;
-            max-width: 520px;
-            margin: 0 auto;
-          }
-        }
+      .focus-card {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        width: 100%;
+        max-width: 520px;
+        margin: 0 auto;
+      }
+    }
 
-        @media (max-width: 520px) {
-          .focus-section {
-            padding: 60px 18px 90px;
-          }
+    @media (max-width: 520px) {
+      .focus-section {
+        padding: 60px 18px 90px;
+      }
 
-          .focus-headline {
-            font-size: 28px;
-          }
+      .focus-headline {
+        font-size: 28px;
+      }
 
-          .focus-card {
-            padding: 28px 24px;
-          }
+      .focus-card {
+        padding: 28px 24px;
+      }
 
-          .focus-card h3 {
-            font-size: 26px;
-          }
-        }
-      `}</style>
+      .focus-card h3 {
+        font-size: 26px;
+      }
+    }
+  `}</style>
 
-      <div className="focus-wrap">
-        <div className="focus-title">OUR FOCUS</div>
+  <div className="focus-wrap">
+    <div className="focus-title">OUR FOCUS</div>
 
-        <div className="plug" />
+    <div className="plug" />
 
-        <svg
-          className="focus-path"
-          viewBox="0 0 1180 980"
-          preserveAspectRatio="none"
-          fill="none"
-        >
-          <path
-            d="
-              M590 106
-              V150
-              H1010
-              C1085 150 1130 190 1130 260
-              C1130 330 1085 370 1010 370
+    <svg
+      className="focus-path"
+      viewBox="0 0 1180 980"
+      preserveAspectRatio="none"
+      fill="none"
+    >
+      <path
+        d="
+          M590 106
+          V150
+          H1010
+          C1085 150 1130 190 1130 260
+          C1130 330 1085 370 1010 370
 
-              H130
-              C65 370 35 405 35 470
-              V545
-              C35 615 75 650 145 650
+          H130
+          C65 370 35 405 35 470
+          V545
+          C35 615 75 650 145 650
 
-              H420
-              C505 650 540 600 580 525
-              L625 440
-              C650 395 690 370 760 370
+          H420
+          C505 650 540 600 580 525
+          L625 440
+          C650 395 690 370 760 370
 
-              H1010
-              C1085 370 1130 410 1130 485
-              V610
-              C1130 690 1085 730 1010 730
+          H1010
+          C1085 370 1130 410 1130 485
+          V610
+          C1130 690 1085 730 1010 730
 
-              H135
-              C65 730 35 770 35 840
-              V860
-              C35 925 75 955 145 955
+          H135
+          C65 730 35 770 35 840
+          V860
+          C35 925 75 955 145 955
 
-              H420
-              C505 955 540 905 580 830
-              L625 745
-              C650 700 690 675 760 675
+          H420
+          C505 955 540 905 580 830
+          L625 745
+          C650 700 690 675 760 675
 
-              H960
-              C1040 675 1080 720 1080 795
-              V940
-            "
-            stroke="#2f6f8f"
-            strokeWidth="5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+          H960
+          C1040 675 1080 720 1080 795
+          V940
+        "
+        stroke="#2f6f8f"
+        strokeWidth="5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
 
-        <h2 className="focus-headline">
-          EV charging reliability, made visible
-        </h2>
+    <h2 className="focus-headline">
+      EV charging reliability, made visible
+    </h2>
 
-        <div className="focus-card diagnostic">
-          <h3>Diagnostic</h3>
-          <p>
-            Charger behavior, interruptions, and field observations reviewed
-            with structure.
-          </p>
-          <a href="#diagnostic">Explore diagnostics →</a>
-        </div>
+    <div className="focus-card diagnostic">
+      <h3>Diagnostic</h3>
 
-        <div className="focus-card rma">
-          <h3>RMA validation</h3>
-          <p>
-            Returned units, issue isolation, functional checks, and redeployment
-            readiness.
-          </p>
-          <a href="#rma">View validation →</a>
-        </div>
+      <p>
+        Charger behavior, interruptions,
+        <br />
+        and field observations reviewed
+        <br />
+        with structure.
+      </p>
 
-        <div className="focus-card site">
-          <h3>Site reliability</h3>
-          <p>
-            Operational continuity, uptime awareness, and site-level support
-            visibility.
-          </p>
-          <a href="#site">Improve uptime →</a>
-        </div>
+      <a href="#diagnostic">Explore diagnostics →</a>
+    </div>
 
-        <div className="focus-card infra">
-          <h3>Infrastructure</h3>
-          <p>
-            Cable flow, placement, usability, and coordination for real charging
-            sites.
-          </p>
-          <a href="#infrastructure">View service →</a>
-        </div>
-      </div>
-    </section>
-  );
-}
+    <div className="focus-card rma">
+      <h3>RMA validation</h3>
+
+      <p>
+        Returned units, issue isolation,
+        <br />
+        functional checks, and
+        <br />
+        redeployment readiness.
+      </p>
+
+      <a href="#rma">View validation →</a>
+    </div>
+
+    <div className="focus-card site">
+      <h3>Site reliability</h3>
+
+      <p>
+        Operational continuity, uptime
+        <br />
+        awareness, and site-level
+        <br />
+        support visibility.
+      </p>
+
+      <a href="#site">Improve uptime →</a>
+    </div>
+
+    <div className="focus-card infra">
+      <h3>Infrastructure</h3>
+
+      <p>
+        Cable flow, placement, usability,
+        <br />
+        and coordination for real
+        <br />
+        charging sites.
+      </p>
+
+      <a href="#infra">View service →</a>
+    </div>
+  </div>
+</section>
      <section style={{ background: "#0f172a", color: "white", padding: "90px 28px" }}>
         <div style={{
           maxWidth: "1220px", margin: "0 auto", display: "grid",
