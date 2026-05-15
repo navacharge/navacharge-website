@@ -191,7 +191,7 @@ url(${heroImage})
 
     .plug {
   position: absolute;
-  top: 95px;
+  top: 70px;
   left: 50%;
   width: 58px;
   height: 58px;
