@@ -211,7 +211,7 @@ url(${heroImage})
   left: 14px;
   width: 5px;
   height: 38px;
-  background: #071b33;
+  background: #2563eb;
   border-radius: 5px;
   box-shadow: 20px 0 0 #2563eb;
 }
