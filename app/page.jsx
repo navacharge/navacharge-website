@@ -347,7 +347,7 @@ url(${heroImage})
    <svg className="cable" viewBox="0 0 980 1500" fill="none">
   <path
     d="
-      M490 150
+      M490 128
       V205
 
       C490 235 515 250 550 250
