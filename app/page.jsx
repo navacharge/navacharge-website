@@ -167,144 +167,102 @@ url(${heroImage})
 </section>
    <section
   style={{
-    maxWidth: "1280px",
+    maxWidth: "1180px",
     margin: "0 auto",
-    padding: "20px 32px 120px",
-    position: "relative",
+    padding: "40px 32px 130px",
   }}
 >
-  <div style={{ position: "relative", minHeight: "620px" }}>
-    <div
-      style={{
-        position: "absolute",
-        top: "0",
-        left: "50%",
-        transform: "translateX(-50%)",
-        letterSpacing: "7px",
-        fontSize: "13px",
-        fontWeight: "800",
-        color: "#2f6f8f",
-        zIndex: 2,
-      }}
-    >
+  <svg
+    viewBox="0 0 1180 1100"
+    style={{ width: "100%", height: "auto", display: "block" }}
+    fill="none"
+  >
+    <text x="590" y="42" textAnchor="middle" fontSize="22" fontWeight="800" letterSpacing="6" fill="#2f6f8f">
       OUR FOCUS
-    </div>
+    </text>
 
-    <svg
-      viewBox="0 0 1280 620"
-      style={{
-        position: "absolute",
-        inset: 0,
-        width: "100%",
-        height: "100%",
-        pointerEvents: "none",
-      }}
+    <line x1="575" y1="78" x2="575" y2="105" stroke="#2f6f8f" strokeWidth="4" />
+    <line x1="605" y1="78" x2="605" y2="105" stroke="#2f6f8f" strokeWidth="4" />
+    <rect x="565" y="105" width="50" height="48" rx="12" stroke="#2f6f8f" strokeWidth="4" fill="#f6f3ec" />
+
+    <path
+      d="
+        M590 153
+        V190
+        H1010
+        C1085 190 1125 225 1125 290
+        C1125 350 1085 380 1010 380
+        H120
+        C65 380 35 410 35 465
+        V555
+        C35 620 70 650 135 650
+        H390
+        C470 650 505 615 545 545
+        L600 455
+        C630 405 670 380 735 380
+        H1010
+        C1085 380 1125 420 1125 495
+        V625
+        C1125 700 1085 735 1010 735
+        H125
+        C65 735 35 770 35 835
+        V865
+        C35 930 70 960 135 960
+        H390
+        C470 960 505 925 545 855
+        L600 765
+        C630 715 670 690 735 690
+        H960
+        C1035 690 1075 730 1075 805
+        V1040
+      "
+      stroke="#2f6f8f"
+      strokeWidth="5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       fill="none"
-    >
-      <path
-        d="
-          M640 88
-          V145
-          C640 170 615 180 580 180
-          H150
-          C90 180 60 215 60 275
-          V390
-          C60 455 95 490 160 490
-          H610
-          C690 490 690 445 770 445
-          H1180
-          C1235 445 1250 410 1250 360
-          V230
-          C1250 195 1230 180 1195 180
-          H760
-        "
-        stroke="#2f6f8f"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        opacity="0.9"
-      />
+    />
 
-      <line x1="630" y1="22" x2="630" y2="42" stroke="#2f6f8f" strokeWidth="2.5" />
-      <line x1="650" y1="22" x2="650" y2="42" stroke="#2f6f8f" strokeWidth="2.5" />
+    <text x="590" y="265" textAnchor="middle" fontSize="42" fontWeight="800" fill="#0f172a">
+      EV charging reliability, made visible
+    </text>
 
-      <rect
-        x="622"
-        y="42"
-        width="36"
-        height="46"
-        rx="10"
-        stroke="#2f6f8f"
-        strokeWidth="2.5"
-        fill="#f6f3ec"
-      />
-    </svg>
+    {/* Diagnostic */}
+    <rect x="75" y="405" width="380" height="210" rx="28" fill="#ffffff" opacity="0.72" />
+    <circle cx="105" cy="445" r="7" fill="#2f6f8f" />
+    <text x="125" y="455" fontSize="30" fontWeight="800" fill="#0f172a">Diagnostic</text>
+    <text x="125" y="505" fontSize="17" fill="#334155">Charger behavior, interruptions,</text>
+    <text x="125" y="535" fontSize="17" fill="#334155">and field observations reviewed</text>
+    <text x="125" y="565" fontSize="17" fill="#334155">with structure.</text>
+    <text x="125" y="595" fontSize="19" fontWeight="800" fill="#2f6f8f">Explore diagnostics →</text>
 
-    <div
-      style={{
-        textAlign: "center",
-        paddingTop: "145px",
-        marginBottom: "170px",
-      }}
-    >
-      <h2
-        style={{
-          fontSize: "42px",
-          lineHeight: "1.1",
-          margin: 0,
-          color: "#0f172a",
-        }}
-      >
-        EV charging reliability, made visible.
-      </h2>
-    </div>
+    {/* RMA validation */}
+    <rect x="645" y="405" width="390" height="210" rx="28" fill="#ffffff" opacity="0.72" />
+    <circle cx="675" cy="445" r="7" fill="#2f6f8f" />
+    <text x="695" y="455" fontSize="30" fontWeight="800" fill="#0f172a">RMA validation</text>
+    <text x="695" y="505" fontSize="17" fill="#334155">Returned units, issue isolation,</text>
+    <text x="695" y="535" fontSize="17" fill="#334155">functional checks, and</text>
+    <text x="695" y="565" fontSize="17" fill="#334155">redeployment readiness.</text>
+    <text x="695" y="595" fontSize="19" fontWeight="800" fill="#2f6f8f">View validation →</text>
 
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(4, 1fr)",
-        gap: "52px",
-        padding: "0 90px",
-      }}
-    >
-      {[
-        [
-          "Diagnostics",
-          "Charger behavior, interruptions, and field observations reviewed with structure.",
-          "Explore diagnostics →",
-        ],
-        [
-          "RMA validation",
-          "Returned units, issue isolation, functional checks, and redeployment readiness.",
-          "View validation →",
-        ],
-        [
-          "Site reliability",
-          "Operational continuity, uptime awareness, and site-level support visibility.",
-          "Improve uptime →",
-        ],
-        [
-          "Infrastructure support",
-          "Cable flow, placement, usability, and coordination for real charging sites.",
-          "View services →",
-        ],
-      ].map(([title, text, link]) => (
-        <div key={title}>
-          <h3 style={{ fontSize: "24px", marginBottom: "14px", color: "#0f172a" }}>
-            {title}
-          </h3>
+    {/* Site reliability */}
+    <rect x="75" y="700" width="380" height="210" rx="28" fill="#ffffff" opacity="0.72" />
+    <circle cx="105" cy="740" r="7" fill="#2f6f8f" />
+    <text x="125" y="750" fontSize="30" fontWeight="800" fill="#0f172a">Site reliability</text>
+    <text x="125" y="800" fontSize="17" fill="#334155">Operational continuity, uptime</text>
+    <text x="125" y="830" fontSize="17" fill="#334155">awareness, and site-level</text>
+    <text x="125" y="860" fontSize="17" fill="#334155">support visibility.</text>
+    <text x="125" y="890" fontSize="19" fontWeight="800" fill="#2f6f8f">Improve uptime →</text>
 
-          <p style={{ color: "#334155", lineHeight: "1.7", fontSize: "16px", marginBottom: "18px" }}>
-            {text}
-          </p>
-
-          <a href="/services" style={{ color: "#2f6f8f", fontWeight: "800", textDecoration: "none" }}>
-            {link}
-          </a>
-        </div>
-      ))}
-    </div>
-  </div>
+    {/* Infrastructure */}
+    <rect x="645" y="700" width="390" height="210" rx="28" fill="#ffffff" opacity="0.72" />
+    <circle cx="675" cy="740" r="7" fill="#2f6f8f" />
+    <text x="695" y="750" fontSize="30" fontWeight="800" fill="#0f172a">Infrastructure</text>
+    <text x="695" y="800" fontSize="17" fill="#334155">Cable flow, placement, usability,</text>
+    <text x="695" y="830" fontSize="17" fill="#334155">and coordination for real</text>
+    <text x="695" y="860" fontSize="17" fill="#334155">charging sites.</text>
+    <text x="695" y="890" fontSize="19" fontWeight="800" fill="#2f6f8f">View service →</text>
+  </svg>
 </section>
      <section style={{ background: "#0f172a", color: "white", padding: "90px 28px" }}>
         <div style={{
