@@ -293,11 +293,11 @@ url(${heroImage})
   top: 990px;
   left: 135px;
 }
-.infrastructure h3 {
+.infra h3 {
   margin-bottom: 18px;
 }
 
-.infrastructure p {
+.infra p {
   line-height: 1.8;
 }
     @media (max-width: 900px) {
