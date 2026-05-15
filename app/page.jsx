@@ -165,105 +165,311 @@ url(${heroImage})
   </div>
 </div>
 </section>
-   <section
-  style={{
-    maxWidth: "1180px",
-    margin: "0 auto",
-    padding: "40px 32px 130px",
-  }}
->
-  <svg
-    viewBox="0 0 1180 1100"
-    style={{ width: "100%", height: "auto", display: "block" }}
-    fill="none"
-  >
-    <text x="590" y="42" textAnchor="middle" fontSize="22" fontWeight="800" letterSpacing="6" fill="#2f6f8f">
-      OUR FOCUS
-    </text>
+   export default function OurFocus() {
+  return (
+    <section className="focus-section">
+      <style>{`
+        .focus-section {
+          width: 100%;
+          background: #f6f3ec;
+          padding: 80px 24px 140px;
+          overflow: hidden;
+        }
 
-    <line x1="575" y1="78" x2="575" y2="105" stroke="#2f6f8f" strokeWidth="4" />
-    <line x1="605" y1="78" x2="605" y2="105" stroke="#2f6f8f" strokeWidth="4" />
-    <rect x="565" y="105" width="50" height="48" rx="12" stroke="#2f6f8f" strokeWidth="4" fill="#f6f3ec" />
+        .focus-wrap {
+          position: relative;
+          max-width: 1180px;
+          height: 980px;
+          margin: 0 auto;
+        }
 
-    <path
-      d="
-        M590 153
-        V190
-        H1010
-        C1085 190 1125 225 1125 290
-        C1125 350 1085 380 1010 380
-        H120
-        C65 380 35 410 35 465
-        V555
-        C35 620 70 650 135 650
-        H390
-        C470 650 505 615 545 545
-        L600 455
-        C630 405 670 380 735 380
-        H1010
-        C1085 380 1125 420 1125 495
-        V625
-        C1125 700 1085 735 1010 735
-        H125
-        C65 735 35 770 35 835
-        V865
-        C35 930 70 960 135 960
-        H390
-        C470 960 505 925 545 855
-        L600 765
-        C630 715 670 690 735 690
-        H960
-        C1035 690 1075 730 1075 805
-        V1040
-      "
-      stroke="#2f6f8f"
-      strokeWidth="5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      fill="none"
-    />
+        .focus-title {
+          text-align: center;
+          font-size: 22px;
+          font-weight: 800;
+          letter-spacing: 6px;
+          color: #2f6f8f;
+          margin-bottom: 28px;
+        }
 
-    <text x="590" y="265" textAnchor="middle" fontSize="42" fontWeight="800" fill="#0f172a">
-      EV charging reliability, made visible
-    </text>
+        .plug {
+          position: absolute;
+          top: 56px;
+          left: 50%;
+          width: 52px;
+          height: 50px;
+          transform: translateX(-50%);
+          border: 4px solid #2f6f8f;
+          border-radius: 14px;
+          background: #f6f3ec;
+          z-index: 4;
+        }
 
-    {/* Diagnostic */}
-    <rect x="75" y="405" width="380" height="210" rx="28" fill="#ffffff" opacity="0.72" />
-    <circle cx="105" cy="445" r="7" fill="#2f6f8f" />
-    <text x="125" y="455" fontSize="30" fontWeight="800" fill="#0f172a">Diagnostic</text>
-    <text x="125" y="505" fontSize="17" fill="#334155">Charger behavior, interruptions,</text>
-    <text x="125" y="535" fontSize="17" fill="#334155">and field observations reviewed</text>
-    <text x="125" y="565" fontSize="17" fill="#334155">with structure.</text>
-    <text x="125" y="595" fontSize="19" fontWeight="800" fill="#2f6f8f">Explore diagnostics →</text>
+        .plug::before,
+        .plug::after {
+          content: "";
+          position: absolute;
+          top: -31px;
+          width: 4px;
+          height: 30px;
+          background: #2f6f8f;
+          border-radius: 4px;
+        }
 
-    {/* RMA validation */}
-    <rect x="645" y="405" width="390" height="210" rx="28" fill="#ffffff" opacity="0.72" />
-    <circle cx="675" cy="445" r="7" fill="#2f6f8f" />
-    <text x="695" y="455" fontSize="30" fontWeight="800" fill="#0f172a">RMA validation</text>
-    <text x="695" y="505" fontSize="17" fill="#334155">Returned units, issue isolation,</text>
-    <text x="695" y="535" fontSize="17" fill="#334155">functional checks, and</text>
-    <text x="695" y="565" fontSize="17" fill="#334155">redeployment readiness.</text>
-    <text x="695" y="595" fontSize="19" fontWeight="800" fill="#2f6f8f">View validation →</text>
+        .plug::before {
+          left: 13px;
+        }
 
-    {/* Site reliability */}
-    <rect x="75" y="700" width="380" height="210" rx="28" fill="#ffffff" opacity="0.72" />
-    <circle cx="105" cy="740" r="7" fill="#2f6f8f" />
-    <text x="125" y="750" fontSize="30" fontWeight="800" fill="#0f172a">Site reliability</text>
-    <text x="125" y="800" fontSize="17" fill="#334155">Operational continuity, uptime</text>
-    <text x="125" y="830" fontSize="17" fill="#334155">awareness, and site-level</text>
-    <text x="125" y="860" fontSize="17" fill="#334155">support visibility.</text>
-    <text x="125" y="890" fontSize="19" fontWeight="800" fill="#2f6f8f">Improve uptime →</text>
+        .plug::after {
+          right: 13px;
+        }
 
-    {/* Infrastructure */}
-    <rect x="645" y="700" width="390" height="210" rx="28" fill="#ffffff" opacity="0.72" />
-    <circle cx="675" cy="740" r="7" fill="#2f6f8f" />
-    <text x="695" y="750" fontSize="30" fontWeight="800" fill="#0f172a">Infrastructure</text>
-    <text x="695" y="800" fontSize="17" fill="#334155">Cable flow, placement, usability,</text>
-    <text x="695" y="830" fontSize="17" fill="#334155">and coordination for real</text>
-    <text x="695" y="860" fontSize="17" fill="#334155">charging sites.</text>
-    <text x="695" y="890" fontSize="19" fontWeight="800" fill="#2f6f8f">View service →</text>
-  </svg>
-</section>
+        .focus-headline {
+          position: absolute;
+          top: 170px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100%;
+          text-align: center;
+          font-size: 42px;
+          font-weight: 800;
+          color: #0f172a;
+          z-index: 3;
+        }
+
+        .focus-path {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          pointer-events: none;
+        }
+
+        .focus-card {
+          position: absolute;
+          width: 390px;
+          min-height: 210px;
+          background: rgba(255, 255, 255, 0.72);
+          border-radius: 28px;
+          padding: 32px 36px;
+          box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+          z-index: 2;
+        }
+
+        .focus-card h3 {
+          margin: 0 0 22px;
+          font-size: 30px;
+          line-height: 1.1;
+          font-weight: 800;
+          color: #0f172a;
+          display: flex;
+          align-items: center;
+          gap: 14px;
+        }
+
+        .focus-card h3::before {
+          content: "";
+          width: 13px;
+          height: 13px;
+          border-radius: 50%;
+          background: #2f6f8f;
+          flex: 0 0 auto;
+        }
+
+        .focus-card p {
+          margin: 0;
+          font-size: 17px;
+          line-height: 1.75;
+          color: #334155;
+        }
+
+        .focus-card a {
+          display: inline-block;
+          margin-top: 22px;
+          font-size: 19px;
+          font-weight: 800;
+          color: #2f6f8f;
+          text-decoration: none;
+        }
+
+        .diagnostic {
+          top: 310px;
+          left: 70px;
+        }
+
+        .rma {
+          top: 320px;
+          right: 80px;
+        }
+
+        .site {
+          top: 640px;
+          left: 70px;
+        }
+
+        .infra {
+          top: 655px;
+          right: 80px;
+        }
+
+        @media (max-width: 900px) {
+          .focus-wrap {
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+          }
+
+          .focus-title {
+            margin-bottom: 90px;
+          }
+
+          .plug {
+            top: 52px;
+          }
+
+          .focus-headline {
+            position: relative;
+            top: auto;
+            left: auto;
+            transform: none;
+            font-size: 32px;
+            margin-bottom: 30px;
+          }
+
+          .focus-path {
+            display: none;
+          }
+
+          .focus-card {
+            position: relative;
+            top: auto;
+            left: auto;
+            right: auto;
+            width: 100%;
+            max-width: 520px;
+            margin: 0 auto;
+          }
+        }
+
+        @media (max-width: 520px) {
+          .focus-section {
+            padding: 60px 18px 90px;
+          }
+
+          .focus-headline {
+            font-size: 28px;
+          }
+
+          .focus-card {
+            padding: 28px 24px;
+          }
+
+          .focus-card h3 {
+            font-size: 26px;
+          }
+        }
+      `}</style>
+
+      <div className="focus-wrap">
+        <div className="focus-title">OUR FOCUS</div>
+
+        <div className="plug" />
+
+        <svg
+          className="focus-path"
+          viewBox="0 0 1180 980"
+          preserveAspectRatio="none"
+          fill="none"
+        >
+          <path
+            d="
+              M590 106
+              V150
+              H1010
+              C1085 150 1130 190 1130 260
+              C1130 330 1085 370 1010 370
+
+              H130
+              C65 370 35 405 35 470
+              V545
+              C35 615 75 650 145 650
+
+              H420
+              C505 650 540 600 580 525
+              L625 440
+              C650 395 690 370 760 370
+
+              H1010
+              C1085 370 1130 410 1130 485
+              V610
+              C1130 690 1085 730 1010 730
+
+              H135
+              C65 730 35 770 35 840
+              V860
+              C35 925 75 955 145 955
+
+              H420
+              C505 955 540 905 580 830
+              L625 745
+              C650 700 690 675 760 675
+
+              H960
+              C1040 675 1080 720 1080 795
+              V940
+            "
+            stroke="#2f6f8f"
+            strokeWidth="5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+
+        <h2 className="focus-headline">
+          EV charging reliability, made visible
+        </h2>
+
+        <div className="focus-card diagnostic">
+          <h3>Diagnostic</h3>
+          <p>
+            Charger behavior, interruptions, and field observations reviewed
+            with structure.
+          </p>
+          <a href="#diagnostic">Explore diagnostics →</a>
+        </div>
+
+        <div className="focus-card rma">
+          <h3>RMA validation</h3>
+          <p>
+            Returned units, issue isolation, functional checks, and redeployment
+            readiness.
+          </p>
+          <a href="#rma">View validation →</a>
+        </div>
+
+        <div className="focus-card site">
+          <h3>Site reliability</h3>
+          <p>
+            Operational continuity, uptime awareness, and site-level support
+            visibility.
+          </p>
+          <a href="#site">Improve uptime →</a>
+        </div>
+
+        <div className="focus-card infra">
+          <h3>Infrastructure</h3>
+          <p>
+            Cable flow, placement, usability, and coordination for real charging
+            sites.
+          </p>
+          <a href="#infrastructure">View service →</a>
+        </div>
+      </div>
+    </section>
+  );
+}
      <section style={{ background: "#0f172a", color: "white", padding: "90px 28px" }}>
         <div style={{
           maxWidth: "1220px", margin: "0 auto", display: "grid",
