@@ -213,7 +213,7 @@ url(${heroImage})
   height: 38px;
   background: #071b33;
   border-radius: 5px;
-  box-shadow: 20px 0 0 #f5f2ea;
+  box-shadow: 20px 0 0 #2563eb;
 }
 
     .plug::before { left: 14px; }
