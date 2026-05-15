@@ -168,7 +168,7 @@ url(${heroImage})
  <section className="focus-flow">
   <style>{`
     .focus-flow {
-      background: #fbfaf7;
+      background: inherit;
       padding: 80px 20px 120px;
       overflow: hidden;
     }
@@ -176,7 +176,7 @@ url(${heroImage})
     .focus-wrap {
       position: relative;
       max-width: 980px;
-      height: 1280px;
+      height: 1420px;
       margin: 0 auto;
     }
 
@@ -198,7 +198,7 @@ url(${heroImage})
       transform: translateX(-50%);
       border: 5px solid #071b33;
       border-radius: 0 0 22px 22px;
-      background: #fbfaf7;
+      background: inherit;
       z-index: 3;
     }
 
@@ -213,13 +213,8 @@ url(${heroImage})
       border-radius: 5px;
     }
 
-    .plug::before {
-      left: 14px;
-    }
-
-    .plug::after {
-      right: 14px;
-    }
+    .plug::before { left: 14px; }
+    .plug::after { right: 14px; }
 
     .cable {
       position: absolute;
@@ -290,42 +285,13 @@ url(${heroImage})
     }
 
     .site {
-      top: 725px;
+      top: 735px;
       left: 135px;
     }
 
     .infra {
-      top: 955px;
+      top: 1045px;
       left: 135px;
-    }
-
-    .dot {
-      position: absolute;
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      background: #071b33;
-      z-index: 3;
-    }
-
-    .dot-1 {
-      top: 424px;
-      left: 90px;
-    }
-
-    .dot-2 {
-      top: 654px;
-      right: 150px;
-    }
-
-    .dot-3 {
-      top: 884px;
-      left: 90px;
-    }
-
-    .dot-4 {
-      right: 88px;
-      bottom: 24px;
     }
 
     @media (max-width: 900px) {
@@ -333,8 +299,7 @@ url(${heroImage})
         height: auto;
       }
 
-      .cable,
-      .dot {
+      .cable {
         display: none;
       }
 
@@ -370,31 +335,41 @@ url(${heroImage})
 
     <div className="plug" />
 
-    <svg className="cable" viewBox="0 0 980 1280" fill="none">
+    <svg className="cable" viewBox="0 0 980 1420" fill="none">
       <path
         d="
           M490 128
           V205
-          C490 230 510 245 540 245
+
+          C490 235 515 250 550 250
           H835
-          C900 245 940 285 940 350
-          V365
-          C940 430 900 470 835 470
-          H115
-          C65 470 35 500 35 550
-          V570
-          C35 620 65 650 115 650
+
+          C905 250 945 290 945 360
+          V385
+
+          C945 455 905 495 835 495
+          H120
+
+          C65 495 35 525 35 580
+          V605
+
+          C35 660 65 690 120 690
           H835
-          C900 650 940 690 940 755
-          V770
-          C940 835 900 875 835 875
-          H115
-          C65 875 35 905 35 955
-          V980
-          C35 1030 65 1060 115 1060
+
+          C905 690 945 730 945 800
+          V825
+
+          C945 895 905 935 835 935
+          H120
+
+          C65 935 35 965 35 1020
+          V1045
+
+          C35 1100 65 1130 120 1130
           H835
-          C900 1060 940 1100 940 1165
-          V1245
+
+          C905 1130 945 1170 945 1240
+          V1330
         "
         stroke="#071b33"
         strokeWidth="5"
@@ -402,11 +377,6 @@ url(${heroImage})
         strokeLinejoin="round"
       />
     </svg>
-
-    <span className="dot dot-1" />
-    <span className="dot dot-2" />
-    <span className="dot dot-3" />
-    <span className="dot dot-4" />
 
     <div className="focus-item diagnostic">
       <svg viewBox="0 0 64 64">
