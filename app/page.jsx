@@ -290,7 +290,7 @@ url(${heroImage})
     }
 
  .infra {
-  top: 1035px;
+  top: 990px;
   left: 135px;
 }
 .infrastructure h3 {
