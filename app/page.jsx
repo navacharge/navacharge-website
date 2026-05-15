@@ -280,7 +280,7 @@ url(${heroImage})
     }
 
     .rma {
-      top: 495px;
+      top: 525px;
       left: 135px;
     }
 
