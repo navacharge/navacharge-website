@@ -293,7 +293,13 @@ url(${heroImage})
   top: 1035px;
   left: 135px;
 }
+.infrastructure h3 {
+  margin-bottom: 18px;
+}
 
+.infrastructure p {
+  line-height: 1.8;
+}
     @media (max-width: 900px) {
       .focus-wrap {
         height: auto;
