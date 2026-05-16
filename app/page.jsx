@@ -165,222 +165,207 @@ url(${heroImage})
   </div>
 </div>
 </section>
-export default function Page() {
-  return (
-    <section className="focus-flow">
-      <style>{`
-        .focus-flow {
-          background: #f4f1ea;
-          padding: 120px 0;
-        }
+<section className="focus-flow">
+  <style>{`
+    .focus-flow {
+      background: #f4f1ea;
+      padding: 120px 0;
+    }
 
-        .focus-wrap {
-          position: relative;
-          width: 980px;
-          height: 1500px;
-          margin: 0 auto;
-        }
+    .focus-wrap {
+      position: relative;
+      width: 980px;
+      height: 1500px;
+      margin: 0 auto;
+    }
 
-        .focus-title {
-          position: absolute;
-          top: 0;
-          left: 50%;
-          transform: translateX(-50%);
-          font-size: 46px;
-          letter-spacing: 10px;
-          font-weight: 700;
-          color: #071b33;
-        }
+    .focus-title {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 46px;
+      letter-spacing: 10px;
+      font-weight: 700;
+      color: #071b33;
+    }
 
-        .tagline {
-          position: absolute;
-          top: 190px;
-          left: 220px;
-          font-size: 30px;
-          color: #071b33;
-          font-style: italic;
-        }
+    .tagline {
+      position: absolute;
+      top: 190px;
+      left: 220px;
+      font-size: 30px;
+      color: #071b33;
+      font-style: italic;
+    }
 
-        .cable {
-          position: absolute;
-          inset: 0;
-          width: 100%;
-          height: 100%;
-        }
+    .cable {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
 
-        .plug {
-          position: absolute;
-          top: 60px;
-          left: 455px;
-          width: 70px;
-          height: 90px;
-          z-index: 3;
-        }
+    .plug {
+      position: absolute;
+      top: 60px;
+      left: 455px;
+      width: 70px;
+      height: 90px;
+      z-index: 3;
+    }
 
-        .card {
-          position: absolute;
-          width: 320px;
-          color: #071b33;
-        }
+    .card {
+      position: absolute;
+      width: 320px;
+      color: #071b33;
+    }
 
-        .card h3 {
-          font-size: 42px;
-          margin-bottom: 18px;
-        }
+    .card h3 {
+      font-size: 42px;
+      margin-bottom: 18px;
+    }
 
-        .card p {
-          font-size: 22px;
-          line-height: 1.7;
-        }
+    .card p {
+      font-size: 22px;
+      line-height: 1.7;
+    }
 
-        .link {
-          margin-top: 22px;
-          font-size: 22px;
-          font-weight: 700;
-        }
+    .link {
+      margin-top: 22px;
+      font-size: 22px;
+      font-weight: 700;
+    }
 
-        .diagnostic {
-          top: 360px;
-          left: 140px;
-        }
+    .diagnostic {
+      top: 360px;
+      left: 140px;
+    }
 
-        .rma {
-          top: 610px;
-          left: 520px;
-        }
+    .rma {
+      top: 610px;
+      left: 520px;
+    }
 
-        .site {
-          top: 930px;
-          left: 170px;
-        }
+    .site {
+      top: 930px;
+      left: 170px;
+    }
 
-        .infra {
-          top: 1180px;
-          left: 520px;
-        }
+    .infra {
+      top: 1180px;
+      left: 520px;
+    }
 
-        .mini-car {
-          position: absolute;
-          width: 46px;
-          height: 26px;
-          z-index: 10;
-          pointer-events: none;
-          offset-path: path("M490 128 V205 C490 235 515 250 550 250 H835 C905 250 945 290 945 360 V385 C945 455 905 495 835 495 H120 C65 495 35 525 35 580 V605 C35 660 65 690 120 690 H835 C905 690 945 730 945 800 V825 C945 895 905 935 835 935 H120 C65 935 35 965 35 1025 V1110 C35 1170 65 1200 120 1200 H835 C905 1200 945 1240 945 1310 V1410");
-          offset-rotate: auto;
-          animation: driveCable 14s linear infinite;
-        }
+    .mini-car {
+      position: absolute;
+      width: 46px;
+      height: 26px;
+      z-index: 10;
+      pointer-events: none;
+      offset-path: path("M490 128 V205 C490 235 515 250 550 250 H835 C905 250 945 290 945 360 V385 C945 455 905 495 835 495 H120 C65 495 35 525 35 580 V605 C35 660 65 690 120 690 H835 C905 690 945 730 945 800 V825 C945 895 905 935 835 935 H120 C65 935 35 965 35 1025 V1110 C35 1170 65 1200 120 1200 H835 C905 1200 945 1240 945 1310 V1410");
+      offset-rotate: auto;
+      animation: driveCable 14s linear infinite;
+    }
 
-        @keyframes driveCable {
-          from {
-            offset-distance: 0%;
-          }
-          to {
-            offset-distance: 100%;
-          }
-        }
+    @keyframes driveCable {
+      from { offset-distance: 0%; }
+      to { offset-distance: 100%; }
+    }
 
-        .car-body {
-          position: absolute;
-          bottom: 4px;
-          left: 4px;
-          width: 38px;
-          height: 16px;
-          background: #071b33;
-          border-radius: 12px 14px 6px 6px;
-        }
+    .car-body {
+      position: absolute;
+      bottom: 4px;
+      left: 4px;
+      width: 38px;
+      height: 16px;
+      background: #071b33;
+      border-radius: 12px 14px 6px 6px;
+    }
 
-        .car-top {
-          position: absolute;
-          top: 2px;
-          left: 14px;
-          width: 20px;
-          height: 12px;
-          background: #071b33;
-          border-radius: 10px 10px 3px 3px;
-        }
+    .car-top {
+      position: absolute;
+      top: 2px;
+      left: 14px;
+      width: 20px;
+      height: 12px;
+      background: #071b33;
+      border-radius: 10px 10px 3px 3px;
+    }
 
-        .wheel {
-          position: absolute;
-          bottom: 0;
-          width: 9px;
-          height: 9px;
-          background: #071b33;
-          border-radius: 50%;
-        }
+    .wheel {
+      position: absolute;
+      bottom: 0;
+      width: 9px;
+      height: 9px;
+      background: #071b33;
+      border-radius: 50%;
+    }
 
-        .wheel-left {
-          left: 9px;
-        }
+    .wheel-left { left: 9px; }
+    .wheel-right { right: 9px; }
+  `}</style>
 
-        .wheel-right {
-          right: 9px;
-        }
-      `}</style>
+  <div className="focus-wrap">
+    <div className="focus-title">OUR FOCUS</div>
 
-      <div className="focus-wrap">
-        <div className="focus-title">OUR FOCUS</div>
+    <div className="plug">
+      <svg viewBox="0 0 70 90" fill="none">
+        <path
+          d="M18 8 V28 M52 8 V28 M18 28 H52 V52 C52 66 45 76 35 80 C25 76 18 66 18 52 Z"
+          stroke="#071b33"
+          strokeWidth="5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          fill="none"
+        />
+      </svg>
+    </div>
 
-        <div className="plug">
-          <svg viewBox="0 0 70 90" fill="none">
-            <path
-              d="M18 8 V28 M52 8 V28 M18 28 H52 V52 C52 66 45 76 35 80 C25 76 18 66 18 52 Z"
-              stroke="#071b33"
-              strokeWidth="5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              fill="none"
-            />
-          </svg>
-        </div>
+    <div className="tagline">EV charging reliability, made visible</div>
 
-        <div className="tagline">
-          EV charging reliability, made visible
-        </div>
+    <svg className="cable" viewBox="0 0 980 1500" fill="none">
+      <path
+        d="M490 128 V205 C490 235 515 250 550 250 H835 C905 250 945 290 945 360 V385 C945 455 905 495 835 495 H120 C65 495 35 525 35 580 V605 C35 660 65 690 120 690 H835 C905 690 945 730 945 800 V825 C945 895 905 935 835 935 H120 C65 935 35 965 35 1025 V1110 C35 1170 65 1200 120 1200 H835 C905 1200 945 1240 945 1310 V1410"
+        stroke="#071b33"
+        strokeWidth="5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
 
-        <svg className="cable" viewBox="0 0 980 1500" fill="none">
-          <path
-            d="M490 128 V205 C490 235 515 250 550 250 H835 C905 250 945 290 945 360 V385 C945 455 905 495 835 495 H120 C65 495 35 525 35 580 V605 C35 660 65 690 120 690 H835 C905 690 945 730 945 800 V825 C945 895 905 935 835 935 H120 C65 935 35 965 35 1025 V1110 C35 1170 65 1200 120 1200 H835 C905 1200 945 1240 945 1310 V1410"
-            stroke="#071b33"
-            strokeWidth="5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+    <div className="mini-car">
+      <div className="car-top" />
+      <div className="car-body" />
+      <div className="wheel wheel-left" />
+      <div className="wheel wheel-right" />
+    </div>
 
-        <div className="mini-car">
-          <div className="car-top" />
-          <div className="car-body" />
-          <div className="wheel wheel-left" />
-          <div className="wheel wheel-right" />
-        </div>
+    <div className="card diagnostic">
+      <h3>Diagnostic</h3>
+      <p>Charger behavior, interruptions, and field observations reviewed with structure.</p>
+      <div className="link">Explore →</div>
+    </div>
 
-        <div className="card diagnostic">
-          <h3>Diagnostic</h3>
-          <p>Charger behavior, interruptions, and field observations reviewed with structure.</p>
-          <div className="link">Explore →</div>
-        </div>
+    <div className="card rma">
+      <h3>RMA validation</h3>
+      <p>Returned units, issue isolation, functional checks, and redeployment readiness.</p>
+      <div className="link">View →</div>
+    </div>
 
-        <div className="card rma">
-          <h3>RMA validation</h3>
-          <p>Returned units, issue isolation, functional checks, and redeployment readiness.</p>
-          <div className="link">View →</div>
-        </div>
+    <div className="card site">
+      <h3>Site reliability</h3>
+      <p>Operational continuity, uptime awareness, and site-level support visibility.</p>
+      <div className="link">Improve →</div>
+    </div>
 
-        <div className="card site">
-          <h3>Site reliability</h3>
-          <p>Operational continuity, uptime awareness, and site-level support visibility.</p>
-          <div className="link">Improve →</div>
-        </div>
-
-        <div className="card infra">
-          <h3>Infrastructure</h3>
-          <p>Cable flow, placement, usability, and coordination for real charging sites.</p>
-          <div className="link">View service →</div>
-        </div>
-      </div>
-    </section>
-  );
-}
+    <div className="card infra">
+      <h3>Infrastructure</h3>
+      <p>Cable flow, placement, usability, and coordination for real charging sites.</p>
+      <div className="link">View service →</div>
+    </div>
+  </div>
+</section>
      <section style={{ background: "#0f172a", color: "white", padding: "90px 28px" }}>
         <div style={{
           maxWidth: "1220px", margin: "0 auto", display: "grid",
