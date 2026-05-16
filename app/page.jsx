@@ -464,7 +464,7 @@ url(${heroImage})
       </div>
 
       <span className="divider" />
-      <a className="focus-link" href="#infra">View service →</a>
+      <a className="focus-link" href="#infra">Improve →</a>
     </div>
   </div>
 </section>
