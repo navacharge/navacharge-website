@@ -176,7 +176,7 @@ url(${heroImage})
     .focus-wrap {
       position: relative;
       max-width: 980px;
-      height: 1500px;
+      height: 1540px;
       margin: 0 auto;
     }
 
@@ -191,7 +191,7 @@ url(${heroImage})
 
     .plug {
       position: absolute;
-      top: 70px;
+      top: 105px;
       left: 50%;
       width: 58px;
       height: 58px;
@@ -339,34 +339,24 @@ url(${heroImage})
         d="
           M490 128
           V205
-
           C490 235 515 250 550 250
           H835
-
           C910 250 945 285 945 360
           V385
-
           C945 460 910 495 835 495
           H120
-
           C65 495 35 530 35 585
           V625
-
           C35 680 65 715 120 715
           H835
-
           C910 715 945 750 945 825
           V850
-
           C945 900 910 935 835 935
           H120
-
           C65 935 35 970 35 1025
           V1110
-
           C35 1165 65 1200 120 1200
           H835
-
           C910 1200 945 1235 945 1310
           V1410
         "
@@ -378,10 +368,39 @@ url(${heroImage})
 
       <g>
         <g>
-          <rect x="-26" y="-10" width="52" height="20" rx="8" fill="#ef4444" />
-          <rect x="-13" y="-24" width="26" height="16" rx="5" fill="#dc2626" />
-          <circle cx="-15" cy="12" r="6" fill="#111827" />
-          <circle cx="15" cy="12" r="6" fill="#111827" />
+          <path
+            d="
+              M-32 2
+              C-28 -10 -16 -16 0 -16
+              C16 -16 28 -10 32 2
+              C28 10 16 14 0 14
+              C-16 14 -28 10 -32 2
+              Z
+            "
+            fill="#ef4444"
+          />
+
+          <path
+            d="
+              M-14 -10
+              C-8 -15 8 -15 14 -10
+              L20 0
+              C10 3 -10 3 -20 0
+              Z
+            "
+            fill="#991b1b"
+            opacity="0.85"
+          />
+
+          <circle cx="-18" cy="12" r="5" fill="#111827" />
+          <circle cx="18" cy="12" r="5" fill="#111827" />
+
+          <path
+            d="M-26 3 H26"
+            stroke="#fecaca"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
 
           <animateMotion
             dur="14s"
@@ -390,34 +409,24 @@ url(${heroImage})
             path="
               M490 128
               V205
-
               C490 235 515 250 550 250
               H835
-
               C910 250 945 285 945 360
               V385
-
               C945 460 910 495 835 495
               H120
-
               C65 495 35 530 35 585
               V625
-
               C35 680 65 715 120 715
               H835
-
               C910 715 945 750 945 825
               V850
-
               C945 900 910 935 835 935
               H120
-
               C65 935 35 970 35 1025
               V1110
-
               C35 1165 65 1200 120 1200
               H835
-
               C910 1200 945 1235 945 1310
               V1410
             "
