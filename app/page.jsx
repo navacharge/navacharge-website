@@ -165,86 +165,10 @@ url(${heroImage})
   </div>
 </div>
 </section>
-"use client";
-
-import { useEffect } from "react";
-
 export default function Page() {
-  useEffect(() => {
-    const section = document.querySelector(".focus-flow");
-    const path = document.getElementById("focusCablePath");
-    const car = document.getElementById("miniCar");
-
-    if (!section || !path || !car) return;
-
-    const pathLength = path.getTotalLength();
-
-    let progress = 0;
-    let started = false;
-    let animationFrame;
-
-    function animateCar() {
-      progress += 2.2;
-
-      if (progress > pathLength) {
-        progress = pathLength;
-      }
-
-      const point = path.getPointAtLength(progress);
-
-      const nextPoint = path.getPointAtLength(
-        Math.min(progress + 4, pathLength)
-      );
-
-      const angle =
-        (Math.atan2(
-          nextPoint.y - point.y,
-          nextPoint.x - point.x
-        ) *
-          180) /
-        Math.PI;
-
-      car.style.opacity = "1";
-      car.style.left = `${point.x}px`;
-      car.style.top = `${point.y}px`;
-
-      car.style.transform = `
-        translate(-50%, -50%)
-        rotate(${angle}deg)
-      `;
-
-      if (progress < pathLength) {
-        animationFrame = requestAnimationFrame(animateCar);
-      }
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting && !started) {
-          started = true;
-          progress = 0;
-          animateCar();
-        }
-      },
-      {
-        threshold: 0.2,
-      }
-    );
-
-    observer.observe(section);
-
-    return () => {
-      observer.disconnect();
-
-      if (animationFrame) {
-        cancelAnimationFrame(animationFrame);
-      }
-    };
-  }, []);
-
   return (
     <section className="focus-flow">
-      <style jsx>{`
+      <style>{`
         .focus-flow {
           background: #f4f1ea;
           padding: 120px 0;
@@ -277,6 +201,13 @@ export default function Page() {
           font-style: italic;
         }
 
+        .cable {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+        }
+
         .plug {
           position: absolute;
           top: 60px;
@@ -284,13 +215,6 @@ export default function Page() {
           width: 70px;
           height: 90px;
           z-index: 3;
-        }
-
-        .cable {
-          position: absolute;
-          inset: 0;
-          width: 100%;
-          height: 100%;
         }
 
         .card {
@@ -341,8 +265,18 @@ export default function Page() {
           height: 26px;
           z-index: 10;
           pointer-events: none;
-          opacity: 0;
-          transform: translate(-50%, -50%);
+          offset-path: path("M490 128 V205 C490 235 515 250 550 250 H835 C905 250 945 290 945 360 V385 C945 455 905 495 835 495 H120 C65 495 35 525 35 580 V605 C35 660 65 690 120 690 H835 C905 690 945 730 945 800 V825 C945 895 905 935 835 935 H120 C65 935 35 965 35 1025 V1110 C35 1170 65 1200 120 1200 H835 C905 1200 945 1240 945 1310 V1410");
+          offset-rotate: auto;
+          animation: driveCable 14s linear infinite;
+        }
+
+        @keyframes driveCable {
+          from {
+            offset-distance: 0%;
+          }
+          to {
+            offset-distance: 100%;
+          }
         }
 
         .car-body {
@@ -384,31 +318,12 @@ export default function Page() {
       `}</style>
 
       <div className="focus-wrap">
-        <div className="focus-title">
-          OUR FOCUS
-        </div>
+        <div className="focus-title">OUR FOCUS</div>
 
         <div className="plug">
           <svg viewBox="0 0 70 90" fill="none">
             <path
-              d="
-                M18 8
-                V28
-
-                M52 8
-                V28
-
-                M18 28
-                H52
-
-                V52
-
-                C52 66 45 76 35 80
-
-                C25 76 18 66 18 52
-
-                Z
-              "
+              d="M18 8 V28 M52 8 V28 M18 28 H52 V52 C52 66 45 76 35 80 C25 76 18 66 18 52 Z"
               stroke="#071b33"
               strokeWidth="5"
               strokeLinecap="round"
@@ -419,51 +334,12 @@ export default function Page() {
         </div>
 
         <div className="tagline">
-          EV charging reliability,
-          made visible
+          EV charging reliability, made visible
         </div>
 
-        <svg
-          className="cable"
-          viewBox="0 0 980 1500"
-          fill="none"
-        >
+        <svg className="cable" viewBox="0 0 980 1500" fill="none">
           <path
-            id="focusCablePath"
-            d="
-              M490 128
-              V205
-
-              C490 235 515 250 550 250
-              H835
-
-              C905 250 945 290 945 360
-              V385
-
-              C945 455 905 495 835 495
-              H120
-
-              C65 495 35 525 35 580
-              V605
-
-              C35 660 65 690 120 690
-              H835
-
-              C905 690 945 730 945 800
-              V825
-
-              C945 895 905 935 835 935
-              H120
-
-              C65 935 35 965 35 1025
-              V1110
-
-              C35 1170 65 1200 120 1200
-              H835
-
-              C905 1200 945 1240 945 1310
-              V1410
-            "
+            d="M490 128 V205 C490 235 515 250 550 250 H835 C905 250 945 290 945 360 V385 C945 455 905 495 835 495 H120 C65 495 35 525 35 580 V605 C35 660 65 690 120 690 H835 C905 690 945 730 945 800 V825 C945 895 905 935 835 935 H120 C65 935 35 965 35 1025 V1110 C35 1170 65 1200 120 1200 H835 C905 1200 945 1240 945 1310 V1410"
             stroke="#071b33"
             strokeWidth="5"
             strokeLinecap="round"
@@ -471,7 +347,7 @@ export default function Page() {
           />
         </svg>
 
-        <div className="mini-car" id="miniCar">
+        <div className="mini-car">
           <div className="car-top" />
           <div className="car-body" />
           <div className="wheel wheel-left" />
@@ -480,63 +356,26 @@ export default function Page() {
 
         <div className="card diagnostic">
           <h3>Diagnostic</h3>
-
-          <p>
-            Charger behavior,
-            interruptions,
-            and field observations
-            reviewed with structure.
-          </p>
-
-          <div className="link">
-            Explore →
-          </div>
+          <p>Charger behavior, interruptions, and field observations reviewed with structure.</p>
+          <div className="link">Explore →</div>
         </div>
 
         <div className="card rma">
           <h3>RMA validation</h3>
-
-          <p>
-            Returned units,
-            issue isolation,
-            functional checks,
-            and redeployment readiness.
-          </p>
-
-          <div className="link">
-            View →
-          </div>
+          <p>Returned units, issue isolation, functional checks, and redeployment readiness.</p>
+          <div className="link">View →</div>
         </div>
 
         <div className="card site">
           <h3>Site reliability</h3>
-
-          <p>
-            Operational continuity,
-            uptime awareness,
-            and site-level
-            support visibility.
-          </p>
-
-          <div className="link">
-            Improve →
-          </div>
+          <p>Operational continuity, uptime awareness, and site-level support visibility.</p>
+          <div className="link">Improve →</div>
         </div>
 
         <div className="card infra">
           <h3>Infrastructure</h3>
-
-          <p>
-            Cable flow,
-            placement,
-            usability,
-            and coordination
-            for real charging sites.
-          </p>
-
-          <div className="link">
-            View service →
-          </div>
+          <p>Cable flow, placement, usability, and coordination for real charging sites.</p>
+          <div className="link">View service →</div>
         </div>
       </div>
     </section>
