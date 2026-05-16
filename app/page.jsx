@@ -165,421 +165,362 @@ url(${heroImage})
   </div>
 </div>
 </section>
-<section className="focus-flow">
-  <style>{`
-    .focus-flow {
-      background: inherit;
-      padding: 80px 20px 120px;
-      overflow: hidden;
-    }
+"use client";
 
-    .focus-wrap {
-      position: relative;
-      max-width: 980px;
-      height: 1500px;
-      margin: 0 auto;
-    }
+import { useEffect } from "react";
 
-    .focus-title {
-      text-align: center;
-      letter-spacing: 10px;
-      font-size: 28px;
-      font-weight: 800;
-      color: #071b33;
-      margin: 0 0 50px;
-    }
+export default function FocusFlow() {
+  useEffect(() => {
+    const section = document.querySelector(".focus-flow");
+    const path = document.getElementById("focusCablePath");
+    const car = document.getElementById("miniCar");
 
-    .plug {
-      position: absolute;
-      top: 70px;
-      left: 50%;
-      width: 58px;
-      height: 58px;
-      transform: translateX(-50%);
-      border: 5px solid #2563eb;
-      border-radius: 0 0 22px 22px;
-      background: inherit;
-      z-index: 3;
-    }
+    if (!section || !path || !car) return;
 
-    .plug::before,
-    .plug::after {
-      content: "";
-      position: absolute;
-      top: -38px;
-      width: 5px;
-      height: 38px;
-      background: #2563eb;
-      border-radius: 5px;
-    }
+    const pathLength = path.getTotalLength();
 
-    .plug::before { left: 14px; }
-    .plug::after { right: 14px; }
+    let progress = 0;
+    let started = false;
+    let animationFrame;
 
-    .cable {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      pointer-events: none;
-    }
+    function animateCar() {
+      progress += 2.2;
 
-    .mini-car {
-      position: absolute;
-      width: 46px;
-      height: 26px;
-      z-index: 4;
-      pointer-events: none;
-      opacity: 0;
-      transform: translate(-50%, -50%);
-    }
-
-    .car-body {
-      position: absolute;
-      bottom: 4px;
-      left: 4px;
-      width: 38px;
-      height: 16px;
-      background: #071b33;
-      border-radius: 12px 14px 6px 6px;
-    }
-
-    .car-top {
-      position: absolute;
-      top: 2px;
-      left: 14px;
-      width: 20px;
-      height: 12px;
-      background: #071b33;
-      border-radius: 10px 10px 3px 3px;
-    }
-
-    .wheel {
-      position: absolute;
-      bottom: 0;
-      width: 9px;
-      height: 9px;
-      background: #071b33;
-      border-radius: 50%;
-    }
-
-    .wheel-left { left: 9px; }
-    .wheel-right { right: 9px; }
-
-    .focus-item {
-      position: absolute;
-      z-index: 2;
-      display: grid;
-      grid-template-columns: 90px 1fr 1px 180px;
-      align-items: center;
-      gap: 34px;
-      width: 760px;
-      min-height: 150px;
-      color: #071b33;
-    }
-
-    .focus-item svg {
-      width: 58px;
-      height: 58px;
-      stroke: #071b33;
-      stroke-width: 4;
-      fill: none;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .focus-item h3 {
-      margin: 0 0 16px;
-      font-size: 30px;
-      font-weight: 800;
-    }
-
-    .focus-item p {
-      margin: 0;
-      font-size: 17px;
-      line-height: 1.6;
-      color: #10243c;
-    }
-
-    .divider {
-      width: 1px;
-      height: 86px;
-      background: rgba(7, 27, 51, 0.25);
-    }
-
-    .focus-link {
-      font-size: 22px;
-      font-weight: 800;
-      color: #071b33;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    .diagnostic {
-      top: 280px;
-      left: 135px;
-    }
-
-    .rma {
-      top: 525px;
-      left: 135px;
-    }
-
-    .site {
-      top: 735px;
-      left: 135px;
-    }
-
-    .infra {
-      top: 1045px;
-      left: 135px;
-      align-items: start;
-      padding-top: 30px;
-    }
-
-    .infra h3 {
-      margin-bottom: 18px;
-    }
-
-    .infra p {
-      line-height: 1.8;
-      margin-top: 14px;
-    }
-
-    @media (max-width: 900px) {
-      .focus-wrap {
-        height: auto;
+      if (progress > pathLength) {
+        progress = pathLength;
       }
 
-      .cable,
-      .mini-car {
-        display: none;
-      }
+      const point = path.getPointAtLength(progress);
+      const nextPoint = path.getPointAtLength(
+        Math.min(progress + 4, pathLength)
+      );
 
-      .plug {
-        position: relative;
-        top: auto;
-        left: 50%;
-        margin-bottom: 60px;
-      }
+      const angle =
+        (Math.atan2(
+          nextPoint.y - point.y,
+          nextPoint.x - point.x
+        ) *
+          180) /
+        Math.PI;
 
-      .focus-item {
-        position: relative;
-        top: auto;
-        left: auto;
-        width: 100%;
-        grid-template-columns: 64px 1fr;
-        margin: 0 auto 56px;
-      }
+      car.style.opacity = "1";
+      car.style.left = `${point.x}px`;
+      car.style.top = `${point.y}px`;
+      car.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
 
-      .divider,
-      .focus-link {
-        grid-column: 2;
-      }
-
-      .divider {
-        display: none;
+      if (progress < pathLength) {
+        animationFrame = requestAnimationFrame(animateCar);
       }
     }
-  `}</style>
 
-  <div className="focus-wrap">
-    <h2 className="focus-title">OUR FOCUS</h2>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !started) {
+          started = true;
+          progress = 0;
+          animateCar();
+        }
+      },
+      {
+        threshold: 0.2,
+      }
+    );
 
-    <div className="plug" />
+    observer.observe(section);
 
-    <svg className="cable" viewBox="0 0 980 1500" fill="none">
-      <path
-        id="focusCablePath"
-        d="
-          M490 128
-          V205
+    return () => {
+      observer.disconnect();
 
-          C490 235 515 250 550 250
-          H835
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
+      }
+    };
+  }, []);
 
-          C910 250 945 285 945 360
-          V385
+  return (
+    <section className="focus-flow">
+      <style jsx>{`
+        .focus-flow {
+          background: #f4f1ea;
+          padding: 140px 0;
+        }
 
-          C945 460 910 495 835 495
-          H120
+        .focus-wrap {
+          position: relative;
+          width: 980px;
+          height: 1500px;
+          margin: 0 auto;
+        }
 
-          C65 495 35 530 35 585
-          V625
+        .cable {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          overflow: visible;
+        }
 
-          C35 680 65 715 120 715
-          H835
+        .plug {
+          position: absolute;
+          top: 60px;
+          left: 455px;
+          width: 70px;
+          height: 90px;
+        }
 
-          C910 715 945 750 945 825
-          V850
+        .focus-title {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: 48px;
+          letter-spacing: 8px;
+          font-weight: 700;
+          color: #071b33;
+        }
 
-          C945 900 910 935 835 935
-          H120
+        .tagline {
+          position: absolute;
+          top: 200px;
+          left: 250px;
+          font-size: 30px;
+          color: #071b33;
+          font-style: italic;
+        }
 
-          C65 935 35 970 35 1025
-          V1110
+        .card {
+          position: absolute;
+          width: 320px;
+          color: #071b33;
+        }
 
-          C35 1165 65 1200 120 1200
-          H835
+        .card h3 {
+          font-size: 42px;
+          margin-bottom: 18px;
+        }
 
-          C910 1200 945 1235 945 1310
-          V1410
-        "
-        stroke="#2563eb"
-        strokeWidth="5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
+        .card p {
+          font-size: 24px;
+          line-height: 1.7;
+        }
 
-    <div className="mini-car" id="miniCar">
-      <div className="car-top" />
-      <div className="car-body" />
-      <div className="wheel wheel-left" />
-      <div className="wheel wheel-right" />
-    </div>
+        .link {
+          margin-top: 22px;
+          font-size: 24px;
+          font-weight: 600;
+        }
 
-    <div className="focus-item diagnostic">
-      <svg viewBox="0 0 64 64">
-        <circle cx="26" cy="26" r="20" />
-        <path d="M14 27h8l4-8 6 16 4-8h8" />
-        <path d="M42 42l14 14" />
-      </svg>
+        .diagnostic {
+          top: 360px;
+          left: 140px;
+        }
 
-      <div>
-        <h3>Diagnostic</h3>
-        <p>
-          Charger behavior, interruptions,<br />
-          and field observations reviewed<br />
-          with structure.
-        </p>
+        .rma {
+          top: 610px;
+          left: 520px;
+        }
+
+        .site {
+          top: 930px;
+          left: 170px;
+        }
+
+        .infra {
+          top: 1180px;
+          left: 520px;
+        }
+
+        .mini-car {
+          position: absolute;
+          width: 46px;
+          height: 26px;
+          z-index: 10;
+          pointer-events: none;
+          opacity: 0;
+          transform: translate(-50%, -50%);
+        }
+
+        .car-body {
+          position: absolute;
+          bottom: 4px;
+          left: 4px;
+          width: 38px;
+          height: 16px;
+          background: #071b33;
+          border-radius: 12px 14px 6px 6px;
+        }
+
+        .car-top {
+          position: absolute;
+          top: 2px;
+          left: 14px;
+          width: 20px;
+          height: 12px;
+          background: #071b33;
+          border-radius: 10px 10px 3px 3px;
+        }
+
+        .wheel {
+          position: absolute;
+          bottom: 0;
+          width: 9px;
+          height: 9px;
+          background: #071b33;
+          border-radius: 50%;
+        }
+
+        .wheel-left {
+          left: 9px;
+        }
+
+        .wheel-right {
+          right: 9px;
+        }
+      `}</style>
+
+      <div className="focus-wrap">
+        <div className="focus-title">OUR FOCUS</div>
+
+        <div className="plug">
+          <svg viewBox="0 0 70 90" fill="none">
+            <path
+              d="
+                M18 8
+                V28
+
+                M52 8
+                V28
+
+                M18 28
+                H52
+
+                V52
+
+                C52 66 45 76 35 80
+
+                C25 76 18 66 18 52
+
+                Z
+              "
+              stroke="#071b33"
+              strokeWidth="5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              fill="none"
+            />
+          </svg>
+        </div>
+
+        <div className="tagline">
+          EV charging reliability, made visible
+        </div>
+
+        <svg
+          className="cable"
+          viewBox="0 0 980 1500"
+          fill="none"
+        >
+          <path
+            id="focusCablePath"
+            d="
+              M490 128
+              V205
+
+              C490 235 515 250 550 250
+              H835
+
+              C905 250 945 290 945 360
+              V385
+
+              C945 455 905 495 835 495
+              H120
+
+              C65 495 35 525 35 580
+              V605
+
+              C35 660 65 690 120 690
+              H835
+
+              C905 690 945 730 945 800
+              V825
+
+              C945 895 905 935 835 935
+              H120
+
+              C65 935 35 965 35 1025
+              V1110
+
+              C35 1170 65 1200 120 1200
+              H835
+
+              C905 1200 945 1240 945 1310
+              V1410
+            "
+            stroke="#071b33"
+            strokeWidth="5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+
+        <div className="mini-car" id="miniCar">
+          <div className="car-top" />
+          <div className="car-body" />
+          <div className="wheel wheel-left" />
+          <div className="wheel wheel-right" />
+        </div>
+
+        <div className="card diagnostic">
+          <h3>Diagnostic</h3>
+
+          <p>
+            Charger behavior, interruptions,
+            and field observations reviewed
+            with structure.
+          </p>
+
+          <div className="link">Explore →</div>
+        </div>
+
+        <div className="card rma">
+          <h3>RMA validation</h3>
+
+          <p>
+            Returned units, issue isolation,
+            functional checks, and
+            redeployment readiness.
+          </p>
+
+          <div className="link">View →</div>
+        </div>
+
+        <div className="card site">
+          <h3>Site reliability</h3>
+
+          <p>
+            Operational continuity, uptime
+            awareness, and site-level
+            support visibility.
+          </p>
+
+          <div className="link">Improve →</div>
+        </div>
+
+        <div className="card infra">
+          <h3>Infrastructure</h3>
+
+          <p>
+            Cable flow, placement, usability,
+            and coordination for real
+            charging sites.
+          </p>
+
+          <div className="link">View service →</div>
+        </div>
       </div>
-
-      <span className="divider" />
-      <a className="focus-link" href="#diagnostic">Explore →</a>
-    </div>
-
-    <div className="focus-item rma">
-      <svg viewBox="0 0 64 64">
-        <rect x="16" y="14" width="32" height="42" rx="4" />
-        <path d="M24 14v-4h16v4" />
-        <path d="M24 36l6 6 12-14" />
-      </svg>
-
-      <div>
-        <h3>RMA validation</h3>
-        <p>
-          Returned units, issue isolation,<br />
-          functional checks, and<br />
-          redeployment readiness.
-        </p>
-      </div>
-
-      <span className="divider" />
-      <a className="focus-link" href="#rma">Explore →</a>
-    </div>
-
-    <div className="focus-item site">
-      <svg viewBox="0 0 64 64">
-        <path d="M32 8l22 8v15c0 14-9 23-22 29C19 54 10 45 10 31V16l22-8z" />
-      </svg>
-
-      <div>
-        <h3>Site reliability</h3>
-        <p>
-          Operational continuity, uptime<br />
-          awareness, and site-level<br />
-          support visibility.
-        </p>
-      </div>
-
-      <span className="divider" />
-      <a className="focus-link" href="#site">Improve →</a>
-    </div>
-
-    <div className="focus-item infra">
-      <svg viewBox="0 0 64 64">
-        <rect x="14" y="10" width="26" height="44" rx="3" />
-        <path d="M20 22h14" />
-        <path d="M26 34h8l-7 14h8" />
-        <path d="M42 28h8v10c0 5 8 5 8 0V20" />
-        <path d="M54 20v-6" />
-      </svg>
-
-      <div>
-        <h3>Infrastructure</h3>
-        <p>
-          Cable flow, placement, usability,<br />
-          and coordination for real<br />
-          charging sites.
-        </p>
-      </div>
-
-      <span className="divider" />
-      <a className="focus-link" href="#infra">View service →</a>
-    </div>
-  </div>
-
-  <script
-    dangerouslySetInnerHTML={{
-      __html: `
-        (() => {
-          const section = document.querySelector(".focus-flow");
-          const path = document.getElementById("focusCablePath");
-          const car = document.getElementById("miniCar");
-
-          if (!section || !path || !car) return;
-
-          const pathLength = path.getTotalLength();
-          let progress = 0;
-          let started = false;
-
-          function animateCar() {
-            progress += 2.2;
-
-            if (progress > pathLength) {
-              progress = pathLength;
-            }
-
-            const point = path.getPointAtLength(progress);
-            const nextPoint = path.getPointAtLength(Math.min(progress + 4, pathLength));
-
-            const angle =
-              Math.atan2(nextPoint.y - point.y, nextPoint.x - point.x) *
-              180 /
-              Math.PI;
-
-            car.style.opacity = "1";
-            car.style.left = point.x + "px";
-            car.style.top = point.y + "px";
-            car.style.transform =
-              "translate(-50%, -50%) rotate(" + angle + "deg)";
-
-            if (progress < pathLength) {
-              requestAnimationFrame(animateCar);
-            }
-          }
-
-          const observer = new IntersectionObserver(
-            (entries) => {
-              entries.forEach((entry) => {
-                if (entry.isIntersecting && !started) {
-                  started = true;
-                  progress = 0;
-                  animateCar();
-                }
-              });
-            },
-            { threshold: 0.25 }
-          );
-
-          observer.observe(section);
-        })();
-      `,
-    }}
-  />
-</section>
+    </section>
+  );
+}
      <section style={{ background: "#0f172a", color: "white", padding: "90px 28px" }}>
         <div style={{
           maxWidth: "1220px", margin: "0 auto", display: "grid",
