@@ -277,10 +277,10 @@ url(${heroImage})
 
     .diagnostic { top: 280px; left: 135px; }
     .rma { top: 525px; left: 135px; }
-    .site { top: 735px; left: 135px; }
+    .site { top: 775px; left: 135px; }
 
     .infra {
-      top: 1045px;
+      top: 1005px;
       left: 135px;
       align-items: start;
       padding-top: 30px;
