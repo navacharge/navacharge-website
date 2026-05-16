@@ -295,35 +295,33 @@ url(${heroImage})
     .company-building {
       position: absolute;
       z-index: 2;
-      left: 420px;
+      left: 585px;
       top: 1435px;
-      width: 360px;
-      height: 170px;
+      width: 270px;
+      height: 150px;
       color: #071b33;
       pointer-events: none;
     }
 
     .company-name {
-      text-align: center;
-      font-size: 30px;
+      font-size: 26px;
       font-weight: 900;
-      letter-spacing: 1px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .building-shape {
-      height: 118px;
-      border: 5px solid #2563eb;
-      border-radius: 26px 26px 10px 10px;
+      height: 105px;
+      border: 3px solid #071b33;
+      border-radius: 12px;
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 9px;
-      padding: 18px;
-      background: rgba(255,255,255,0.18);
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      padding: 14px;
+      background: transparent;
     }
 
     .window {
-      border: 2px solid #2563eb;
+      border: 2px solid #071b33;
       border-radius: 4px;
     }
 
@@ -336,22 +334,16 @@ url(${heroImage})
     .brand-slogan {
       position: absolute;
       z-index: 2;
-      left: 570px;
-      top: 1645px;
+      left: 665px;
+      top: 1665px;
       font-size: 22px;
       font-weight: 800;
       color: #2563eb;
       white-space: nowrap;
-      animation: sloganPulse 2.6s ease-in-out infinite;
     }
 
     .brand-slogan strong {
       color: #071b33;
-    }
-
-    @keyframes sloganPulse {
-      0%, 100% { opacity: 0.75; transform: translateY(0); }
-      50% { opacity: 1; transform: translateY(-4px); }
     }
 
     @media (max-width: 900px) {
@@ -421,22 +413,11 @@ url(${heroImage})
           C35 1165 65 1200 120 1200
           H835
           C910 1200 945 1235 945 1310
-          V1390
-          C945 1435 910 1465 865 1465
-          H805
-          C770 1465 750 1485 750 1520
-          V1585
-          H650
-          V1520
-          C650 1485 630 1465 595 1465
-          H500
-          C455 1465 425 1495 425 1540
-          V1590
-          C425 1635 455 1665 500 1665
-          H835
-          C880 1665 910 1635 910 1590
-          V1545
-          C910 1515 930 1495 960 1495
+          V1410
+          C945 1455 910 1485 865 1485
+          H560
+          V1610
+          C560 1650 595 1680 640 1680
           H980
         "
         stroke="#2563eb"
@@ -506,22 +487,11 @@ url(${heroImage})
             C35 1165 65 1200 120 1200
             H835
             C910 1200 945 1235 945 1310
-            V1390
-            C945 1435 910 1465 865 1465
-            H805
-            C770 1465 750 1485 750 1520
-            V1585
-            H650
-            V1520
-            C650 1485 630 1465 595 1465
-            H500
-            C455 1465 425 1495 425 1540
-            V1590
-            C425 1635 455 1665 500 1665
-            H835
-            C880 1665 910 1635 910 1590
-            V1545
-            C910 1515 930 1495 960 1495
+            V1410
+            C945 1455 910 1485 865 1485
+            H560
+            V1610
+            C560 1650 595 1680 640 1680
             H980
           "
         />
