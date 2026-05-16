@@ -199,7 +199,6 @@ url(${heroImage})
       border: 5px solid #2f6f8f;
       border-radius: 0 0 22px 22px;
       background: #2f6f8f;
-      overflow: visible;
       z-index: 3;
     }
 
@@ -293,34 +292,52 @@ url(${heroImage})
       margin-top: 14px;
     }
 
-    .brand-card {
+    .company-building {
       position: absolute;
       z-index: 2;
-      left: 500px;
-      top: 1455px;
-      width: 300px;
-      height: 130px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 34px;
-      font-weight: 900;
-      letter-spacing: 1px;
+      left: 420px;
+      top: 1435px;
+      width: 360px;
+      height: 170px;
       color: #071b33;
       pointer-events: none;
     }
 
-    .brand-card span {
-      color: #2563eb;
-      font-size: 44px;
-      margin: 0 2px;
+    .company-name {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .building-shape {
+      height: 118px;
+      border: 5px solid #2563eb;
+      border-radius: 26px 26px 10px 10px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 9px;
+      padding: 18px;
+      background: rgba(255,255,255,0.18);
+    }
+
+    .window {
+      border: 2px solid #2563eb;
+      border-radius: 4px;
+    }
+
+    .company-door {
+      grid-column: span 2;
+      border: 3px solid #071b33;
+      border-radius: 6px 6px 0 0;
     }
 
     .brand-slogan {
       position: absolute;
       z-index: 2;
-      left: 665px;
-      top: 1615px;
+      left: 570px;
+      top: 1645px;
       font-size: 22px;
       font-weight: 800;
       color: #2563eb;
@@ -343,7 +360,7 @@ url(${heroImage})
       }
 
       .cable,
-      .brand-card,
+      .company-building,
       .brand-slogan {
         display: none;
       }
@@ -404,15 +421,23 @@ url(${heroImage})
           C35 1165 65 1200 120 1200
           H835
           C910 1200 945 1235 945 1310
-          V1410
-          C945 1465 910 1500 850 1500
-          H560
-          C515 1500 485 1530 485 1575
-          V1605
-          C485 1650 515 1680 560 1680
-          H840
-          C900 1680 940 1640 940 1580
+          V1390
+          C945 1435 910 1465 865 1465
+          H805
+          C770 1465 750 1485 750 1520
+          V1585
+          H650
+          V1520
+          C650 1485 630 1465 595 1465
+          H500
+          C455 1465 425 1495 425 1540
+          V1590
+          C425 1635 455 1665 500 1665
+          H835
+          C880 1665 910 1635 910 1590
           V1545
+          C910 1515 930 1495 960 1495
+          H980
         "
         stroke="#2563eb"
         strokeWidth="5"
@@ -421,79 +446,85 @@ url(${heroImage})
       />
 
       <g>
-        <g>
-          <path
-            d="
-              M-32 2
-              C-28 -10 -16 -16 0 -16
-              C16 -16 28 -10 32 2
-              C28 10 16 14 0 14
-              C-16 14 -28 10 -32 2
-              Z
-            "
-            fill="#ef4444"
-          />
+        <path
+          d="
+            M-32 2
+            C-28 -10 -16 -16 0 -16
+            C16 -16 28 -10 32 2
+            C28 10 16 14 0 14
+            C-16 14 -28 10 -32 2
+            Z
+          "
+          fill="#ef4444"
+        />
 
-          <path
-            d="
-              M-14 -10
-              C-8 -15 8 -15 14 -10
-              L20 0
-              C10 3 -10 3 -20 0
-              Z
-            "
-            fill="#991b1b"
-            opacity="0.85"
-          />
+        <path
+          d="
+            M-14 -10
+            C-8 -15 8 -15 14 -10
+            L20 0
+            C10 3 -10 3 -20 0
+            Z
+          "
+          fill="#991b1b"
+          opacity="0.85"
+        />
 
-          <circle cx="-18" cy="12" r="5" fill="#111827" />
-          <circle cx="18" cy="12" r="5" fill="#111827" />
+        <circle cx="-18" cy="12" r="5" fill="#111827" />
+        <circle cx="18" cy="12" r="5" fill="#111827" />
 
-          <path
-            d="M-26 3 H26"
-            stroke="#fecaca"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
+        <path
+          d="M-26 3 H26"
+          stroke="#fecaca"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
 
-          <animateMotion
-            dur="18s"
-            repeatCount="indefinite"
-            rotate="auto"
-            path="
-              M490 128
-              V205
-              C490 235 515 250 550 250
-              H835
-              C910 250 945 285 945 360
-              V385
-              C945 460 910 495 835 495
-              H120
-              C65 495 35 530 35 585
-              V625
-              C35 680 65 715 120 715
-              H835
-              C910 715 945 750 945 825
-              V850
-              C945 900 910 935 835 935
-              H120
-              C65 935 35 970 35 1025
-              V1110
-              C35 1165 65 1200 120 1200
-              H835
-              C910 1200 945 1235 945 1310
-              V1410
-              C945 1465 910 1500 850 1500
-              H560
-              C515 1500 485 1530 485 1575
-              V1605
-              C485 1650 515 1680 560 1680
-              H840
-              C900 1680 940 1640 940 1580
-              V1545
-            "
-          />
-        </g>
+        <animateMotion
+          dur="20s"
+          repeatCount="indefinite"
+          rotate="auto"
+          path="
+            M490 128
+            V205
+            C490 235 515 250 550 250
+            H835
+            C910 250 945 285 945 360
+            V385
+            C945 460 910 495 835 495
+            H120
+            C65 495 35 530 35 585
+            V625
+            C35 680 65 715 120 715
+            H835
+            C910 715 945 750 945 825
+            V850
+            C945 900 910 935 835 935
+            H120
+            C65 935 35 970 35 1025
+            V1110
+            C35 1165 65 1200 120 1200
+            H835
+            C910 1200 945 1235 945 1310
+            V1390
+            C945 1435 910 1465 865 1465
+            H805
+            C770 1465 750 1485 750 1520
+            V1585
+            H650
+            V1520
+            C650 1485 630 1465 595 1465
+            H500
+            C455 1465 425 1495 425 1540
+            V1590
+            C425 1635 455 1665 500 1665
+            H835
+            C880 1665 910 1635 910 1590
+            V1545
+            C910 1515 930 1495 960 1495
+            H980
+          "
+        />
       </g>
     </svg>
 
@@ -577,12 +608,26 @@ url(${heroImage})
       <a className="focus-link" href="#infra">View service →</a>
     </div>
 
-    <div className="brand-card">
-      NAVA<span>⚡</span>CHARGE
+    <div className="company-building">
+      <div className="company-name">NavaCharge</div>
+
+      <div className="building-shape">
+        <div className="window" />
+        <div className="window" />
+        <div className="window" />
+        <div className="window" />
+        <div className="window" />
+        <div className="window" />
+        <div className="window" />
+        <div className="window" />
+        <div className="company-door" />
+        <div className="window" />
+        <div className="window" />
+      </div>
     </div>
 
     <div className="brand-slogan">
-      <strong>ستار باشد.</strong> Reliable, Responsive and Ready.
+      <strong>ستار باشد.</strong> Reliable, Responsible and Ready.
     </div>
   </div>
 </section>
