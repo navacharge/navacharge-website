@@ -169,7 +169,7 @@ url(${heroImage})
 
 import { useEffect } from "react";
 
-export default function FocusFlow() {
+export default function Page() {
   useEffect(() => {
     const section = document.querySelector(".focus-flow");
     const path = document.getElementById("focusCablePath");
@@ -191,6 +191,7 @@ export default function FocusFlow() {
       }
 
       const point = path.getPointAtLength(progress);
+
       const nextPoint = path.getPointAtLength(
         Math.min(progress + 4, pathLength)
       );
@@ -206,7 +207,11 @@ export default function FocusFlow() {
       car.style.opacity = "1";
       car.style.left = `${point.x}px`;
       car.style.top = `${point.y}px`;
-      car.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
+
+      car.style.transform = `
+        translate(-50%, -50%)
+        rotate(${angle}deg)
+      `;
 
       if (progress < pathLength) {
         animationFrame = requestAnimationFrame(animateCar);
@@ -242,7 +247,7 @@ export default function FocusFlow() {
       <style jsx>{`
         .focus-flow {
           background: #f4f1ea;
-          padding: 140px 0;
+          padding: 120px 0;
         }
 
         .focus-wrap {
@@ -252,12 +257,24 @@ export default function FocusFlow() {
           margin: 0 auto;
         }
 
-        .cable {
+        .focus-title {
           position: absolute;
-          inset: 0;
-          width: 100%;
-          height: 100%;
-          overflow: visible;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: 46px;
+          letter-spacing: 10px;
+          font-weight: 700;
+          color: #071b33;
+        }
+
+        .tagline {
+          position: absolute;
+          top: 190px;
+          left: 220px;
+          font-size: 30px;
+          color: #071b33;
+          font-style: italic;
         }
 
         .plug {
@@ -266,26 +283,14 @@ export default function FocusFlow() {
           left: 455px;
           width: 70px;
           height: 90px;
+          z-index: 3;
         }
 
-        .focus-title {
+        .cable {
           position: absolute;
-          top: 0;
-          left: 50%;
-          transform: translateX(-50%);
-          font-size: 48px;
-          letter-spacing: 8px;
-          font-weight: 700;
-          color: #071b33;
-        }
-
-        .tagline {
-          position: absolute;
-          top: 200px;
-          left: 250px;
-          font-size: 30px;
-          color: #071b33;
-          font-style: italic;
+          inset: 0;
+          width: 100%;
+          height: 100%;
         }
 
         .card {
@@ -300,14 +305,14 @@ export default function FocusFlow() {
         }
 
         .card p {
-          font-size: 24px;
+          font-size: 22px;
           line-height: 1.7;
         }
 
         .link {
           margin-top: 22px;
-          font-size: 24px;
-          font-weight: 600;
+          font-size: 22px;
+          font-weight: 700;
         }
 
         .diagnostic {
@@ -379,7 +384,9 @@ export default function FocusFlow() {
       `}</style>
 
       <div className="focus-wrap">
-        <div className="focus-title">OUR FOCUS</div>
+        <div className="focus-title">
+          OUR FOCUS
+        </div>
 
         <div className="plug">
           <svg viewBox="0 0 70 90" fill="none">
@@ -412,7 +419,8 @@ export default function FocusFlow() {
         </div>
 
         <div className="tagline">
-          EV charging reliability, made visible
+          EV charging reliability,
+          made visible
         </div>
 
         <svg
@@ -474,48 +482,61 @@ export default function FocusFlow() {
           <h3>Diagnostic</h3>
 
           <p>
-            Charger behavior, interruptions,
-            and field observations reviewed
-            with structure.
+            Charger behavior,
+            interruptions,
+            and field observations
+            reviewed with structure.
           </p>
 
-          <div className="link">Explore →</div>
+          <div className="link">
+            Explore →
+          </div>
         </div>
 
         <div className="card rma">
           <h3>RMA validation</h3>
 
           <p>
-            Returned units, issue isolation,
-            functional checks, and
-            redeployment readiness.
+            Returned units,
+            issue isolation,
+            functional checks,
+            and redeployment readiness.
           </p>
 
-          <div className="link">View →</div>
+          <div className="link">
+            View →
+          </div>
         </div>
 
         <div className="card site">
           <h3>Site reliability</h3>
 
           <p>
-            Operational continuity, uptime
-            awareness, and site-level
+            Operational continuity,
+            uptime awareness,
+            and site-level
             support visibility.
           </p>
 
-          <div className="link">Improve →</div>
+          <div className="link">
+            Improve →
+          </div>
         </div>
 
         <div className="card infra">
           <h3>Infrastructure</h3>
 
           <p>
-            Cable flow, placement, usability,
-            and coordination for real
-            charging sites.
+            Cable flow,
+            placement,
+            usability,
+            and coordination
+            for real charging sites.
           </p>
 
-          <div className="link">View service →</div>
+          <div className="link">
+            View service →
+          </div>
         </div>
       </div>
     </section>
