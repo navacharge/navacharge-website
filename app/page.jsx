@@ -165,7 +165,7 @@ url(${heroImage})
   </div>
 </div>
 </section>
- <section className="focus-flow">
+<section className="focus-flow">
   <style>{`
     .focus-flow {
       background: inherit;
@@ -173,12 +173,12 @@ url(${heroImage})
       overflow: hidden;
     }
 
-   .focus-wrap {
-  position: relative;
-  max-width: 980px;
-  height: 1500px;
-  margin: 0 auto;
-}
+    .focus-wrap {
+      position: relative;
+      max-width: 980px;
+      height: 1500px;
+      margin: 0 auto;
+    }
 
     .focus-title {
       text-align: center;
@@ -190,31 +190,28 @@ url(${heroImage})
     }
 
     .plug {
-  position: absolute;
-  top: 70px;
-  left: 50%;
-  width: 58px;
-  height: 58px;
-  transform: translateX(-50%);
-  border: 5px solid #2f6f8f;
-  border-radius: 0 0 22px 22px;
-  background: #2f6f8f;
-  overflow: visible;
-  z-index: 3;
-}
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      width: 58px;
+      height: 58px;
+      transform: translateX(-50%);
+      border: 5px solid #2563eb;
+      border-radius: 0 0 22px 22px;
+      background: inherit;
+      z-index: 3;
+    }
 
     .plug::before,
-    .plug::before {
-  content: "";
-  position: absolute;
-  top: -38px;
-  left: 14px;
-  width: 5px;
-  height: 38px;
-  background: #2563eb;
-  border-radius: 5px;
-  box-shadow: 20px 0 0 #2563eb;
-}
+    .plug::after {
+      content: "";
+      position: absolute;
+      top: -38px;
+      width: 5px;
+      height: 38px;
+      background: #2563eb;
+      border-radius: 5px;
+    }
 
     .plug::before { left: 14px; }
     .plug::after { right: 14px; }
@@ -227,6 +224,48 @@ url(${heroImage})
       z-index: 1;
       pointer-events: none;
     }
+
+    .mini-car {
+      position: absolute;
+      width: 46px;
+      height: 26px;
+      z-index: 4;
+      pointer-events: none;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+    }
+
+    .car-body {
+      position: absolute;
+      bottom: 4px;
+      left: 4px;
+      width: 38px;
+      height: 16px;
+      background: #071b33;
+      border-radius: 12px 14px 6px 6px;
+    }
+
+    .car-top {
+      position: absolute;
+      top: 2px;
+      left: 14px;
+      width: 20px;
+      height: 12px;
+      background: #071b33;
+      border-radius: 10px 10px 3px 3px;
+    }
+
+    .wheel {
+      position: absolute;
+      bottom: 0;
+      width: 9px;
+      height: 9px;
+      background: #071b33;
+      border-radius: 50%;
+    }
+
+    .wheel-left { left: 9px; }
+    .wheel-right { right: 9px; }
 
     .focus-item {
       position: absolute;
@@ -292,23 +331,29 @@ url(${heroImage})
       left: 135px;
     }
 
- .infra {
-  top: 990px;
-  left: 135px;
-}
-.infra h3 {
-  margin-bottom: 18px;
-}
+    .infra {
+      top: 1045px;
+      left: 135px;
+      align-items: start;
+      padding-top: 30px;
+    }
 
-.infra p {
-  line-height: 1.8;
-}
+    .infra h3 {
+      margin-bottom: 18px;
+    }
+
+    .infra p {
+      line-height: 1.8;
+      margin-top: 14px;
+    }
+
     @media (max-width: 900px) {
       .focus-wrap {
         height: auto;
       }
 
-      .cable {
+      .cable,
+      .mini-car {
         display: none;
       }
 
@@ -344,48 +389,56 @@ url(${heroImage})
 
     <div className="plug" />
 
-   <svg className="cable" viewBox="0 0 980 1500" fill="none">
-  <path
-  d="
-    M490 128
-    V205
+    <svg className="cable" viewBox="0 0 980 1500" fill="none">
+      <path
+        id="focusCablePath"
+        d="
+          M490 128
+          V205
 
-    C490 235 515 250 550 250
-    H835
+          C490 235 515 250 550 250
+          H835
 
-    C910 250 945 285 945 360
-    V385
+          C910 250 945 285 945 360
+          V385
 
-    C945 460 910 495 835 495
-    H120
+          C945 460 910 495 835 495
+          H120
 
-    C65 495 35 530 35 585
-    V625
+          C65 495 35 530 35 585
+          V625
 
-    C35 680 65 715 120 715
-    H835
+          C35 680 65 715 120 715
+          H835
 
-    C910 715 945 750 945 825
-    V850
+          C910 715 945 750 945 825
+          V850
 
-    C945 900 910 935 835 935
-    H120
+          C945 900 910 935 835 935
+          H120
 
-    C65 935 35 970 35 1025
-    V1110
+          C65 935 35 970 35 1025
+          V1110
 
-    C35 1165 65 1200 120 1200
-    H835
+          C35 1165 65 1200 120 1200
+          H835
 
-    C910 1200 945 1235 945 1310
-    V1410
-  "
-  stroke="#2563eb"
-  strokeWidth="5"
-  strokeLinecap="round"
-  strokeLinejoin="round"
-/>
-</svg>
+          C910 1200 945 1235 945 1310
+          V1410
+        "
+        stroke="#2563eb"
+        strokeWidth="5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+
+    <div className="mini-car" id="miniCar">
+      <div className="car-top" />
+      <div className="car-body" />
+      <div className="wheel wheel-left" />
+      <div className="wheel wheel-right" />
+    </div>
 
     <div className="focus-item diagnostic">
       <svg viewBox="0 0 64 64">
@@ -424,7 +477,7 @@ url(${heroImage})
       </div>
 
       <span className="divider" />
-      <a className="focus-link" href="#rma"> Explore →</a>
+      <a className="focus-link" href="#rma">Explore →</a>
     </div>
 
     <div className="focus-item site">
@@ -464,9 +517,68 @@ url(${heroImage})
       </div>
 
       <span className="divider" />
-      <a className="focus-link" href="#infra">Improve →</a>
+      <a className="focus-link" href="#infra">View service →</a>
     </div>
   </div>
+
+  <script
+    dangerouslySetInnerHTML={{
+      __html: `
+        (() => {
+          const section = document.querySelector(".focus-flow");
+          const path = document.getElementById("focusCablePath");
+          const car = document.getElementById("miniCar");
+
+          if (!section || !path || !car) return;
+
+          const pathLength = path.getTotalLength();
+          let progress = 0;
+          let started = false;
+
+          function animateCar() {
+            progress += 2.2;
+
+            if (progress > pathLength) {
+              progress = pathLength;
+            }
+
+            const point = path.getPointAtLength(progress);
+            const nextPoint = path.getPointAtLength(Math.min(progress + 4, pathLength));
+
+            const angle =
+              Math.atan2(nextPoint.y - point.y, nextPoint.x - point.x) *
+              180 /
+              Math.PI;
+
+            car.style.opacity = "1";
+            car.style.left = point.x + "px";
+            car.style.top = point.y + "px";
+            car.style.transform =
+              "translate(-50%, -50%) rotate(" + angle + "deg)";
+
+            if (progress < pathLength) {
+              requestAnimationFrame(animateCar);
+            }
+          }
+
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting && !started) {
+                  started = true;
+                  progress = 0;
+                  animateCar();
+                }
+              });
+            },
+            { threshold: 0.25 }
+          );
+
+          observer.observe(section);
+        })();
+      `,
+    }}
+  />
 </section>
      <section style={{ background: "#0f172a", color: "white", padding: "90px 28px" }}>
         <div style={{
