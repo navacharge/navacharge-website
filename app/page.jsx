@@ -228,12 +228,13 @@ url(${heroImage})
 
     .mini-car {
       position: absolute;
-      width: 46px;
-      height: 26px;
+      width: 58px;
+      height: 34px;
       z-index: 5;
       pointer-events: none;
       offset-path: path("M490 128 V205 C490 235 515 250 550 250 H835 C910 250 945 285 945 360 V385 C945 460 910 495 835 495 H120 C65 495 35 530 35 585 V625 C35 680 65 715 120 715 H835 C910 715 945 750 945 825 V850 C945 900 910 935 835 935 H120 C65 935 35 970 35 1025 V1110 C35 1165 65 1200 120 1200 H835 C910 1200 945 1235 945 1310 V1410");
       offset-rotate: auto;
+      offset-anchor: 50% 50%;
       animation: driveCable 14s linear infinite;
     }
 
@@ -244,35 +245,36 @@ url(${heroImage})
 
     .car-body {
       position: absolute;
-      bottom: 4px;
-      left: 4px;
-      width: 38px;
-      height: 16px;
-      background: #071b33;
-      border-radius: 12px 14px 6px 6px;
+      bottom: 6px;
+      left: 5px;
+      width: 48px;
+      height: 20px;
+      background: #ef4444;
+      border-radius: 14px 16px 7px 7px;
+      box-shadow: 0 4px 10px rgba(239, 68, 68, 0.35);
     }
 
     .car-top {
       position: absolute;
       top: 2px;
-      left: 14px;
-      width: 20px;
-      height: 12px;
-      background: #071b33;
-      border-radius: 10px 10px 3px 3px;
+      left: 18px;
+      width: 25px;
+      height: 15px;
+      background: #dc2626;
+      border-radius: 12px 12px 4px 4px;
     }
 
     .wheel {
       position: absolute;
       bottom: 0;
-      width: 9px;
-      height: 9px;
-      background: #071b33;
+      width: 11px;
+      height: 11px;
+      background: #111827;
       border-radius: 50%;
     }
 
-    .wheel-left { left: 9px; }
-    .wheel-right { right: 9px; }
+    .wheel-left { left: 12px; }
+    .wheel-right { right: 12px; }
 
     .focus-item {
       position: absolute;
@@ -388,34 +390,24 @@ url(${heroImage})
         d="
           M490 128
           V205
-
           C490 235 515 250 550 250
           H835
-
           C910 250 945 285 945 360
           V385
-
           C945 460 910 495 835 495
           H120
-
           C65 495 35 530 35 585
           V625
-
           C35 680 65 715 120 715
           H835
-
           C910 715 945 750 945 825
           V850
-
           C945 900 910 935 835 935
           H120
-
           C65 935 35 970 35 1025
           V1110
-
           C35 1165 65 1200 120 1200
           H835
-
           C910 1200 945 1235 945 1310
           V1410
         "
