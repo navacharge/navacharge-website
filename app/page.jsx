@@ -159,7 +159,7 @@ url(${heroImage})
         fontWeight: "800",
       }}
     >
-      Explore Services
+      Explore 
     </a>
     </div>
   </div>
@@ -424,7 +424,7 @@ url(${heroImage})
       </div>
 
       <span className="divider" />
-      <a className="focus-link" href="#rma">View →</a>
+      <a className="focus-link" href="#rma"> Explore →</a>
     </div>
 
     <div className="focus-item site">
