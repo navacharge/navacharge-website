@@ -226,56 +226,6 @@ url(${heroImage})
       pointer-events: none;
     }
 
-    .mini-car {
-      position: absolute;
-      width: 58px;
-      height: 34px;
-      z-index: 5;
-      pointer-events: none;
-      offset-path: path("M490 128 V205 C490 235 515 250 550 250 H835 C910 250 945 285 945 360 V385 C945 460 910 495 835 495 H120 C65 495 35 530 35 585 V625 C35 680 65 715 120 715 H835 C910 715 945 750 945 825 V850 C945 900 910 935 835 935 H120 C65 935 35 970 35 1025 V1110 C35 1165 65 1200 120 1200 H835 C910 1200 945 1235 945 1310 V1410");
-      offset-rotate: auto;
-      offset-anchor: 50% 50%;
-      animation: driveCable 14s linear infinite;
-    }
-
-    @keyframes driveCable {
-      from { offset-distance: 0%; }
-      to { offset-distance: 100%; }
-    }
-
-    .car-body {
-      position: absolute;
-      bottom: 6px;
-      left: 5px;
-      width: 48px;
-      height: 20px;
-      background: #ef4444;
-      border-radius: 14px 16px 7px 7px;
-      box-shadow: 0 4px 10px rgba(239, 68, 68, 0.35);
-    }
-
-    .car-top {
-      position: absolute;
-      top: 2px;
-      left: 18px;
-      width: 25px;
-      height: 15px;
-      background: #dc2626;
-      border-radius: 12px 12px 4px 4px;
-    }
-
-    .wheel {
-      position: absolute;
-      bottom: 0;
-      width: 11px;
-      height: 11px;
-      background: #111827;
-      border-radius: 50%;
-    }
-
-    .wheel-left { left: 12px; }
-    .wheel-right { right: 12px; }
-
     .focus-item {
       position: absolute;
       z-index: 2;
@@ -348,8 +298,7 @@ url(${heroImage})
         height: auto;
       }
 
-      .cable,
-      .mini-car {
+      .cable {
         display: none;
       }
 
@@ -390,24 +339,34 @@ url(${heroImage})
         d="
           M490 128
           V205
+
           C490 235 515 250 550 250
           H835
+
           C910 250 945 285 945 360
           V385
+
           C945 460 910 495 835 495
           H120
+
           C65 495 35 530 35 585
           V625
+
           C35 680 65 715 120 715
           H835
+
           C910 715 945 750 945 825
           V850
+
           C945 900 910 935 835 935
           H120
+
           C65 935 35 970 35 1025
           V1110
+
           C35 1165 65 1200 120 1200
           H835
+
           C910 1200 945 1235 945 1310
           V1410
         "
@@ -416,14 +375,56 @@ url(${heroImage})
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-    </svg>
 
-    <div className="mini-car">
-      <div className="car-top" />
-      <div className="car-body" />
-      <div className="wheel wheel-left" />
-      <div className="wheel wheel-right" />
-    </div>
+      <g>
+        <g>
+          <rect x="-26" y="-10" width="52" height="20" rx="8" fill="#ef4444" />
+          <rect x="-13" y="-24" width="26" height="16" rx="5" fill="#dc2626" />
+          <circle cx="-15" cy="12" r="6" fill="#111827" />
+          <circle cx="15" cy="12" r="6" fill="#111827" />
+
+          <animateMotion
+            dur="14s"
+            repeatCount="indefinite"
+            rotate="auto"
+            path="
+              M490 128
+              V205
+
+              C490 235 515 250 550 250
+              H835
+
+              C910 250 945 285 945 360
+              V385
+
+              C945 460 910 495 835 495
+              H120
+
+              C65 495 35 530 35 585
+              V625
+
+              C35 680 65 715 120 715
+              H835
+
+              C910 715 945 750 945 825
+              V850
+
+              C945 900 910 935 835 935
+              H120
+
+              C65 935 35 970 35 1025
+              V1110
+
+              C35 1165 65 1200 120 1200
+              H835
+
+              C910 1200 945 1235 945 1310
+              V1410
+            "
+          />
+        </g>
+      </g>
+    </svg>
 
     <div className="focus-item diagnostic">
       <svg viewBox="0 0 64 64">
