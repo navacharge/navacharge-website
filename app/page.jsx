@@ -275,16 +275,27 @@ url(${heroImage})
       white-space: nowrap;
     }
 
-    .diagnostic { top: 280px; left: 135px; }
-    .rma { top: 525px; left: 135px; }
-    .site { top: 775px; left: 135px; }
+    .diagnostic { 
+  top: 320px; 
+  left: 135px; 
+}
 
-    .infra {
-      top: 1005px;
-      left: 135px;
-      align-items: start;
-      padding-top: 30px;
-    }
+.rma { 
+  top: 565px; 
+  left: 135px; 
+}
+
+.site { 
+  top: 775px; 
+  left: 135px; 
+}
+
+.infra {
+  top: 985px;
+  left: 135px;
+  align-items: start;
+  padding-top: 30px;
+}
 
     .infra h3 { margin-bottom: 18px; }
 
