@@ -176,7 +176,7 @@ url(${heroImage})
     .focus-wrap {
       position: relative;
       max-width: 980px;
-      height: 1540px;
+      height: 1740px;
       margin: 0 auto;
     }
 
@@ -275,27 +275,16 @@ url(${heroImage})
       white-space: nowrap;
     }
 
-    .diagnostic { 
-  top: 320px; 
-  left: 135px; 
-}
+    .diagnostic { top: 320px; left: 135px; }
+    .rma { top: 565px; left: 135px; }
+    .site { top: 775px; left: 135px; }
 
-.rma { 
-  top: 565px; 
-  left: 135px; 
-}
-
-.site { 
-  top: 775px; 
-  left: 135px; 
-}
-
-.infra {
-  top: 985px;
-  left: 135px;
-  align-items: start;
-  padding-top: 30px;
-}
+    .infra {
+      top: 985px;
+      left: 135px;
+      align-items: start;
+      padding-top: 30px;
+    }
 
     .infra h3 { margin-bottom: 18px; }
 
@@ -304,12 +293,58 @@ url(${heroImage})
       margin-top: 14px;
     }
 
+    .brand-card {
+      position: absolute;
+      z-index: 2;
+      left: 500px;
+      top: 1455px;
+      width: 300px;
+      height: 130px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      color: #071b33;
+      pointer-events: none;
+    }
+
+    .brand-card span {
+      color: #2563eb;
+      font-size: 44px;
+      margin: 0 2px;
+    }
+
+    .brand-slogan {
+      position: absolute;
+      z-index: 2;
+      left: 665px;
+      top: 1615px;
+      font-size: 22px;
+      font-weight: 800;
+      color: #2563eb;
+      white-space: nowrap;
+      animation: sloganPulse 2.6s ease-in-out infinite;
+    }
+
+    .brand-slogan strong {
+      color: #071b33;
+    }
+
+    @keyframes sloganPulse {
+      0%, 100% { opacity: 0.75; transform: translateY(0); }
+      50% { opacity: 1; transform: translateY(-4px); }
+    }
+
     @media (max-width: 900px) {
       .focus-wrap {
         height: auto;
       }
 
-      .cable {
+      .cable,
+      .brand-card,
+      .brand-slogan {
         display: none;
       }
 
@@ -345,7 +380,7 @@ url(${heroImage})
 
     <div className="plug" />
 
-    <svg className="cable" viewBox="0 0 980 1500" fill="none">
+    <svg className="cable" viewBox="0 0 980 1740" fill="none">
       <path
         d="
           M490 128
@@ -370,6 +405,14 @@ url(${heroImage})
           H835
           C910 1200 945 1235 945 1310
           V1410
+          C945 1465 910 1500 850 1500
+          H560
+          C515 1500 485 1530 485 1575
+          V1605
+          C485 1650 515 1680 560 1680
+          H840
+          C900 1680 940 1640 940 1580
+          V1545
         "
         stroke="#2563eb"
         strokeWidth="5"
@@ -414,7 +457,7 @@ url(${heroImage})
           />
 
           <animateMotion
-            dur="14s"
+            dur="18s"
             repeatCount="indefinite"
             rotate="auto"
             path="
@@ -440,6 +483,14 @@ url(${heroImage})
               H835
               C910 1200 945 1235 945 1310
               V1410
+              C945 1465 910 1500 850 1500
+              H560
+              C515 1500 485 1530 485 1575
+              V1605
+              C485 1650 515 1680 560 1680
+              H840
+              C900 1680 940 1640 940 1580
+              V1545
             "
           />
         </g>
@@ -524,6 +575,14 @@ url(${heroImage})
 
       <span className="divider" />
       <a className="focus-link" href="#infra">View service →</a>
+    </div>
+
+    <div className="brand-card">
+      NAVA<span>⚡</span>CHARGE
+    </div>
+
+    <div className="brand-slogan">
+      <strong>ستار باشد.</strong> Reliable, Responsive and Ready.
     </div>
   </div>
 </section>
