@@ -176,7 +176,7 @@ url(${heroImage})
     .focus-wrap {
       position: relative;
       max-width: 1080px;
-      height: 1900px;
+      height: 1950px;
       margin: 0 auto;
     }
 
@@ -276,15 +276,15 @@ url(${heroImage})
 
     .diagnostic { top: 320px; left: 135px; }
     .rma { top: 545px; left: 135px; }
+    .site { top: 755px; left: 135px; }
 
-.site { top: 755px; left: 135px; }
+    .infra {
+      top: 970px;
+      left: 135px;
+      align-items: start;
+      padding-top: 30px;
+    }
 
-.infra {
-  top: 970px;
-  left: 135px;
-  align-items: start;
-  padding-top: 30px;
-}
     .infra h3 { margin-bottom: 18px; }
 
     .infra p {
@@ -295,35 +295,34 @@ url(${heroImage})
     .operational-hub {
       position: absolute;
       z-index: 2;
-      left: 240px;
-      top: 1405px;
-      width: 600px;
-      padding: 52px 48px 46px;
+      left: 160px;
+      top: 1395px;
+      width: 760px;
+      padding: 44px 46px 38px;
       border-radius: 34px;
-      background: rgba(255,255,255,0.55);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(7,27,51,0.08);
+      background: rgba(255,255,255,0.58);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(37,99,235,0.18);
       box-shadow:
-        0 24px 80px rgba(7,27,51,0.06),
+        0 24px 80px rgba(7,27,51,0.07),
         inset 0 1px 0 rgba(255,255,255,0.75);
       color: #071b33;
       pointer-events: none;
     }
 
     .hub-header {
-      text-align: center;
-      margin-bottom: 44px;
+      text-align: left;
+      margin-bottom: 34px;
     }
 
     .hub-logo {
       display: flex;
       align-items: center;
-      justify-content: center;
       gap: 12px;
-      font-size: 32px;
-      font-weight: 800;
+      font-size: 30px;
+      font-weight: 900;
       color: #071b33;
-      margin-bottom: 16px;
+      margin-bottom: 8px;
     }
 
     .hub-logo-mark {
@@ -336,13 +335,13 @@ url(${heroImage})
       align-items: center;
       justify-content: center;
       font-size: 22px;
-      font-weight: 800;
+      font-weight: 900;
     }
 
     .hub-title {
-      margin: 0 0 10px;
+      margin: 0 0 8px;
       font-size: 28px;
-      font-weight: 800;
+      font-weight: 900;
       color: #071b33;
     }
 
@@ -353,53 +352,136 @@ url(${heroImage})
       font-weight: 500;
     }
 
-    .hub-features {
+    .hub-core {
+      position: relative;
+      min-height: 260px;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      margin-bottom: 42px;
+      grid-template-columns: 1fr 260px 1fr;
+      align-items: center;
+      gap: 26px;
+      margin-bottom: 30px;
     }
 
-    .hub-feature {
-      text-align: center;
+    .hub-list {
+      display: grid;
+      gap: 18px;
     }
 
-    .hub-feature-icon {
-      width: 54px;
-      height: 54px;
-      margin: 0 auto 16px;
-      border-radius: 16px;
-      border: 1.5px solid rgba(7,27,51,0.12);
+    .hub-signal {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #071b33;
+    }
+
+    .signal-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #245DFF;
+      box-shadow: 0 0 0 6px rgba(36,93,255,0.1);
+    }
+
+    .hub-radar {
+      position: relative;
+      width: 240px;
+      height: 240px;
+      margin: 0 auto;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle, rgba(36,93,255,0.16) 0 18%, transparent 19%),
+        radial-gradient(circle, transparent 0 39%, rgba(36,93,255,0.16) 40% 41%, transparent 42%),
+        radial-gradient(circle, transparent 0 65%, rgba(36,93,255,0.12) 66% 67%, transparent 68%);
+    }
+
+    .hub-radar::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border: 1px dashed rgba(36,93,255,0.35);
+      border-radius: 50%;
+    }
+
+    .hub-radar-center {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 86px;
+      height: 86px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: linear-gradient(135deg, #245DFF, #60a5fa);
+      color: white;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 24px;
-      color: #071b33;
-      background: rgba(255,255,255,0.45);
+      font-size: 46px;
+      font-weight: 900;
+      box-shadow: 0 18px 40px rgba(36,93,255,0.28);
     }
 
-    .hub-feature h4 {
-      margin: 0;
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 1.4;
+    .radar-node {
+      position: absolute;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.85);
+      border: 1px solid rgba(36,93,255,0.22);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: #071b33;
+      font-size: 22px;
+      box-shadow: 0 12px 28px rgba(7,27,51,0.08);
     }
 
-    .hub-footer {
-      text-align: center;
-      font-size: 26px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
+    .radar-node.top { top: 0; left: 50%; transform: translateX(-50%); }
+    .radar-node.right { right: 0; top: 50%; transform: translateY(-50%); }
+    .radar-node.bottom { bottom: 0; left: 50%; transform: translateX(-50%); }
+    .radar-node.left { left: 0; top: 50%; transform: translateY(-50%); }
+
+    .hub-outcome {
+      padding: 20px 22px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(36,93,255,0.16);
+      display: grid;
+      grid-template-columns: 1.1fr 1fr 1fr 1fr;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 14px 34px rgba(7,27,51,0.06);
+    }
+
+    .outcome-title {
+      font-size: 13px;
+      letter-spacing: 4px;
+      font-weight: 900;
+      color: #071b33;
+      white-space: nowrap;
+    }
+
+    .outcome-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 18px;
+      font-weight: 900;
       color: #245DFF;
-      opacity: 0;
-      transform: translateY(14px);
-      animation: sloganReveal 4s ease-in-out infinite;
+      justify-content: center;
     }
 
-    @keyframes sloganReveal {
-      0%, 38% { opacity: 0; transform: translateY(14px); }
-      52%, 100% { opacity: 1; transform: translateY(0); }
+    .outcome-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      border: 1.5px solid rgba(36,93,255,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #245DFF;
+      background: rgba(255,255,255,0.7);
     }
 
     @media (max-width: 900px) {
@@ -444,7 +526,7 @@ url(${heroImage})
 
     <div className="plug" />
 
-    <svg className="cable" viewBox="0 0 1080 1900" fill="none">
+    <svg className="cable" viewBox="0 0 1080 1950" fill="none">
       <path
         d="
           M540 128
@@ -467,8 +549,8 @@ url(${heroImage})
           V1110
           C35 1165 65 1200 120 1200
           H500
-C525 1200 540 1218 540 1248
-V1405
+          C525 1200 540 1218 540 1248
+          V1395
         "
         stroke="#2563eb"
         strokeWidth="4"
@@ -535,9 +617,9 @@ V1405
             C65 935 35 970 35 1025
             V1110
             C35 1165 65 1200 120 1200
-            H540
-            C540 1225 540 1245 540 1270
-            V1405
+            H500
+            C525 1200 540 1218 540 1248
+            V1395
           "
         />
       </g>
@@ -637,30 +719,47 @@ V1405
         </p>
       </div>
 
-      <div className="hub-features">
-        <div className="hub-feature">
-          <div className="hub-feature-icon">⌁</div>
-          <h4>Diagnostics</h4>
+      <div className="hub-core">
+        <div className="hub-list">
+          <div className="hub-signal"><span className="signal-dot" />Live diagnostics</div>
+          <div className="hub-signal"><span className="signal-dot" />RMA intelligence</div>
+          <div className="hub-signal"><span className="signal-dot" />Site uptime visibility</div>
+          <div className="hub-signal"><span className="signal-dot" />Infrastructure coordination</div>
         </div>
 
-        <div className="hub-feature">
-          <div className="hub-feature-icon">↻</div>
-          <h4>RMA validation</h4>
+        <div className="hub-radar">
+          <div className="hub-radar-center">N</div>
+          <div className="radar-node top">⌁</div>
+          <div className="radar-node right">↻</div>
+          <div className="radar-node bottom">⚡</div>
+          <div className="radar-node left">◔</div>
         </div>
 
-        <div className="hub-feature">
-          <div className="hub-feature-icon">⏱</div>
-          <h4>Uptime reliability</h4>
-        </div>
-
-        <div className="hub-feature">
-          <div className="hub-feature-icon">⌘</div>
-          <h4>Infrastructure</h4>
+        <div className="hub-list">
+          <div className="hub-signal"><span className="signal-dot" />Unified operational view</div>
+          <div className="hub-signal"><span className="signal-dot" />Connected site signals</div>
+          <div className="hub-signal"><span className="signal-dot" />Better service decisions</div>
+          <div className="hub-signal"><span className="signal-dot" />Readiness before dispatch</div>
         </div>
       </div>
 
-      <div className="hub-footer">
-        Reliable. Responsible. Ready.
+      <div className="hub-outcome">
+        <div className="outcome-title">SITE READINESS STATUS</div>
+
+        <div className="outcome-item">
+          <span className="outcome-icon">✓</span>
+          Reliable
+        </div>
+
+        <div className="outcome-item">
+          <span className="outcome-icon">●</span>
+          Responsible
+        </div>
+
+        <div className="outcome-item">
+          <span className="outcome-icon">→</span>
+          Ready
+        </div>
       </div>
     </div>
   </div>
