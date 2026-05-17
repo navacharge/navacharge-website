@@ -275,16 +275,16 @@ url(${heroImage})
     }
 
     .diagnostic { top: 320px; left: 135px; }
-    .rma { top: 565px; left: 135px; }
-    .site { top: 775px; left: 135px; }
+    .rma { top: 545px; left: 135px; }
 
-    .infra {
-      top: 985px;
-      left: 135px;
-      align-items: start;
-      padding-top: 30px;
-    }
+.site { top: 755px; left: 135px; }
 
+.infra {
+  top: 970px;
+  left: 135px;
+  align-items: start;
+  padding-top: 30px;
+}
     .infra h3 { margin-bottom: 18px; }
 
     .infra p {
@@ -466,9 +466,9 @@ url(${heroImage})
           C65 935 35 970 35 1025
           V1110
           C35 1165 65 1200 120 1200
-          H540
-          C540 1225 540 1245 540 1270
-          V1405
+          H500
+C525 1200 540 1218 540 1248
+V1405
         "
         stroke="#2563eb"
         strokeWidth="4"
