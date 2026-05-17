@@ -175,8 +175,8 @@ url(${heroImage})
 
     .focus-wrap {
       position: relative;
-      max-width: 980px;
-      height: 1740px;
+      max-width: 1080px;
+      height: 1880px;
       margin: 0 auto;
     }
 
@@ -292,58 +292,203 @@ url(${heroImage})
       margin-top: 14px;
     }
 
-    .company-building {
+    .operational-hub {
       position: absolute;
       z-index: 2;
-      left: 585px;
-      top: 1435px;
-      width: 270px;
-      height: 150px;
+      left: 125px;
+      top: 1385px;
+      width: 820px;
+      min-height: 330px;
+      border: 1px solid rgba(7, 27, 51, 0.18);
+      border-radius: 26px;
+      background: rgba(255, 255, 255, 0.28);
+      backdrop-filter: blur(4px);
+      padding: 42px 42px 34px;
       color: #071b33;
       pointer-events: none;
     }
 
-    .company-name {
-      font-size: 26px;
+    .hub-header {
+      text-align: center;
+      margin-bottom: 34px;
+    }
+
+    .hub-logo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 32px;
       font-weight: 900;
+      letter-spacing: -0.6px;
       margin-bottom: 8px;
     }
 
-    .building-shape {
-      height: 105px;
-      border: 3px solid #071b33;
-      border-radius: 12px;
+    .hub-logo-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, #2563eb, #60a5fa);
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 22px;
+    }
+
+    .hub-title {
+      font-size: 30px;
+      font-weight: 900;
+      margin: 0;
+    }
+
+    .hub-subtitle {
+      margin: 6px 0 0;
+      font-size: 16px;
+      color: #10243c;
+      font-weight: 600;
+    }
+
+    .hub-features {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 8px;
-      padding: 14px;
-      background: transparent;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-bottom: 32px;
     }
 
-    .window {
+    .hub-feature {
+      text-align: center;
+      padding: 0 12px;
+      border-right: 1px solid rgba(7, 27, 51, 0.14);
+    }
+
+    .hub-feature:last-child {
+      border-right: none;
+    }
+
+    .hub-feature-icon {
+      width: 42px;
+      height: 42px;
+      margin: 0 auto 10px;
       border: 2px solid #071b33;
-      border-radius: 4px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      color: #2563eb;
     }
 
-    .company-door {
-      grid-column: span 2;
-      border: 3px solid #071b33;
-      border-radius: 6px 6px 0 0;
+    .hub-feature h4 {
+      margin: 0 0 8px;
+      font-size: 14px;
+      font-weight: 900;
     }
+
+    .hub-feature p {
+      margin: 0;
+      font-size: 12px;
+      line-height: 1.6;
+      color: #10243c;
+    }
+
+    .hub-scene {
+      height: 120px;
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(37,99,235,0.05), rgba(37,99,235,0.12)),
+        linear-gradient(90deg, rgba(7,27,51,0.08) 1px, transparent 1px),
+        linear-gradient(rgba(7,27,51,0.06) 1px, transparent 1px);
+      background-size: auto, 44px 44px, 44px 44px;
+    }
+
+    .hub-office {
+      position: absolute;
+      left: 28px;
+      bottom: 0;
+      width: 250px;
+      height: 92px;
+      border: 2px solid rgba(7, 27, 51, 0.35);
+      border-radius: 12px 12px 0 0;
+      background: rgba(255,255,255,0.45);
+    }
+
+    .hub-office::before {
+      content: "N";
+      position: absolute;
+      left: 18px;
+      top: 22px;
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #2563eb, #60a5fa);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 28px;
+    }
+
+    .hub-screen {
+      position: absolute;
+      left: 86px;
+      top: 18px;
+      width: 130px;
+      height: 50px;
+      border-radius: 8px;
+      background: #0f172a;
+      box-shadow: inset 0 0 0 2px rgba(96,165,250,0.45);
+    }
+
+    .charger {
+      position: absolute;
+      bottom: 0;
+      width: 28px;
+      height: 76px;
+      border: 2px solid rgba(7, 27, 51, 0.45);
+      border-radius: 8px 8px 0 0;
+      background: rgba(255,255,255,0.55);
+    }
+
+    .charger::before {
+      content: "";
+      position: absolute;
+      top: 14px;
+      left: 7px;
+      width: 12px;
+      height: 20px;
+      border-radius: 4px;
+      background: #2563eb;
+    }
+
+    .charger.one { left: 430px; }
+    .charger.two { left: 510px; }
+    .charger.three { left: 590px; }
 
     .brand-slogan {
       position: absolute;
       z-index: 2;
-      left: 665px;
-      top: 1665px;
-      font-size: 22px;
-      font-weight: 800;
-      color: #2563eb;
+      left: 360px;
+      top: 1818px;
+      font-size: 28px;
+      font-weight: 900;
+      color: #071b33;
       white-space: nowrap;
+      animation: sloganReveal 4s ease-in-out infinite;
     }
 
-    .brand-slogan strong {
-      color: #071b33;
+    .brand-slogan span {
+      color: #2563eb;
+      margin-left: 18px;
+    }
+
+    @keyframes sloganReveal {
+      0%, 38% { opacity: 0; transform: translateY(10px); }
+      52%, 100% { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 900px) {
@@ -352,7 +497,7 @@ url(${heroImage})
       }
 
       .cable,
-      .company-building,
+      .operational-hub,
       .brand-slogan {
         display: none;
       }
@@ -389,7 +534,7 @@ url(${heroImage})
 
     <div className="plug" />
 
-    <svg className="cable" viewBox="0 0 980 1740" fill="none">
+    <svg className="cable" viewBox="0 0 1080 1880" fill="none">
       <path
         d="
           M490 128
@@ -415,13 +560,15 @@ url(${heroImage})
           C910 1200 945 1235 945 1310
           V1410
           C945 1455 910 1485 865 1485
-          H560
-          V1610
-          C560 1650 595 1680 640 1680
-          H980
+          H120
+          C75 1485 45 1515 45 1560
+          V1700
+          C45 1745 75 1775 120 1775
+          H890
+          C940 1775 980 1810 980 1860
         "
         stroke="#2563eb"
-        strokeWidth="5"
+        strokeWidth="4"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
@@ -462,7 +609,7 @@ url(${heroImage})
         />
 
         <animateMotion
-          dur="20s"
+          dur="22s"
           repeatCount="indefinite"
           rotate="auto"
           path="
@@ -489,10 +636,12 @@ url(${heroImage})
             C910 1200 945 1235 945 1310
             V1410
             C945 1455 910 1485 865 1485
-            H560
-            V1610
-            C560 1650 595 1680 640 1680
-            H980
+            H120
+            C75 1485 45 1515 45 1560
+            V1700
+            C45 1745 75 1775 120 1775
+            H890
+            C940 1775 980 1810 980 1860
           "
         />
       </g>
@@ -578,26 +727,56 @@ url(${heroImage})
       <a className="focus-link" href="#infra">View service →</a>
     </div>
 
-    <div className="company-building">
-      <div className="company-name">NavaCharge</div>
+    <div className="operational-hub">
+      <div className="hub-header">
+        <div className="hub-logo">
+          <span className="hub-logo-mark">N</span>
+          NavaCharge
+        </div>
+        <h3 className="hub-title">Operational Hub</h3>
+        <p className="hub-subtitle">
+          Operational intelligence powering every site.
+        </p>
+      </div>
 
-      <div className="building-shape">
-        <div className="window" />
-        <div className="window" />
-        <div className="window" />
-        <div className="window" />
-        <div className="window" />
-        <div className="window" />
-        <div className="window" />
-        <div className="window" />
-        <div className="company-door" />
-        <div className="window" />
-        <div className="window" />
+      <div className="hub-features">
+        <div className="hub-feature">
+          <div className="hub-feature-icon">⌁</div>
+          <h4>Diagnostics</h4>
+          <p>Deep visibility into charger behavior and faults.</p>
+        </div>
+
+        <div className="hub-feature">
+          <div className="hub-feature-icon">↻</div>
+          <h4>RMA validation</h4>
+          <p>Testing and issue isolation for returned units.</p>
+        </div>
+
+        <div className="hub-feature">
+          <div className="hub-feature-icon">⏱</div>
+          <h4>Uptime reliability</h4>
+          <p>Performance tracking and continuity support.</p>
+        </div>
+
+        <div className="hub-feature">
+          <div className="hub-feature-icon">⌘</div>
+          <h4>Infrastructure</h4>
+          <p>Cable flow, placement, and usability optimization.</p>
+        </div>
+      </div>
+
+      <div className="hub-scene">
+        <div className="hub-office">
+          <div className="hub-screen" />
+        </div>
+        <div className="charger one" />
+        <div className="charger two" />
+        <div className="charger three" />
       </div>
     </div>
 
     <div className="brand-slogan">
-      <strong>ستار باشد.</strong> Reliable, Responsible and Ready.
+      ستار باشد. <span>Reliable. Responsible. Ready.</span>
     </div>
   </div>
 </section>
