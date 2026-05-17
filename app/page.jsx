@@ -176,7 +176,7 @@ url(${heroImage})
     .focus-wrap {
       position: relative;
       max-width: 1080px;
-      height: 1880px;
+      height: 1900px;
       margin: 0 auto;
     }
 
@@ -295,22 +295,22 @@ url(${heroImage})
     .operational-hub {
       position: absolute;
       z-index: 2;
-      left: 125px;
-      top: 1385px;
-      width: 820px;
-      min-height: 330px;
+      left: 190px;
+      top: 1395px;
+      width: 700px;
+      min-height: 300px;
       border: 1px solid rgba(7, 27, 51, 0.18);
       border-radius: 26px;
-      background: rgba(255, 255, 255, 0.28);
+      background: rgba(255, 255, 255, 0.26);
       backdrop-filter: blur(4px);
-      padding: 42px 42px 34px;
+      padding: 36px 36px 30px;
       color: #071b33;
       pointer-events: none;
     }
 
     .hub-header {
       text-align: center;
-      margin-bottom: 34px;
+      margin-bottom: 28px;
     }
 
     .hub-logo {
@@ -318,15 +318,15 @@ url(${heroImage})
       align-items: center;
       justify-content: center;
       gap: 10px;
-      font-size: 32px;
+      font-size: 28px;
       font-weight: 900;
-      letter-spacing: -0.6px;
+      letter-spacing: -0.5px;
       margin-bottom: 8px;
     }
 
     .hub-logo-mark {
-      width: 34px;
-      height: 34px;
+      width: 32px;
+      height: 32px;
       border-radius: 9px;
       background: linear-gradient(135deg, #2563eb, #60a5fa);
       color: white;
@@ -334,18 +334,18 @@ url(${heroImage})
       align-items: center;
       justify-content: center;
       font-weight: 900;
-      font-size: 22px;
+      font-size: 21px;
     }
 
     .hub-title {
-      font-size: 30px;
+      font-size: 28px;
       font-weight: 900;
       margin: 0;
     }
 
     .hub-subtitle {
       margin: 6px 0 0;
-      font-size: 16px;
+      font-size: 15px;
       color: #10243c;
       font-weight: 600;
     }
@@ -353,13 +353,13 @@ url(${heroImage})
     .hub-features {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-      margin-bottom: 32px;
+      gap: 14px;
+      margin-bottom: 28px;
     }
 
     .hub-feature {
       text-align: center;
-      padding: 0 12px;
+      padding: 0 10px;
       border-right: 1px solid rgba(7, 27, 51, 0.14);
     }
 
@@ -368,8 +368,8 @@ url(${heroImage})
     }
 
     .hub-feature-icon {
-      width: 42px;
-      height: 42px;
+      width: 38px;
+      height: 38px;
       margin: 0 auto 10px;
       border: 2px solid #071b33;
       border-radius: 10px;
@@ -382,35 +382,35 @@ url(${heroImage})
 
     .hub-feature h4 {
       margin: 0 0 8px;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 900;
     }
 
     .hub-feature p {
       margin: 0;
-      font-size: 12px;
-      line-height: 1.6;
+      font-size: 11px;
+      line-height: 1.55;
       color: #10243c;
     }
 
     .hub-scene {
-      height: 120px;
+      height: 105px;
       position: relative;
       border-radius: 18px;
       overflow: hidden;
       background:
-        linear-gradient(180deg, rgba(37,99,235,0.05), rgba(37,99,235,0.12)),
-        linear-gradient(90deg, rgba(7,27,51,0.08) 1px, transparent 1px),
-        linear-gradient(rgba(7,27,51,0.06) 1px, transparent 1px);
-      background-size: auto, 44px 44px, 44px 44px;
+        linear-gradient(180deg, rgba(37,99,235,0.04), rgba(37,99,235,0.1)),
+        linear-gradient(90deg, rgba(7,27,51,0.07) 1px, transparent 1px),
+        linear-gradient(rgba(7,27,51,0.05) 1px, transparent 1px);
+      background-size: auto, 42px 42px, 42px 42px;
     }
 
     .hub-office {
       position: absolute;
-      left: 28px;
+      left: 26px;
       bottom: 0;
-      width: 250px;
-      height: 92px;
+      width: 220px;
+      height: 82px;
       border: 2px solid rgba(7, 27, 51, 0.35);
       border-radius: 12px 12px 0 0;
       background: rgba(255,255,255,0.45);
@@ -419,10 +419,10 @@ url(${heroImage})
     .hub-office::before {
       content: "N";
       position: absolute;
-      left: 18px;
-      top: 22px;
-      width: 42px;
-      height: 42px;
+      left: 16px;
+      top: 20px;
+      width: 38px;
+      height: 38px;
       border-radius: 10px;
       background: linear-gradient(135deg, #2563eb, #60a5fa);
       color: white;
@@ -430,15 +430,15 @@ url(${heroImage})
       align-items: center;
       justify-content: center;
       font-weight: 900;
-      font-size: 28px;
+      font-size: 26px;
     }
 
     .hub-screen {
       position: absolute;
-      left: 86px;
+      left: 78px;
       top: 18px;
-      width: 130px;
-      height: 50px;
+      width: 115px;
+      height: 44px;
       border-radius: 8px;
       background: #0f172a;
       box-shadow: inset 0 0 0 2px rgba(96,165,250,0.45);
@@ -447,8 +447,8 @@ url(${heroImage})
     .charger {
       position: absolute;
       bottom: 0;
-      width: 28px;
-      height: 76px;
+      width: 24px;
+      height: 66px;
       border: 2px solid rgba(7, 27, 51, 0.45);
       border-radius: 8px 8px 0 0;
       background: rgba(255,255,255,0.55);
@@ -457,22 +457,22 @@ url(${heroImage})
     .charger::before {
       content: "";
       position: absolute;
-      top: 14px;
-      left: 7px;
-      width: 12px;
-      height: 20px;
+      top: 12px;
+      left: 6px;
+      width: 10px;
+      height: 18px;
       border-radius: 4px;
       background: #2563eb;
     }
 
-    .charger.one { left: 430px; }
-    .charger.two { left: 510px; }
-    .charger.three { left: 590px; }
+    .charger.one { left: 385px; }
+    .charger.two { left: 455px; }
+    .charger.three { left: 525px; }
 
     .brand-slogan {
       position: absolute;
       z-index: 2;
-      left: 360px;
+      left: 345px;
       top: 1818px;
       font-size: 28px;
       font-weight: 900;
@@ -534,7 +534,7 @@ url(${heroImage})
 
     <div className="plug" />
 
-    <svg className="cable" viewBox="0 0 1080 1880" fill="none">
+    <svg className="cable" viewBox="0 0 1080 1900" fill="none">
       <path
         d="
           M490 128
@@ -556,16 +556,9 @@ url(${heroImage})
           C65 935 35 970 35 1025
           V1110
           C35 1165 65 1200 120 1200
-          H835
-          C910 1200 945 1235 945 1310
-          V1410
-          C945 1455 910 1485 865 1485
-          H120
-          C75 1485 45 1515 45 1560
-          V1700
-          C45 1745 75 1775 120 1775
-          H890
-          C940 1775 980 1810 980 1860
+          H490
+          C520 1200 540 1220 540 1250
+          V1395
         "
         stroke="#2563eb"
         strokeWidth="4"
@@ -632,16 +625,9 @@ url(${heroImage})
             C65 935 35 970 35 1025
             V1110
             C35 1165 65 1200 120 1200
-            H835
-            C910 1200 945 1235 945 1310
-            V1410
-            C945 1455 910 1485 865 1485
-            H120
-            C75 1485 45 1515 45 1560
-            V1700
-            C45 1745 75 1775 120 1775
-            H890
-            C940 1775 980 1810 980 1860
+            H490
+            C520 1200 540 1220 540 1250
+            V1395
           "
         />
       </g>
