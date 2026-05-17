@@ -295,199 +295,110 @@ url(${heroImage})
     .operational-hub {
       position: absolute;
       z-index: 2;
-      left: 190px;
-      top: 1395px;
-      width: 700px;
-      min-height: 300px;
-      border: 1px solid rgba(7, 27, 51, 0.18);
-      border-radius: 26px;
-      background: rgba(255, 255, 255, 0.26);
-      backdrop-filter: blur(4px);
-      padding: 36px 36px 30px;
+      left: 240px;
+      top: 1405px;
+      width: 600px;
+      padding: 52px 48px 46px;
+      border-radius: 34px;
+      background: rgba(255,255,255,0.55);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(7,27,51,0.08);
+      box-shadow:
+        0 24px 80px rgba(7,27,51,0.06),
+        inset 0 1px 0 rgba(255,255,255,0.75);
       color: #071b33;
       pointer-events: none;
     }
 
     .hub-header {
       text-align: center;
-      margin-bottom: 28px;
+      margin-bottom: 44px;
     }
 
     .hub-logo {
-      display: inline-flex;
+      display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      font-size: 28px;
-      font-weight: 900;
-      letter-spacing: -0.5px;
-      margin-bottom: 8px;
+      gap: 12px;
+      font-size: 32px;
+      font-weight: 800;
+      color: #071b33;
+      margin-bottom: 16px;
     }
 
     .hub-logo-mark {
-      width: 32px;
-      height: 32px;
-      border-radius: 9px;
-      background: linear-gradient(135deg, #2563eb, #60a5fa);
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: #245DFF;
       color: white;
-      display: inline-flex;
+      display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 900;
-      font-size: 21px;
+      font-size: 22px;
+      font-weight: 800;
     }
 
     .hub-title {
+      margin: 0 0 10px;
       font-size: 28px;
-      font-weight: 900;
-      margin: 0;
+      font-weight: 800;
+      color: #071b33;
     }
 
     .hub-subtitle {
-      margin: 6px 0 0;
+      margin: 0;
       font-size: 15px;
-      color: #10243c;
-      font-weight: 600;
+      color: rgba(7,27,51,0.68);
+      font-weight: 500;
     }
 
     .hub-features {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-      margin-bottom: 28px;
+      gap: 24px;
+      margin-bottom: 42px;
     }
 
     .hub-feature {
       text-align: center;
-      padding: 0 10px;
-      border-right: 1px solid rgba(7, 27, 51, 0.14);
-    }
-
-    .hub-feature:last-child {
-      border-right: none;
     }
 
     .hub-feature-icon {
-      width: 38px;
-      height: 38px;
-      margin: 0 auto 10px;
-      border: 2px solid #071b33;
-      border-radius: 10px;
+      width: 54px;
+      height: 54px;
+      margin: 0 auto 16px;
+      border-radius: 16px;
+      border: 1.5px solid rgba(7,27,51,0.12);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 900;
-      color: #2563eb;
-    }
-
-    .hub-feature h4 {
-      margin: 0 0 8px;
-      font-size: 13px;
-      font-weight: 900;
-    }
-
-    .hub-feature p {
-      margin: 0;
-      font-size: 11px;
-      line-height: 1.55;
-      color: #10243c;
-    }
-
-    .hub-scene {
-      height: 105px;
-      position: relative;
-      border-radius: 18px;
-      overflow: hidden;
-      background:
-        linear-gradient(180deg, rgba(37,99,235,0.04), rgba(37,99,235,0.1)),
-        linear-gradient(90deg, rgba(7,27,51,0.07) 1px, transparent 1px),
-        linear-gradient(rgba(7,27,51,0.05) 1px, transparent 1px);
-      background-size: auto, 42px 42px, 42px 42px;
-    }
-
-    .hub-office {
-      position: absolute;
-      left: 26px;
-      bottom: 0;
-      width: 220px;
-      height: 82px;
-      border: 2px solid rgba(7, 27, 51, 0.35);
-      border-radius: 12px 12px 0 0;
+      font-size: 24px;
+      color: #071b33;
       background: rgba(255,255,255,0.45);
     }
 
-    .hub-office::before {
-      content: "N";
-      position: absolute;
-      left: 16px;
-      top: 20px;
-      width: 38px;
-      height: 38px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, #2563eb, #60a5fa);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 900;
-      font-size: 26px;
-    }
-
-    .hub-screen {
-      position: absolute;
-      left: 78px;
-      top: 18px;
-      width: 115px;
-      height: 44px;
-      border-radius: 8px;
-      background: #0f172a;
-      box-shadow: inset 0 0 0 2px rgba(96,165,250,0.45);
-    }
-
-    .charger {
-      position: absolute;
-      bottom: 0;
-      width: 24px;
-      height: 66px;
-      border: 2px solid rgba(7, 27, 51, 0.45);
-      border-radius: 8px 8px 0 0;
-      background: rgba(255,255,255,0.55);
-    }
-
-    .charger::before {
-      content: "";
-      position: absolute;
-      top: 12px;
-      left: 6px;
-      width: 10px;
-      height: 18px;
-      border-radius: 4px;
-      background: #2563eb;
-    }
-
-    .charger.one { left: 385px; }
-    .charger.two { left: 455px; }
-    .charger.three { left: 525px; }
-
-    .brand-slogan {
-      position: absolute;
-      z-index: 2;
-      left: 345px;
-      top: 1818px;
-      font-size: 28px;
-      font-weight: 900;
+    .hub-feature h4 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.4;
       color: #071b33;
-      white-space: nowrap;
+    }
+
+    .hub-footer {
+      text-align: center;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #245DFF;
+      opacity: 0;
+      transform: translateY(14px);
       animation: sloganReveal 4s ease-in-out infinite;
     }
 
-    .brand-slogan span {
-      color: #2563eb;
-      margin-left: 18px;
-    }
-
     @keyframes sloganReveal {
-      0%, 38% { opacity: 0; transform: translateY(10px); }
+      0%, 38% { opacity: 0; transform: translateY(14px); }
       52%, 100% { opacity: 1; transform: translateY(0); }
     }
 
@@ -497,8 +408,7 @@ url(${heroImage})
       }
 
       .cable,
-      .operational-hub,
-      .brand-slogan {
+      .operational-hub {
         display: none;
       }
 
@@ -558,7 +468,7 @@ url(${heroImage})
           C35 1165 65 1200 120 1200
           H490
           C520 1200 540 1220 540 1250
-          V1395
+          V1405
         "
         stroke="#2563eb"
         strokeWidth="4"
@@ -627,7 +537,7 @@ url(${heroImage})
             C35 1165 65 1200 120 1200
             H490
             C520 1200 540 1220 540 1250
-            V1395
+            V1405
           "
         />
       </g>
@@ -719,7 +629,9 @@ url(${heroImage})
           <span className="hub-logo-mark">N</span>
           NavaCharge
         </div>
+
         <h3 className="hub-title">Operational Hub</h3>
+
         <p className="hub-subtitle">
           Operational intelligence powering every site.
         </p>
@@ -729,40 +641,27 @@ url(${heroImage})
         <div className="hub-feature">
           <div className="hub-feature-icon">⌁</div>
           <h4>Diagnostics</h4>
-          <p>Deep visibility into charger behavior and faults.</p>
         </div>
 
         <div className="hub-feature">
           <div className="hub-feature-icon">↻</div>
           <h4>RMA validation</h4>
-          <p>Testing and issue isolation for returned units.</p>
         </div>
 
         <div className="hub-feature">
           <div className="hub-feature-icon">⏱</div>
           <h4>Uptime reliability</h4>
-          <p>Performance tracking and continuity support.</p>
         </div>
 
         <div className="hub-feature">
           <div className="hub-feature-icon">⌘</div>
           <h4>Infrastructure</h4>
-          <p>Cable flow, placement, and usability optimization.</p>
         </div>
       </div>
 
-      <div className="hub-scene">
-        <div className="hub-office">
-          <div className="hub-screen" />
-        </div>
-        <div className="charger one" />
-        <div className="charger two" />
-        <div className="charger three" />
+      <div className="hub-footer">
+        Reliable. Responsible. Ready.
       </div>
-    </div>
-
-    <div className="brand-slogan">
-      ستار باشد. <span>Reliable. Responsible. Ready.</span>
     </div>
   </div>
 </section>
