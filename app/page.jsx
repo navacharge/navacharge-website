@@ -299,7 +299,7 @@ url(${heroImage})
   left: 50%;
   transform: translateX(-50%);
 
- top: 1305px;
+ top: 1410px;
 
   width: 1280px;
   height: 640px;
