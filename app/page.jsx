@@ -512,7 +512,7 @@ url(${heroImage})
     alt="NavaCharge Operational Hub"
   />
 </div>
-</div>
+
   </div>
 </section>
      <section style={{ background: "#0f172a", color: "white", padding: "90px 28px" }}>
