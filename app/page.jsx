@@ -274,9 +274,9 @@ url(${heroImage})
       white-space: nowrap;
     }
 
-    .diagnostic { top: 320px; left: 135px; }
-    .rma { top: 545px; left: 135px; }
-    .site { top: 755px; left: 135px; }
+    .diagnostic { top: 360px; left: 135px; }
+    .rma { top: 585px; left: 135px; }
+   .site { top: 795px; left: 135px; }
 
     .infra {
       top: 970px;
