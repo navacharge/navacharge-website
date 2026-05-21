@@ -175,8 +175,8 @@ url(${heroImage})
 
     .focus-wrap {
       position: relative;
-      max-width: 1080px;
-      height: 1950px;
+      max-width: 1400px;
+      height: 2150px;
       margin: 0 auto;
     }
 
@@ -295,13 +295,19 @@ url(${heroImage})
 .operational-hub {
   position: absolute;
   z-index: 2;
-  left: 120px;
+
+  left: 50%;
+  transform: translateX(-50%);
+
   top: 1395px;
-  width: 840px;
-  height: 520px;
+
+  width: 1280px;
+  height: 720px;
+
   overflow: hidden;
   border-radius: 36px;
   background: #07111f;
+
   box-shadow:
     0 30px 90px rgba(7,27,51,0.18),
     0 0 0 1px rgba(255,255,255,0.08);
