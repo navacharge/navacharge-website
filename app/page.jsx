@@ -294,6 +294,7 @@ url(${heroImage})
 
     .operational-hub {
       position: absolute;
+      position: relative;
       z-index: 2;
       left: 120px;
       top: 1395px;
@@ -506,12 +507,183 @@ url(${heroImage})
     </div>
 
     <div className="operational-hub">
-      <img
-        className="hub-photo"
-        src="/aaa.png"
-        alt="NavaCharge Operational Hub"
-      />
+  <img
+    className="hub-photo"
+    src="/aaa.png"
+    alt="NavaCharge Operational Hub"
+  />
+
+  <div
+    style={{
+      position: "absolute",
+      inset: 0,
+      background:
+        "linear-gradient(90deg, rgba(7,17,31,0.82) 0%, rgba(7,17,31,0.55) 34%, rgba(7,17,31,0.08) 100%)",
+    }}
+  />
+
+  <div
+    style={{
+      position: "absolute",
+      left: "42px",
+      top: "42px",
+      zIndex: 3,
+      width: "320px",
+      color: "white",
+    }}
+  >
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: "12px",
+        marginBottom: "22px",
+      }}
+    >
+      <div
+        style={{
+          width: "42px",
+          height: "42px",
+          borderRadius: "12px",
+          background: "#2563eb",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          fontWeight: "900",
+          fontSize: "22px",
+        }}
+      >
+        N
+      </div>
+
+      <div style={{ fontWeight: "700", fontSize: "18px" }}>
+        NavaCharge
+      </div>
     </div>
+
+    <h3
+      style={{
+        fontSize: "54px",
+        lineHeight: "0.95",
+        margin: "0 0 18px",
+        fontWeight: "900",
+      }}
+    >
+      Operational
+      <br />
+      Hub
+    </h3>
+
+    <p
+      style={{
+        color: "rgba(255,255,255,0.76)",
+        lineHeight: "1.7",
+        marginBottom: "30px",
+        fontSize: "16px",
+      }}
+    >
+      Operational intelligence coordinating diagnostics,
+      validation, infrastructure and uptime readiness.
+    </p>
+
+    <div style={{ display: "grid", gap: "16px" }}>
+      {[
+        "RMA & Validation",
+        "Diagnostics & Testing",
+        "Infrastructure Coordination",
+        "Reliability Operations",
+      ].map((item) => (
+        <div
+          key={item}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "12px",
+          }}
+        >
+          <div
+            style={{
+              width: "10px",
+              height: "10px",
+              borderRadius: "50%",
+              background: "#2563eb",
+              boxShadow: "0 0 0 6px rgba(37,99,235,0.18)",
+            }}
+          />
+
+          <div
+            style={{
+              fontSize: "17px",
+              fontWeight: "700",
+            }}
+          >
+            {item}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div
+    style={{
+      position: "absolute",
+      left: "28px",
+      right: "28px",
+      bottom: "26px",
+      display: "grid",
+      gridTemplateColumns: "repeat(3,1fr)",
+      gap: "16px",
+      zIndex: 4,
+    }}
+  >
+    {[
+      ["✓", "Reliable"],
+      ["●", "Responsible"],
+      ["→", "Ready"],
+    ].map(([icon, text]) => (
+      <div
+        key={text}
+        style={{
+          background: "rgba(255,255,255,0.08)",
+          backdropFilter: "blur(10px)",
+          border: "1px solid rgba(255,255,255,0.08)",
+          borderRadius: "18px",
+          padding: "16px",
+          display: "flex",
+          alignItems: "center",
+          gap: "12px",
+        }}
+      >
+        <div
+          style={{
+            width: "42px",
+            height: "42px",
+            borderRadius: "14px",
+            background: "rgba(37,99,235,0.22)",
+            border: "1px solid rgba(37,99,235,0.45)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            fontWeight: "900",
+            color: "white",
+          }}
+        >
+          {icon}
+        </div>
+
+        <div
+          style={{
+            color: "white",
+            fontWeight: "800",
+            fontSize: "18px",
+          }}
+        >
+          {text}
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
   </div>
 </section>
      <section style={{ background: "#0f172a", color: "white", padding: "90px 28px" }}>
