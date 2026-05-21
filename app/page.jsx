@@ -186,7 +186,7 @@ url(${heroImage})
       font-size: 28px;
       font-weight: 800;
       color: #071b33;
-      margin: 0 0 50px;
+      margin: -35px 0 10px;
     }
 
     .plug {
