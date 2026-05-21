@@ -223,6 +223,7 @@ url(${heroImage})
       height: 100%;
       z-index: 1;
       pointer-events: none;
+      transform: translateY(-90px);
     }
 
     .focus-item {
@@ -299,7 +300,7 @@ url(${heroImage})
   left: 50%;
   transform: translateX(-50%);
 
-  top: 1395px;
+ top: 1305px;
 
   width: 1280px;
   height: 640px;
