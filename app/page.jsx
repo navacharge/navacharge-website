@@ -173,12 +173,12 @@ url(${heroImage})
       overflow: hidden;
     }
 
-    .focus-wrap {
-      position: relative;
-      max-width: 1400px;
-      height: 2150px;
-      margin: 0 auto;
-    }
+   .focus-wrap {
+  position: relative;
+  max-width: 1400px;
+  height: 2150px;
+  margin: -60px auto 0;
+}
 
     .focus-title {
       text-align: center;
@@ -186,12 +186,12 @@ url(${heroImage})
       font-size: 28px;
       font-weight: 800;
       color: #071b33;
-      margin: -70px 0 0;
+      margin: 0 0 50px;
     }
 
     .plug {
       position: absolute;
-      top: 25px;
+      top: 55px;
       left: 50%;
       width: 58px;
       height: 58px;
@@ -223,8 +223,7 @@ url(${heroImage})
       height: 100%;
       z-index: 1;
       pointer-events: none;
-      transform: translateY(-90px);
-    }
+      }
 
     .focus-item {
       position: absolute;
@@ -370,7 +369,7 @@ url(${heroImage})
     <svg className="cable" viewBox="0 0 1080 1950" fill="none">
       <path
         d="
-         M540 78
+         M540 128
           V205
           C540 235 565 250 600 250
           H835
