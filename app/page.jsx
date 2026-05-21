@@ -302,7 +302,7 @@ url(${heroImage})
   top: 1395px;
 
   width: 1280px;
-  height: 600px;
+  height: 640px;
 
   overflow: hidden;
   border-radius: 34px;
@@ -318,12 +318,10 @@ url(${heroImage})
   width: 100%;
   height: 100%;
 
-  object-fit: contain;
+  object-fit: cover;
   object-position: center center;
 
   display: block;
-
-  background: #07111f;
 }
 
     @media (max-width: 900px) {
