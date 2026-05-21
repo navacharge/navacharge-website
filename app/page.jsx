@@ -167,598 +167,381 @@ url(${heroImage})
 </section>
 <section className="focus-flow">
   <style>{`
-    .focus-flow {
-      background: inherit;
-      padding: 80px 20px 120px;
-      overflow: hidden;
-    }
-
-    .focus-wrap {
-      position: relative;
-      max-width: 1080px;
-      height: 1950px;
-      margin: 0 auto;
-    }
-
-    .focus-title {
-      text-align: center;
-      letter-spacing: 10px;
-      font-size: 28px;
-      font-weight: 800;
-      color: #071b33;
-      margin: 0 0 50px;
-    }
-
-    .plug {
-      position: absolute;
-      top: 105px;
-      left: 50%;
-      width: 58px;
-      height: 58px;
-      transform: translateX(-50%);
-      border: 5px solid #2f6f8f;
-      border-radius: 0 0 22px 22px;
-      background: #2f6f8f;
-      z-index: 3;
-    }
-
-    .plug::before,
-    .plug::after {
-      content: "";
-      position: absolute;
-      top: -38px;
-      width: 5px;
-      height: 38px;
-      background: #2563eb;
-      border-radius: 5px;
-    }
-
-    .plug::before { left: 14px; }
-    .plug::after { right: 14px; }
-
-    .cable {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    .focus-item {
-      position: absolute;
-      z-index: 2;
-      display: grid;
-      grid-template-columns: 90px 1fr 1px 180px;
-      align-items: center;
-      gap: 34px;
-      width: 760px;
-      min-height: 150px;
-      color: #071b33;
-    }
-
-    .focus-item svg {
-      width: 58px;
-      height: 58px;
-      stroke: #071b33;
-      stroke-width: 4;
-      fill: none;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .focus-item h3 {
-      margin: 0 0 16px;
-      font-size: 30px;
-      font-weight: 800;
-    }
-
-    .focus-item p {
-      margin: 0;
-      font-size: 17px;
-      line-height: 1.6;
-      color: #10243c;
-    }
-
-    .divider {
-      width: 1px;
-      height: 86px;
-      background: rgba(7, 27, 51, 0.25);
-    }
-
-    .focus-link {
-      font-size: 22px;
-      font-weight: 800;
-      color: #071b33;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    .diagnostic { top: 320px; left: 135px; }
-    .rma { top: 545px; left: 135px; }
-    .site { top: 755px; left: 135px; }
-
-    .infra {
-      top: 970px;
-      left: 135px;
-      align-items: start;
-      padding-top: 30px;
-    }
-
-    .infra h3 { margin-bottom: 18px; }
-
-    .infra p {
-      line-height: 1.8;
-      margin-top: 14px;
-    }
-
     .operational-hub {
       position: absolute;
       z-index: 2;
-      left: 160px;
-      top: 1395px;
-      width: 760px;
-      padding: 44px 46px 38px;
-      border-radius: 34px;
-      background: rgba(255,255,255,0.58);
-      backdrop-filter: blur(14px);
-      border: 1px solid rgba(37,99,235,0.18);
+      left: 120px;
+      top: 1370px;
+      width: 840px;
+      overflow: hidden;
+      border-radius: 36px;
+      background: #07111f;
       box-shadow:
-        0 24px 80px rgba(7,27,51,0.07),
-        inset 0 1px 0 rgba(255,255,255,0.75);
-      color: #071b33;
-      pointer-events: none;
+        0 30px 90px rgba(7,27,51,0.18),
+        0 0 0 1px rgba(255,255,255,0.04);
     }
 
-    .hub-header {
-      text-align: left;
-      margin-bottom: 34px;
+    .hub-image-wrap {
+      position: relative;
+      width: 100%;
+      height: 520px;
+      overflow: hidden;
+    }
+
+    .hub-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hub-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(5,10,20,0.88) 0%,
+          rgba(5,10,20,0.74) 26%,
+          rgba(5,10,20,0.25) 52%,
+          rgba(5,10,20,0.08) 100%
+        );
+    }
+
+    .hub-content {
+      position: absolute;
+      left: 48px;
+      top: 48px;
+      width: 340px;
+      z-index: 3;
+      color: white;
     }
 
     .hub-logo {
       display: flex;
       align-items: center;
-      gap: 12px;
-      font-size: 30px;
-      font-weight: 900;
-      color: #071b33;
-      margin-bottom: 8px;
+      gap: 14px;
+      margin-bottom: 22px;
+      font-size: 18px;
+      font-weight: 700;
     }
 
     .hub-logo-mark {
-      width: 38px;
-      height: 38px;
+      width: 42px;
+      height: 42px;
       border-radius: 12px;
-      background: #245DFF;
-      color: white;
+      background: #2563eb;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 22px;
       font-weight: 900;
+      font-size: 24px;
+      color: white;
+      box-shadow: 0 10px 25px rgba(37,99,235,0.35);
     }
 
     .hub-title {
-      margin: 0 0 8px;
-      font-size: 28px;
+      margin: 0;
+      font-size: 54px;
+      line-height: 0.95;
       font-weight: 900;
-      color: #071b33;
+      letter-spacing: -2px;
     }
 
     .hub-subtitle {
-      margin: 0;
-      font-size: 15px;
-      color: rgba(7,27,51,0.68);
-      font-weight: 500;
+      margin: 20px 0 34px;
+      font-size: 18px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.78);
+      max-width: 300px;
     }
 
-    .hub-core {
-      position: relative;
-      min-height: 260px;
+    .hub-points {
       display: grid;
-      grid-template-columns: 1fr 260px 1fr;
-      align-items: center;
-      gap: 26px;
-      margin-bottom: 30px;
+      gap: 20px;
     }
 
-    .hub-list {
-      display: grid;
-      gap: 18px;
-    }
-
-    .hub-signal {
+    .hub-point {
       display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 14px;
-      font-weight: 700;
-      color: #071b33;
+      align-items: flex-start;
+      gap: 14px;
     }
 
-    .signal-dot {
+    .hub-dot {
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      background: #245DFF;
-      box-shadow: 0 0 0 6px rgba(36,93,255,0.1);
+      background: #2563eb;
+      margin-top: 9px;
+      box-shadow: 0 0 0 6px rgba(37,99,235,0.18);
     }
 
-    .hub-radar {
-      position: relative;
-      width: 240px;
-      height: 240px;
-      margin: 0 auto;
-      border-radius: 50%;
-      background:
-        radial-gradient(circle, rgba(36,93,255,0.16) 0 18%, transparent 19%),
-        radial-gradient(circle, transparent 0 39%, rgba(36,93,255,0.16) 40% 41%, transparent 42%),
-        radial-gradient(circle, transparent 0 65%, rgba(36,93,255,0.12) 66% 67%, transparent 68%);
-    }
-
-    .hub-radar::before {
-      content: "";
-      position: absolute;
-      inset: 18px;
-      border: 1px dashed rgba(36,93,255,0.35);
-      border-radius: 50%;
-    }
-
-    .hub-radar-center {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 86px;
-      height: 86px;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-      background: linear-gradient(135deg, #245DFF, #60a5fa);
+    .hub-point strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 5px;
       color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 46px;
-      font-weight: 900;
-      box-shadow: 0 18px 40px rgba(36,93,255,0.28);
     }
 
-    .radar-node {
+    .hub-point span {
+      color: rgba(255,255,255,0.72);
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    .hub-status {
       position: absolute;
-      width: 54px;
-      height: 54px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.85);
-      border: 1px solid rgba(36,93,255,0.22);
+      left: 34px;
+      right: 34px;
+      bottom: 28px;
+      z-index: 3;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 18px;
+    }
+
+    .hub-status-item {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hub-status-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #071b33;
-      font-size: 22px;
-      box-shadow: 0 12px 28px rgba(7,27,51,0.08);
-    }
-
-    .radar-node.top { top: 0; left: 50%; transform: translateX(-50%); }
-    .radar-node.right { right: 0; top: 50%; transform: translateY(-50%); }
-    .radar-node.bottom { bottom: 0; left: 50%; transform: translateX(-50%); }
-    .radar-node.left { left: 0; top: 50%; transform: translateY(-50%); }
-
-    .hub-outcome {
-      padding: 20px 22px;
-      border-radius: 24px;
-      background: rgba(255,255,255,0.72);
-      border: 1px solid rgba(36,93,255,0.16);
-      display: grid;
-      grid-template-columns: 1.1fr 1fr 1fr 1fr;
-      align-items: center;
-      gap: 16px;
-      box-shadow: 0 14px 34px rgba(7,27,51,0.06);
-    }
-
-    .outcome-title {
-      font-size: 13px;
-      letter-spacing: 4px;
-      font-weight: 900;
-      color: #071b33;
-      white-space: nowrap;
-    }
-
-    .outcome-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
       font-size: 18px;
       font-weight: 900;
-      color: #245DFF;
-      justify-content: center;
+      color: white;
     }
 
-    .outcome-icon {
-      width: 34px;
-      height: 34px;
-      border-radius: 12px;
-      border: 1.5px solid rgba(36,93,255,0.35);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #245DFF;
-      background: rgba(255,255,255,0.7);
+    .hub-status-item:nth-child(1) .hub-status-icon {
+      background: rgba(37,99,235,0.22);
+      border: 1px solid rgba(37,99,235,0.45);
     }
 
-    @media (max-width: 900px) {
-      .focus-wrap {
-        height: auto;
-      }
+    .hub-status-item:nth-child(2) .hub-status-icon {
+      background: rgba(34,197,94,0.18);
+      border: 1px solid rgba(34,197,94,0.4);
+    }
 
-      .cable,
-      .operational-hub {
-        display: none;
-      }
+    .hub-status-item:nth-child(3) .hub-status-icon {
+      background: rgba(245,158,11,0.18);
+      border: 1px solid rgba(245,158,11,0.4);
+    }
 
-      .plug {
-        position: relative;
-        top: auto;
-        left: 50%;
-        margin-bottom: 60px;
-      }
+    .hub-status-label {
+      font-size: 20px;
+      font-weight: 800;
+      color: white;
+    }
 
-      .focus-item {
-        position: relative;
-        top: auto;
-        left: auto;
-        width: 100%;
-        grid-template-columns: 64px 1fr;
-        margin: 0 auto 56px;
-      }
+    .hub-status-sub {
+      font-size: 13px;
+      color: rgba(255,255,255,0.7);
+      margin-top: 2px;
+    }
 
-      .divider,
-      .focus-link {
-        grid-column: 2;
-      }
+    .energy-flow {
+      position: absolute;
+      z-index: 4;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle, #ffffff 0%, #93c5fd 25%, #2563eb 65%, transparent 72%);
+      box-shadow:
+        0 0 14px rgba(37,99,235,0.9),
+        0 0 32px rgba(37,99,235,0.75),
+        0 0 60px rgba(37,99,235,0.5);
+      pointer-events: none;
+    }
 
-      .divider {
-        display: none;
-      }
+    .energy-flow::after {
+      content: "";
+      position: absolute;
+      inset: -18px;
+      border-radius: 50%;
+      background: rgba(37,99,235,0.18);
+      filter: blur(12px);
     }
   `}</style>
 
-  <div className="focus-wrap">
-    <h2 className="focus-title">OUR FOCUS</h2>
+  <svg className="cable" viewBox="0 0 1080 2050" fill="none">
+    <path
+      id="mainCable"
+      d="
+        M540 128
+        V205
+        C540 235 565 250 600 250
+        H835
+        C910 250 945 285 945 360
+        V385
+        C945 460 910 495 835 495
+        H120
+        C65 495 35 530 35 585
+        V625
+        C35 680 65 715 120 715
+        H835
+        C910 715 945 750 945 825
+        V850
+        C945 900 910 935 835 935
+        H120
+        C65 935 35 970 35 1025
+        V1110
+        C35 1165 65 1200 120 1200
+        H500
+        C560 1200 590 1228 590 1295
+        V1390
+      "
+      stroke="#2563eb"
+      strokeWidth="4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
 
-    <div className="plug" />
+  <div className="energy-flow">
+    <animateMotion
+      dur="12s"
+      repeatCount="indefinite"
+      rotate="auto"
+      path="
+        M540 128
+        V205
+        C540 235 565 250 600 250
+        H835
+        C910 250 945 285 945 360
+        V385
+        C945 460 910 495 835 495
+        H120
+        C65 495 35 530 35 585
+        V625
+        C35 680 65 715 120 715
+        H835
+        C910 715 945 750 945 825
+        V850
+        C945 900 910 935 835 935
+        H120
+        C65 935 35 970 35 1025
+        V1110
+        C35 1165 65 1200 120 1200
+        H500
+        C560 1200 590 1228 590 1295
+        V1390
+      "
+    />
+  </div>
 
-    <svg className="cable" viewBox="0 0 1080 1950" fill="none">
-      <path
-        d="
-          M540 128
-          V205
-          C540 235 565 250 600 250
-          H835
-          C910 250 945 285 945 360
-          V385
-          C945 460 910 495 835 495
-          H120
-          C65 495 35 530 35 585
-          V625
-          C35 680 65 715 120 715
-          H835
-          C910 715 945 750 945 825
-          V850
-          C945 900 910 935 835 935
-          H120
-          C65 935 35 970 35 1025
-          V1110
-          C35 1165 65 1200 120 1200
-          H500
-          C525 1200 540 1218 540 1248
-          V1395
-        "
-        stroke="#2563eb"
-        strokeWidth="4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+  <div className="operational-hub">
+    <div className="hub-image-wrap">
+      <img
+        className="hub-image"
+        src="/aaa.png"
+        alt="NavaCharge Operational Hub"
       />
 
-      <g>
-        <path
-          d="
-            M-32 2
-            C-28 -10 -16 -16 0 -16
-            C16 -16 28 -10 32 2
-            C28 10 16 14 0 14
-            C-16 14 -28 10 -32 2
-            Z
-          "
-          fill="#ef4444"
-        />
+      <div className="hub-overlay" />
 
-        <path
-          d="
-            M-14 -10
-            C-8 -15 8 -15 14 -10
-            L20 0
-            C10 3 -10 3 -20 0
-            Z
-          "
-          fill="#991b1b"
-          opacity="0.85"
-        />
-
-        <circle cx="-18" cy="12" r="5" fill="#111827" />
-        <circle cx="18" cy="12" r="5" fill="#111827" />
-
-        <path
-          d="M-26 3 H26"
-          stroke="#fecaca"
-          strokeWidth="2"
-          strokeLinecap="round"
-        />
-
-        <animateMotion
-          dur="22s"
-          repeatCount="indefinite"
-          rotate="auto"
-          path="
-            M540 128
-            V205
-            C540 235 565 250 600 250
-            H835
-            C910 250 945 285 945 360
-            V385
-            C945 460 910 495 835 495
-            H120
-            C65 495 35 530 35 585
-            V625
-            C35 680 65 715 120 715
-            H835
-            C910 715 945 750 945 825
-            V850
-            C945 900 910 935 835 935
-            H120
-            C65 935 35 970 35 1025
-            V1110
-            C35 1165 65 1200 120 1200
-            H500
-            C525 1200 540 1218 540 1248
-            V1395
-          "
-        />
-      </g>
-    </svg>
-
-    <div className="focus-item diagnostic">
-      <svg viewBox="0 0 64 64">
-        <circle cx="26" cy="26" r="20" />
-        <path d="M14 27h8l4-8 6 16 4-8h8" />
-        <path d="M42 42l14 14" />
-      </svg>
-
-      <div>
-        <h3>Diagnostic</h3>
-        <p>
-          Charger behavior, interruptions,<br />
-          and field observations reviewed<br />
-          with structure.
-        </p>
-      </div>
-
-      <span className="divider" />
-      <a className="focus-link" href="#diagnostic">Explore →</a>
-    </div>
-
-    <div className="focus-item rma">
-      <svg viewBox="0 0 64 64">
-        <rect x="16" y="14" width="32" height="42" rx="4" />
-        <path d="M24 14v-4h16v4" />
-        <path d="M24 36l6 6 12-14" />
-      </svg>
-
-      <div>
-        <h3>RMA validation</h3>
-        <p>
-          Returned units, issue isolation,<br />
-          functional checks, and<br />
-          redeployment readiness.
-        </p>
-      </div>
-
-      <span className="divider" />
-      <a className="focus-link" href="#rma">Explore →</a>
-    </div>
-
-    <div className="focus-item site">
-      <svg viewBox="0 0 64 64">
-        <path d="M32 8l22 8v15c0 14-9 23-22 29C19 54 10 45 10 31V16l22-8z" />
-      </svg>
-
-      <div>
-        <h3>Site reliability</h3>
-        <p>
-          Operational continuity, uptime<br />
-          awareness, and site-level<br />
-          support visibility.
-        </p>
-      </div>
-
-      <span className="divider" />
-      <a className="focus-link" href="#site">Improve →</a>
-    </div>
-
-    <div className="focus-item infra">
-      <svg viewBox="0 0 64 64">
-        <rect x="14" y="10" width="26" height="44" rx="3" />
-        <path d="M20 22h14" />
-        <path d="M26 34h8l-7 14h8" />
-        <path d="M42 28h8v10c0 5 8 5 8 0V20" />
-        <path d="M54 20v-6" />
-      </svg>
-
-      <div>
-        <h3>Infrastructure</h3>
-        <p>
-          Cable flow, placement, usability,<br />
-          and coordination for real<br />
-          charging sites.
-        </p>
-      </div>
-
-      <span className="divider" />
-      <a className="focus-link" href="#infra">View service →</a>
-    </div>
-
-    <div className="operational-hub">
-      <div className="hub-header">
+      <div className="hub-content">
         <div className="hub-logo">
-          <span className="hub-logo-mark">N</span>
+          <div className="hub-logo-mark">N</div>
           NavaCharge
         </div>
 
-        <h3 className="hub-title">Operational Hub</h3>
+        <h3 className="hub-title">
+          Operational<br />
+          Hub
+        </h3>
 
         <p className="hub-subtitle">
-          Operational intelligence powering every site.
+          Operational intelligence coordinating diagnostics,
+          validation, infrastructure and uptime readiness.
         </p>
+
+        <div className="hub-points">
+          <div className="hub-point">
+            <div className="hub-dot" />
+            <div>
+              <strong>RMA & Validation</strong>
+              <span>
+                Returned units reviewed before redeployment.
+              </span>
+            </div>
+          </div>
+
+          <div className="hub-point">
+            <div className="hub-dot" />
+            <div>
+              <strong>Diagnostics & Testing</strong>
+              <span>
+                Charger behavior and session visibility.
+              </span>
+            </div>
+          </div>
+
+          <div className="hub-point">
+            <div className="hub-dot" />
+            <div>
+              <strong>Infrastructure Coordination</strong>
+              <span>
+                Cable flow, placement and operational readiness.
+              </span>
+            </div>
+          </div>
+
+          <div className="hub-point">
+            <div className="hub-dot" />
+            <div>
+              <strong>Reliability Operations</strong>
+              <span>
+                Uptime-focused operational support visibility.
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div className="hub-core">
-        <div className="hub-list">
-          <div className="hub-signal"><span className="signal-dot" />Live diagnostics</div>
-          <div className="hub-signal"><span className="signal-dot" />RMA intelligence</div>
-          <div className="hub-signal"><span className="signal-dot" />Site uptime visibility</div>
-          <div className="hub-signal"><span className="signal-dot" />Infrastructure coordination</div>
+      <div className="hub-status">
+        <div className="hub-status-item">
+          <div className="hub-status-icon">✓</div>
+
+          <div>
+            <div className="hub-status-label">Reliable</div>
+            <div className="hub-status-sub">
+              Systems perform.
+            </div>
+          </div>
         </div>
 
-        <div className="hub-radar">
-          <div className="hub-radar-center">N</div>
-          <div className="radar-node top">⌁</div>
-          <div className="radar-node right">↻</div>
-          <div className="radar-node bottom">⚡</div>
-          <div className="radar-node left">◔</div>
+        <div className="hub-status-item">
+          <div className="hub-status-icon">●</div>
+
+          <div>
+            <div className="hub-status-label">Responsible</div>
+            <div className="hub-status-sub">
+              Operational ownership.
+            </div>
+          </div>
         </div>
 
-        <div className="hub-list">
-          <div className="hub-signal"><span className="signal-dot" />Unified operational view</div>
-          <div className="hub-signal"><span className="signal-dot" />Connected site signals</div>
-          <div className="hub-signal"><span className="signal-dot" />Better service decisions</div>
-          <div className="hub-signal"><span className="signal-dot" />Readiness before dispatch</div>
-        </div>
-      </div>
+        <div className="hub-status-item">
+          <div className="hub-status-icon">→</div>
 
-      <div className="hub-outcome">
-        <div className="outcome-title">SITE READINESS STATUS</div>
-
-        <div className="outcome-item">
-          <span className="outcome-icon">✓</span>
-          Reliable
-        </div>
-
-        <div className="outcome-item">
-          <span className="outcome-icon">●</span>
-          Responsible
-        </div>
-
-        <div className="outcome-item">
-          <span className="outcome-icon">→</span>
-          Ready
+          <div>
+            <div className="hub-status-label">Ready</div>
+            <div className="hub-status-sub">
+              Prepared before dispatch.
+            </div>
+          </div>
         </div>
       </div>
     </div>
