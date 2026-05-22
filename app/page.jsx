@@ -279,11 +279,11 @@ url(${heroImage})
    .site { top: 795px; left: 135px; }
 
     .infra {
-      top: 970px;
-      left: 135px;
-      align-items: start;
-      padding-top: 30px;
-    }
+  top: 1015px;
+  left: 135px;
+  align-items: start;
+  padding-top: 30px;
+}
 
     .infra h3 { margin-bottom: 18px; }
 
