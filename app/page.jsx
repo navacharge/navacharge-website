@@ -388,9 +388,9 @@ url(${heroImage})
           C65 935 35 970 35 1025
           V1110
           C35 1165 65 1200 120 1200
-         H980
-         C1040 1200 1080 1230 1080 1280
-         V1380
+          H465
+          C515 1200 540 1230 540 1280
+          V1395
         "
         stroke="#2563eb"
         strokeWidth="4"
@@ -427,13 +427,20 @@ url(${heroImage})
             C65 935 35 970 35 1025
             V1110
             C35 1165 65 1200 120 1200
-           H980
-           C1040 1200 1080 1230 1080 1280
-           V1380
+            H465
+            C515 1200 540 1230 540 1280
+            V1395
           "
         />
       </g>
     </svg>
+
+    <div className="focus-item diagnostic">
+      <svg viewBox="0 0 64 64">
+        <circle cx="26" cy="26" r="20" />
+        <path d="M14 27h8l4-8 6 16 4-8h8" />
+        <path d="M42 42l14 14" />
+      </svg>
 
       <div>
         <h3>Diagnostic</h3>
@@ -448,7 +455,14 @@ url(${heroImage})
       <a className="focus-link" href="#diagnostic">Explore →</a>
     </div>
 
-    <div>
+    <div className="focus-item rma">
+      <svg viewBox="0 0 64 64">
+        <rect x="16" y="14" width="32" height="42" rx="4" />
+        <path d="M24 14v-4h16v4" />
+        <path d="M24 36l6 6 12-14" />
+      </svg>
+
+      <div>
         <h3>RMA validation</h3>
         <p>
           Returned units, issue isolation,<br />
@@ -461,7 +475,12 @@ url(${heroImage})
       <a className="focus-link" href="#rma">Explore →</a>
     </div>
 
-    <div>
+    <div className="focus-item site">
+      <svg viewBox="0 0 64 64">
+        <path d="M32 8l22 8v15c0 14-9 23-22 29C19 54 10 45 10 31V16l22-8z" />
+      </svg>
+
+      <div>
         <h3>Site reliability</h3>
         <p>
           Operational continuity, uptime<br />
@@ -474,7 +493,16 @@ url(${heroImage})
       <a className="focus-link" href="#site">Improve →</a>
     </div>
 
-    <div>
+    <div className="focus-item infra">
+      <svg viewBox="0 0 64 64">
+        <rect x="14" y="10" width="26" height="44" rx="3" />
+        <path d="M20 22h14" />
+        <path d="M26 34h8l-7 14h8" />
+        <path d="M42 28h8v10c0 5 8 5 8 0V20" />
+        <path d="M54 20v-6" />
+      </svg>
+
+      <div>
         <h3>Infrastructure</h3>
         <p>
           Cable flow, placement, usability,<br />
@@ -490,13 +518,14 @@ url(${heroImage})
    <div className="operational-hub">
   <img
     className="hub-photo"
-    src="/nava2.png"
+    src="/aaa.png"
     alt="NavaCharge Operational Hub"
   />
 </div>
 
   </div>
 </section>
+
      <section style={{ background: "#0f172a", color: "white", padding: "90px 28px" }}>
         <div style={{
           maxWidth: "1220px", margin: "0 auto", display: "grid",
