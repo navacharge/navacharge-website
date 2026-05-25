@@ -518,7 +518,7 @@ url(${heroImage})
    <div className="operational-hub">
   <img
     className="hub-photo"
-    src="/aaa.png"
+    src="/nava2.png"
     alt="NavaCharge Operational Hub"
   />
 </div>
