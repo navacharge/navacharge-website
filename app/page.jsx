@@ -388,9 +388,9 @@ url(${heroImage})
           C65 935 35 970 35 1025
           V1110
           C35 1165 65 1200 120 1200
-          H465
-          C515 1200 540 1230 540 1280
-          V1395
+         H980
+         C1040 1200 1080 1230 1080 1280
+         V1380
         "
         stroke="#2563eb"
         strokeWidth="4"
@@ -427,9 +427,9 @@ url(${heroImage})
             C65 935 35 970 35 1025
             V1110
             C35 1165 65 1200 120 1200
-            H465
-            C515 1200 540 1230 540 1280
-            V1395
+            H980
+            C1040 1200 1080 1230 1080 1280
+            V1380
           "
         />
       </g>
@@ -518,7 +518,7 @@ url(${heroImage})
    <div className="operational-hub">
   <img
     className="hub-photo"
-    src="/aaa.png"
+    src="/nava2.png"
     alt="NavaCharge Operational Hub"
   />
 </div>
