@@ -173,12 +173,12 @@ url(${heroImage})
       overflow: hidden;
     }
 
-   .focus-wrap {
-  position: relative;
-  max-width: 1400px;
-  height: 2150px;
-  margin: -60px auto 0;
-}
+    .focus-wrap {
+      position: relative;
+      max-width: 1400px;
+      height: 2150px;
+      margin: -60px auto 0;
+    }
 
     .focus-title {
       text-align: center;
@@ -213,8 +213,13 @@ url(${heroImage})
       border-radius: 5px;
     }
 
-    .plug::before { left: 14px; }
-    .plug::after { right: 14px; }
+    .plug::before {
+      left: 14px;
+    }
+
+    .plug::after {
+      right: 14px;
+    }
 
     .cable {
       position: absolute;
@@ -223,13 +228,13 @@ url(${heroImage})
       height: 100%;
       z-index: 1;
       pointer-events: none;
-      }
+    }
 
     .focus-item {
       position: absolute;
       z-index: 2;
       display: grid;
-      grid-template-columns: 90px 1fr 1px 180px;
+      grid-template-columns: 90px 1fr;
       align-items: center;
       gap: 34px;
       width: 760px;
@@ -260,71 +265,74 @@ url(${heroImage})
       color: #10243c;
     }
 
-    .divider {
-      width: 1px;
-      height: 86px;
-      background: rgba(7, 27, 51, 0.25);
-    }
-
+    .divider,
     .focus-link {
-      font-size: 22px;
-      font-weight: 800;
-      color: #071b33;
-      text-decoration: none;
-      white-space: nowrap;
+      display: none;
     }
 
-    .diagnostic { top: 360px; left: 135px; }
-    .rma { top: 585px; left: 135px; }
-   .site { top: 850px; left: 135px; }
+    .diagnostic {
+      top: 360px;
+      left: 135px;
+    }
+
+    .rma {
+      top: 585px;
+      left: 135px;
+    }
+
+    .site {
+      top: 850px;
+      left: 135px;
+    }
 
     .infra {
-  top: 1070px;
-  left: 135px;
-  align-items: start;
-  padding-top: 30px;
-}
+      top: 1070px;
+      left: 135px;
+      align-items: start;
+      padding-top: 30px;
+    }
 
-    .infra h3 { margin-bottom: 18px; }
+    .infra h3 {
+      margin-bottom: 18px;
+    }
 
     .infra p {
       line-height: 1.8;
       margin-top: 14px;
     }
 
-.operational-hub {
-  position: absolute;
-  z-index: 2;
+    .operational-hub {
+      position: absolute;
+      z-index: 2;
 
-  left: 50%;
-  transform: translateX(-50%);
+      left: 50%;
+      transform: translateX(-50%);
 
- top: 1410px;
+      top: 1410px;
 
-  width: 1280px;
-  height: 640px;
+      width: 1280px;
+      height: 640px;
 
-  overflow: hidden;
-  border-radius: 34px;
+      overflow: hidden;
+      border-radius: 34px;
 
-  background: #07111f;
+      background: #07111f;
 
-  box-shadow:
-    0 30px 90px rgba(7,27,51,0.18),
-    0 0 0 1px rgba(255,255,255,0.08);
-}
+      box-shadow:
+        0 30px 90px rgba(7,27,51,0.18),
+        0 0 0 1px rgba(255,255,255,0.08);
+    }
 
-.hub-photo {
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-  object-position: center center;
-
-  display: block;
-}
+    .hub-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+    }
 
     @media (max-width: 900px) {
+
       .focus-wrap {
         height: auto;
       }
@@ -349,48 +357,51 @@ url(${heroImage})
         grid-template-columns: 64px 1fr;
         margin: 0 auto 56px;
       }
-
-      .divider,
-      .focus-link {
-        grid-column: 2;
-      }
-
-      .divider {
-        display: none;
-      }
     }
   `}</style>
 
   <div className="focus-wrap">
+
     <h2 className="focus-title">OUR FOCUS</h2>
 
     <div className="plug" />
 
     <svg className="cable" viewBox="0 0 1080 1950" fill="none">
+
       <path
         d="
-         M540 128
+          M540 128
           V205
+
           C540 235 565 250 600 250
           H835
+
           C910 250 945 285 945 360
           V385
+
           C945 460 910 495 835 495
           H120
+
           C65 495 35 530 35 585
           V625
+
           C35 680 65 715 120 715
           H835
+
           C910 715 945 750 945 825
           V850
+
           C945 900 910 935 835 935
           H120
+
           C65 935 35 970 35 1025
           V1110
+
           C35 1165 65 1200 120 1200
-         H980
-         C1040 1200 1080 1230 1080 1280
-         V1380
+          H980
+
+          C1040 1200 1080 1230 1080 1280
+          V1380
         "
         stroke="#2563eb"
         strokeWidth="4"
@@ -410,32 +421,44 @@ url(${heroImage})
           path="
             M540 128
             V205
+
             C540 235 565 250 600 250
             H835
+
             C910 250 945 285 945 360
             V385
+
             C945 460 910 495 835 495
             H120
+
             C65 495 35 530 35 585
             V625
+
             C35 680 65 715 120 715
             H835
+
             C910 715 945 750 945 825
             V850
+
             C945 900 910 935 835 935
             H120
+
             C65 935 35 970 35 1025
             V1110
+
             C35 1165 65 1200 120 1200
             H980
+
             C1040 1200 1080 1230 1080 1280
             V1380
           "
         />
       </g>
+
     </svg>
 
     <div className="focus-item diagnostic">
+
       <svg viewBox="0 0 64 64">
         <circle cx="26" cy="26" r="20" />
         <path d="M14 27h8l4-8 6 16 4-8h8" />
@@ -451,11 +474,10 @@ url(${heroImage})
         </p>
       </div>
 
-      <span className="divider" />
-      <a className="focus-link" href="#diagnostic">Explore →</a>
     </div>
 
     <div className="focus-item rma">
+
       <svg viewBox="0 0 64 64">
         <rect x="16" y="14" width="32" height="42" rx="4" />
         <path d="M24 14v-4h16v4" />
@@ -471,11 +493,10 @@ url(${heroImage})
         </p>
       </div>
 
-      <span className="divider" />
-      <a className="focus-link" href="#rma">Explore →</a>
     </div>
 
     <div className="focus-item site">
+
       <svg viewBox="0 0 64 64">
         <path d="M32 8l22 8v15c0 14-9 23-22 29C19 54 10 45 10 31V16l22-8z" />
       </svg>
@@ -489,11 +510,10 @@ url(${heroImage})
         </p>
       </div>
 
-      <span className="divider" />
-      <a className="focus-link" href="#site">Improve →</a>
     </div>
 
     <div className="focus-item infra">
+
       <svg viewBox="0 0 64 64">
         <rect x="14" y="10" width="26" height="44" rx="3" />
         <path d="M20 22h14" />
@@ -511,17 +531,17 @@ url(${heroImage})
         </p>
       </div>
 
-      <span className="divider" />
-      <a className="focus-link" href="#infra">View service →</a>
     </div>
 
-   <div className="operational-hub">
-  <img
-    className="hub-photo"
-    src="/nava2.png"
-    alt="NavaCharge Operational Hub"
-  />
-</div>
+    <div className="operational-hub">
+
+      <img
+        className="hub-photo"
+        src="/nava2.png"
+        alt="NavaCharge Operational Hub"
+      />
+
+    </div>
 
   </div>
 </section>
