@@ -230,35 +230,6 @@ url(${heroImage})
       pointer-events: none;
     }
 
-    .divider,
-    .focus-link {
-      display: none;
-    }
-
-    /* ---------- DIAGNOSTIC BANNER ---------- */
-
-    .diagnostic-banner{
-      position:absolute;
-
-      top:320px;
-      left:150px;
-
-      width:860px;
-      z-index:2;
-    }
-
-    .diagnostic-banner img{
-      width:100%;
-      display:block;
-
-      border-radius:28px;
-
-      box-shadow:
-        0 25px 70px rgba(7,27,51,0.18);
-    }
-
-    /* ---------- OTHER ITEMS ---------- */
-
     .focus-item {
       position: absolute;
       z-index: 2;
@@ -299,23 +270,51 @@ url(${heroImage})
       margin: 0;
 
       font-size: 17px;
-      line-height: 1.7;
+      line-height: 1.6;
 
       color: #10243c;
     }
 
+    .divider,
+    .focus-link {
+      display: none;
+    }
+
+    /* ---------- DIAGNOSTIC BANNER ---------- */
+
+    .diagnostic-banner{
+      position:absolute;
+
+      top:355px;
+      left:165px;
+
+      width:620px;
+
+      z-index:2;
+    }
+
+    .diagnostic-banner img{
+      width:100%;
+      display:block;
+
+      border-radius:22px;
+
+      box-shadow:
+        0 18px 45px rgba(7,27,51,0.14);
+    }
+
     .rma {
-      top: 700px;
+      top: 585px;
       left: 135px;
     }
 
     .site {
-      top: 965px;
+      top: 850px;
       left: 135px;
     }
 
     .infra {
-      top: 1185px;
+      top: 1070px;
       left: 135px;
 
       align-items: start;
@@ -331,8 +330,6 @@ url(${heroImage})
       margin-top: 14px;
     }
 
-    /* ---------- OPERATIONAL HUB ---------- */
-
     .operational-hub {
       position: absolute;
       z-index: 2;
@@ -340,7 +337,7 @@ url(${heroImage})
       left: 50%;
       transform: translateX(-50%);
 
-      top: 1500px;
+      top: 1410px;
 
       width: 1280px;
       height: 640px;
@@ -365,8 +362,6 @@ url(${heroImage})
       display: block;
     }
 
-    /* ---------- MOBILE ---------- */
-
     @media (max-width: 900px) {
 
       .focus-wrap {
@@ -380,25 +375,13 @@ url(${heroImage})
 
       .plug {
         position: relative;
-
         top: auto;
         left: 50%;
-
         margin-bottom: 60px;
       }
 
-      .diagnostic-banner{
-        position:relative;
-
-        top:auto;
-        left:auto;
-
-        width:100%;
-
-        margin:0 auto 50px;
-      }
-
-      .focus-item {
+      .focus-item,
+      .diagnostic-banner {
         position: relative;
 
         top: auto;
@@ -406,9 +389,11 @@ url(${heroImage})
 
         width: 100%;
 
-        grid-template-columns: 64px 1fr;
-
         margin: 0 auto 56px;
+      }
+
+      .focus-item {
+        grid-template-columns: 64px 1fr;
       }
     }
 
@@ -419,8 +404,6 @@ url(${heroImage})
     <h2 className="focus-title">OUR FOCUS</h2>
 
     <div className="plug" />
-
-    {/* ---------- CABLE ---------- */}
 
     <svg className="cable" viewBox="0 0 1080 1950" fill="none">
 
@@ -435,81 +418,35 @@ url(${heroImage})
           C910 250 945 285 945 360
           V385
 
-          C945 520 910 620 835 620
+          C945 460 910 495 835 495
           H120
 
-          C65 620 35 650 35 705
-          V745
+          C65 495 35 530 35 585
+          V625
 
-          C35 800 65 835 120 835
+          C35 680 65 715 120 715
           H835
 
-          C910 835 945 870 945 945
-          V970
+          C910 715 945 750 945 825
+          V850
 
-          C945 1020 910 1055 835 1055
+          C945 900 910 935 835 935
           H120
 
-          C65 1055 35 1090 35 1145
-          V1230
+          C65 935 35 970 35 1025
+          V1110
 
-          C35 1285 65 1320 120 1320
+          C35 1165 65 1200 120 1200
           H980
 
-          C1040 1320 1080 1350 1080 1400
-          V1490
+          C1040 1200 1080 1230 1080 1280
+          V1380
         "
         stroke="#2563eb"
         strokeWidth="4"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-
-      <g>
-        <circle r="9" fill="#ffffff" />
-        <circle r="16" fill="#2563eb" opacity="0.35" />
-        <circle r="28" fill="#2563eb" opacity="0.14" />
-
-        <animateMotion
-          dur="16s"
-          repeatCount="indefinite"
-          rotate="auto"
-          path="
-            M540 128
-            V205
-
-            C540 235 565 250 600 250
-            H835
-
-            C910 250 945 285 945 360
-            V385
-
-            C945 520 910 620 835 620
-            H120
-
-            C65 620 35 650 35 705
-            V745
-
-            C35 800 65 835 120 835
-            H835
-
-            C910 835 945 870 945 945
-            V970
-
-            C945 1020 910 1055 835 1055
-            H120
-
-            C65 1055 35 1090 35 1145
-            V1230
-
-            C35 1285 65 1320 120 1320
-            H980
-
-            C1040 1320 1080 1350 1080 1400
-            V1490
-          "
-        />
-      </g>
 
     </svg>
 
@@ -518,7 +455,7 @@ url(${heroImage})
     <div className="diagnostic-banner">
 
       <img
-        src="/Diagnostic .png"
+        src="/Diagnostic.png"
         alt="Diagnostic Banner"
       />
 
@@ -604,7 +541,7 @@ url(${heroImage})
 
   </div>
 </section>
-
+      
      <section style={{ background: "#0f172a", color: "white", padding: "90px 28px" }}>
         <div style={{
           maxWidth: "1220px", margin: "0 auto", display: "grid",
