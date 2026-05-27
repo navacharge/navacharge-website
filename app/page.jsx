@@ -285,10 +285,10 @@ url(${heroImage})
     .diagnostic-banner{
       position:absolute;
 
-      top:355px;
-      left:165px;
+      top:300px;
+      left:220px;
 
-      width:620px;
+      width:520px;
 
       z-index:2;
     }
