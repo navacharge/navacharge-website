@@ -414,7 +414,7 @@ url(${heroImage})
 
     <div className="diagnostic-banner">
       <img
-        src="/Diagnostic .png"
+        src="/Diagnostic.png"
         alt="Diagnostic Banner"
       />
     </div>
