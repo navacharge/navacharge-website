@@ -308,6 +308,35 @@ url(${heroImage})
     0 18px 45px rgba(7,27,51,0.14);
 }
 
+/* ---------- RMA BANNER ---------- */
+
+.rma-banner{
+  position:absolute;
+
+  top:585px;
+  left:300px;
+
+  width:700px;
+  height:160px;
+
+  z-index:2;
+}
+
+.rma-banner img{
+  width:100%;
+  height:100%;
+
+  object-fit:contain;
+  background:#07111f;
+
+  display:block;
+
+  border-radius:22px;
+
+  box-shadow:
+    0 18px 45px rgba(7,27,51,0.14);
+}
+
     .rma {
       top: 585px;
       left: 135px;
@@ -468,15 +497,12 @@ url(${heroImage})
 
     {/* ---------- RMA ---------- */}
 
-    <div className="focus-item rma">
-
-      <svg viewBox="0 0 64 64">
-        <rect x="16" y="14" width="32" height="42" rx="4" />
-        <path d="M24 14v-4h16v4" />
-        <path d="M24 36l6 6 12-14" />
-      </svg>
-
-      <div>
+ <div className="rma-banner">
+  <img
+    src="/RMA.png"
+    alt="RMA Banner"
+  />
+</div>
         <h3>RMA validation</h3>
 
         <p>
