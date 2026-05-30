@@ -281,7 +281,7 @@ url(${heroImage})
     .rma-banner img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       background: #07111f;
       display: block;
       border-radius: 22px;
