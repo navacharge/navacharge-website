@@ -213,13 +213,8 @@ url(${heroImage})
       border-radius: 5px;
     }
 
-    .plug::before {
-      left: 14px;
-    }
-
-    .plug::after {
-      right: 14px;
-    }
+    .plug::before { left: 14px; }
+    .plug::after { right: 14px; }
 
     .cable {
       position: absolute;
@@ -233,45 +228,35 @@ url(${heroImage})
     .focus-item {
       position: absolute;
       z-index: 2;
-
       display: grid;
       grid-template-columns: 90px 1fr;
-
       align-items: center;
       gap: 34px;
-
       width: 760px;
       min-height: 150px;
-
       color: #071b33;
     }
 
     .focus-item svg {
       width: 58px;
       height: 58px;
-
       stroke: #071b33;
       stroke-width: 4;
-
       fill: none;
-
       stroke-linecap: round;
       stroke-linejoin: round;
     }
 
     .focus-item h3 {
       margin: 0 0 16px;
-
       font-size: 30px;
       font-weight: 800;
     }
 
     .focus-item p {
       margin: 0;
-
       font-size: 17px;
       line-height: 1.6;
-
       color: #10243c;
     }
 
@@ -280,66 +265,27 @@ url(${heroImage})
       display: none;
     }
 
-    /* ---------- DIAGNOSTIC BANNER ---------- */
-
-    .diagnostic-banner{
-      position:absolute;
-      
-      top:320px;
-      left:300px;
-      height:160px;
-      width:700px;
-      
-      z-index:2;
+    .diagnostic-banner,
+    .rma-banner {
+      position: absolute;
+      left: 300px;
+      width: 700px;
+      height: 160px;
+      z-index: 2;
     }
 
-    .diagnostic-banner img{
-  width:100%;
-  height:100%;
+    .diagnostic-banner { top: 320px; }
+    .rma-banner { top: 585px; }
 
-  object-fit:contain;
-  background:#07111f;
-
-  display:block;
-
-  border-radius:22px;
-
-  box-shadow:
-    0 18px 45px rgba(7,27,51,0.14);
-}
-
-/* ---------- RMA BANNER ---------- */
-
-.rma-banner{
-  position:absolute;
-
-  top:585px;
-  left:300px;
-
-  width:700px;
-  height:160px;
-
-  z-index:2;
-}
-
-.rma-banner img{
-  width:100%;
-  height:100%;
-
-  object-fit:contain;
-  background:#07111f;
-
-  display:block;
-
-  border-radius:22px;
-
-  box-shadow:
-    0 18px 45px rgba(7,27,51,0.14);
-}
-
-    .rma {
-      top: 585px;
-      left: 135px;
+    .diagnostic-banner img,
+    .rma-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #07111f;
+      display: block;
+      border-radius: 22px;
+      box-shadow: 0 18px 45px rgba(7,27,51,0.14);
     }
 
     .site {
@@ -350,14 +296,11 @@ url(${heroImage})
     .infra {
       top: 1070px;
       left: 135px;
-
       align-items: start;
       padding-top: 30px;
     }
 
-    .infra h3 {
-      margin-bottom: 18px;
-    }
+    .infra h3 { margin-bottom: 18px; }
 
     .infra p {
       line-height: 1.8;
@@ -367,20 +310,14 @@ url(${heroImage})
     .operational-hub {
       position: absolute;
       z-index: 2;
-
       left: 50%;
       transform: translateX(-50%);
-
       top: 1410px;
-
       width: 1280px;
       height: 640px;
-
       overflow: hidden;
       border-radius: 34px;
-
       background: #07111f;
-
       box-shadow:
         0 30px 90px rgba(7,27,51,0.18),
         0 0 0 1px rgba(255,255,255,0.08);
@@ -389,15 +326,12 @@ url(${heroImage})
     .hub-photo {
       width: 100%;
       height: 100%;
-
       object-fit: cover;
       object-position: center center;
-
       display: block;
     }
 
     @media (max-width: 900px) {
-
       .focus-wrap {
         height: auto;
       }
@@ -415,14 +349,12 @@ url(${heroImage})
       }
 
       .focus-item,
-      .diagnostic-banner {
+      .diagnostic-banner,
+      .rma-banner {
         position: relative;
-
         top: auto;
         left: auto;
-
         width: 100%;
-
         margin: 0 auto 56px;
       }
 
@@ -430,17 +362,14 @@ url(${heroImage})
         grid-template-columns: 64px 1fr;
       }
     }
-
   `}</style>
 
   <div className="focus-wrap">
-
     <h2 className="focus-title">OUR FOCUS</h2>
 
     <div className="plug" />
 
     <svg className="cable" viewBox="0 0 1080 1950" fill="none">
-
       <path
         d="
           M540 128
@@ -481,63 +410,38 @@ url(${heroImage})
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-
     </svg>
 
-    {/* ---------- DIAGNOSTIC BANNER ---------- */}
-
     <div className="diagnostic-banner">
-
       <img
         src="/Diagnostic .png"
         alt="Diagnostic Banner"
       />
-
     </div>
 
-    {/* ---------- RMA ---------- */}
-
- <div className="rma-banner">
-  <img
-    src="/RMA.png"
-    alt="RMA Banner"
-  />
-</div>
-        <h3>RMA validation</h3>
-
-        <p>
-          Returned units, issue isolation,<br />
-          functional checks, and<br />
-          redeployment readiness.
-        </p>
-      </div>
-
-   
-
-    {/* ---------- SITE ---------- */}
+    <div className="rma-banner">
+      <img
+        src="/RMA.png"
+        alt="RMA Banner"
+      />
+    </div>
 
     <div className="focus-item site">
-
       <svg viewBox="0 0 64 64">
         <path d="M32 8l22 8v15c0 14-9 23-22 29C19 54 10 45 10 31V16l22-8z" />
       </svg>
 
       <div>
         <h3>Site reliability</h3>
-
         <p>
           Operational continuity, uptime<br />
           awareness, and site-level<br />
           support visibility.
         </p>
       </div>
-
     </div>
 
-    {/* ---------- INFRA ---------- */}
-
     <div className="focus-item infra">
-
       <svg viewBox="0 0 64 64">
         <rect x="14" y="10" width="26" height="44" rx="3" />
         <path d="M20 22h14" />
@@ -548,28 +452,21 @@ url(${heroImage})
 
       <div>
         <h3>Infrastructure</h3>
-
         <p>
           Cable flow, placement, usability,<br />
           and coordination for real<br />
           charging sites.
         </p>
       </div>
-
     </div>
 
-    {/* ---------- OPERATIONAL HUB ---------- */}
-
     <div className="operational-hub">
-
       <img
         className="hub-photo"
         src="/nava2.png"
         alt="NavaCharge Operational Hub"
       />
-
     </div>
-
   </div>
 </section>
       
