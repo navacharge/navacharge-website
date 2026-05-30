@@ -225,48 +225,10 @@ url(${heroImage})
       pointer-events: none;
     }
 
-    .focus-item {
-      position: absolute;
-      z-index: 2;
-      display: grid;
-      grid-template-columns: 90px 1fr;
-      align-items: center;
-      gap: 34px;
-      width: 760px;
-      min-height: 150px;
-      color: #071b33;
-    }
-
-    .focus-item svg {
-      width: 58px;
-      height: 58px;
-      stroke: #071b33;
-      stroke-width: 4;
-      fill: none;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .focus-item h3 {
-      margin: 0 0 16px;
-      font-size: 30px;
-      font-weight: 800;
-    }
-
-    .focus-item p {
-      margin: 0;
-      font-size: 17px;
-      line-height: 1.6;
-      color: #10243c;
-    }
-
-    .divider,
-    .focus-link {
-      display: none;
-    }
-
     .diagnostic-banner,
-    .rma-banner {
+    .rma-banner,
+    .site-banner,
+    .infra-banner {
       position: absolute;
       left: 300px;
       width: 700px;
@@ -276,9 +238,13 @@ url(${heroImage})
 
     .diagnostic-banner { top: 320px; }
     .rma-banner { top: 600px; }
+    .site-banner { top: 850px; }
+    .infra-banner { top: 1080px; }
 
     .diagnostic-banner img,
-    .rma-banner img {
+    .rma-banner img,
+    .site-banner img,
+    .infra-banner img {
       width: 100%;
       height: 100%;
       object-fit: contain;
@@ -286,25 +252,6 @@ url(${heroImage})
       display: block;
       border-radius: 22px;
       box-shadow: 0 18px 45px rgba(7,27,51,0.14);
-    }
-
-    .site {
-      top: 850px;
-      left: 135px;
-    }
-
-    .infra {
-      top: 1070px;
-      left: 135px;
-      align-items: start;
-      padding-top: 30px;
-    }
-
-    .infra h3 { margin-bottom: 18px; }
-
-    .infra p {
-      line-height: 1.8;
-      margin-top: 14px;
     }
 
     .operational-hub {
@@ -348,18 +295,15 @@ url(${heroImage})
         margin-bottom: 60px;
       }
 
-      .focus-item,
       .diagnostic-banner,
-      .rma-banner {
+      .rma-banner,
+      .site-banner,
+      .infra-banner {
         position: relative;
         top: auto;
         left: auto;
         width: 100%;
         margin: 0 auto 56px;
-      }
-
-      .focus-item {
-        grid-template-columns: 64px 1fr;
       }
     }
   `}</style>
@@ -413,51 +357,19 @@ url(${heroImage})
     </svg>
 
     <div className="diagnostic-banner">
-      <img
-        src="/Diagnostic.png"
-        alt="Diagnostic Banner"
-      />
+      <img src="/Diagnostic.png" alt="Diagnostic Banner" />
     </div>
 
     <div className="rma-banner">
-      <img
-        src="/RMA.png"
-        alt="RMA Banner"
-      />
+      <img src="/RMA.png" alt="RMA Banner" />
     </div>
 
-    <div className="focus-item site">
-      <svg viewBox="0 0 64 64">
-        <path d="M32 8l22 8v15c0 14-9 23-22 29C19 54 10 45 10 31V16l22-8z" />
-      </svg>
-
-      <div>
-        <h3>Site reliability</h3>
-        <p>
-          Operational continuity, uptime<br />
-          awareness, and site-level<br />
-          support visibility.
-        </p>
-      </div>
+    <div className="site-banner">
+      <img src="/Site.png" alt="Site Banner" />
     </div>
 
-    <div className="focus-item infra">
-      <svg viewBox="0 0 64 64">
-        <rect x="14" y="10" width="26" height="44" rx="3" />
-        <path d="M20 22h14" />
-        <path d="M26 34h8l-7 14h8" />
-        <path d="M42 28h8v10c0 5 8 5 8 0V20" />
-        <path d="M54 20v-6" />
-      </svg>
-
-      <div>
-        <h3>Infrastructure</h3>
-        <p>
-          Cable flow, placement, usability,<br />
-          and coordination for real<br />
-          charging sites.
-        </p>
-      </div>
+    <div className="infra-banner">
+      <img src="/Infra.png" alt="Infrastructure Banner" />
     </div>
 
     <div className="operational-hub">
