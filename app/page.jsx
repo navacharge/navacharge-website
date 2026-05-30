@@ -284,24 +284,28 @@ url(${heroImage})
 
     .diagnostic-banner{
       position:absolute;
-
+      
       top:320px;
       left:120px;
-
+      height:220px;
       width:800px;
-
+      
       z-index:2;
     }
 
     .diagnostic-banner img{
-      width:100%;
-      display:block;
+  width:100%;
+  height:100%;
 
-      border-radius:22px;
+  object-fit:cover;
 
-      box-shadow:
-        0 18px 45px rgba(7,27,51,0.14);
-    }
+  display:block;
+
+  border-radius:22px;
+
+  box-shadow:
+    0 18px 45px rgba(7,27,51,0.14);
+}
 
     .rma {
       top: 585px;
