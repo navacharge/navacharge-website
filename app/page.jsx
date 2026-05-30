@@ -286,7 +286,7 @@ url(${heroImage})
       position:absolute;
       
       top:320px;
-      left:160px;
+      left:70px;
       height:160px;
       width:700px;
       
