@@ -275,7 +275,7 @@ url(${heroImage})
     }
 
     .diagnostic-banner { top: 320px; }
-    .rma-banner { top: 585px; }
+    .rma-banner { top: 600px; }
 
     .diagnostic-banner img,
     .rma-banner img {
