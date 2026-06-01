@@ -275,10 +275,10 @@ url(${heroImage})
 
     .hub-extension {
   position: absolute;
-  left: 60px;
-  top: 2020px;
+  left: 40px;
+  top: 1980px;
   width: 1280px;
-  height: 360px;
+  height: 420px;
   z-index: 1;
   pointer-events: none;
 }
@@ -286,12 +286,11 @@ url(${heroImage})
 .post-hub-banner {
   position: absolute;
   left: 300px;
-  top: 2125px;
+  top: 2100px;
   width: 700px;
   height: 160px;
   z-index: 2;
 }
-
 .post-hub-banner img {
   width: 100%;
   height: 100%;
@@ -411,6 +410,40 @@ url(${heroImage})
         alt="NavaCharge Operational Hub"
       />
     </div>
+
+    <svg className="hub-extension" viewBox="0 0 1280 420" fill="none">
+  <path
+    d="
+      M120 70
+
+      H1120
+
+      C1180 70 1220 110 1220 170
+
+      V260
+
+      C1220 320 1180 360 1120 360
+
+      H220
+
+      C140 360 80 310 80 230
+
+      V210
+    "
+    stroke="#2563eb"
+    strokeWidth="4"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+</svg>
+
+<div className="post-hub-banner">
+  <img
+    src="/YourBanner.png"
+    alt="Post Hub Banner"
+  />
+</div>
+    
   </div>
 </section>
       
