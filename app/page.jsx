@@ -385,32 +385,7 @@ url(${heroImage})
   </div>
 </section>
       
-     <section style={{ background: "#0f172a", color: "white", padding: "90px 28px" }}>
-        <div style={{
-          maxWidth: "1220px", margin: "0 auto", display: "grid",
-          gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))", gap: "34px", alignItems: "center"
-        }}>
-          <div>
-            <p style={{ color: "#93c5fd", fontWeight: "700" }}>Cable Management</p>
-            <h2 style={{ fontSize: "46px", lineHeight: "1.1", marginBottom: "22px" }}>
-              Cleaner charging spaces. Better daily usability.
-            </h2>
-            <p style={{ color: "#cbd5e1", lineHeight: "1.8", fontSize: "18px" }}>
-              Cable keepers and wall-mounted arm concepts help reduce clutter,
-              improve handling, and make residential or commercial charging spaces
-              look safer and more professional.
-            </p>
-          </div>
-
-          <div style={{
-            minHeight: "360px", borderRadius: "28px", backgroundImage: `url(${garageImage})`,
-            backgroundSize: "cover", backgroundPosition: "center",
-            boxShadow: "0 30px 70px rgba(0,0,0,0.35)"
-          }} />
-        </div>
-      </section>
-
-      <section id="portal" style={{ maxWidth: "1220px", margin: "0 auto", padding: "100px 28px" }}>
+    <section id="portal" style={{ maxWidth: "1220px", margin: "0 auto", padding: "100px 28px" }}>
         <div style={{
           display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))",
           gap: "34px", alignItems: "center"
