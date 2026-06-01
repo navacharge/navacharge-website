@@ -176,7 +176,7 @@ url(${heroImage})
     .focus-wrap {
       position: relative;
       max-width: 1400px;
-      height: 2150px;
+      height: 2500px;
       margin: -60px auto 0;
     }
 
@@ -272,6 +272,35 @@ url(${heroImage})
         0 30px 90px rgba(7,27,51,0.18),
         0 0 0 1px rgba(255,255,255,0.08);
     }
+
+    .hub-extension {
+  position: absolute;
+  left: 60px;
+  top: 2020px;
+  width: 1280px;
+  height: 360px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.post-hub-banner {
+  position: absolute;
+  left: 300px;
+  top: 2125px;
+  width: 700px;
+  height: 160px;
+  z-index: 2;
+}
+
+.post-hub-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #07111f;
+  display: block;
+  border-radius: 22px;
+  box-shadow: 0 18px 45px rgba(7,27,51,0.14);
+}
 
     .hub-photo {
       width: 100%;
