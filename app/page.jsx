@@ -276,7 +276,7 @@ url(${heroImage})
     .hub-extension {
   position: absolute;
   left: 40px;
-  top: 1980px;
+  top: 2180px;
   width: 1280px;
   height: 420px;
   z-index: 1;
