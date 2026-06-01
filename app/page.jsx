@@ -253,6 +253,9 @@ url(${heroImage})
       border-radius: 22px;
       box-shadow: 0 18px 45px rgba(7,27,51,0.14);
     }
+    .diagnostic-banner img{
+  object-position: center top;
+}
 
     .operational-hub {
       position: absolute;
