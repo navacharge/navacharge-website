@@ -176,7 +176,7 @@ url(${heroImage})
     .focus-wrap {
       position: relative;
       max-width: 1400px;
-      height: 2500px;
+      height: 2150px;
       margin: -60px auto 0;
     }
 
