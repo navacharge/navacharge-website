@@ -386,7 +386,78 @@ url(${heroImage})
     
   </div>
 </section>
-      
+    <section
+  style={{
+    maxWidth: "1280px",
+    margin: "0 auto",
+    padding: "40px 28px 90px",
+    position: "relative",
+  }}
+>
+  <div
+    style={{
+      position: "relative",
+      height: "360px",
+    }}
+  >
+    <svg
+      viewBox="0 0 1280 360"
+      fill="none"
+      style={{
+        position: "absolute",
+        inset: 0,
+        width: "100%",
+        height: "100%",
+        zIndex: 1,
+        pointerEvents: "none",
+      }}
+    >
+      <path
+        d="
+          M40 40
+          H1180
+          C1230 40 1260 70 1260 120
+          V240
+          C1260 300 1220 330 1160 330
+          H120
+          C70 330 40 300 40 250
+          V210
+        "
+        stroke="#2563eb"
+        strokeWidth="4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+
+    <div
+      style={{
+        position: "absolute",
+        left: "50%",
+        top: "95px",
+        transform: "translateX(-50%)",
+        width: "700px",
+        height: "160px",
+        borderRadius: "22px",
+        overflow: "hidden",
+        background: "#07111f",
+        boxShadow: "0 18px 45px rgba(7,27,51,0.14)",
+        zIndex: 2,
+      }}
+    >
+      <img
+        src="/YourBanner.png"
+        alt="New Banner"
+        style={{
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          display: "block",
+        }}
+      />
+    </div>
+  </div>
+</section>  
     <section id="portal" style={{ maxWidth: "1220px", margin: "0 auto", padding: "100px 28px" }}>
         <div style={{
           display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))",
