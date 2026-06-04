@@ -176,7 +176,7 @@ url(${heroImage})
     .focus-wrap {
       position: relative;
       max-width: 1400px;
-      height: 2460px;
+      height: 2150px;
       margin: -60px auto 0;
     }
 
@@ -273,34 +273,6 @@ url(${heroImage})
         0 0 0 1px rgba(255,255,255,0.08);
     }
 
-    .hub-extension {
-  position: absolute;
-  left: 60px;
-  top: 2055px;
-  width: 1280px;
-  height: 360px;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.post-hub-banner {
-  position: absolute;
-  left: 300px;
-  top: 2180px;
-  width: 700px;
-  height: 160px;
-  z-index: 2;
-}
-.post-hub-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  background: #07111f;
-  display: block;
-  border-radius: 22px;
-  box-shadow: 0 18px 45px rgba(7,27,51,0.14);
-}
-
     .hub-photo {
       width: 100%;
       height: 100%;
@@ -315,8 +287,7 @@ url(${heroImage})
       }
 
       .cable,
-      .operational-hub,
-      .hub-extension {
+      .operational-hub {
         display: none;
       }
 
@@ -330,8 +301,7 @@ url(${heroImage})
       .diagnostic-banner,
       .rma-banner,
       .site-banner,
-      .infra-banner,
-      .post-hub-banner {
+      .infra-banner {
         position: relative;
         top: auto;
         left: auto;
@@ -413,36 +383,6 @@ url(${heroImage})
       />
     </div>
 
-    <svg className="hub-extension" viewBox="0 0 1280 360" fill="none">
-      <path
-        d="
-          M0 0
-          V80
-
-          C0 125 45 150 110 150
-          H1120
-
-          C1195 150 1240 195 1240 260
-
-          C1240 325 1195 350 1120 350
-          H130
-
-          C55 350 0 305 0 240
-          V220
-        "
-        stroke="#2563eb"
-        strokeWidth="4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-
-<div className="post-hub-banner">
-  <img
-    src="/YourBanner.png"
-    alt="Post Hub Banner"
-  />
-</div>
     
   </div>
 </section>
