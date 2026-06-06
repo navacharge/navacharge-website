@@ -159,22 +159,26 @@ export default function Home() {
       <section
         style={{
           position: "relative",
+          minHeight: "calc(100vh - 68px)",
           overflow: "hidden",
           background:
-            "linear-gradient(180deg, #0f76a8 0%, #1398c8 38%, #f6f3ec 38%, #f6f3ec 100%)",
-          padding: "96px 28px 118px",
+            "linear-gradient(135deg, #0b4f8a 0%, #0f76a8 44%, #1398c8 100%)",
+          color: "white",
+          padding: "92px 28px 105px",
+          display: "flex",
+          alignItems: "center",
         }}
       >
         <div
           style={{
             position: "absolute",
-            top: "-180px",
-            right: "-120px",
-            width: "520px",
-            height: "520px",
+            top: "-220px",
+            right: "-140px",
+            width: "620px",
+            height: "620px",
             borderRadius: "50%",
-            background: "rgba(255,255,255,0.14)",
-            filter: "blur(2px)",
+            background:
+              "radial-gradient(circle, rgba(255,255,255,0.20) 0%, rgba(255,255,255,0.08) 45%, transparent 72%)",
             pointerEvents: "none",
           }}
         />
@@ -182,131 +186,170 @@ export default function Home() {
         <div
           style={{
             position: "absolute",
-            top: "120px",
-            left: "-160px",
-            width: "420px",
-            height: "420px",
+            bottom: "-260px",
+            left: "-180px",
+            width: "640px",
+            height: "640px",
             borderRadius: "50%",
-            background: "rgba(147,197,253,0.16)",
-            filter: "blur(10px)",
+            background:
+              "radial-gradient(circle, rgba(147,197,253,0.22) 0%, rgba(147,197,253,0.08) 46%, transparent 74%)",
             pointerEvents: "none",
           }}
         />
 
         <div
           style={{
-            maxWidth: "1280px",
+            position: "absolute",
+            inset: 0,
+            background:
+              "linear-gradient(180deg, rgba(255,255,255,0.08) 0%, transparent 36%, rgba(2,6,23,0.14) 100%)",
+            pointerEvents: "none",
+          }}
+        />
+
+        <div
+          style={{
+            maxWidth: "1220px",
             margin: "0 auto",
+            width: "100%",
             position: "relative",
             zIndex: 2,
+            display: "grid",
+            gridTemplateColumns: "minmax(0, 1.05fr) minmax(420px, 0.95fr)",
+            gap: "58px",
+            alignItems: "center",
           }}
         >
+          <div>
+            <p
+              style={{
+                color: "#dbeafe",
+                fontWeight: "900",
+                marginBottom: "24px",
+                letterSpacing: "0.8px",
+              }}
+            >
+              EV Charging Diagnostics & Reliability Support
+            </p>
+
+            <h1
+              style={{
+                fontSize: "clamp(48px, 6vw, 86px)",
+                lineHeight: "0.95",
+                margin: "0 0 28px",
+                fontWeight: "900",
+                letterSpacing: "-3px",
+                textShadow: "0 18px 48px rgba(0,0,0,0.22)",
+              }}
+            >
+              EV charging reliability, made visible.
+            </h1>
+
+            <p
+              style={{
+                fontSize: "clamp(18px, 2vw, 22px)",
+                lineHeight: "1.85",
+                color: "#e0f2fe",
+                maxWidth: "660px",
+                marginBottom: "34px",
+              }}
+            >
+              NavaCharge helps property managers and charging teams turn
+              charger issues, cable problems, field notes, and repeat failures
+              into clear technical evidence.
+            </p>
+
+            <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
+              <a
+                href="#contact"
+                style={{
+                  background:
+                    "linear-gradient(135deg,#1d4ed8 0%,#38bdf8 100%)",
+                  boxShadow: "0 18px 42px rgba(15,23,42,0.26)",
+                  color: "white",
+                  padding: "16px 26px",
+                  borderRadius: "14px",
+                  textDecoration: "none",
+                  fontWeight: "900",
+                }}
+              >
+                Request Support Review
+              </a>
+
+              <a
+                href="#focus"
+                style={{
+                  color: "white",
+                  padding: "16px 26px",
+                  borderRadius: "14px",
+                  border: "1px solid rgba(255,255,255,0.20)",
+                  background: "rgba(255,255,255,0.12)",
+                  backdropFilter: "blur(10px)",
+                  textDecoration: "none",
+                  fontWeight: "900",
+                }}
+              >
+                Explore Reliability Flow
+              </a>
+            </div>
+          </div>
+
           <div
             style={{
-              minHeight: "680px",
-              borderRadius: "38px",
+              position: "relative",
+              minHeight: "570px",
+              borderRadius: "42px",
               overflow: "hidden",
-              boxShadow: "0 46px 130px rgba(15,23,42,0.34)",
-              border: "1px solid rgba(255,255,255,0.22)",
               backgroundImage: `
                 linear-gradient(
                   135deg,
-                  rgba(3,20,38,0.94) 0%,
-                  rgba(7,45,79,0.84) 38%,
-                  rgba(13,89,130,0.46) 70%,
-                  rgba(15,23,42,0.22) 100%
+                  rgba(2,6,23,0.12) 0%,
+                  rgba(15,23,42,0.22) 42%,
+                  rgba(15,23,42,0.36) 100%
                 ),
                 url(${heroImage})
               `,
               backgroundSize: "cover",
               backgroundPosition: "center",
-              backgroundAttachment: "fixed",
-              color: "white",
-              padding: "72px 78px",
-              display: "flex",
-              alignItems: "flex-end",
+              boxShadow: "0 34px 90px rgba(7,27,51,0.32)",
+              border: "1px solid rgba(255,255,255,0.18)",
             }}
           >
             <div
               style={{
-                maxWidth: "650px",
-                minHeight: "520px",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
+                position: "absolute",
+                inset: 0,
+                background:
+                  "radial-gradient(circle at 20% 20%, rgba(255,255,255,0.20), transparent 28%), linear-gradient(180deg, transparent 0%, rgba(2,6,23,0.30) 100%)",
+              }}
+            />
+
+            <div
+              style={{
+                position: "absolute",
+                left: "26px",
+                bottom: "26px",
+                right: "26px",
+                padding: "18px 20px",
+                borderRadius: "22px",
+                background: "rgba(2,6,23,0.38)",
+                border: "1px solid rgba(255,255,255,0.14)",
+                backdropFilter: "blur(14px)",
+                color: "#e0f2fe",
               }}
             >
-              <div>
-                <p
-                  style={{
-                    color: "#bfdbfe",
-                    fontWeight: "900",
-                    marginBottom: "22px",
-                    letterSpacing: "0.6px",
-                  }}
-                >
-                  EV Charging Diagnostics & Reliability Support
-                </p>
-
-                <h1
-                  style={{
-                    fontSize: "clamp(44px, 5vw, 76px)",
-                    lineHeight: "0.98",
-                    margin: "0 0 26px",
-                    fontWeight: "900",
-                    letterSpacing: "-2.6px",
-                    textShadow: "0 18px 48px rgba(0,0,0,0.28)",
-                  }}
-                >
-                  EV charging reliability, made visible.
-                </h1>
-
-                <p
-                  style={{
-                    fontSize: "clamp(17px, 2vw, 21px)",
-                    lineHeight: "1.85",
-                    color: "#e0f2fe",
-                    maxWidth: "600px",
-                  }}
-                >
-                  NavaCharge helps property managers and charging teams turn
-                  charger issues, cable problems, field notes, and repeat
-                  failures into clear technical evidence.
-                </p>
+              <div
+                style={{
+                  fontWeight: "900",
+                  color: "white",
+                  marginBottom: "6px",
+                }}
+              >
+                Reliability starts with visibility.
               </div>
-
-              <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
-                <a
-                  href="#contact"
-                  style={{
-                    background:
-                      "linear-gradient(135deg,#2563eb 0%,#38bdf8 100%)",
-                    boxShadow: "0 18px 42px rgba(37,99,235,0.38)",
-                    color: "white",
-                    padding: "16px 26px",
-                    borderRadius: "14px",
-                    textDecoration: "none",
-                    fontWeight: "900",
-                  }}
-                >
-                  Request Support Review
-                </a>
-
-                <a
-                  href="#focus"
-                  style={{
-                    color: "white",
-                    padding: "16px 26px",
-                    borderRadius: "14px",
-                    border: "1px solid rgba(255,255,255,0.16)",
-                    background: "rgba(255,255,255,0.10)",
-                    backdropFilter: "blur(8px)",
-                    textDecoration: "none",
-                    fontWeight: "900",
-                  }}
-                >
-                  Explore Reliability Flow
-                </a>
+              <div style={{ fontSize: "14px", lineHeight: "1.6" }}>
+                Symptoms, cable conditions, RMA notes, and support history
+                become one clearer operating picture.
               </div>
             </div>
           </div>
@@ -321,7 +364,7 @@ export default function Home() {
 
           .focus-flow {
             background: #f6f3ec;
-            padding: 20px 20px 130px;
+            padding: 90px 20px 130px;
             overflow: hidden;
           }
 
