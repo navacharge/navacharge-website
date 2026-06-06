@@ -40,6 +40,35 @@ export default function Home() {
     },
   ];
 
+  const cablePath = `
+    M640 252
+    V410
+
+    C640 500 580 540 500 540
+    H260
+
+    C170 540 120 590 120 680
+    V735
+
+    C120 825 175 880 265 880
+    H1015
+
+    C1105 880 1160 935 1160 1025
+    V1050
+
+    C1160 1140 1105 1195 1015 1195
+    H265
+
+    C175 1195 120 1250 120 1340
+    V1385
+
+    C120 1475 175 1530 265 1530
+    H610
+
+    C630 1530 640 1540 640 1560
+    V1705
+  `;
+
   return (
     <main
       style={{
@@ -208,7 +237,8 @@ export default function Home() {
               <a
                 href="#contact"
                 style={{
-                  background: "linear-gradient(135deg,#2563eb 0%,#3b82f6 100%)",
+                  background:
+                    "linear-gradient(135deg,#2563eb 0%,#3b82f6 100%)",
                   boxShadow: "0 14px 34px rgba(37,99,235,0.35)",
                   color: "white",
                   padding: "15px 24px",
@@ -346,66 +376,6 @@ export default function Home() {
 
           .cable-shadow {
             filter: drop-shadow(0 26px 34px rgba(37,99,235,0.20));
-          }
-
-          .signal {
-            position: absolute;
-            top: -330px;
-            left: 0;
-            width: 18px;
-            height: 18px;
-            border-radius: 999px;
-            background: #ffffff;
-            z-index: 8;
-            pointer-events: none;
-            box-shadow:
-              0 0 0 8px rgba(147,197,253,0.16),
-              0 0 22px rgba(147,197,253,0.90),
-              0 0 46px rgba(37,99,235,0.85);
-            offset-path: path("M640 252 V410 C640 500 580 540 500 540 H260 C170 540 120 590 120 680 V735 C120 825 175 880 265 880 H1015 C1105 880 1160 935 1160 1025 V1050 C1160 1140 1105 1195 1015 1195 H265 C175 1195 120 1250 120 1340 V1385 C120 1475 175 1530 265 1530 H610 C630 1530 640 1540 640 1560 V1705");
-            offset-rotate: 0deg;
-            animation: signalMove 12s cubic-bezier(0.72, 0, 0.22, 1) infinite;
-          }
-
-          .signal::after {
-            content: "";
-            position: absolute;
-            inset: -12px;
-            border-radius: 999px;
-            background: radial-gradient(circle, rgba(59,130,246,0.44) 0%, rgba(59,130,246,0.08) 48%, transparent 70%);
-            animation: signalPulse 1.4s ease-in-out infinite;
-          }
-
-          @keyframes signalMove {
-            0% {
-              offset-distance: 0%;
-              opacity: 0;
-            }
-
-            4% {
-              opacity: 1;
-            }
-
-            90% {
-              opacity: 1;
-            }
-
-            100% {
-              offset-distance: 100%;
-              opacity: 0;
-            }
-          }
-
-          @keyframes signalPulse {
-            0%, 100% {
-              transform: scale(0.82);
-              opacity: 0.75;
-            }
-
-            50% {
-              transform: scale(1.25);
-              opacity: 1;
-            }
           }
 
           .focus-item {
@@ -839,8 +809,7 @@ export default function Home() {
 
             .plug,
             .plug-base,
-            .cable,
-            .signal {
+            .cable {
               display: none;
             }
 
@@ -962,35 +931,9 @@ export default function Home() {
 
           <svg className="cable" viewBox="0 0 1280 1900" fill="none">
             <path
+              id="focusCablePath"
               className="cable-shadow"
-              d="
-                M640 252
-                V410
-
-                C640 500 580 540 500 540
-                H260
-
-                C170 540 120 590 120 680
-                V735
-
-                C120 825 175 880 265 880
-                H1015
-
-                C1105 880 1160 935 1160 1025
-                V1050
-
-                C1160 1140 1105 1195 1015 1195
-                H265
-
-                C175 1195 120 1250 120 1340
-                V1385
-
-                C120 1475 175 1530 265 1530
-                H610
-
-                C630 1530 640 1540 640 1560
-                V1705
-              "
+              d={cablePath}
               stroke="#2563eb"
               strokeWidth="24"
               strokeLinecap="round"
@@ -998,42 +941,39 @@ export default function Home() {
             />
 
             <path
-              d="
-                M640 252
-                V410
-
-                C640 500 580 540 500 540
-                H260
-
-                C170 540 120 590 120 680
-                V735
-
-                C120 825 175 880 265 880
-                H1015
-
-                C1105 880 1160 935 1160 1025
-                V1050
-
-                C1160 1140 1105 1195 1015 1195
-                H265
-
-                C175 1195 120 1250 120 1340
-                V1385
-
-                C120 1475 175 1530 265 1530
-                H610
-
-                C630 1530 640 1540 640 1560
-                V1705
-              "
+              d={cablePath}
               stroke="rgba(255,255,255,0.42)"
               strokeWidth="5"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
-          </svg>
 
-          <div className="signal" />
+            <g>
+              <circle r="22" fill="rgba(147,197,253,0.12)">
+                <animateMotion
+                  dur="12s"
+                  repeatCount="indefinite"
+                  path={cablePath}
+                />
+              </circle>
+
+              <circle r="12" fill="rgba(147,197,253,0.38)">
+                <animateMotion
+                  dur="12s"
+                  repeatCount="indefinite"
+                  path={cablePath}
+                />
+              </circle>
+
+              <circle r="7" fill="#ffffff">
+                <animateMotion
+                  dur="12s"
+                  repeatCount="indefinite"
+                  path={cablePath}
+                />
+              </circle>
+            </g>
+          </svg>
 
           {focusItems.map((item) => (
             <article key={item.title} className={`focus-item ${item.className}`}>
@@ -1090,7 +1030,8 @@ export default function Home() {
       >
         <div
           style={{
-            background: "linear-gradient(135deg,#0f172a 0%,#111827 55%,#1e293b 100%)",
+            background:
+              "linear-gradient(135deg,#0f172a 0%,#111827 55%,#1e293b 100%)",
             color: "white",
             borderRadius: "34px",
             padding: "68px",
@@ -1130,7 +1071,8 @@ export default function Home() {
           <a
             href="mailto:hello@navacharge.com"
             style={{
-              background: "linear-gradient(135deg,#2563eb 0%,#3b82f6 100%)",
+              background:
+                "linear-gradient(135deg,#2563eb 0%,#3b82f6 100%)",
               boxShadow: "0 16px 36px rgba(37,99,235,0.32)",
               color: "white",
               padding: "16px 28px",
@@ -1185,6 +1127,7 @@ export default function Home() {
 
           <div>
             <strong style={{ color: "white" }}>Connect</strong>
+
             <div style={{ display: "grid", gap: "12px", marginTop: "14px" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                 <Linkedin size={18} />
