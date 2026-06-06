@@ -587,8 +587,8 @@ export default function Home() {
             bottom: -28px;
             left: 50%;
             transform: translateX(-50%);
-            width: 210px;
-            height: 38px;
+            width: 170px;
+            height: 34px;
             border-radius: 10px 10px 24px 24px;
             background: linear-gradient(180deg, #111827 0%, #050b14 100%);
             box-shadow:
