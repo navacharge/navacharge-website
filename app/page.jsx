@@ -315,7 +315,7 @@ export default function Home() {
 
           .cable {
   position: absolute;
-  top: -230px;
+  top: -280px;
   left: 0;
   width: 100%;
   height: 100%;
