@@ -172,10 +172,9 @@ export default function Home() {
           backgroundImage: `
             linear-gradient(
               135deg,
-              rgba(8,78,130,0.90) 0%,
-              rgba(14,118,168,0.78) 42%,
-              rgba(19,152,200,0.56) 72%,
-              rgba(3,20,38,0.72) 100%
+              rgba(11,79,138,0.92) 0%,
+              rgba(15,118,168,0.82) 52%,
+              rgba(19,152,200,0.58) 100%
             ),
             url(${heroImage})
           `,
@@ -189,7 +188,7 @@ export default function Home() {
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(90deg, rgba(2,6,23,0.48) 0%, rgba(2,6,23,0.22) 44%, rgba(2,6,23,0.04) 100%)",
+              "linear-gradient(90deg, rgba(2,6,23,0.42) 0%, rgba(2,6,23,0.18) 44%, rgba(2,6,23,0.03) 100%)",
             pointerEvents: "none",
           }}
         />
