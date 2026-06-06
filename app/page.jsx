@@ -128,12 +128,12 @@ export default function Home() {
         style={{
           maxWidth: "1280px",
           margin: "0 auto",
-          padding: "88px 28px 120px",
+          padding: "88px 28px 110px",
         }}
       >
         <div
           style={{
-            minHeight: "660px",
+            minHeight: "650px",
             borderRadius: "34px",
             overflow: "hidden",
             boxShadow: "0 40px 120px rgba(15,23,42,0.28)",
@@ -143,8 +143,8 @@ export default function Home() {
                 135deg,
                 rgba(2,6,23,0.94) 0%,
                 rgba(15,23,42,0.72) 38%,
-                rgba(15,23,42,0.32) 72%,
-                rgba(15,23,42,0.16) 100%
+                rgba(15,23,42,0.34) 72%,
+                rgba(15,23,42,0.18) 100%
               ),
               url(${heroImage})
             `,
@@ -160,7 +160,7 @@ export default function Home() {
           <div
             style={{
               maxWidth: "620px",
-              minHeight: "520px",
+              minHeight: "500px",
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
@@ -249,15 +249,19 @@ export default function Home() {
 
       <section id="focus" className="focus-flow">
         <style>{`
+          html {
+            scroll-behavior: smooth;
+          }
+
           .focus-flow {
             background: #f6f3ec;
-            padding: 40px 20px 130px;
+            padding: 20px 20px 130px;
             overflow: hidden;
           }
 
           .focus-head {
             text-align: center;
-            max-width: 820px;
+            max-width: 860px;
             margin: 0 auto 70px;
           }
 
@@ -283,13 +287,13 @@ export default function Home() {
             font-size: 18px;
             line-height: 1.8;
             margin: 0 auto;
-            max-width: 680px;
+            max-width: 700px;
           }
 
           .focus-wrap {
             position: relative;
             max-width: 1280px;
-            height: 1680px;
+            height: 1960px;
             margin: 0 auto;
           }
 
@@ -297,13 +301,13 @@ export default function Home() {
             position: absolute;
             top: 0;
             left: 50%;
-            width: 72px;
+            width: 74px;
             height: 76px;
             transform: translateX(-50%);
             border-radius: 0 0 26px 26px;
-            background: #071b33;
+            background: linear-gradient(180deg, #071b33 0%, #0f172a 100%);
             box-shadow: 0 18px 42px rgba(7,27,51,0.18);
-            z-index: 3;
+            z-index: 5;
           }
 
           .plug::before,
@@ -330,11 +334,11 @@ export default function Home() {
             left: 50%;
             top: 72px;
             width: 28px;
-            height: 62px;
+            height: 68px;
             transform: translateX(-50%);
-            background: #071b33;
+            background: linear-gradient(180deg, #071b33 0%, #0f172a 100%);
             border-radius: 0 0 16px 16px;
-            z-index: 3;
+            z-index: 5;
           }
 
           .cable {
@@ -347,14 +351,14 @@ export default function Home() {
           }
 
           .cable-shadow {
-            filter: drop-shadow(0 24px 38px rgba(37,99,235,0.16));
+            filter: drop-shadow(0 26px 34px rgba(37,99,235,0.20));
           }
 
           .focus-item {
             position: absolute;
-            z-index: 4;
-            width: min(430px, 35vw);
-            background: rgba(255,255,255,0.76);
+            z-index: 6;
+            width: min(410px, 34vw);
+            background: rgba(255,255,255,0.80);
             border: 1px solid rgba(15,23,42,0.08);
             border-radius: 28px;
             padding: 28px;
@@ -365,22 +369,22 @@ export default function Home() {
           }
 
           .focus-item.item-one {
-            top: 230px;
+            top: 250px;
             left: 70px;
           }
 
           .focus-item.item-two {
-            top: 545px;
+            top: 710px;
             right: 70px;
           }
 
           .focus-item.item-three {
-            top: 870px;
+            top: 1115px;
             left: 70px;
           }
 
           .focus-item.item-four {
-            top: 1195px;
+            top: 1450px;
             right: 70px;
           }
 
@@ -395,7 +399,7 @@ export default function Home() {
             color: #dbeafe;
             font-weight: 900;
             font-size: 14px;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             box-shadow: 0 14px 30px rgba(7,27,51,0.18);
           }
 
@@ -415,106 +419,239 @@ export default function Home() {
 
           .node {
             position: absolute;
-            z-index: 5;
-            width: 28px;
-            height: 28px;
+            z-index: 7;
+            width: 34px;
+            height: 34px;
             border-radius: 50%;
             background: #f6f3ec;
             border: 8px solid #2563eb;
             box-shadow:
               0 0 0 10px rgba(37,99,235,0.10),
-              0 16px 34px rgba(37,99,235,0.20);
+              0 16px 34px rgba(37,99,235,0.18);
+          }
+
+          .node::after {
+            content: "";
+            position: absolute;
+            inset: 7px;
+            border-radius: 50%;
+            background: #ffffff;
           }
 
           .node-one {
-            top: 305px;
-            left: calc(50% - 14px);
+            top: 390px;
+            left: 623px;
           }
 
           .node-two {
-            top: 625px;
-            left: calc(50% - 14px);
+            top: 863px;
+            left: 895px;
           }
 
           .node-three {
-            top: 950px;
-            left: calc(50% - 14px);
+            top: 1178px;
+            left: 365px;
           }
 
           .node-four {
-            top: 1278px;
-            left: calc(50% - 14px);
+            top: 1513px;
+            left: 623px;
           }
 
-          .operational-hub {
+          .charger-wrap {
             position: absolute;
             left: 50%;
             bottom: 0;
             transform: translateX(-50%);
-            z-index: 3;
-            width: min(1060px, 92%);
+            z-index: 4;
+            width: min(980px, 94%);
+            display: grid;
+            grid-template-columns: 360px 1fr;
+            gap: 34px;
+            align-items: end;
+          }
+
+          .charger-panel {
+            position: relative;
+            height: 360px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+          }
+
+          .charger-halo {
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(37,99,235,0.14) 0%, rgba(37,99,235,0.02) 62%, transparent 76%);
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            filter: blur(4px);
+          }
+
+          .charger-shadow {
+            position: absolute;
+            bottom: 10px;
+            width: 230px;
+            height: 24px;
+            border-radius: 50%;
+            background: rgba(7,27,51,0.16);
+            filter: blur(18px);
+          }
+
+          .charger {
+            position: relative;
+            width: 210px;
+            height: 290px;
+            border-radius: 28px;
+            background: linear-gradient(180deg, #0f172a 0%, #07111f 100%);
+            box-shadow:
+              0 30px 80px rgba(7,27,51,0.26),
+              inset 0 0 0 1px rgba(255,255,255,0.06);
+            overflow: hidden;
+          }
+
+          .charger::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+              radial-gradient(circle at top left, rgba(37,99,235,0.28), transparent 40%),
+              linear-gradient(180deg, rgba(255,255,255,0.08), transparent 24%);
+            pointer-events: none;
+          }
+
+          .charger-port {
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #2563eb;
+            box-shadow:
+              0 0 0 8px rgba(37,99,235,0.12),
+              0 12px 28px rgba(37,99,235,0.30);
+          }
+
+          .charger-screen {
+            position: absolute;
+            top: 36px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 138px;
+            height: 86px;
+            border-radius: 18px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%);
+            border: 1px solid rgba(255,255,255,0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #dbeafe;
+            font-weight: 800;
+            letter-spacing: 0.4px;
+          }
+
+          .charger-status {
+            position: absolute;
+            top: 146px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+          }
+
+          .charger-status span {
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #3b82f6;
+            box-shadow: 0 0 16px rgba(59,130,246,0.55);
+          }
+
+          .charger-ring {
+            position: absolute;
+            bottom: 54px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 8px solid rgba(59,130,246,0.90);
+            box-shadow: inset 0 0 0 5px rgba(255,255,255,0.06);
+          }
+
+          .charger-base {
+            position: absolute;
+            bottom: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 118px;
+            height: 12px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.10);
+          }
+
+          .support-card {
+            position: relative;
             border-radius: 34px;
             background:
-              radial-gradient(circle at top left, rgba(37,99,235,0.34), transparent 34%),
+              radial-gradient(circle at top left, rgba(37,99,235,0.30), transparent 34%),
               linear-gradient(135deg,#07111f 0%,#0f172a 54%,#111827 100%);
             color: white;
-            padding: 46px;
+            padding: 42px;
             box-shadow:
-              0 30px 90px rgba(7,27,51,0.24),
+              0 30px 90px rgba(7,27,51,0.22),
               0 0 0 1px rgba(255,255,255,0.08);
             overflow: hidden;
           }
 
-          .hub-grid {
-            display: grid;
-            grid-template-columns: 1.1fr 1fr;
-            gap: 34px;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-          }
-
-          .hub-label {
+          .support-label {
             color: #93c5fd;
             font-weight: 900;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             font-size: 12px;
             margin-bottom: 16px;
           }
 
-          .operational-hub h3 {
-            font-size: clamp(30px, 4vw, 48px);
-            line-height: 1.05;
-            letter-spacing: -1.6px;
-            margin: 0 0 18px;
+          .support-card h3 {
+            font-size: clamp(30px, 4vw, 50px);
+            line-height: 1.03;
+            letter-spacing: -1.5px;
+            margin: 0 0 16px;
           }
 
-          .operational-hub p {
+          .support-card p {
             color: #cbd5e1;
             line-height: 1.8;
             font-size: 17px;
-            margin: 0;
+            margin: 0 0 26px;
+            max-width: 520px;
           }
 
-          .hub-list {
+          .support-list {
             display: grid;
             gap: 12px;
           }
 
-          .hub-list div {
+          .support-list div {
             background: rgba(255,255,255,0.07);
             border: 1px solid rgba(255,255,255,0.10);
             border-radius: 16px;
-            padding: 16px 18px;
+            padding: 15px 18px;
             color: #dbeafe;
             font-weight: 700;
           }
 
-          @media (max-width: 980px) {
+          @media (max-width: 1080px) {
             .focus-wrap {
               height: auto;
               display: grid;
-              gap: 22px;
+              gap: 24px;
               padding-top: 100px;
             }
 
@@ -533,17 +670,17 @@ export default function Home() {
               width: auto;
             }
 
-            .operational-hub {
+            .charger-wrap {
               position: relative;
               left: auto;
               bottom: auto;
               transform: none;
               width: auto;
-              margin-top: 26px;
+              grid-template-columns: 1fr;
             }
 
-            .hub-grid {
-              grid-template-columns: 1fr;
+            .charger-panel {
+              height: 320px;
             }
           }
 
@@ -556,7 +693,7 @@ export default function Home() {
               letter-spacing: 6px;
             }
 
-            .operational-hub {
+            .support-card {
               padding: 30px;
               border-radius: 26px;
             }
@@ -568,6 +705,15 @@ export default function Home() {
             .nav-links {
               gap: 16px !important;
               font-size: 13px !important;
+            }
+
+            .charger {
+              width: 190px;
+              height: 270px;
+            }
+
+            .charger-screen {
+              width: 128px;
             }
           }
         `}</style>
@@ -589,77 +735,71 @@ export default function Home() {
           <div className="plug" />
           <div className="plug-base" />
 
-          <svg className="cable" viewBox="0 0 1280 1680" fill="none">
+          <svg className="cable" viewBox="0 0 1280 1960" fill="none">
             <path
               className="cable-shadow"
               d="
-                M640 110
-                V235
+                M640 140
+                V410
 
-                C640 300 590 325 520 325
-                H250
+                C640 500 580 540 500 540
+                H260
 
-                C150 325 95 380 95 480
-                V500
+                C170 540 120 590 120 680
+                V735
 
-                C95 600 150 655 250 655
-                H1030
+                C120 825 175 880 265 880
+                H1015
 
-                C1130 655 1185 710 1185 810
-                V825
+                C1105 880 1160 935 1160 1025
+                V1050
 
-                C1185 925 1130 980 1030 980
-                H250
+                C1160 1140 1105 1195 1015 1195
+                H265
 
-                C150 980 95 1035 95 1135
-                V1150
+                C175 1195 120 1250 120 1340
+                V1385
 
-                C95 1250 150 1305 250 1305
-                H1030
+                C120 1475 175 1530 265 1530
+                H560
 
-                C1130 1305 1185 1360 1185 1460
-                V1505
-
-                C1185 1575 1130 1610 1060 1610
-                H640
+                C610 1530 640 1560 640 1610
+                V1665
               "
               stroke="#2563eb"
-              strokeWidth="22"
+              strokeWidth="24"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
 
             <path
               d="
-                M640 110
-                V235
+                M640 140
+                V410
 
-                C640 300 590 325 520 325
-                H250
+                C640 500 580 540 500 540
+                H260
 
-                C150 325 95 380 95 480
-                V500
+                C170 540 120 590 120 680
+                V735
 
-                C95 600 150 655 250 655
-                H1030
+                C120 825 175 880 265 880
+                H1015
 
-                C1130 655 1185 710 1185 810
-                V825
+                C1105 880 1160 935 1160 1025
+                V1050
 
-                C1185 925 1130 980 1030 980
-                H250
+                C1160 1140 1105 1195 1015 1195
+                H265
 
-                C150 980 95 1035 95 1135
-                V1150
+                C175 1195 120 1250 120 1340
+                V1385
 
-                C95 1250 150 1305 250 1305
-                H1030
+                C120 1475 175 1530 265 1530
+                H560
 
-                C1130 1305 1185 1360 1185 1460
-                V1505
-
-                C1185 1575 1130 1610 1060 1610
-                H640
+                C610 1530 640 1560 640 1610
+                V1665
               "
               stroke="rgba(255,255,255,0.42)"
               strokeWidth="5"
@@ -681,26 +821,38 @@ export default function Home() {
             </article>
           ))}
 
-          <div className="operational-hub" id="support">
-            <div className="hub-grid">
-              <div>
-                <div className="hub-label">SUPPORT LAYER</div>
-
-                <h3>Field signals become clearer support decisions.</h3>
-
-                <p>
-                  NavaCharge is built around practical EV charging visibility:
-                  what is failing, what keeps repeating, what needs review, and
-                  what should be documented before the next action.
-                </p>
+          <div className="charger-wrap" id="support">
+            <div className="charger-panel">
+              <div className="charger-halo" />
+              <div className="charger-shadow" />
+              <div className="charger">
+                <div className="charger-port" />
+                <div className="charger-screen">NavaCharge</div>
+                <div className="charger-status">
+                  <span />
+                  <span />
+                  <span />
+                </div>
+                <div className="charger-ring" />
+                <div className="charger-base" />
               </div>
+            </div>
 
-              <div className="hub-list">
+            <div className="support-card">
+              <div className="support-label">SUPPORT LAYER</div>
+              <h3>From cable flow to clearer charging support.</h3>
+              <p>
+                Diagnostics, RMA validation, cable management, and uptime
+                support come together in one practical workflow built around
+                visibility, repeat issues, and real site conditions.
+              </p>
+
+              <div className="support-list">
                 <div>Field photos and site context</div>
                 <div>Charger symptoms and repeat issues</div>
                 <div>Cable risk and placement friction</div>
                 <div>RMA notes and redeployment readiness</div>
-                <div>Clearer support history for decisions</div>
+                <div>Clearer support history for better next actions</div>
               </div>
             </div>
           </div>
@@ -712,7 +864,7 @@ export default function Home() {
         style={{
           maxWidth: "1220px",
           margin: "0 auto",
-          padding: "30px 28px 110px",
+          padding: "10px 28px 110px",
         }}
       >
         <div
@@ -801,7 +953,6 @@ export default function Home() {
             >
               NavaCharge
             </strong>
-
             <p>EV Charging Diagnostics & Reliability Support</p>
             <p>Vancouver, BC, Canada</p>
           </div>
@@ -815,7 +966,6 @@ export default function Home() {
 
           <div>
             <strong style={{ color: "white" }}>Connect</strong>
-
             <div
               style={{
                 display: "grid",
