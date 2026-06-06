@@ -161,24 +161,45 @@ export default function Home() {
           position: "relative",
           minHeight: "calc(100vh - 68px)",
           overflow: "hidden",
-          background:
-            "linear-gradient(135deg, #0b4f8a 0%, #0f76a8 44%, #1398c8 100%)",
           color: "white",
-          padding: "92px 28px 105px",
+          padding: "96px 28px 115px",
           display: "flex",
           alignItems: "center",
+          backgroundImage: `
+            linear-gradient(
+              135deg,
+              rgba(8,78,130,0.92) 0%,
+              rgba(14,118,168,0.82) 42%,
+              rgba(19,152,200,0.62) 72%,
+              rgba(3,20,38,0.74) 100%
+            ),
+            url(${heroImage})
+          `,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
         }}
       >
         <div
           style={{
             position: "absolute",
+            inset: 0,
+            background:
+              "linear-gradient(90deg, rgba(2,6,23,0.46) 0%, rgba(2,6,23,0.20) 44%, rgba(2,6,23,0.04) 100%)",
+            pointerEvents: "none",
+          }}
+        />
+
+        <div
+          style={{
+            position: "absolute",
             top: "-220px",
-            right: "-140px",
+            right: "-160px",
             width: "620px",
             height: "620px",
             borderRadius: "50%",
             background:
-              "radial-gradient(circle, rgba(255,255,255,0.20) 0%, rgba(255,255,255,0.08) 45%, transparent 72%)",
+              "radial-gradient(circle, rgba(255,255,255,0.20) 0%, rgba(255,255,255,0.08) 44%, transparent 72%)",
             pointerEvents: "none",
           }}
         />
@@ -192,17 +213,7 @@ export default function Home() {
             height: "640px",
             borderRadius: "50%",
             background:
-              "radial-gradient(circle, rgba(147,197,253,0.22) 0%, rgba(147,197,253,0.08) 46%, transparent 74%)",
-            pointerEvents: "none",
-          }}
-        />
-
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background:
-              "linear-gradient(180deg, rgba(255,255,255,0.08) 0%, transparent 36%, rgba(2,6,23,0.14) 100%)",
+              "radial-gradient(circle, rgba(147,197,253,0.24) 0%, rgba(147,197,253,0.08) 46%, transparent 74%)",
             pointerEvents: "none",
           }}
         />
@@ -214,19 +225,21 @@ export default function Home() {
             width: "100%",
             position: "relative",
             zIndex: 2,
-            display: "grid",
-            gridTemplateColumns: "minmax(0, 1.05fr) minmax(420px, 0.95fr)",
-            gap: "58px",
-            alignItems: "center",
           }}
         >
-          <div>
+          <div
+            style={{
+              maxWidth: "720px",
+              paddingTop: "24px",
+            }}
+          >
             <p
               style={{
                 color: "#dbeafe",
                 fontWeight: "900",
                 marginBottom: "24px",
                 letterSpacing: "0.8px",
+                textShadow: "0 10px 26px rgba(0,0,0,0.24)",
               }}
             >
               EV Charging Diagnostics & Reliability Support
@@ -234,12 +247,12 @@ export default function Home() {
 
             <h1
               style={{
-                fontSize: "clamp(48px, 6vw, 86px)",
-                lineHeight: "0.95",
-                margin: "0 0 28px",
+                fontSize: "clamp(50px, 7vw, 92px)",
+                lineHeight: "0.94",
+                margin: "0 0 30px",
                 fontWeight: "900",
-                letterSpacing: "-3px",
-                textShadow: "0 18px 48px rgba(0,0,0,0.22)",
+                letterSpacing: "-3.4px",
+                textShadow: "0 20px 58px rgba(0,0,0,0.36)",
               }}
             >
               EV charging reliability, made visible.
@@ -251,12 +264,13 @@ export default function Home() {
                 lineHeight: "1.85",
                 color: "#e0f2fe",
                 maxWidth: "660px",
-                marginBottom: "34px",
+                marginBottom: "36px",
+                textShadow: "0 12px 28px rgba(0,0,0,0.24)",
               }}
             >
               NavaCharge helps property managers and charging teams turn
-              charger issues, cable problems, field notes, and repeat failures
-              into clear technical evidence.
+              charger symptoms, cable issues, field notes, and repeat failures
+              into clearer technical evidence.
             </p>
 
             <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
@@ -265,7 +279,7 @@ export default function Home() {
                 style={{
                   background:
                     "linear-gradient(135deg,#1d4ed8 0%,#38bdf8 100%)",
-                  boxShadow: "0 18px 42px rgba(15,23,42,0.26)",
+                  boxShadow: "0 18px 42px rgba(15,23,42,0.32)",
                   color: "white",
                   padding: "16px 26px",
                   borderRadius: "14px",
@@ -282,75 +296,15 @@ export default function Home() {
                   color: "white",
                   padding: "16px 26px",
                   borderRadius: "14px",
-                  border: "1px solid rgba(255,255,255,0.20)",
-                  background: "rgba(255,255,255,0.12)",
-                  backdropFilter: "blur(10px)",
+                  border: "1px solid rgba(255,255,255,0.24)",
+                  background: "rgba(255,255,255,0.13)",
+                  backdropFilter: "blur(12px)",
                   textDecoration: "none",
                   fontWeight: "900",
                 }}
               >
                 Explore Reliability Flow
               </a>
-            </div>
-          </div>
-
-          <div
-            style={{
-              position: "relative",
-              minHeight: "570px",
-              borderRadius: "42px",
-              overflow: "hidden",
-              backgroundImage: `
-                linear-gradient(
-                  135deg,
-                  rgba(2,6,23,0.12) 0%,
-                  rgba(15,23,42,0.22) 42%,
-                  rgba(15,23,42,0.36) 100%
-                ),
-                url(${heroImage})
-              `,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              boxShadow: "0 34px 90px rgba(7,27,51,0.32)",
-              border: "1px solid rgba(255,255,255,0.18)",
-            }}
-          >
-            <div
-              style={{
-                position: "absolute",
-                inset: 0,
-                background:
-                  "radial-gradient(circle at 20% 20%, rgba(255,255,255,0.20), transparent 28%), linear-gradient(180deg, transparent 0%, rgba(2,6,23,0.30) 100%)",
-              }}
-            />
-
-            <div
-              style={{
-                position: "absolute",
-                left: "26px",
-                bottom: "26px",
-                right: "26px",
-                padding: "18px 20px",
-                borderRadius: "22px",
-                background: "rgba(2,6,23,0.38)",
-                border: "1px solid rgba(255,255,255,0.14)",
-                backdropFilter: "blur(14px)",
-                color: "#e0f2fe",
-              }}
-            >
-              <div
-                style={{
-                  fontWeight: "900",
-                  color: "white",
-                  marginBottom: "6px",
-                }}
-              >
-                Reliability starts with visibility.
-              </div>
-              <div style={{ fontSize: "14px", lineHeight: "1.6" }}>
-                Symptoms, cable conditions, RMA notes, and support history
-                become one clearer operating picture.
-              </div>
             </div>
           </div>
         </div>
