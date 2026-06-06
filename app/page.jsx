@@ -354,6 +354,66 @@ export default function Home() {
             filter: drop-shadow(0 26px 34px rgba(37,99,235,0.20));
           }
 
+          .signal {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 18px;
+            height: 18px;
+            border-radius: 999px;
+            background: #ffffff;
+            z-index: 8;
+            pointer-events: none;
+            box-shadow:
+              0 0 0 8px rgba(147,197,253,0.16),
+              0 0 22px rgba(147,197,253,0.90),
+              0 0 46px rgba(37,99,235,0.85);
+            offset-path: path("M640 140 V410 C640 500 580 540 500 540 H260 C170 540 120 590 120 680 V735 C120 825 175 880 265 880 H1015 C1105 880 1160 935 1160 1025 V1050 C1160 1140 1105 1195 1015 1195 H265 C175 1195 120 1250 120 1340 V1385 C120 1475 175 1530 265 1530 H560 C610 1530 640 1560 640 1610 V1665");
+            offset-rotate: 0deg;
+            animation: signalMove 12s cubic-bezier(0.72, 0, 0.22, 1) infinite;
+          }
+
+          .signal::after {
+            content: "";
+            position: absolute;
+            inset: -12px;
+            border-radius: 999px;
+            background: radial-gradient(circle, rgba(59,130,246,0.44) 0%, rgba(59,130,246,0.08) 48%, transparent 70%);
+            animation: signalPulse 1.4s ease-in-out infinite;
+          }
+
+          @keyframes signalMove {
+            0% {
+              offset-distance: 0%;
+              opacity: 0;
+            }
+
+            4% {
+              opacity: 1;
+            }
+
+            90% {
+              opacity: 1;
+            }
+
+            100% {
+              offset-distance: 100%;
+              opacity: 0;
+            }
+          }
+
+          @keyframes signalPulse {
+            0%, 100% {
+              transform: scale(0.82);
+              opacity: 0.75;
+            }
+
+            50% {
+              transform: scale(1.25);
+              opacity: 1;
+            }
+          }
+
           .focus-item {
             position: absolute;
             z-index: 6;
@@ -366,26 +426,103 @@ export default function Home() {
               0 24px 60px rgba(15,23,42,0.10),
               0 2px 10px rgba(15,23,42,0.04);
             backdrop-filter: blur(12px);
+            transition: all 0.4s ease;
           }
 
           .focus-item.item-one {
             top: 250px;
             left: 70px;
+            animation: highlightOne 12s ease-in-out infinite;
           }
 
           .focus-item.item-two {
             top: 710px;
             right: 70px;
+            animation: highlightTwo 12s ease-in-out infinite;
           }
 
           .focus-item.item-three {
             top: 1115px;
             left: 70px;
+            animation: highlightThree 12s ease-in-out infinite;
           }
 
           .focus-item.item-four {
             top: 1450px;
             right: 70px;
+            animation: highlightFour 12s ease-in-out infinite;
+          }
+
+          @keyframes highlightOne {
+            0%, 12%, 28%, 100% {
+              transform: translateY(0);
+              border-color: rgba(15,23,42,0.08);
+              box-shadow:
+                0 24px 60px rgba(15,23,42,0.10),
+                0 2px 10px rgba(15,23,42,0.04);
+            }
+
+            16%, 23% {
+              transform: translateY(-6px);
+              border-color: rgba(37,99,235,0.52);
+              box-shadow:
+                0 30px 74px rgba(37,99,235,0.18),
+                0 0 0 1px rgba(37,99,235,0.22);
+            }
+          }
+
+          @keyframes highlightTwo {
+            0%, 34%, 50%, 100% {
+              transform: translateY(0);
+              border-color: rgba(15,23,42,0.08);
+              box-shadow:
+                0 24px 60px rgba(15,23,42,0.10),
+                0 2px 10px rgba(15,23,42,0.04);
+            }
+
+            38%, 46% {
+              transform: translateY(-6px);
+              border-color: rgba(37,99,235,0.52);
+              box-shadow:
+                0 30px 74px rgba(37,99,235,0.18),
+                0 0 0 1px rgba(37,99,235,0.22);
+            }
+          }
+
+          @keyframes highlightThree {
+            0%, 56%, 72%, 100% {
+              transform: translateY(0);
+              border-color: rgba(15,23,42,0.08);
+              box-shadow:
+                0 24px 60px rgba(15,23,42,0.10),
+                0 2px 10px rgba(15,23,42,0.04);
+            }
+
+            60%, 68% {
+              transform: translateY(-6px);
+              border-color: rgba(37,99,235,0.52);
+              box-shadow:
+                0 30px 74px rgba(37,99,235,0.18),
+                0 0 0 1px rgba(37,99,235,0.22);
+            }
+          }
+
+          @keyframes highlightFour {
+            0%, 76%, 92%, 100% {
+              transform: translateY(0);
+              border-color: rgba(15,23,42,0.08);
+              box-shadow:
+                0 24px 60px rgba(15,23,42,0.10),
+                0 2px 10px rgba(15,23,42,0.04);
+            }
+
+            80%, 88% {
+              transform: translateY(-6px);
+              border-color: rgba(37,99,235,0.52);
+              box-shadow:
+                0 30px 74px rgba(37,99,235,0.18),
+                0 0 0 1px rgba(37,99,235,0.22);
+            }
           }
 
           .item-number {
@@ -417,47 +554,6 @@ export default function Home() {
             font-size: 16px;
           }
 
-          .node {
-            position: absolute;
-            z-index: 7;
-            width: 34px;
-            height: 34px;
-            border-radius: 50%;
-            background: #f6f3ec;
-            border: 8px solid #2563eb;
-            box-shadow:
-              0 0 0 10px rgba(37,99,235,0.10),
-              0 16px 34px rgba(37,99,235,0.18);
-          }
-
-          .node::after {
-            content: "";
-            position: absolute;
-            inset: 7px;
-            border-radius: 50%;
-            background: #ffffff;
-          }
-
-          .node-one {
-            top: 390px;
-            left: 623px;
-          }
-
-          .node-two {
-            top: 863px;
-            left: 895px;
-          }
-
-          .node-three {
-            top: 1178px;
-            left: 365px;
-          }
-
-          .node-four {
-            top: 1513px;
-            left: 623px;
-          }
-
           .charger-wrap {
             position: absolute;
             left: 50%;
@@ -467,7 +563,7 @@ export default function Home() {
             width: min(980px, 94%);
             display: grid;
             grid-template-columns: 360px 1fr;
-            gap: 34px;
+            gap: 38px;
             align-items: end;
           }
 
@@ -553,6 +649,21 @@ export default function Home() {
             color: #dbeafe;
             font-weight: 800;
             letter-spacing: 0.4px;
+            animation: screenGlow 12s ease-in-out infinite;
+          }
+
+          @keyframes screenGlow {
+            0%, 88%, 100% {
+              box-shadow: none;
+              color: #dbeafe;
+            }
+
+            92%, 97% {
+              box-shadow:
+                0 0 32px rgba(59,130,246,0.38),
+                inset 0 0 24px rgba(59,130,246,0.10);
+              color: #ffffff;
+            }
           }
 
           .charger-status {
@@ -583,6 +694,19 @@ export default function Home() {
             border-radius: 50%;
             border: 8px solid rgba(59,130,246,0.90);
             box-shadow: inset 0 0 0 5px rgba(255,255,255,0.06);
+            animation: chargerPulse 12s ease-in-out infinite;
+          }
+
+          @keyframes chargerPulse {
+            0%, 88%, 100% {
+              box-shadow: inset 0 0 0 5px rgba(255,255,255,0.06);
+            }
+
+            92%, 97% {
+              box-shadow:
+                0 0 36px rgba(59,130,246,0.56),
+                inset 0 0 0 5px rgba(255,255,255,0.08);
+            }
           }
 
           .charger-base {
@@ -596,55 +720,33 @@ export default function Home() {
             background: rgba(255,255,255,0.10);
           }
 
-          .support-card {
-            position: relative;
-            border-radius: 34px;
-            background:
-              radial-gradient(circle at top left, rgba(37,99,235,0.30), transparent 34%),
-              linear-gradient(135deg,#07111f 0%,#0f172a 54%,#111827 100%);
-            color: white;
-            padding: 42px;
-            box-shadow:
-              0 30px 90px rgba(7,27,51,0.22),
-              0 0 0 1px rgba(255,255,255,0.08);
-            overflow: hidden;
+          .final-message {
+            align-self: center;
+            max-width: 470px;
+            padding: 34px 0;
           }
 
-          .support-label {
-            color: #93c5fd;
+          .final-label {
+            color: #2563eb;
             font-weight: 900;
             letter-spacing: 4px;
             font-size: 12px;
             margin-bottom: 16px;
           }
 
-          .support-card h3 {
-            font-size: clamp(30px, 4vw, 50px);
-            line-height: 1.03;
-            letter-spacing: -1.5px;
-            margin: 0 0 16px;
+          .final-message h3 {
+            color: #071b33;
+            font-size: clamp(34px, 4vw, 54px);
+            line-height: 1.04;
+            letter-spacing: -1.6px;
+            margin: 0 0 18px;
           }
 
-          .support-card p {
-            color: #cbd5e1;
+          .final-message p {
+            color: #4b5563;
             line-height: 1.8;
-            font-size: 17px;
-            margin: 0 0 26px;
-            max-width: 520px;
-          }
-
-          .support-list {
-            display: grid;
-            gap: 12px;
-          }
-
-          .support-list div {
-            background: rgba(255,255,255,0.07);
-            border: 1px solid rgba(255,255,255,0.10);
-            border-radius: 16px;
-            padding: 15px 18px;
-            color: #dbeafe;
-            font-weight: 700;
+            font-size: 18px;
+            margin: 0;
           }
 
           @media (max-width: 1080px) {
@@ -658,7 +760,7 @@ export default function Home() {
             .plug,
             .plug-base,
             .cable,
-            .node {
+            .signal {
               display: none;
             }
 
@@ -668,6 +770,7 @@ export default function Home() {
               left: auto !important;
               right: auto !important;
               width: auto;
+              animation: none !important;
             }
 
             .charger-wrap {
@@ -677,10 +780,17 @@ export default function Home() {
               transform: none;
               width: auto;
               grid-template-columns: 1fr;
+              gap: 16px;
             }
 
             .charger-panel {
               height: 320px;
+            }
+
+            .final-message {
+              max-width: 100%;
+              text-align: center;
+              padding: 10px 0 0;
             }
           }
 
@@ -691,11 +801,6 @@ export default function Home() {
 
             .focus-kicker {
               letter-spacing: 6px;
-            }
-
-            .support-card {
-              padding: 30px;
-              border-radius: 26px;
             }
 
             .focus-item {
@@ -808,10 +913,7 @@ export default function Home() {
             />
           </svg>
 
-          <div className="node node-one" />
-          <div className="node node-two" />
-          <div className="node node-three" />
-          <div className="node node-four" />
+          <div className="signal" />
 
           {focusItems.map((item) => (
             <article key={item.title} className={`focus-item ${item.className}`}>
@@ -825,6 +927,7 @@ export default function Home() {
             <div className="charger-panel">
               <div className="charger-halo" />
               <div className="charger-shadow" />
+
               <div className="charger">
                 <div className="charger-port" />
                 <div className="charger-screen">NavaCharge</div>
@@ -838,22 +941,15 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="support-card">
-              <div className="support-label">SUPPORT LAYER</div>
-              <h3>From cable flow to clearer charging support.</h3>
-              <p>
-                Diagnostics, RMA validation, cable management, and uptime
-                support come together in one practical workflow built around
-                visibility, repeat issues, and real site conditions.
-              </p>
+            <div className="final-message">
+              <div className="final-label">CONNECTED</div>
 
-              <div className="support-list">
-                <div>Field photos and site context</div>
-                <div>Charger symptoms and repeat issues</div>
-                <div>Cable risk and placement friction</div>
-                <div>RMA notes and redeployment readiness</div>
-                <div>Clearer support history for better next actions</div>
-              </div>
+              <h3>Connected to clearer action.</h3>
+
+              <p>
+                From field symptoms, cable conditions, and repeat charging
+                issues to practical support decisions.
+              </p>
             </div>
           </div>
         </div>
