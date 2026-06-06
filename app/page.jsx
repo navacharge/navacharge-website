@@ -346,9 +346,9 @@ export default function Home() {
             left: 50%;
             top: 136px;
             width: 24px;
-            height: 78px;
+            height: 118px;
             transform: translateX(-50%);
-            border-radius: 999px;
+            border-radius: 999px 999px 0 0;
             background: linear-gradient(180deg, #2563eb 0%, #1d4ed8 100%);
             box-shadow:
               0 12px 28px rgba(37,99,235,0.22),
@@ -383,7 +383,7 @@ export default function Home() {
               0 0 0 8px rgba(147,197,253,0.16),
               0 0 22px rgba(147,197,253,0.90),
               0 0 46px rgba(37,99,235,0.85);
-            offset-path: path("M640 214 V410 C640 500 580 540 500 540 H260 C170 540 120 590 120 680 V735 C120 825 175 880 265 880 H1015 C1105 880 1160 935 1160 1025 V1050 C1160 1140 1105 1195 1015 1195 H265 C175 1195 120 1250 120 1340 V1385 C120 1475 175 1530 265 1530 H610 C630 1530 640 1540 640 1560 V1618");
+            offset-path: path("M640 252 V410 C640 500 580 540 500 540 H260 C170 540 120 590 120 680 V735 C120 825 175 880 265 880 H1015 C1105 880 1160 935 1160 1025 V1050 C1160 1140 1105 1195 1015 1195 H265 C175 1195 120 1250 120 1340 V1385 C120 1475 175 1530 265 1530 H610 C630 1530 640 1540 640 1560 V1618");
             offset-rotate: 0deg;
             animation: signalMove 12s cubic-bezier(0.72, 0, 0.22, 1) infinite;
           }
@@ -928,7 +928,7 @@ export default function Home() {
             <path
               className="cable-shadow"
               d="
-                M640 214
+                M640 252
                 V410
 
                 C640 500 580 540 500 540
@@ -963,7 +963,7 @@ export default function Home() {
 
             <path
               d="
-                M640 214
+                M640 252
                 V410
 
                 C640 500 580 540 500 540
