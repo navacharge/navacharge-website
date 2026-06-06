@@ -74,7 +74,8 @@ export default function Home() {
       style={{
         background: "#f6f3ec",
         color: "#111827",
-        fontFamily: "Arial, sans-serif",
+        fontFamily:
+          "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif",
       }}
     >
       <nav
@@ -93,7 +94,7 @@ export default function Home() {
           style={{
             maxWidth: "1220px",
             margin: "0 auto",
-            padding: "18px 34px",
+            padding: "16px 34px",
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
@@ -159,19 +160,22 @@ export default function Home() {
       <section
         style={{
           position: "relative",
-          minHeight: "calc(100vh - 68px)",
+          height: "calc(100vh - 150px)",
+          minHeight: "520px",
+          maxHeight: "660px",
+          boxSizing: "border-box",
           overflow: "hidden",
           color: "white",
-          padding: "96px 28px 115px",
+          padding: "58px 28px 64px",
           display: "flex",
           alignItems: "center",
           backgroundImage: `
             linear-gradient(
               135deg,
-              rgba(8,78,130,0.92) 0%,
-              rgba(14,118,168,0.82) 42%,
-              rgba(19,152,200,0.62) 72%,
-              rgba(3,20,38,0.74) 100%
+              rgba(8,78,130,0.90) 0%,
+              rgba(14,118,168,0.78) 42%,
+              rgba(19,152,200,0.56) 72%,
+              rgba(3,20,38,0.72) 100%
             ),
             url(${heroImage})
           `,
@@ -185,7 +189,7 @@ export default function Home() {
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(90deg, rgba(2,6,23,0.46) 0%, rgba(2,6,23,0.20) 44%, rgba(2,6,23,0.04) 100%)",
+              "linear-gradient(90deg, rgba(2,6,23,0.48) 0%, rgba(2,6,23,0.22) 44%, rgba(2,6,23,0.04) 100%)",
             pointerEvents: "none",
           }}
         />
@@ -199,7 +203,7 @@ export default function Home() {
             height: "620px",
             borderRadius: "50%",
             background:
-              "radial-gradient(circle, rgba(255,255,255,0.20) 0%, rgba(255,255,255,0.08) 44%, transparent 72%)",
+              "radial-gradient(circle, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.07) 44%, transparent 72%)",
             pointerEvents: "none",
           }}
         />
@@ -207,13 +211,13 @@ export default function Home() {
         <div
           style={{
             position: "absolute",
-            bottom: "-260px",
+            bottom: "-280px",
             left: "-180px",
             width: "640px",
             height: "640px",
             borderRadius: "50%",
             background:
-              "radial-gradient(circle, rgba(147,197,253,0.24) 0%, rgba(147,197,253,0.08) 46%, transparent 74%)",
+              "radial-gradient(circle, rgba(147,197,253,0.22) 0%, rgba(147,197,253,0.08) 46%, transparent 74%)",
             pointerEvents: "none",
           }}
         />
@@ -229,48 +233,48 @@ export default function Home() {
         >
           <div
             style={{
-              maxWidth: "720px",
-              paddingTop: "24px",
+              maxWidth: "700px",
             }}
           >
             <p
               style={{
                 color: "#dbeafe",
                 fontWeight: "900",
-                marginBottom: "24px",
-                letterSpacing: "0.8px",
+                marginBottom: "18px",
+                letterSpacing: "2.8px",
+                fontSize: "13px",
+                textTransform: "uppercase",
                 textShadow: "0 10px 26px rgba(0,0,0,0.24)",
               }}
             >
-              EV Charging Diagnostics & Reliability Support
+              EVSE Reliability Support
             </p>
 
             <h1
               style={{
-                fontSize: "clamp(50px, 7vw, 92px)",
+                fontSize: "clamp(48px, 6.4vw, 84px)",
                 lineHeight: "0.94",
-                margin: "0 0 30px",
-                fontWeight: "900",
-                letterSpacing: "-3.4px",
+                margin: "0 0 24px",
+                fontWeight: "950",
+                letterSpacing: "-3.2px",
                 textShadow: "0 20px 58px rgba(0,0,0,0.36)",
               }}
             >
-              EV charging reliability, made visible.
+              Clearer charging support.
             </h1>
 
             <p
               style={{
-                fontSize: "clamp(18px, 2vw, 22px)",
-                lineHeight: "1.85",
+                fontSize: "clamp(19px, 2.1vw, 25px)",
+                lineHeight: "1.55",
                 color: "#e0f2fe",
-                maxWidth: "660px",
-                marginBottom: "36px",
+                maxWidth: "590px",
+                marginBottom: "32px",
+                fontWeight: "650",
                 textShadow: "0 12px 28px rgba(0,0,0,0.24)",
               }}
             >
-              NavaCharge helps property managers and charging teams turn
-              charger symptoms, cable issues, field notes, and repeat failures
-              into clearer technical evidence.
+              From charger symptoms to practical action.
             </p>
 
             <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
@@ -318,7 +322,7 @@ export default function Home() {
 
           .focus-flow {
             background: #f6f3ec;
-            padding: 90px 20px 130px;
+            padding: 72px 20px 130px;
             overflow: hidden;
           }
 
@@ -371,6 +375,7 @@ export default function Home() {
             background: linear-gradient(180deg, #071b33 0%, #0f172a 100%);
             box-shadow: 0 18px 42px rgba(7,27,51,0.18);
             z-index: 5;
+            animation: plugPulse 2.6s ease-in-out infinite;
           }
 
           .plug::before,
@@ -382,6 +387,7 @@ export default function Home() {
             height: 48px;
             background: #2563eb;
             border-radius: 8px;
+            animation: prongPulse 2.6s ease-in-out infinite;
           }
 
           .plug::before {
@@ -390,6 +396,36 @@ export default function Home() {
 
           .plug::after {
             right: 18px;
+          }
+
+          @keyframes plugPulse {
+            0%, 100% {
+              opacity: 0.62;
+              filter: saturate(0.9);
+              box-shadow: 0 14px 34px rgba(7,27,51,0.14);
+            }
+
+            50% {
+              opacity: 1;
+              filter: saturate(1.28);
+              box-shadow:
+                0 22px 54px rgba(37,99,235,0.26),
+                0 0 0 8px rgba(37,99,235,0.08);
+            }
+          }
+
+          @keyframes prongPulse {
+            0%, 100% {
+              opacity: 0.58;
+              box-shadow: none;
+            }
+
+            50% {
+              opacity: 1;
+              box-shadow:
+                0 0 18px rgba(59,130,246,0.55),
+                0 0 32px rgba(37,99,235,0.34);
+            }
           }
 
           .plug-base {
@@ -402,6 +438,18 @@ export default function Home() {
             background: linear-gradient(180deg, #071b33 0%, #0f172a 100%);
             border-radius: 0 0 16px 16px;
             z-index: 5;
+            animation: plugBasePulse 2.6s ease-in-out infinite;
+          }
+
+          @keyframes plugBasePulse {
+            0%, 100% {
+              opacity: 0.68;
+            }
+
+            50% {
+              opacity: 1;
+              box-shadow: 0 18px 40px rgba(37,99,235,0.20);
+            }
           }
 
           .cable {
