@@ -341,21 +341,6 @@ export default function Home() {
             z-index: 5;
           }
 
-          .plug-link {
-            position: absolute;
-            left: 50%;
-            top: 136px;
-            width: 24px;
-            height: 40px;
-            transform: translateX(-50%);
-            border-radius: 999px;
-            background: linear-gradient(180deg, #2563eb 0%, #1d4ed8 100%);
-            box-shadow:
-              0 12px 28px rgba(37,99,235,0.22),
-              inset 0 0 0 3px rgba(255,255,255,0.14);
-            z-index: 4;
-          }
-
           .cable {
             position: absolute;
             inset: 0;
@@ -371,7 +356,7 @@ export default function Home() {
 
           .signal {
             position: absolute;
-            top: -120px;
+            top: 0;
             left: 0;
             width: 18px;
             height: 18px;
@@ -383,7 +368,7 @@ export default function Home() {
               0 0 0 8px rgba(147,197,253,0.16),
               0 0 22px rgba(147,197,253,0.90),
               0 0 46px rgba(37,99,235,0.85);
-            offset-path: path("M640 252 V410 C640 500 580 540 500 540 H260 C170 540 120 590 120 680 V735 C120 825 175 880 265 880 H1015 C1105 880 1160 935 1160 1025 V1050 C1160 1140 1105 1195 1015 1195 H265 C175 1195 120 1250 120 1340 V1385 C120 1475 175 1530 265 1530 H610 C630 1530 640 1540 640 1560 V1618");
+            offset-path: path("M640 136 V410 C640 500 580 540 500 540 H260 C170 540 120 590 120 680 V735 C120 825 175 880 265 880 H1015 C1105 880 1160 935 1160 1025 V1050 C1160 1140 1105 1195 1015 1195 H265 C175 1195 120 1250 120 1340 V1385 C120 1475 175 1530 265 1530 H610 C630 1530 640 1540 640 1560 V1618");
             offset-rotate: 0deg;
             animation: signalMove 12s cubic-bezier(0.72, 0, 0.22, 1) infinite;
           }
@@ -834,7 +819,6 @@ export default function Home() {
 
             .plug,
             .plug-base,
-            .plug-link,
             .cable,
             .signal {
               display: none;
@@ -922,18 +906,12 @@ export default function Home() {
         <div className="focus-wrap">
           <div className="plug" />
           <div className="plug-base" />
-          <div className="plug-link" />
 
-          <svg
-            className="cable"
-            viewBox="0 0 1280 1900"
-            fill="none"
-            style={{ transform: "translateY(-120px)" }}
-          >
+          <svg className="cable" viewBox="0 0 1280 1900" fill="none">
             <path
               className="cable-shadow"
               d="
-                M640 252
+                M640 136
                 V410
 
                 C640 500 580 540 500 540
@@ -968,7 +946,7 @@ export default function Home() {
 
             <path
               d="
-                M640 252
+                M640 136
                 V410
 
                 C640 500 580 540 500 540
