@@ -88,15 +88,36 @@ export default function Home() {
               fontSize: "14px",
             }}
           >
-            <a href="#focus" style={{ color: "#111827", textDecoration: "none", fontWeight: "500" }}>
+            <a
+              href="#focus"
+              style={{
+                color: "#111827",
+                textDecoration: "none",
+                fontWeight: "500",
+              }}
+            >
               Reliability Flow
             </a>
 
-            <a href="#support" style={{ color: "#111827", textDecoration: "none", fontWeight: "500" }}>
+            <a
+              href="#support"
+              style={{
+                color: "#111827",
+                textDecoration: "none",
+                fontWeight: "500",
+              }}
+            >
               Support
             </a>
 
-            <a href="#contact" style={{ color: "#111827", textDecoration: "none", fontWeight: "500" }}>
+            <a
+              href="#contact"
+              style={{
+                color: "#111827",
+                textDecoration: "none",
+                fontWeight: "500",
+              }}
+            >
               Contact
             </a>
           </div>
@@ -314,14 +335,14 @@ export default function Home() {
           }
 
           .cable {
-  position: absolute;
-  top: -330px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  pointer-events: none;
-}
+            position: absolute;
+            top: -330px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+          }
 
           .cable-shadow {
             filter: drop-shadow(0 26px 34px rgba(37,99,235,0.20));
@@ -329,7 +350,7 @@ export default function Home() {
 
           .signal {
             position: absolute;
-            top: -120px;
+            top: -330px;
             left: 0;
             width: 18px;
             height: 18px;
@@ -576,6 +597,36 @@ export default function Home() {
             filter: blur(24px);
           }
 
+          .charger-top-slot {
+            position: absolute;
+            top: 58px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 170px;
+            height: 34px;
+            border-radius: 18px 18px 8px 8px;
+            background: linear-gradient(180deg, #050b14 0%, #111827 100%);
+            box-shadow:
+              inset 0 0 0 1px rgba(255,255,255,0.06),
+              0 12px 26px rgba(0,0,0,0.24);
+            z-index: 8;
+          }
+
+          .charger-bottom-slot {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 210px;
+            height: 38px;
+            border-radius: 10px 10px 24px 24px;
+            background: linear-gradient(180deg, #111827 0%, #050b14 100%);
+            box-shadow:
+              inset 0 0 0 1px rgba(255,255,255,0.06),
+              0 18px 34px rgba(0,0,0,0.22);
+            z-index: 7;
+          }
+
           .charger {
             position: relative;
             width: 500px;
@@ -613,34 +664,6 @@ export default function Home() {
               transparent
             );
             opacity: 0.55;
-          }
-
-          .charger-cable-slot {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 150px;
-            height: 26px;
-            border-radius: 0 0 18px 18px;
-            background: linear-gradient(180deg, #050b14 0%, #111827 100%);
-            box-shadow:
-              inset 0 0 0 1px rgba(255,255,255,0.06),
-              0 10px 22px rgba(0,0,0,0.22);
-            z-index: 7;
-          }
-
-          .charger-cable-slot::after {
-            content: "";
-            position: absolute;
-            left: 50%;
-            bottom: -20px;
-            transform: translateX(-50%);
-            width: 46px;
-            height: 28px;
-            border-radius: 0 0 16px 16px;
-            background: #0b1220;
-            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05);
           }
 
           .charger-screen {
@@ -744,25 +767,25 @@ export default function Home() {
 
           .charger-port {
             position: absolute;
-            top: 365px;
+            top: 405px;
             left: 50%;
             transform: translateX(-50%);
-            width: 110px;
-            height: 110px;
+            width: 135px;
+            height: 135px;
             border-radius: 50%;
             background: #0f172a;
-            border: 13px solid #2563eb;
+            border: 14px solid #2563eb;
             box-shadow:
-              0 0 0 14px rgba(37,99,235,0.12),
-              0 18px 38px rgba(37,99,235,0.24),
-              inset 0 0 0 8px rgba(255,255,255,0.05);
+              0 0 0 16px rgba(37,99,235,0.12),
+              0 20px 42px rgba(37,99,235,0.26),
+              inset 0 0 0 9px rgba(255,255,255,0.05);
             z-index: 6;
           }
 
           .charger-port::after {
             content: "";
             position: absolute;
-            inset: 22px;
+            inset: 28px;
             border-radius: 50%;
             background: rgba(147,197,253,0.14);
             box-shadow: inset 0 0 0 1px rgba(255,255,255,0.10);
@@ -782,10 +805,10 @@ export default function Home() {
 
           .charger-glow {
             position: absolute;
-            top: 330px;
+            top: 382px;
             left: 50%;
-            width: 220px;
-            height: 220px;
+            width: 260px;
+            height: 260px;
             transform: translateX(-50%);
             border-radius: 50%;
             background: radial-gradient(circle, rgba(59,130,246,0.24), transparent 68%);
@@ -888,13 +911,34 @@ export default function Home() {
             }
 
             .charger-port {
-              top: 300px;
-              width: 92px;
-              height: 92px;
+              top: 330px;
+              width: 112px;
+              height: 112px;
+            }
+
+            .charger-port::after {
+              inset: 24px;
+            }
+
+            .charger-glow {
+              top: 305px;
+              width: 220px;
+              height: 220px;
             }
 
             .charger-base {
               bottom: 28px;
+            }
+
+            .charger-top-slot {
+              top: 72px;
+              width: 140px;
+              height: 30px;
+            }
+
+            .charger-bottom-slot {
+              width: 180px;
+              height: 34px;
             }
           }
         `}</style>
@@ -1004,9 +1048,9 @@ export default function Home() {
               <div className="charger-halo" />
               <div className="charger-shadow" />
 
-              <div className="charger">
-                <div className="charger-cable-slot" />
+              <div className="charger-top-slot" />
 
+              <div className="charger">
                 <div className="charger-screen">
                   <div className="screen-top-row">
                     <span className="screen-network">CONNECTED</span>
@@ -1029,6 +1073,8 @@ export default function Home() {
                 <div className="charger-port" />
                 <div className="charger-base" />
               </div>
+
+              <div className="charger-bottom-slot" />
             </div>
           </div>
         </div>
