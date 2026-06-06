@@ -293,7 +293,7 @@ export default function Home() {
           .focus-wrap {
             position: relative;
             max-width: 1280px;
-            height: 1900px;
+            height: 2140px;
             margin: 0 auto;
           }
 
@@ -368,7 +368,7 @@ export default function Home() {
               0 0 0 8px rgba(147,197,253,0.16),
               0 0 22px rgba(147,197,253,0.90),
               0 0 46px rgba(37,99,235,0.85);
-            offset-path: path("M640 140 V410 C640 500 580 540 500 540 H260 C170 540 120 590 120 680 V735 C120 825 175 880 265 880 H1015 C1105 880 1160 935 1160 1025 V1050 C1160 1140 1105 1195 1015 1195 H265 C175 1195 120 1250 120 1340 V1385 C120 1475 175 1530 265 1530 H610 C630 1530 640 1540 640 1560 V1588");
+            offset-path: path("M640 140 V410 C640 500 580 540 500 540 H260 C170 540 120 590 120 680 V735 C120 825 175 880 265 880 H1015 C1105 880 1160 935 1160 1025 V1050 C1160 1140 1105 1195 1015 1195 H265 C175 1195 120 1250 120 1340 V1385 C120 1475 175 1530 265 1530 H610 C630 1530 640 1540 640 1560 V1618");
             offset-rotate: 0deg;
             animation: signalMove 12s cubic-bezier(0.72, 0, 0.22, 1) infinite;
           }
@@ -557,11 +557,11 @@ export default function Home() {
           .charger-wrap {
             position: absolute;
             left: 50%;
-            top: 1508px;
+            top: 1520px;
             transform: translateX(-50%);
             z-index: 4;
             width: min(980px, 94%);
-            min-height: 390px;
+            min-height: 620px;
             display: flex;
             justify-content: center;
             align-items: flex-start;
@@ -569,8 +569,8 @@ export default function Home() {
 
           .charger-panel {
             position: relative;
-            width: 420px;
-            height: 390px;
+            width: 560px;
+            height: 620px;
             display: flex;
             align-items: flex-end;
             justify-content: center;
@@ -578,93 +578,72 @@ export default function Home() {
 
           .charger-halo {
             position: absolute;
-            width: 330px;
-            height: 330px;
+            width: 520px;
+            height: 520px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(37,99,235,0.16) 0%, rgba(37,99,235,0.04) 58%, transparent 76%);
-            top: 18px;
+            background: radial-gradient(
+              circle,
+              rgba(37,99,235,0.18) 0%,
+              rgba(37,99,235,0.05) 56%,
+              transparent 76%
+            );
+            top: 20px;
             left: 50%;
             transform: translateX(-50%);
-            filter: blur(4px);
+            filter: blur(6px);
           }
 
           .charger-shadow {
             position: absolute;
-            bottom: 10px;
-            width: 260px;
-            height: 28px;
+            bottom: 8px;
+            width: 390px;
+            height: 36px;
             border-radius: 50%;
-            background: rgba(7,27,51,0.17);
-            filter: blur(18px);
+            background: rgba(7,27,51,0.18);
+            filter: blur(22px);
           }
 
-          .connector-line {
+          .cable-entry {
             position: absolute;
-            top: 55px;
+            top: 0;
             left: 50%;
-            width: 26px;
-            height: 54px;
+            width: 34px;
+            height: 92px;
             transform: translateX(-50%);
             border-radius: 999px;
             background: linear-gradient(180deg, #2563eb 0%, #1d4ed8 100%);
             box-shadow:
-              0 12px 30px rgba(37,99,235,0.24),
-              inset 0 0 0 3px rgba(255,255,255,0.12);
-            z-index: 6;
-          }
-
-          .connector-head {
-            position: absolute;
-            top: 96px;
-            left: 50%;
-            width: 88px;
-            height: 46px;
-            transform: translateX(-50%);
-            border-radius: 20px 20px 14px 14px;
-            background: linear-gradient(180deg, #111827 0%, #07111f 100%);
-            box-shadow:
-              0 18px 42px rgba(7,27,51,0.24),
-              inset 0 0 0 1px rgba(255,255,255,0.10);
+              0 18px 42px rgba(37,99,235,0.28),
+              inset 0 0 0 4px rgba(255,255,255,0.14);
             z-index: 7;
           }
 
-          .connector-head::before {
+          .cable-entry::after {
             content: "";
             position: absolute;
             left: 50%;
-            bottom: -18px;
-            width: 42px;
-            height: 22px;
+            bottom: -16px;
+            width: 74px;
+            height: 34px;
             transform: translateX(-50%);
-            border-radius: 0 0 14px 14px;
-            background: #07111f;
-            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
-          }
-
-          .connector-head::after {
-            content: "";
-            position: absolute;
-            left: 50%;
-            top: 13px;
-            width: 44px;
-            height: 14px;
-            transform: translateX(-50%);
-            border-radius: 999px;
-            background: rgba(59,130,246,0.82);
-            box-shadow: 0 0 18px rgba(59,130,246,0.60);
+            border-radius: 18px;
+            background: linear-gradient(180deg, #1e293b 0%, #07111f 100%);
+            box-shadow:
+              0 16px 36px rgba(7,27,51,0.24),
+              inset 0 0 0 1px rgba(255,255,255,0.10);
           }
 
           .charger {
             position: relative;
-            width: 245px;
-            height: 335px;
-            border-radius: 34px 34px 26px 26px;
-            background: linear-gradient(180deg, #111827 0%, #07111f 100%);
+            width: 360px;
+            height: 520px;
+            border-radius: 42px 42px 30px 30px;
+            background: linear-gradient(180deg, #172033 0%, #07111f 100%);
             box-shadow:
-              0 34px 90px rgba(7,27,51,0.28),
-              inset 0 0 0 1px rgba(255,255,255,0.07);
+              0 42px 110px rgba(7,27,51,0.30),
+              inset 0 0 0 1px rgba(255,255,255,0.08);
             overflow: hidden;
-            z-index: 4;
+            z-index: 5;
           }
 
           .charger::before {
@@ -672,19 +651,24 @@ export default function Home() {
             position: absolute;
             inset: 0;
             background:
-              radial-gradient(circle at top left, rgba(37,99,235,0.28), transparent 38%),
-              linear-gradient(180deg, rgba(255,255,255,0.10), transparent 25%);
+              radial-gradient(circle at top left, rgba(37,99,235,0.30), transparent 36%),
+              linear-gradient(180deg, rgba(255,255,255,0.11), transparent 24%);
             pointer-events: none;
           }
 
           .charger::after {
             content: "";
             position: absolute;
-            left: 20px;
-            top: 18px;
-            bottom: 18px;
+            left: 28px;
+            top: 24px;
+            bottom: 24px;
             width: 1px;
-            background: linear-gradient(180deg, transparent, rgba(255,255,255,0.18), transparent);
+            background: linear-gradient(
+              180deg,
+              transparent,
+              rgba(255,255,255,0.20),
+              transparent
+            );
             opacity: 0.55;
           }
 
@@ -693,75 +677,72 @@ export default function Home() {
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 128px;
-            height: 18px;
-            border-radius: 0 0 16px 16px;
-            background: rgba(255,255,255,0.10);
-            z-index: 3;
+            width: 160px;
+            height: 22px;
+            border-radius: 0 0 18px 18px;
+            background: rgba(255,255,255,0.12);
+            z-index: 4;
           }
 
-          .charger-port {
+          .charger-neck {
             position: absolute;
-            top: 118px;
+            top: 18px;
             left: 50%;
+            width: 104px;
+            height: 36px;
             transform: translateX(-50%);
-            width: 58px;
-            height: 58px;
-            border-radius: 50%;
-            background: #0f172a;
-            border: 8px solid #2563eb;
-            box-shadow:
-              0 0 0 9px rgba(37,99,235,0.12),
-              0 14px 30px rgba(37,99,235,0.24),
-              inset 0 0 0 5px rgba(255,255,255,0.05);
-            z-index: 5;
+            border-radius: 0 0 22px 22px;
+            background: linear-gradient(180deg, #111827 0%, #07111f 100%);
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+            z-index: 4;
           }
 
           .charger-screen {
             position: absolute;
-            top: 34px;
+            top: 72px;
             left: 50%;
             transform: translateX(-50%);
-            width: 168px;
-            height: 74px;
-            border-radius: 18px;
+            width: 250px;
+            height: 132px;
+            border-radius: 26px;
             background:
-              radial-gradient(circle at top, rgba(59,130,246,0.24), transparent 62%),
-              linear-gradient(180deg, rgba(15,23,42,0.96) 0%, rgba(2,6,23,0.98) 100%);
-            border: 1px solid rgba(147,197,253,0.18);
+              radial-gradient(circle at top, rgba(59,130,246,0.28), transparent 62%),
+              linear-gradient(180deg, rgba(15,23,42,0.98) 0%, rgba(2,6,23,0.98) 100%);
+            border: 1px solid rgba(147,197,253,0.22);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 4px;
+            gap: 9px;
             color: #dbeafe;
             text-align: center;
             animation: screenGlow 12s ease-in-out infinite;
-            z-index: 5;
+            z-index: 6;
           }
 
           .screen-status {
-            font-size: 11px;
+            font-size: 14px;
             line-height: 1;
             font-weight: 900;
-            letter-spacing: 2.6px;
+            letter-spacing: 3px;
             color: #93c5fd;
           }
 
           .screen-main {
-            font-size: 14px;
-            line-height: 1.1;
+            font-size: 24px;
+            line-height: 1.05;
             font-weight: 900;
             color: #ffffff;
-            letter-spacing: -0.2px;
+            letter-spacing: -0.6px;
           }
 
           .screen-small {
-            font-size: 9px;
-            line-height: 1.1;
+            font-size: 12px;
+            line-height: 1.25;
             font-weight: 700;
             color: #bfdbfe;
-            opacity: 0.92;
+            max-width: 190px;
+            opacity: 0.94;
           }
 
           @keyframes screenGlow {
@@ -771,51 +752,77 @@ export default function Home() {
 
             92%, 97% {
               box-shadow:
-                0 0 34px rgba(59,130,246,0.38),
-                inset 0 0 28px rgba(59,130,246,0.12);
+                0 0 40px rgba(59,130,246,0.42),
+                inset 0 0 34px rgba(59,130,246,0.14);
             }
+          }
+
+          .charger-port {
+            position: absolute;
+            top: 242px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 82px;
+            height: 82px;
+            border-radius: 50%;
+            background: #0f172a;
+            border: 11px solid #2563eb;
+            box-shadow:
+              0 0 0 12px rgba(37,99,235,0.13),
+              0 16px 34px rgba(37,99,235,0.26),
+              inset 0 0 0 7px rgba(255,255,255,0.06);
+            z-index: 6;
+          }
+
+          .charger-port::after {
+            content: "";
+            position: absolute;
+            inset: 18px;
+            border-radius: 50%;
+            background: rgba(147,197,253,0.15);
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.10);
           }
 
           .charger-status {
             position: absolute;
-            top: 195px;
+            top: 352px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 10px;
-            z-index: 5;
+            gap: 12px;
+            z-index: 6;
           }
 
           .charger-status span {
             display: block;
-            width: 10px;
-            height: 10px;
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
             background: #3b82f6;
-            box-shadow: 0 0 16px rgba(59,130,246,0.55);
+            box-shadow: 0 0 18px rgba(59,130,246,0.60);
           }
 
           .charger-lower-panel {
             position: absolute;
             left: 50%;
-            bottom: 42px;
+            bottom: 58px;
             transform: translateX(-50%);
-            width: 146px;
-            height: 78px;
-            border-radius: 24px;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.07);
-            z-index: 4;
+            width: 216px;
+            height: 94px;
+            border-radius: 28px;
+            background: rgba(255,255,255,0.055);
+            border: 1px solid rgba(255,255,255,0.08);
+            z-index: 5;
           }
 
           .charger-lower-panel::before {
             content: "";
             position: absolute;
             left: 50%;
-            top: 18px;
+            top: 22px;
             transform: translateX(-50%);
-            width: 82px;
-            height: 10px;
+            width: 120px;
+            height: 12px;
             border-radius: 999px;
             background: rgba(147,197,253,0.20);
           }
@@ -824,36 +831,36 @@ export default function Home() {
             content: "";
             position: absolute;
             left: 50%;
-            bottom: 18px;
+            bottom: 22px;
             transform: translateX(-50%);
-            width: 108px;
-            height: 10px;
+            width: 154px;
+            height: 12px;
             border-radius: 999px;
-            background: rgba(255,255,255,0.08);
+            background: rgba(255,255,255,0.09);
           }
 
           .charger-base {
             position: absolute;
-            bottom: 17px;
+            bottom: 22px;
             left: 50%;
             transform: translateX(-50%);
-            width: 142px;
-            height: 14px;
+            width: 208px;
+            height: 16px;
             border-radius: 999px;
-            background: rgba(255,255,255,0.12);
-            z-index: 5;
+            background: rgba(255,255,255,0.13);
+            z-index: 6;
           }
 
-          .connector-glow {
+          .charger-glow {
             position: absolute;
-            top: 104px;
+            top: 216px;
             left: 50%;
-            width: 120px;
-            height: 120px;
+            width: 180px;
+            height: 180px;
             transform: translateX(-50%);
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(59,130,246,0.25), transparent 68%);
-            filter: blur(4px);
+            background: radial-gradient(circle, rgba(59,130,246,0.26), transparent 68%);
+            filter: blur(5px);
             z-index: 3;
             animation: chargerPulse 12s ease-in-out infinite;
           }
@@ -900,12 +907,12 @@ export default function Home() {
               top: auto;
               transform: none;
               width: auto;
-              min-height: 390px;
+              min-height: 620px;
             }
 
             .charger-panel {
               width: 100%;
-              height: 390px;
+              height: 620px;
             }
           }
 
@@ -928,13 +935,25 @@ export default function Home() {
             }
 
             .charger {
-              width: 225px;
-              height: 315px;
+              width: 300px;
+              height: 455px;
             }
 
             .charger-screen {
-              width: 154px;
-              height: 70px;
+              width: 218px;
+              height: 116px;
+            }
+
+            .screen-main {
+              font-size: 21px;
+            }
+
+            .screen-small {
+              font-size: 11px;
+            }
+
+            .charger-port {
+              top: 222px;
             }
           }
         `}</style>
@@ -1043,18 +1062,21 @@ export default function Home() {
             <div className="charger-panel">
               <div className="charger-halo" />
               <div className="charger-shadow" />
-              <div className="connector-line" />
-              <div className="connector-head" />
-              <div className="connector-glow" />
+              <div className="cable-entry" />
 
               <div className="charger">
                 <div className="charger-top-cap" />
+                <div className="charger-neck" />
+
                 <div className="charger-screen">
                   <div className="screen-status">CONNECTED</div>
                   <div className="screen-main">Clearer action</div>
-                  <div className="screen-small">Field issues → practical decisions</div>
+                  <div className="screen-small">
+                    Field issues → practical decisions
+                  </div>
                 </div>
 
+                <div className="charger-glow" />
                 <div className="charger-port" />
 
                 <div className="charger-status">
