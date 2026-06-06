@@ -584,7 +584,7 @@ export default function Home() {
 
           .charger-bottom-slot {
             position: absolute;
-            bottom: 0;
+            bottom: -28px;
             left: 50%;
             transform: translateX(-50%);
             width: 210px;
