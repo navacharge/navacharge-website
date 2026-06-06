@@ -346,9 +346,9 @@ export default function Home() {
             left: 50%;
             top: 136px;
             width: 24px;
-            height: 118px;
+            height: 40px;
             transform: translateX(-50%);
-            border-radius: 999px 999px 0 0;
+            border-radius: 999px;
             background: linear-gradient(180deg, #2563eb 0%, #1d4ed8 100%);
             box-shadow:
               0 12px 28px rgba(37,99,235,0.22),
@@ -371,7 +371,7 @@ export default function Home() {
 
           .signal {
             position: absolute;
-            top: 0;
+            top: -120px;
             left: 0;
             width: 18px;
             height: 18px;
@@ -924,7 +924,12 @@ export default function Home() {
           <div className="plug-base" />
           <div className="plug-link" />
 
-          <svg className="cable" viewBox="0 0 1280 1900" fill="none">
+          <svg
+            className="cable"
+            viewBox="0 0 1280 1900"
+            fill="none"
+            style={{ transform: "translateY(-120px)" }}
+          >
             <path
               className="cable-shadow"
               d="
