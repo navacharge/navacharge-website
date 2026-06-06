@@ -599,7 +599,7 @@ export default function Home() {
 
           .charger-top-slot {
             position: absolute;
-            top: 80px;
+            top: 73px;
             left: 50%;
             transform: translateX(-50%);
             width: 170px;
