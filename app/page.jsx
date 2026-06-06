@@ -88,36 +88,15 @@ export default function Home() {
               fontSize: "14px",
             }}
           >
-            <a
-              href="#focus"
-              style={{
-                color: "#111827",
-                textDecoration: "none",
-                fontWeight: "500",
-              }}
-            >
+            <a href="#focus" style={{ color: "#111827", textDecoration: "none", fontWeight: "500" }}>
               Reliability Flow
             </a>
 
-            <a
-              href="#support"
-              style={{
-                color: "#111827",
-                textDecoration: "none",
-                fontWeight: "500",
-              }}
-            >
+            <a href="#support" style={{ color: "#111827", textDecoration: "none", fontWeight: "500" }}>
               Support
             </a>
 
-            <a
-              href="#contact"
-              style={{
-                color: "#111827",
-                textDecoration: "none",
-                fontWeight: "500",
-              }}
-            >
+            <a href="#contact" style={{ color: "#111827", textDecoration: "none", fontWeight: "500" }}>
               Contact
             </a>
           </div>
@@ -204,18 +183,11 @@ export default function Home() {
               </p>
             </div>
 
-            <div
-              style={{
-                display: "flex",
-                gap: "16px",
-                flexWrap: "wrap",
-              }}
-            >
+            <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
               <a
                 href="#contact"
                 style={{
-                  background:
-                    "linear-gradient(135deg,#2563eb 0%,#3b82f6 100%)",
+                  background: "linear-gradient(135deg,#2563eb 0%,#3b82f6 100%)",
                   boxShadow: "0 14px 34px rgba(37,99,235,0.35)",
                   color: "white",
                   padding: "15px 24px",
@@ -293,7 +265,7 @@ export default function Home() {
           .focus-wrap {
             position: relative;
             max-width: 1280px;
-            height: 2140px;
+            height: 2320px;
             margin: 0 auto;
           }
 
@@ -342,14 +314,14 @@ export default function Home() {
           }
 
           .cable {
-  position: absolute;
-  top: -120px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  pointer-events: none;
-}
+            position: absolute;
+            top: -120px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+          }
 
           .cable-shadow {
             filter: drop-shadow(0 26px 34px rgba(37,99,235,0.20));
@@ -357,7 +329,7 @@ export default function Home() {
 
           .signal {
             position: absolute;
-            top: 0;
+            top: -120px;
             left: 0;
             width: 18px;
             height: 18px;
@@ -369,7 +341,7 @@ export default function Home() {
               0 0 0 8px rgba(147,197,253,0.16),
               0 0 22px rgba(147,197,253,0.90),
               0 0 46px rgba(37,99,235,0.85);
-            offset-path: path("M640 136 V410 C640 500 580 540 500 540 H260 C170 540 120 590 120 680 V735 C120 825 175 880 265 880 H1015 C1105 880 1160 935 1160 1025 V1050 C1160 1140 1105 1195 1015 1195 H265 C175 1195 120 1250 120 1340 V1385 C120 1475 175 1530 265 1530 H610 C630 1530 640 1540 640 1560 V1618");
+            offset-path: path("M640 252 V410 C640 500 580 540 500 540 H260 C170 540 120 590 120 680 V735 C120 825 175 880 265 880 H1015 C1105 880 1160 935 1160 1025 V1050 C1160 1140 1105 1195 1015 1195 H265 C175 1195 120 1250 120 1340 V1385 C120 1475 175 1530 265 1530 H610 C630 1530 640 1540 640 1560 V1705");
             offset-rotate: 0deg;
             animation: signalMove 12s cubic-bezier(0.72, 0, 0.22, 1) infinite;
           }
@@ -558,11 +530,11 @@ export default function Home() {
           .charger-wrap {
             position: absolute;
             left: 50%;
-            top: 1520px;
+            top: 1460px;
             transform: translateX(-50%);
             z-index: 4;
-            width: min(980px, 94%);
-            min-height: 620px;
+            width: min(1100px, 96%);
+            min-height: 860px;
             display: flex;
             justify-content: center;
             align-items: flex-start;
@@ -570,8 +542,8 @@ export default function Home() {
 
           .charger-panel {
             position: relative;
-            width: 560px;
-            height: 620px;
+            width: 760px;
+            height: 860px;
             display: flex;
             align-items: flex-end;
             justify-content: center;
@@ -579,69 +551,39 @@ export default function Home() {
 
           .charger-halo {
             position: absolute;
-            width: 520px;
-            height: 520px;
+            width: 680px;
+            height: 680px;
             border-radius: 50%;
             background: radial-gradient(
               circle,
               rgba(37,99,235,0.18) 0%,
               rgba(37,99,235,0.05) 56%,
-              transparent 76%
+              transparent 78%
             );
-            top: 20px;
+            top: 40px;
             left: 50%;
             transform: translateX(-50%);
-            filter: blur(6px);
+            filter: blur(8px);
           }
 
           .charger-shadow {
             position: absolute;
             bottom: 8px;
-            width: 390px;
-            height: 36px;
+            width: 460px;
+            height: 42px;
             border-radius: 50%;
             background: rgba(7,27,51,0.18);
-            filter: blur(22px);
-          }
-
-          .cable-entry {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 34px;
-            height: 92px;
-            transform: translateX(-50%);
-            border-radius: 999px;
-            background: linear-gradient(180deg, #2563eb 0%, #1d4ed8 100%);
-            box-shadow:
-              0 18px 42px rgba(37,99,235,0.28),
-              inset 0 0 0 4px rgba(255,255,255,0.14);
-            z-index: 7;
-          }
-
-          .cable-entry::after {
-            content: "";
-            position: absolute;
-            left: 50%;
-            bottom: -16px;
-            width: 74px;
-            height: 34px;
-            transform: translateX(-50%);
-            border-radius: 18px;
-            background: linear-gradient(180deg, #1e293b 0%, #07111f 100%);
-            box-shadow:
-              0 16px 36px rgba(7,27,51,0.24),
-              inset 0 0 0 1px rgba(255,255,255,0.10);
+            filter: blur(24px);
           }
 
           .charger {
             position: relative;
-            width: 360px;
-            height: 520px;
-            border-radius: 42px 42px 30px 30px;
-            background: linear-gradient(180deg, #172033 0%, #07111f 100%);
+            width: 500px;
+            height: 760px;
+            border-radius: 48px 48px 34px 34px;
+            background: linear-gradient(180deg, #1a2335 0%, #07111f 100%);
             box-shadow:
-              0 42px 110px rgba(7,27,51,0.30),
+              0 52px 130px rgba(7,27,51,0.32),
               inset 0 0 0 1px rgba(255,255,255,0.08);
             overflow: hidden;
             z-index: 5;
@@ -652,148 +594,202 @@ export default function Home() {
             position: absolute;
             inset: 0;
             background:
-              radial-gradient(circle at top left, rgba(37,99,235,0.30), transparent 36%),
-              linear-gradient(180deg, rgba(255,255,255,0.11), transparent 24%);
+              radial-gradient(circle at top left, rgba(37,99,235,0.26), transparent 34%),
+              linear-gradient(180deg, rgba(255,255,255,0.10), transparent 24%);
             pointer-events: none;
           }
 
           .charger::after {
             content: "";
             position: absolute;
-            left: 28px;
-            top: 24px;
-            bottom: 24px;
+            left: 34px;
+            top: 30px;
+            bottom: 30px;
             width: 1px;
             background: linear-gradient(
               180deg,
               transparent,
-              rgba(255,255,255,0.20),
+              rgba(255,255,255,0.18),
               transparent
             );
             opacity: 0.55;
           }
 
-          .charger-top-cap {
+          .charger-cable-slot {
             position: absolute;
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 160px;
-            height: 22px;
+            width: 150px;
+            height: 26px;
             border-radius: 0 0 18px 18px;
-            background: rgba(255,255,255,0.12);
-            z-index: 4;
+            background: linear-gradient(180deg, #050b14 0%, #111827 100%);
+            box-shadow:
+              inset 0 0 0 1px rgba(255,255,255,0.06),
+              0 10px 22px rgba(0,0,0,0.22);
+            z-index: 7;
           }
 
-          .charger-neck {
+          .charger-cable-slot::after {
+            content: "";
             position: absolute;
-            top: 18px;
             left: 50%;
-            width: 104px;
-            height: 36px;
+            bottom: -20px;
             transform: translateX(-50%);
-            border-radius: 0 0 22px 22px;
-            background: linear-gradient(180deg, #111827 0%, #07111f 100%);
-            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
-            z-index: 4;
+            width: 46px;
+            height: 28px;
+            border-radius: 0 0 16px 16px;
+            background: #0b1220;
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05);
           }
 
           .charger-screen {
             position: absolute;
-            top: 72px;
+            top: 90px;
             left: 50%;
             transform: translateX(-50%);
-            width: 250px;
-            height: 132px;
-            border-radius: 26px;
+            width: 340px;
+            height: 210px;
+            border-radius: 28px;
             background:
-              radial-gradient(circle at top, rgba(59,130,246,0.28), transparent 62%),
-              linear-gradient(180deg, rgba(15,23,42,0.98) 0%, rgba(2,6,23,0.98) 100%);
-            border: 1px solid rgba(147,197,253,0.22);
+              radial-gradient(circle at top, rgba(59,130,246,0.20), transparent 58%),
+              linear-gradient(180deg, rgba(10,19,34,0.98) 0%, rgba(3,8,18,0.98) 100%);
+            border: 1px solid rgba(147,197,253,0.20);
+            box-shadow:
+              inset 0 0 0 1px rgba(255,255,255,0.03),
+              0 18px 44px rgba(7,27,51,0.18);
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 9px;
+            justify-content: space-between;
+            padding: 20px 22px;
             color: #dbeafe;
-            text-align: center;
-            animation: screenGlow 12s ease-in-out infinite;
             z-index: 6;
+            animation: screenGlow 12s ease-in-out infinite;
           }
 
-          .screen-status {
-            font-size: 14px;
-            line-height: 1;
-            font-weight: 900;
-            letter-spacing: 3px;
+          .screen-top-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+
+          .screen-network {
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
             color: #93c5fd;
+            text-transform: uppercase;
+          }
+
+          .screen-badge {
+            font-size: 11px;
+            font-weight: 800;
+            padding: 5px 10px;
+            border-radius: 999px;
+            background: rgba(59,130,246,0.16);
+            color: #dbeafe;
+            border: 1px solid rgba(59,130,246,0.22);
           }
 
           .screen-main {
-            font-size: 24px;
-            line-height: 1.05;
+            font-size: 32px;
+            line-height: 1.02;
             font-weight: 900;
+            letter-spacing: -0.9px;
             color: #ffffff;
-            letter-spacing: -0.6px;
+            margin-top: 8px;
           }
 
-          .screen-small {
-            font-size: 12px;
-            line-height: 1.25;
+          .screen-sub {
+            font-size: 14px;
+            line-height: 1.45;
             font-weight: 700;
             color: #bfdbfe;
-            max-width: 190px;
-            opacity: 0.94;
+            max-width: 250px;
+          }
+
+          .screen-footer {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            margin-top: 10px;
+          }
+
+          .screen-footer span {
+            flex: 1;
+            font-size: 11px;
+            font-weight: 700;
+            color: #cbd5e1;
+            padding: 8px 10px;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.05);
+            text-align: center;
           }
 
           @keyframes screenGlow {
             0%, 88%, 100% {
-              box-shadow: none;
+              box-shadow:
+                inset 0 0 0 1px rgba(255,255,255,0.03),
+                0 18px 44px rgba(7,27,51,0.18);
             }
 
             92%, 97% {
               box-shadow:
-                0 0 40px rgba(59,130,246,0.42),
-                inset 0 0 34px rgba(59,130,246,0.14);
+                0 0 48px rgba(59,130,246,0.36),
+                inset 0 0 34px rgba(59,130,246,0.10),
+                0 18px 44px rgba(7,27,51,0.18);
             }
           }
 
           .charger-port {
             position: absolute;
-            top: 242px;
+            top: 365px;
             left: 50%;
             transform: translateX(-50%);
-            width: 82px;
-            height: 82px;
+            width: 110px;
+            height: 110px;
             border-radius: 50%;
             background: #0f172a;
-            border: 11px solid #2563eb;
+            border: 13px solid #2563eb;
             box-shadow:
-              0 0 0 12px rgba(37,99,235,0.13),
-              0 16px 34px rgba(37,99,235,0.26),
-              inset 0 0 0 7px rgba(255,255,255,0.06);
+              0 0 0 14px rgba(37,99,235,0.12),
+              0 18px 38px rgba(37,99,235,0.24),
+              inset 0 0 0 8px rgba(255,255,255,0.05);
             z-index: 6;
           }
 
           .charger-port::after {
             content: "";
             position: absolute;
-            inset: 18px;
+            inset: 22px;
             border-radius: 50%;
-            background: rgba(147,197,253,0.15);
+            background: rgba(147,197,253,0.14);
             box-shadow: inset 0 0 0 1px rgba(255,255,255,0.10);
+          }
+
+          .charger-base {
+            position: absolute;
+            bottom: 34px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 230px;
+            height: 18px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.14);
+            z-index: 6;
           }
 
           .charger-glow {
             position: absolute;
-            top: 216px;
+            top: 330px;
             left: 50%;
-            width: 180px;
-            height: 180px;
+            width: 220px;
+            height: 220px;
             transform: translateX(-50%);
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(59,130,246,0.26), transparent 68%);
-            filter: blur(5px);
+            background: radial-gradient(circle, rgba(59,130,246,0.24), transparent 68%);
+            filter: blur(6px);
             z-index: 3;
             animation: chargerPulse 12s ease-in-out infinite;
           }
@@ -806,7 +802,7 @@ export default function Home() {
 
             92%, 97% {
               opacity: 1;
-              transform: translateX(-50%) scale(1.12);
+              transform: translateX(-50%) scale(1.10);
             }
           }
 
@@ -840,12 +836,12 @@ export default function Home() {
               top: auto;
               transform: none;
               width: auto;
-              min-height: 620px;
+              min-height: 860px;
             }
 
             .charger-panel {
               width: 100%;
-              height: 620px;
+              height: 860px;
             }
           }
 
@@ -868,25 +864,37 @@ export default function Home() {
             }
 
             .charger {
-              width: 300px;
-              height: 455px;
+              width: 330px;
+              height: 560px;
             }
 
             .charger-screen {
-              width: 218px;
-              height: 116px;
+              width: 245px;
+              height: 170px;
+              top: 76px;
             }
 
             .screen-main {
-              font-size: 21px;
+              font-size: 25px;
             }
 
-            .screen-small {
-              font-size: 11px;
+            .screen-sub {
+              font-size: 12px;
+            }
+
+            .screen-footer span {
+              font-size: 10px;
+              padding: 7px 6px;
             }
 
             .charger-port {
-              top: 222px;
+              top: 300px;
+              width: 92px;
+              height: 92px;
+            }
+
+            .charger-base {
+              bottom: 28px;
             }
           }
         `}</style>
@@ -912,7 +920,7 @@ export default function Home() {
             <path
               className="cable-shadow"
               d="
-                M640 136
+                M640 252
                 V410
 
                 C640 500 580 540 500 540
@@ -937,7 +945,7 @@ export default function Home() {
                 H610
 
                 C630 1530 640 1540 640 1560
-                V1588
+                V1705
               "
               stroke="#2563eb"
               strokeWidth="24"
@@ -947,7 +955,7 @@ export default function Home() {
 
             <path
               d="
-                M640 136
+                M640 252
                 V410
 
                 C640 500 580 540 500 540
@@ -972,7 +980,7 @@ export default function Home() {
                 H610
 
                 C630 1530 640 1540 640 1560
-                V1588
+                V1705
               "
               stroke="rgba(255,255,255,0.42)"
               strokeWidth="5"
@@ -995,22 +1003,31 @@ export default function Home() {
             <div className="charger-panel">
               <div className="charger-halo" />
               <div className="charger-shadow" />
-              <div className="cable-entry" />
 
               <div className="charger">
-                <div className="charger-top-cap" />
-                <div className="charger-neck" />
+                <div className="charger-cable-slot" />
 
                 <div className="charger-screen">
-                  <div className="screen-status">CONNECTED</div>
+                  <div className="screen-top-row">
+                    <span className="screen-network">CONNECTED</span>
+                    <span className="screen-badge">LIVE</span>
+                  </div>
+
                   <div className="screen-main">Clearer action</div>
-                  <div className="screen-small">
+
+                  <div className="screen-sub">
                     Field issues → practical decisions
+                  </div>
+
+                  <div className="screen-footer">
+                    <span>Evidence visible</span>
+                    <span>Support ready</span>
                   </div>
                 </div>
 
                 <div className="charger-glow" />
                 <div className="charger-port" />
+                <div className="charger-base" />
               </div>
             </div>
           </div>
@@ -1027,8 +1044,7 @@ export default function Home() {
       >
         <div
           style={{
-            background:
-              "linear-gradient(135deg,#0f172a 0%,#111827 55%,#1e293b 100%)",
+            background: "linear-gradient(135deg,#0f172a 0%,#111827 55%,#1e293b 100%)",
             color: "white",
             borderRadius: "34px",
             padding: "68px",
@@ -1068,8 +1084,7 @@ export default function Home() {
           <a
             href="mailto:hello@navacharge.com"
             style={{
-              background:
-                "linear-gradient(135deg,#2563eb 0%,#3b82f6 100%)",
+              background: "linear-gradient(135deg,#2563eb 0%,#3b82f6 100%)",
               boxShadow: "0 16px 36px rgba(37,99,235,0.32)",
               color: "white",
               padding: "16px 28px",
@@ -1124,13 +1139,7 @@ export default function Home() {
 
           <div>
             <strong style={{ color: "white" }}>Connect</strong>
-            <div
-              style={{
-                display: "grid",
-                gap: "12px",
-                marginTop: "14px",
-              }}
-            >
+            <div style={{ display: "grid", gap: "12px", marginTop: "14px" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                 <Linkedin size={18} />
                 <span>LinkedIn</span>
