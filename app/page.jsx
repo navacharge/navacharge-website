@@ -342,13 +342,14 @@ export default function Home() {
           }
 
           .cable {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            pointer-events: none;
-          }
+  position: absolute;
+  top: -120px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
 
           .cable-shadow {
             filter: drop-shadow(0 26px 34px rgba(37,99,235,0.20));
