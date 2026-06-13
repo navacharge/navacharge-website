@@ -482,27 +482,28 @@ export default function Home() {
 
 .focus-item.item-one {
   top: 140px;
-  left: clamp(-320px, calc(24px - ((100vw - 1280px) / 2)), 24px);
+  left: clamp(-260px, calc(24px - ((100vw - 1280px) / 2)), 24px);
 
-  width: min(820px, 62vw);
-  padding: 44px;
+  width: min(680px, 54vw);
+  padding: 38px;
 
   outline: 1px solid rgba(37,99,235,0.42);
   outline-offset: 0px;
 
   box-shadow:
-    0 34px 86px rgba(15,23,42,0.14),
-    0 0 34px rgba(37,99,235,0.10);
+    0 30px 76px rgba(15,23,42,0.13),
+    0 0 28px rgba(37,99,235,0.09);
 
   animation: highlightOne 12s ease-in-out infinite;
 }
+
 .focus-item.item-one h3 {
-  font-size: 34px;
+  font-size: 31px;
 }
 
 .focus-item.item-one p {
-  font-size: 18px;
-  line-height: 1.8;
+  font-size: 17px;
+  line-height: 1.75;
 }
 
 .focus-item.item-one .item-number {
