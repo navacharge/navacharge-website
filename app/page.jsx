@@ -487,7 +487,7 @@ export default function Home() {
           }
 
           .focus-item.item-two {
-            top: 450px;
+            top: 430px;
             right: 70px;
             animation: highlightTwo 12s ease-in-out infinite;
           }
