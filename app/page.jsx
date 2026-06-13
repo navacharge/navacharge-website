@@ -465,6 +465,28 @@ export default function Home() {
             filter: drop-shadow(0 26px 34px rgba(37,99,235,0.20));
           }
 
+          .connector-one-line {
+            opacity: 0.30;
+            filter: drop-shadow(0 0 10px rgba(37,99,235,0.28));
+            animation: connectorOne 12s ease-in-out infinite;
+          }
+
+          .connector-one-dot {
+            opacity: 0.42;
+            filter: drop-shadow(0 0 12px rgba(37,99,235,0.42));
+            animation: connectorOne 12s ease-in-out infinite;
+          }
+
+          @keyframes connectorOne {
+            0%, 12%, 28%, 100% {
+              opacity: 0.30;
+            }
+
+            16%, 23% {
+              opacity: 1;
+            }
+          }
+
           .focus-item {
             position: absolute;
             z-index: 6;
@@ -510,48 +532,6 @@ export default function Home() {
             background: #2563eb;
             color: #ffffff;
             box-shadow: 0 14px 34px rgba(37,99,235,0.34);
-          }
-
-          .focus-item.item-one::after {
-            content: "";
-            position: absolute;
-            right: -78px;
-            bottom: 42px;
-            width: 78px;
-            height: 2px;
-            background: linear-gradient(
-              90deg,
-              rgba(37,99,235,0.18),
-              rgba(37,99,235,0.95)
-            );
-            border-radius: 999px;
-            box-shadow: 0 0 18px rgba(37,99,235,0.30);
-            opacity: 0.38;
-            animation: connectorOne 12s ease-in-out infinite;
-          }
-
-          .focus-item.item-one::before {
-            content: "";
-            position: absolute;
-            right: -84px;
-            bottom: 38px;
-            width: 10px;
-            height: 10px;
-            background: #2563eb;
-            border-radius: 50%;
-            box-shadow: 0 0 20px rgba(37,99,235,0.55);
-            opacity: 0.45;
-            animation: connectorOne 12s ease-in-out infinite;
-          }
-
-          @keyframes connectorOne {
-            0%, 12%, 28%, 100% {
-              opacity: 0.32;
-            }
-
-            16%, 23% {
-              opacity: 1;
-            }
           }
 
           .focus-item.item-two {
@@ -1102,6 +1082,24 @@ export default function Home() {
               strokeWidth="5"
               strokeLinecap="round"
               strokeLinejoin="round"
+            />
+
+            <path
+              className="connector-one-line"
+              d="M500 540 C430 540 380 500 330 455"
+              stroke="#2563eb"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              fill="none"
+            />
+
+            <circle
+              className="connector-one-dot"
+              cx="500"
+              cy="540"
+              r="7"
+              fill="#2563eb"
             />
 
             <g>
