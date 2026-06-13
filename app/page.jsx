@@ -481,7 +481,7 @@ export default function Home() {
           }
 
 .focus-item.item-one {
-  top: 140px;
+  top: 120px;
   left: clamp(-260px, calc(24px - ((100vw - 1280px) / 2)), 24px);
 
   width: min(680px, 54vw);
