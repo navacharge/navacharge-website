@@ -482,7 +482,7 @@ export default function Home() {
 
 .focus-item.item-one {
   top: 140px;
-  left: -10px;
+  left: max(28px, calc((1280px - 100vw) / 2 + 28px));
 
   width: min(820px, 62vw);
   padding: 44px;
