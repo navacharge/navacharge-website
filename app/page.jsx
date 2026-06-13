@@ -481,13 +481,13 @@ export default function Home() {
           }
 
         .focus-item.item-one {
-  top: 250px;
+  top: 200px;
   left: 70px;
   animation: highlightOne 12s ease-in-out infinite;
 }
 
           .focus-item.item-two {
-            top: 380px;
+            top: 450px;
             left: 400px;
             animation: highlightTwo 12s ease-in-out infinite;
           }
