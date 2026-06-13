@@ -487,11 +487,12 @@ export default function Home() {
   width: min(820px, 62vw);
   padding: 44px;
 
-  border: 1px solid rgba(37,99,235,0.34);
+  outline: 1px solid rgba(37,99,235,0.42);
+  outline-offset: 0px;
+
   box-shadow:
     0 34px 86px rgba(15,23,42,0.14),
-    0 0 0 1px rgba(37,99,235,0.10),
-    0 0 34px rgba(37,99,235,0.12);
+    0 0 34px rgba(37,99,235,0.10);
 
   animation: highlightOne 12s ease-in-out infinite;
 }
