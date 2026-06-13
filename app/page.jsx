@@ -499,8 +499,8 @@ export default function Home() {
           }
 
           .focus-item.item-four {
-            top: 1100px;
-           left: 200px;
+            top: 1150px;
+           left: 400px;
             animation: highlightFour 12s ease-in-out infinite;
           }
 
