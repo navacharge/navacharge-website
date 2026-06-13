@@ -480,60 +480,10 @@ export default function Home() {
             transition: all 0.4s ease;
           }
 
-          .f.focus-item.item-one {
-  top: 170px;
+        .focus-item.item-one {
+  top: 250px;
   left: 70px;
-  width: min(520px, 40vw);
-  padding: 34px;
   animation: highlightOne 12s ease-in-out infinite;
-}
-.focus-item.item-one .item-number {
-  background: #2563eb;
-  color: #ffffff;
-  box-shadow: 0 14px 34px rgba(37,99,235,0.34);
-}
-.focus-item.item-one::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: -86px;
-  width: 86px;
-  height: 2px;
-  transform: translateY(-50%);
-  background: linear-gradient(
-    90deg,
-    rgba(37,99,235,0.20),
-    rgba(37,99,235,0.95)
-  );
-  box-shadow: 0 0 18px rgba(37,99,235,0.35);
-  border-radius: 999px;
-  opacity: 0.55;
-  animation: connectorOne 12s ease-in-out infinite;
-}
-
-.focus-item.item-one::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: -94px;
-  width: 10px;
-  height: 10px;
-  transform: translateY(-50%);
-  background: #2563eb;
-  border-radius: 50%;
-  box-shadow: 0 0 22px rgba(37,99,235,0.55);
-  opacity: 0.7;
-  animation: connectorOne 12s ease-in-out infinite;
-}
-
-@keyframes connectorOne {
-  0%, 12%, 28%, 100% {
-    opacity: 0.38;
-  }
-
-  16%, 23% {
-    opacity: 1;
-  }
 }
 
           .focus-item.item-two {
