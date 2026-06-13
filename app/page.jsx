@@ -481,7 +481,7 @@ export default function Home() {
           }
 
           .focus-item.item-one {
-            top: 170px;
+            top: 140px;
             left: 70px;
             animation: highlightOne 12s ease-in-out infinite;
           }
