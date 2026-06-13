@@ -493,7 +493,7 @@ export default function Home() {
           }
 
           .focus-item.item-three {
-            top: 800px;
+            top: 790px;
             left: 70px;
             animation: highlightThree 12s ease-in-out infinite;
           }
