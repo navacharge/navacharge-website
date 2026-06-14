@@ -462,14 +462,22 @@ export default function Home() {
           }
 
           .connector-one-line {
-            opacity: 0.34;
-            filter: drop-shadow(0 0 10px rgba(37,99,235,0.28));
+            opacity: 0.30;
+            filter: drop-shadow(0 0 10px rgba(37,99,235,0.26));
             animation: connectorOne 12s ease-in-out infinite;
           }
 
+          .connector-one-pulse {
+            opacity: 0;
+            stroke-dasharray: 42 180;
+            stroke-dashoffset: 0;
+            filter: drop-shadow(0 0 14px rgba(59,130,246,0.58));
+            animation: connectorPulseOne 12s ease-in-out infinite;
+          }
+
           .connector-one-dot {
-            opacity: 0.48;
-            stroke: rgba(255,255,255,0.88);
+            opacity: 0.46;
+            stroke: rgba(255,255,255,0.90);
             stroke-width: 2px;
             filter: drop-shadow(0 0 12px rgba(37,99,235,0.46));
             animation: connectorOne 12s ease-in-out infinite;
@@ -477,11 +485,33 @@ export default function Home() {
 
           @keyframes connectorOne {
             0%, 12%, 28%, 100% {
-              opacity: 0.34;
+              opacity: 0.30;
             }
 
             16%, 23% {
               opacity: 1;
+            }
+          }
+
+          @keyframes connectorPulseOne {
+            0%, 13%, 100% {
+              opacity: 0;
+              stroke-dashoffset: 80;
+            }
+
+            16% {
+              opacity: 0.95;
+              stroke-dashoffset: 80;
+            }
+
+            23% {
+              opacity: 0.95;
+              stroke-dashoffset: -150;
+            }
+
+            28% {
+              opacity: 0;
+              stroke-dashoffset: -150;
             }
           }
 
@@ -515,6 +545,7 @@ export default function Home() {
               0 0 24px rgba(37,99,235,0.08);
 
             animation: highlightOne 12s ease-in-out infinite;
+            overflow: hidden;
           }
 
           .focus-item.item-one h3 {
@@ -532,111 +563,93 @@ export default function Home() {
             box-shadow: 0 14px 34px rgba(37,99,235,0.34);
           }
 
-          .banner-car-track {
+          .diagnostic-scan {
             position: absolute;
-            top: -23px;
             left: 22px;
             right: 22px;
-            height: 34px;
-            pointer-events: none;
-            z-index: 12;
-          }
-
-          .banner-car-track::before {
-            display: none;
-          }
-
-          .tesla-car {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 76px;
-            height: 28px;
-            animation: driveBannerOne 18s ease-in-out infinite;
-            filter: drop-shadow(0 10px 12px rgba(15,23,42,0.24));
-          }
-
-          .tesla-car-body {
-            position: absolute;
-            left: 3px;
-            bottom: 6px;
-            width: 70px;
-            height: 17px;
-            border-radius: 24px 32px 14px 14px;
-            background: linear-gradient(180deg, #ffffff 0%, #dbeafe 52%, #cbd5e1 100%);
-            border: 1px solid rgba(15,23,42,0.20);
-            overflow: hidden;
-            box-shadow:
-              inset 0 1px 0 rgba(255,255,255,0.85),
-              0 0 14px rgba(37,99,235,0.16);
-          }
-
-          .tesla-car-body::before {
-            content: "";
-            position: absolute;
-            left: 23px;
-            top: 2px;
-            width: 30px;
-            height: 10px;
-            border-radius: 16px 18px 5px 5px;
-            background: linear-gradient(180deg, #bfdbfe 0%, #2563eb 100%);
-            opacity: 0.95;
-          }
-
-          .tesla-car-body::after {
-            content: "";
-            position: absolute;
-            right: 6px;
-            top: 7px;
-            width: 8px;
-            height: 4px;
+            top: 0;
+            height: 3px;
             border-radius: 999px;
-            background: #38bdf8;
-            box-shadow: 0 0 10px rgba(56,189,248,0.85);
+            overflow: hidden;
+            opacity: 0;
+            background: rgba(37,99,235,0.10);
+            animation: scanBaseOne 12s ease-in-out infinite;
           }
 
-          .tesla-wheel {
+          .diagnostic-scan::before {
+            content: "";
             position: absolute;
-            bottom: 2px;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: #0f172a;
-            border: 2px solid #64748b;
-            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.14);
+            top: 0;
+            left: -34%;
+            width: 34%;
+            height: 100%;
+            border-radius: 999px;
+            background: linear-gradient(
+              90deg,
+              transparent 0%,
+              rgba(147,197,253,0.55) 30%,
+              rgba(255,255,255,0.95) 52%,
+              rgba(37,99,235,0.72) 78%,
+              transparent 100%
+            );
+            box-shadow:
+              0 0 18px rgba(59,130,246,0.52),
+              0 0 32px rgba(37,99,235,0.25);
+            animation: scanMoveOne 12s ease-in-out infinite;
           }
 
-          .tesla-wheel.front {
-            right: 11px;
+          .focus-item.item-one::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 28px;
+            background:
+              linear-gradient(90deg, transparent, rgba(37,99,235,0.08), transparent),
+              radial-gradient(circle at 18% 0%, rgba(59,130,246,0.14), transparent 34%);
+            opacity: 0;
+            pointer-events: none;
+            animation: diagnosticGlowOne 12s ease-in-out infinite;
           }
 
-          .tesla-wheel.back {
-            left: 12px;
-          }
-
-          @keyframes driveBannerOne {
-            0%, 14% {
-              left: 0;
+          @keyframes scanBaseOne {
+            0%, 12%, 28%, 100% {
               opacity: 0;
-              transform: translateY(0);
             }
 
-            18% {
-              left: 0;
+            16%, 24% {
               opacity: 1;
-              transform: translateY(1px);
             }
+          }
 
-            42% {
-              left: calc(100% - 76px);
-              opacity: 1;
-              transform: translateY(1px);
-            }
-
-            48%, 100% {
-              left: calc(100% - 76px);
+          @keyframes scanMoveOne {
+            0%, 15% {
+              left: -34%;
               opacity: 0;
-              transform: translateY(0);
+            }
+
+            16% {
+              left: -34%;
+              opacity: 1;
+            }
+
+            24% {
+              left: 100%;
+              opacity: 1;
+            }
+
+            28%, 100% {
+              left: 100%;
+              opacity: 0;
+            }
+          }
+
+          @keyframes diagnosticGlowOne {
+            0%, 12%, 28%, 100% {
+              opacity: 0;
+            }
+
+            16%, 23% {
+              opacity: 1;
             }
           }
 
@@ -663,8 +676,8 @@ export default function Home() {
               transform: translateY(0);
               border-color: rgba(15,23,42,0.08);
               box-shadow:
-                0 30px 76px rgba(15,23,42,0.13),
-                0 0 28px rgba(37,99,235,0.09);
+                0 26px 66px rgba(15,23,42,0.12),
+                0 0 24px rgba(37,99,235,0.08);
             }
 
             16%, 23% {
@@ -744,6 +757,8 @@ export default function Home() {
             font-size: 14px;
             margin-bottom: 18px;
             box-shadow: 0 14px 30px rgba(7,27,51,0.18);
+            position: relative;
+            z-index: 2;
           }
 
           .focus-item h3 {
@@ -751,6 +766,8 @@ export default function Home() {
             color: #071b33;
             font-size: 28px;
             letter-spacing: -0.8px;
+            position: relative;
+            z-index: 2;
           }
 
           .focus-item p {
@@ -758,6 +775,8 @@ export default function Home() {
             color: #4b5563;
             line-height: 1.75;
             font-size: 16px;
+            position: relative;
+            z-index: 2;
           }
 
           .charger-wrap {
@@ -1064,10 +1083,6 @@ export default function Home() {
               animation: none !important;
             }
 
-            .banner-car-track {
-              display: none;
-            }
-
             .charger-wrap {
               position: relative;
               left: auto;
@@ -1205,6 +1220,17 @@ export default function Home() {
               strokeLinecap="round"
             />
 
+            <line
+              className="connector-one-pulse"
+              x1="488"
+              y1="528"
+              x2="314"
+              y2="454"
+              stroke="#ffffff"
+              strokeWidth="4"
+              strokeLinecap="round"
+            />
+
             <circle
               className="connector-one-dot"
               cx="488"
@@ -1251,13 +1277,7 @@ export default function Home() {
           {focusItems.map((item) => (
             <article key={item.title} className={`focus-item ${item.className}`}>
               {item.className === "item-one" && (
-                <div className="banner-car-track" aria-hidden="true">
-                  <div className="tesla-car">
-                    <div className="tesla-car-body" />
-                    <div className="tesla-wheel back" />
-                    <div className="tesla-wheel front" />
-                  </div>
-                </div>
+                <div className="diagnostic-scan" aria-hidden="true" />
               )}
 
               <div className="item-number">{item.number}</div>
