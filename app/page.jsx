@@ -538,6 +538,148 @@ export default function Home() {
             z-index: 2;
           }
 
+          .item-symbol {
+            position: absolute;
+            top: 28px;
+            right: 30px;
+            width: 78px;
+            height: 56px;
+            border-radius: 22px;
+            background:
+              linear-gradient(180deg, rgba(255,255,255,0.52), rgba(255,255,255,0.16)),
+              radial-gradient(circle at 50% 0%, rgba(37,99,235,0.24), transparent 68%);
+            border: 1px solid rgba(37,99,235,0.14);
+            box-shadow:
+              inset 0 1px 0 rgba(255,255,255,0.55),
+              0 16px 34px rgba(37,99,235,0.08);
+            opacity: 0.46;
+            z-index: 1;
+            pointer-events: none;
+          }
+
+          .item-symbol span {
+            position: absolute;
+            display: block;
+            border-radius: 999px;
+            background: rgba(37,99,235,0.46);
+            box-shadow: 0 0 12px rgba(37,99,235,0.20);
+          }
+
+          .item-one .item-symbol {
+            animation: symbolOne 12s ease-in-out infinite;
+          }
+
+          .item-one .item-symbol span:nth-child(1) {
+            left: 17px;
+            top: 16px;
+            width: 44px;
+            height: 3px;
+          }
+
+          .item-one .item-symbol span:nth-child(2) {
+            left: 12px;
+            top: 27px;
+            width: 54px;
+            height: 3px;
+          }
+
+          .item-one .item-symbol span:nth-child(3) {
+            left: 24px;
+            top: 38px;
+            width: 30px;
+            height: 3px;
+          }
+
+          .item-two .item-symbol {
+            animation: symbolTwo 12s ease-in-out infinite;
+          }
+
+          .item-two .item-symbol span {
+            display: none;
+          }
+
+          .item-two .item-symbol::before {
+            content: "";
+            position: absolute;
+            left: 24px;
+            top: 15px;
+            width: 25px;
+            height: 13px;
+            border-left: 4px solid rgba(37,99,235,0.68);
+            border-bottom: 4px solid rgba(37,99,235,0.68);
+            transform: rotate(-45deg);
+            border-radius: 2px;
+            filter: drop-shadow(0 0 10px rgba(37,99,235,0.22));
+          }
+
+          .item-two .item-symbol::after {
+            content: "";
+            position: absolute;
+            left: 16px;
+            right: 16px;
+            bottom: 12px;
+            height: 3px;
+            border-radius: 999px;
+            background: rgba(37,99,235,0.28);
+          }
+
+          .item-three .item-symbol {
+            animation: symbolThree 12s ease-in-out infinite;
+          }
+
+          .item-three .item-symbol span:nth-child(1) {
+            left: 13px;
+            top: 16px;
+            width: 52px;
+            height: 3px;
+            transform: rotate(-8deg);
+          }
+
+          .item-three .item-symbol span:nth-child(2) {
+            left: 13px;
+            top: 27px;
+            width: 52px;
+            height: 3px;
+            transform: rotate(8deg);
+          }
+
+          .item-three .item-symbol span:nth-child(3) {
+            left: 32px;
+            top: 20px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: rgba(37,99,235,0.38);
+            box-shadow:
+              0 0 0 5px rgba(37,99,235,0.08),
+              0 0 16px rgba(37,99,235,0.22);
+          }
+
+          .item-four .item-symbol {
+            animation: symbolFour 12s ease-in-out infinite;
+          }
+
+          .item-four .item-symbol span:nth-child(1) {
+            left: 19px;
+            bottom: 14px;
+            width: 8px;
+            height: 16px;
+          }
+
+          .item-four .item-symbol span:nth-child(2) {
+            left: 35px;
+            bottom: 14px;
+            width: 8px;
+            height: 27px;
+          }
+
+          .item-four .item-symbol span:nth-child(3) {
+            left: 51px;
+            bottom: 14px;
+            width: 8px;
+            height: 36px;
+          }
+
           .diagnostic-scan {
             position: absolute;
             left: 22px;
@@ -773,6 +915,66 @@ export default function Home() {
           @keyframes diagnosticGlowFour {
             0%, 76%, 92%, 100% { opacity: 0; }
             80%, 88% { opacity: 1; }
+          }
+
+          @keyframes symbolOne {
+            0%, 12%, 28%, 100% {
+              opacity: 0.42;
+              transform: translateY(0) scale(1);
+            }
+
+            16%, 23% {
+              opacity: 0.95;
+              transform: translateY(-2px) scale(1.03);
+              box-shadow:
+                inset 0 1px 0 rgba(255,255,255,0.60),
+                0 18px 40px rgba(37,99,235,0.18);
+            }
+          }
+
+          @keyframes symbolTwo {
+            0%, 34%, 50%, 100% {
+              opacity: 0.42;
+              transform: translateY(0) scale(1);
+            }
+
+            38%, 46% {
+              opacity: 0.95;
+              transform: translateY(-2px) scale(1.03);
+              box-shadow:
+                inset 0 1px 0 rgba(255,255,255,0.60),
+                0 18px 40px rgba(37,99,235,0.18);
+            }
+          }
+
+          @keyframes symbolThree {
+            0%, 56%, 72%, 100% {
+              opacity: 0.42;
+              transform: translateY(0) scale(1);
+            }
+
+            60%, 68% {
+              opacity: 0.95;
+              transform: translateY(-2px) scale(1.03);
+              box-shadow:
+                inset 0 1px 0 rgba(255,255,255,0.60),
+                0 18px 40px rgba(37,99,235,0.18);
+            }
+          }
+
+          @keyframes symbolFour {
+            0%, 76%, 92%, 100% {
+              opacity: 0.42;
+              transform: translateY(0) scale(1);
+            }
+
+            80%, 88% {
+              opacity: 0.95;
+              transform: translateY(-2px) scale(1.03);
+              box-shadow:
+                inset 0 1px 0 rgba(255,255,255,0.60),
+                0 18px 40px rgba(37,99,235,0.18);
+            }
           }
 
           .charger-wrap {
@@ -1079,6 +1281,10 @@ export default function Home() {
               animation: none !important;
             }
 
+            .item-symbol {
+              display: none;
+            }
+
             .charger-wrap {
               position: relative;
               left: auto;
@@ -1235,6 +1441,12 @@ export default function Home() {
           {focusItems.map((item) => (
             <article key={item.title} className={`focus-item ${item.className}`}>
               <div className="diagnostic-scan" aria-hidden="true" />
+
+              <div className="item-symbol" aria-hidden="true">
+                <span />
+                <span />
+                <span />
+              </div>
 
               <div className="item-number">{item.number}</div>
               <h3>{item.title}</h3>
