@@ -462,20 +462,22 @@ export default function Home() {
           }
 
           .connector-one-line {
-            opacity: 0.32;
-            filter: drop-shadow(0 0 10px rgba(37,99,235,0.30));
+            opacity: 0.34;
+            filter: drop-shadow(0 0 10px rgba(37,99,235,0.28));
             animation: connectorOne 12s ease-in-out infinite;
           }
 
           .connector-one-dot {
-            opacity: 0.42;
-            filter: drop-shadow(0 0 12px rgba(37,99,235,0.45));
+            opacity: 0.48;
+            stroke: rgba(255,255,255,0.88);
+            stroke-width: 2px;
+            filter: drop-shadow(0 0 12px rgba(37,99,235,0.46));
             animation: connectorOne 12s ease-in-out infinite;
           }
 
           @keyframes connectorOne {
             0%, 12%, 28%, 100% {
-              opacity: 0.32;
+              opacity: 0.34;
             }
 
             16%, 23% {
@@ -532,116 +534,107 @@ export default function Home() {
 
           .banner-car-track {
             position: absolute;
-            top: -32px;
-            left: 28px;
-            right: 28px;
-            height: 28px;
+            top: -23px;
+            left: 22px;
+            right: 22px;
+            height: 34px;
             pointer-events: none;
-            z-index: 8;
+            z-index: 12;
           }
 
           .banner-car-track::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 8px;
-            height: 2px;
-            border-radius: 999px;
-            background: linear-gradient(
-              90deg,
-              rgba(37,99,235,0.12),
-              rgba(37,99,235,0.42),
-              rgba(37,99,235,0.12)
-            );
-            box-shadow: 0 0 14px rgba(37,99,235,0.16);
+            display: none;
           }
 
           .tesla-car {
             position: absolute;
             left: 0;
-            bottom: 5px;
-            width: 58px;
-            height: 20px;
-            animation: driveBannerOne 12s ease-in-out infinite;
-            filter: drop-shadow(0 8px 10px rgba(15,23,42,0.20));
+            bottom: 0;
+            width: 76px;
+            height: 28px;
+            animation: driveBannerOne 18s ease-in-out infinite;
+            filter: drop-shadow(0 10px 12px rgba(15,23,42,0.24));
           }
 
           .tesla-car-body {
             position: absolute;
-            left: 2px;
-            bottom: 3px;
-            width: 54px;
-            height: 13px;
-            border-radius: 18px 24px 12px 12px;
-            background: linear-gradient(180deg, #f8fafc 0%, #cbd5e1 100%);
-            border: 1px solid rgba(15,23,42,0.18);
+            left: 3px;
+            bottom: 6px;
+            width: 70px;
+            height: 17px;
+            border-radius: 24px 32px 14px 14px;
+            background: linear-gradient(180deg, #ffffff 0%, #dbeafe 52%, #cbd5e1 100%);
+            border: 1px solid rgba(15,23,42,0.20);
             overflow: hidden;
+            box-shadow:
+              inset 0 1px 0 rgba(255,255,255,0.85),
+              0 0 14px rgba(37,99,235,0.16);
           }
 
           .tesla-car-body::before {
             content: "";
             position: absolute;
-            left: 17px;
-            top: 1px;
-            width: 24px;
-            height: 8px;
-            border-radius: 12px 14px 4px 4px;
-            background: linear-gradient(180deg, #93c5fd 0%, #1e3a8a 100%);
+            left: 23px;
+            top: 2px;
+            width: 30px;
+            height: 10px;
+            border-radius: 16px 18px 5px 5px;
+            background: linear-gradient(180deg, #bfdbfe 0%, #2563eb 100%);
             opacity: 0.95;
           }
 
           .tesla-car-body::after {
             content: "";
             position: absolute;
-            right: 5px;
-            top: 5px;
-            width: 6px;
-            height: 3px;
+            right: 6px;
+            top: 7px;
+            width: 8px;
+            height: 4px;
             border-radius: 999px;
             background: #38bdf8;
-            box-shadow: 0 0 8px rgba(56,189,248,0.75);
+            box-shadow: 0 0 10px rgba(56,189,248,0.85);
           }
 
           .tesla-wheel {
             position: absolute;
-            bottom: 0;
-            width: 8px;
-            height: 8px;
+            bottom: 2px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
             background: #0f172a;
             border: 2px solid #64748b;
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.14);
           }
 
           .tesla-wheel.front {
-            right: 8px;
+            right: 11px;
           }
 
           .tesla-wheel.back {
-            left: 9px;
+            left: 12px;
           }
 
           @keyframes driveBannerOne {
-            0%, 12% {
+            0%, 14% {
               left: 0;
               opacity: 0;
               transform: translateY(0);
             }
 
-            16% {
+            18% {
               left: 0;
               opacity: 1;
-              transform: translateY(-1px);
+              transform: translateY(1px);
             }
 
-            28% {
-              left: calc(100% - 58px);
+            42% {
+              left: calc(100% - 76px);
               opacity: 1;
-              transform: translateY(-1px);
+              transform: translateY(1px);
             }
 
-            34%, 100% {
-              left: calc(100% - 58px);
+            48%, 100% {
+              left: calc(100% - 76px);
               opacity: 0;
               transform: translateY(0);
             }
@@ -1203,10 +1196,10 @@ export default function Home() {
 
             <line
               className="connector-one-line"
-              x1="500"
-              y1="540"
-              x2="300"
-              y2="455"
+              x1="488"
+              y1="528"
+              x2="314"
+              y2="454"
               stroke="#2563eb"
               strokeWidth="3"
               strokeLinecap="round"
@@ -1214,17 +1207,17 @@ export default function Home() {
 
             <circle
               className="connector-one-dot"
-              cx="500"
-              cy="540"
-              r="7"
+              cx="488"
+              cy="528"
+              r="6"
               fill="#2563eb"
             />
 
             <circle
               className="connector-one-dot"
-              cx="300"
-              cy="455"
-              r="7"
+              cx="314"
+              cy="454"
+              r="6"
               fill="#2563eb"
             />
 
