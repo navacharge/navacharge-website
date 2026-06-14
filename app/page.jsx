@@ -503,30 +503,30 @@ export default function Home() {
           }
 
           .focus-item.item-one {
-            top: 80px;
-            left: clamp(-260px, calc(24px - ((100vw - 1280px) / 2)), 24px);
+  top: 80px;
+  left: clamp(-220px, calc(24px - ((100vw - 1280px) / 2)), 24px);
 
-            width: min(680px, 54vw);
-            padding: 38px;
+  width: min(580px, 46vw);
+  padding: 32px;
 
-            outline: 1px solid rgba(37,99,235,0.42);
-            outline-offset: 0px;
+  outline: 1px solid rgba(37,99,235,0.42);
+  outline-offset: 0px;
 
-            box-shadow:
-              0 30px 76px rgba(15,23,42,0.13),
-              0 0 28px rgba(37,99,235,0.09);
+  box-shadow:
+    0 26px 66px rgba(15,23,42,0.12),
+    0 0 24px rgba(37,99,235,0.08);
 
-            animation: highlightOne 12s ease-in-out infinite;
-          }
+  animation: highlightOne 12s ease-in-out infinite;
+}
 
-          .focus-item.item-one h3 {
-            font-size: 31px;
-          }
+.focus-item.item-one h3 {
+  font-size: 28px;
+}
 
-          .focus-item.item-one p {
-            font-size: 17px;
-            line-height: 1.75;
-          }
+.focus-item.item-one p {
+  font-size: 16px;
+  line-height: 1.72;
+}
 
           .focus-item.item-one .item-number {
             background: #2563eb;
