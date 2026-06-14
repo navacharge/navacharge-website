@@ -465,16 +465,16 @@ export default function Home() {
             position: absolute;
             z-index: 6;
             width: min(580px, 46vw);
-            background: rgba(255,255,255,0.80);
+            background: rgba(255,255,255,0.84);
             border: 1px solid rgba(15,23,42,0.08);
             border-radius: 28px;
             padding: 32px;
             box-shadow:
-              0 26px 66px rgba(15,23,42,0.12),
-              0 0 24px rgba(37,99,235,0.08);
+              0 24px 58px rgba(15,23,42,0.10),
+              0 2px 10px rgba(15,23,42,0.04);
             backdrop-filter: blur(12px);
             transition: all 0.4s ease;
-            outline: 1px solid rgba(37,99,235,0.42);
+            outline: 1px solid rgba(15,23,42,0.06);
             outline-offset: 0px;
             overflow: hidden;
           }
@@ -528,14 +528,15 @@ export default function Home() {
             width: 46px;
             height: 46px;
             border-radius: 50%;
-            background: #2563eb;
-            color: #ffffff;
+            background: #071b33;
+            color: #dbeafe;
             font-weight: 900;
             font-size: 14px;
             margin-bottom: 18px;
-            box-shadow: 0 14px 34px rgba(37,99,235,0.34);
+            box-shadow: 0 14px 30px rgba(7,27,51,0.16);
             position: relative;
             z-index: 2;
+            transition: all 0.4s ease;
           }
 
           .item-symbol {
@@ -546,13 +547,13 @@ export default function Home() {
             height: 56px;
             border-radius: 22px;
             background:
-              linear-gradient(180deg, rgba(255,255,255,0.52), rgba(255,255,255,0.16)),
-              radial-gradient(circle at 50% 0%, rgba(37,99,235,0.24), transparent 68%);
-            border: 1px solid rgba(37,99,235,0.14);
+              linear-gradient(180deg, rgba(255,255,255,0.48), rgba(255,255,255,0.14)),
+              radial-gradient(circle at 50% 0%, rgba(15,23,42,0.10), transparent 68%);
+            border: 1px solid rgba(15,23,42,0.08);
             box-shadow:
               inset 0 1px 0 rgba(255,255,255,0.55),
-              0 16px 34px rgba(37,99,235,0.08);
-            opacity: 0.46;
+              0 14px 30px rgba(15,23,42,0.05);
+            opacity: 0.34;
             z-index: 1;
             pointer-events: none;
           }
@@ -561,8 +562,8 @@ export default function Home() {
             position: absolute;
             display: block;
             border-radius: 999px;
-            background: rgba(37,99,235,0.46);
-            box-shadow: 0 0 12px rgba(37,99,235,0.20);
+            background: rgba(15,23,42,0.34);
+            box-shadow: none;
           }
 
           .item-one .item-symbol {
@@ -605,11 +606,10 @@ export default function Home() {
             top: 15px;
             width: 25px;
             height: 13px;
-            border-left: 4px solid rgba(37,99,235,0.68);
-            border-bottom: 4px solid rgba(37,99,235,0.68);
+            border-left: 4px solid rgba(15,23,42,0.38);
+            border-bottom: 4px solid rgba(15,23,42,0.38);
             transform: rotate(-45deg);
             border-radius: 2px;
-            filter: drop-shadow(0 0 10px rgba(37,99,235,0.22));
           }
 
           .item-two .item-symbol::after {
@@ -620,7 +620,7 @@ export default function Home() {
             bottom: 12px;
             height: 3px;
             border-radius: 999px;
-            background: rgba(37,99,235,0.28);
+            background: rgba(15,23,42,0.22);
           }
 
           .item-three .item-symbol {
@@ -649,10 +649,8 @@ export default function Home() {
             width: 14px;
             height: 14px;
             border-radius: 50%;
-            background: rgba(37,99,235,0.38);
-            box-shadow:
-              0 0 0 5px rgba(37,99,235,0.08),
-              0 0 16px rgba(37,99,235,0.22);
+            background: rgba(15,23,42,0.26);
+            box-shadow: 0 0 0 5px rgba(15,23,42,0.05);
           }
 
           .item-four .item-symbol {
@@ -777,18 +775,19 @@ export default function Home() {
             0%, 12%, 28%, 100% {
               transform: translateY(0);
               border-color: rgba(15,23,42,0.08);
+              outline-color: rgba(15,23,42,0.06);
               box-shadow:
-                0 26px 66px rgba(15,23,42,0.12),
-                0 0 24px rgba(37,99,235,0.08);
+                0 24px 58px rgba(15,23,42,0.10),
+                0 2px 10px rgba(15,23,42,0.04);
             }
 
             16%, 23% {
               transform: translateY(-6px);
-              border-color: rgba(37,99,235,0.52);
+              border-color: rgba(37,99,235,0.34);
+              outline-color: rgba(37,99,235,0.20);
               box-shadow:
-                0 34px 88px rgba(37,99,235,0.20),
-                0 0 0 1px rgba(37,99,235,0.22),
-                0 0 36px rgba(37,99,235,0.16);
+                0 34px 82px rgba(15,23,42,0.14),
+                0 0 32px rgba(37,99,235,0.12);
             }
           }
 
@@ -796,18 +795,19 @@ export default function Home() {
             0%, 34%, 50%, 100% {
               transform: translateY(0);
               border-color: rgba(15,23,42,0.08);
+              outline-color: rgba(15,23,42,0.06);
               box-shadow:
-                0 26px 66px rgba(15,23,42,0.12),
-                0 0 24px rgba(37,99,235,0.08);
+                0 24px 58px rgba(15,23,42,0.10),
+                0 2px 10px rgba(15,23,42,0.04);
             }
 
             38%, 46% {
               transform: translateY(-6px);
-              border-color: rgba(37,99,235,0.52);
+              border-color: rgba(37,99,235,0.34);
+              outline-color: rgba(37,99,235,0.20);
               box-shadow:
-                0 34px 88px rgba(37,99,235,0.20),
-                0 0 0 1px rgba(37,99,235,0.22),
-                0 0 36px rgba(37,99,235,0.16);
+                0 34px 82px rgba(15,23,42,0.14),
+                0 0 32px rgba(37,99,235,0.12);
             }
           }
 
@@ -815,18 +815,19 @@ export default function Home() {
             0%, 56%, 72%, 100% {
               transform: translateY(0);
               border-color: rgba(15,23,42,0.08);
+              outline-color: rgba(15,23,42,0.06);
               box-shadow:
-                0 26px 66px rgba(15,23,42,0.12),
-                0 0 24px rgba(37,99,235,0.08);
+                0 24px 58px rgba(15,23,42,0.10),
+                0 2px 10px rgba(15,23,42,0.04);
             }
 
             60%, 68% {
               transform: translateY(-6px);
-              border-color: rgba(37,99,235,0.52);
+              border-color: rgba(37,99,235,0.34);
+              outline-color: rgba(37,99,235,0.20);
               box-shadow:
-                0 34px 88px rgba(37,99,235,0.20),
-                0 0 0 1px rgba(37,99,235,0.22),
-                0 0 36px rgba(37,99,235,0.16);
+                0 34px 82px rgba(15,23,42,0.14),
+                0 0 32px rgba(37,99,235,0.12);
             }
           }
 
@@ -834,18 +835,19 @@ export default function Home() {
             0%, 76%, 92%, 100% {
               transform: translateY(0);
               border-color: rgba(15,23,42,0.08);
+              outline-color: rgba(15,23,42,0.06);
               box-shadow:
-                0 26px 66px rgba(15,23,42,0.12),
-                0 0 24px rgba(37,99,235,0.08);
+                0 24px 58px rgba(15,23,42,0.10),
+                0 2px 10px rgba(15,23,42,0.04);
             }
 
             80%, 88% {
               transform: translateY(-6px);
-              border-color: rgba(37,99,235,0.52);
+              border-color: rgba(37,99,235,0.34);
+              outline-color: rgba(37,99,235,0.20);
               box-shadow:
-                0 34px 88px rgba(37,99,235,0.20),
-                0 0 0 1px rgba(37,99,235,0.22),
-                0 0 36px rgba(37,99,235,0.16);
+                0 34px 82px rgba(15,23,42,0.14),
+                0 0 32px rgba(37,99,235,0.12);
             }
           }
 
@@ -919,61 +921,65 @@ export default function Home() {
 
           @keyframes symbolOne {
             0%, 12%, 28%, 100% {
-              opacity: 0.42;
+              opacity: 0.34;
               transform: translateY(0) scale(1);
             }
 
             16%, 23% {
-              opacity: 0.95;
+              opacity: 0.78;
               transform: translateY(-2px) scale(1.03);
+              border-color: rgba(37,99,235,0.18);
               box-shadow:
                 inset 0 1px 0 rgba(255,255,255,0.60),
-                0 18px 40px rgba(37,99,235,0.18);
+                0 18px 38px rgba(37,99,235,0.10);
             }
           }
 
           @keyframes symbolTwo {
             0%, 34%, 50%, 100% {
-              opacity: 0.42;
+              opacity: 0.34;
               transform: translateY(0) scale(1);
             }
 
             38%, 46% {
-              opacity: 0.95;
+              opacity: 0.78;
               transform: translateY(-2px) scale(1.03);
+              border-color: rgba(37,99,235,0.18);
               box-shadow:
                 inset 0 1px 0 rgba(255,255,255,0.60),
-                0 18px 40px rgba(37,99,235,0.18);
+                0 18px 38px rgba(37,99,235,0.10);
             }
           }
 
           @keyframes symbolThree {
             0%, 56%, 72%, 100% {
-              opacity: 0.42;
+              opacity: 0.34;
               transform: translateY(0) scale(1);
             }
 
             60%, 68% {
-              opacity: 0.95;
+              opacity: 0.78;
               transform: translateY(-2px) scale(1.03);
+              border-color: rgba(37,99,235,0.18);
               box-shadow:
                 inset 0 1px 0 rgba(255,255,255,0.60),
-                0 18px 40px rgba(37,99,235,0.18);
+                0 18px 38px rgba(37,99,235,0.10);
             }
           }
 
           @keyframes symbolFour {
             0%, 76%, 92%, 100% {
-              opacity: 0.42;
+              opacity: 0.34;
               transform: translateY(0) scale(1);
             }
 
             80%, 88% {
-              opacity: 0.95;
+              opacity: 0.78;
               transform: translateY(-2px) scale(1.03);
+              border-color: rgba(37,99,235,0.18);
               box-shadow:
                 inset 0 1px 0 rgba(255,255,255,0.60),
-                0 18px 40px rgba(37,99,235,0.18);
+                0 18px 38px rgba(37,99,235,0.10);
             }
           }
 
