@@ -461,106 +461,81 @@ export default function Home() {
             filter: drop-shadow(0 26px 34px rgba(37,99,235,0.20));
           }
 
-          .connector-one-line {
-            opacity: 0.30;
-            filter: drop-shadow(0 0 10px rgba(37,99,235,0.26));
-            animation: connectorOne 12s ease-in-out infinite;
-          }
-
-          .connector-one-pulse {
-            opacity: 0;
-            stroke-dasharray: 42 180;
-            stroke-dashoffset: 0;
-            filter: drop-shadow(0 0 14px rgba(59,130,246,0.58));
-            animation: connectorPulseOne 12s ease-in-out infinite;
-          }
-
-          .connector-one-dot {
-            opacity: 0.46;
-            stroke: rgba(255,255,255,0.90);
-            stroke-width: 2px;
-            filter: drop-shadow(0 0 12px rgba(37,99,235,0.46));
-            animation: connectorOne 12s ease-in-out infinite;
-          }
-
-          @keyframes connectorOne {
-            0%, 12%, 28%, 100% {
-              opacity: 0.30;
-            }
-
-            16%, 23% {
-              opacity: 1;
-            }
-          }
-
-          @keyframes connectorPulseOne {
-            0%, 13%, 100% {
-              opacity: 0;
-              stroke-dashoffset: 80;
-            }
-
-            16% {
-              opacity: 0.95;
-              stroke-dashoffset: 80;
-            }
-
-            23% {
-              opacity: 0.95;
-              stroke-dashoffset: -150;
-            }
-
-            28% {
-              opacity: 0;
-              stroke-dashoffset: -150;
-            }
-          }
-
           .focus-item {
             position: absolute;
             z-index: 6;
-            width: min(410px, 34vw);
+            width: min(580px, 46vw);
             background: rgba(255,255,255,0.80);
             border: 1px solid rgba(15,23,42,0.08);
             border-radius: 28px;
-            padding: 28px;
+            padding: 32px;
             box-shadow:
-              0 24px 60px rgba(15,23,42,0.10),
-              0 2px 10px rgba(15,23,42,0.04);
+              0 26px 66px rgba(15,23,42,0.12),
+              0 0 24px rgba(37,99,235,0.08);
             backdrop-filter: blur(12px);
             transition: all 0.4s ease;
+            outline: 1px solid rgba(37,99,235,0.42);
+            outline-offset: 0px;
+            overflow: hidden;
           }
 
           .focus-item.item-one {
             top: 80px;
             left: clamp(-220px, calc(24px - ((100vw - 1280px) / 2)), 24px);
-
-            width: min(580px, 46vw);
-            padding: 32px;
-
-            outline: 1px solid rgba(37,99,235,0.42);
-            outline-offset: 0px;
-
-            box-shadow:
-              0 26px 66px rgba(15,23,42,0.12),
-              0 0 24px rgba(37,99,235,0.08);
-
             animation: highlightOne 12s ease-in-out infinite;
-            overflow: hidden;
           }
 
-          .focus-item.item-one h3 {
+          .focus-item.item-two {
+            top: 450px;
+            left: 400px;
+            animation: highlightTwo 12s ease-in-out infinite;
+          }
+
+          .focus-item.item-three {
+            top: 790px;
+            left: 70px;
+            animation: highlightThree 12s ease-in-out infinite;
+          }
+
+          .focus-item.item-four {
+            top: 1130px;
+            left: 400px;
+            animation: highlightFour 12s ease-in-out infinite;
+          }
+
+          .focus-item h3 {
+            margin: 0 0 14px;
+            color: #071b33;
             font-size: 28px;
+            letter-spacing: -0.8px;
+            position: relative;
+            z-index: 2;
           }
 
-          .focus-item.item-one p {
-            font-size: 16px;
+          .focus-item p {
+            margin: 0;
+            color: #4b5563;
             line-height: 1.72;
+            font-size: 16px;
+            position: relative;
+            z-index: 2;
           }
 
-          .focus-item.item-one .item-number {
+          .item-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
             background: #2563eb;
             color: #ffffff;
+            font-weight: 900;
+            font-size: 14px;
+            margin-bottom: 18px;
             box-shadow: 0 14px 34px rgba(37,99,235,0.34);
+            position: relative;
+            z-index: 2;
           }
 
           .diagnostic-scan {
@@ -573,7 +548,6 @@ export default function Home() {
             overflow: hidden;
             opacity: 0;
             background: rgba(37,99,235,0.10);
-            animation: scanBaseOne 12s ease-in-out infinite;
           }
 
           .diagnostic-scan::before {
@@ -595,10 +569,9 @@ export default function Home() {
             box-shadow:
               0 0 18px rgba(59,130,246,0.52),
               0 0 32px rgba(37,99,235,0.25);
-            animation: scanMoveOne 12s ease-in-out infinite;
           }
 
-          .focus-item.item-one::before {
+          .focus-item::before {
             content: "";
             position: absolute;
             inset: 0;
@@ -608,67 +581,54 @@ export default function Home() {
               radial-gradient(circle at 18% 0%, rgba(59,130,246,0.14), transparent 34%);
             opacity: 0;
             pointer-events: none;
+          }
+
+          .item-one::before {
             animation: diagnosticGlowOne 12s ease-in-out infinite;
           }
 
-          @keyframes scanBaseOne {
-            0%, 12%, 28%, 100% {
-              opacity: 0;
-            }
-
-            16%, 24% {
-              opacity: 1;
-            }
+          .item-two::before {
+            animation: diagnosticGlowTwo 12s ease-in-out infinite;
           }
 
-          @keyframes scanMoveOne {
-            0%, 15% {
-              left: -34%;
-              opacity: 0;
-            }
-
-            16% {
-              left: -34%;
-              opacity: 1;
-            }
-
-            24% {
-              left: 100%;
-              opacity: 1;
-            }
-
-            28%, 100% {
-              left: 100%;
-              opacity: 0;
-            }
+          .item-three::before {
+            animation: diagnosticGlowThree 12s ease-in-out infinite;
           }
 
-          @keyframes diagnosticGlowOne {
-            0%, 12%, 28%, 100% {
-              opacity: 0;
-            }
-
-            16%, 23% {
-              opacity: 1;
-            }
+          .item-four::before {
+            animation: diagnosticGlowFour 12s ease-in-out infinite;
           }
 
-          .focus-item.item-two {
-            top: 450px;
-            left: 400px;
-            animation: highlightTwo 12s ease-in-out infinite;
+          .item-one .diagnostic-scan {
+            animation: scanBaseOne 12s ease-in-out infinite;
           }
 
-          .focus-item.item-three {
-            top: 790px;
-            left: 70px;
-            animation: highlightThree 12s ease-in-out infinite;
+          .item-two .diagnostic-scan {
+            animation: scanBaseTwo 12s ease-in-out infinite;
           }
 
-          .focus-item.item-four {
-            top: 1130px;
-            left: 400px;
-            animation: highlightFour 12s ease-in-out infinite;
+          .item-three .diagnostic-scan {
+            animation: scanBaseThree 12s ease-in-out infinite;
+          }
+
+          .item-four .diagnostic-scan {
+            animation: scanBaseFour 12s ease-in-out infinite;
+          }
+
+          .item-one .diagnostic-scan::before {
+            animation: scanMoveOne 12s ease-in-out infinite;
+          }
+
+          .item-two .diagnostic-scan::before {
+            animation: scanMoveTwo 12s ease-in-out infinite;
+          }
+
+          .item-three .diagnostic-scan::before {
+            animation: scanMoveThree 12s ease-in-out infinite;
+          }
+
+          .item-four .diagnostic-scan::before {
+            animation: scanMoveFour 12s ease-in-out infinite;
           }
 
           @keyframes highlightOne {
@@ -695,16 +655,17 @@ export default function Home() {
               transform: translateY(0);
               border-color: rgba(15,23,42,0.08);
               box-shadow:
-                0 24px 60px rgba(15,23,42,0.10),
-                0 2px 10px rgba(15,23,42,0.04);
+                0 26px 66px rgba(15,23,42,0.12),
+                0 0 24px rgba(37,99,235,0.08);
             }
 
             38%, 46% {
               transform: translateY(-6px);
               border-color: rgba(37,99,235,0.52);
               box-shadow:
-                0 30px 74px rgba(37,99,235,0.18),
-                0 0 0 1px rgba(37,99,235,0.22);
+                0 34px 88px rgba(37,99,235,0.20),
+                0 0 0 1px rgba(37,99,235,0.22),
+                0 0 36px rgba(37,99,235,0.16);
             }
           }
 
@@ -713,16 +674,17 @@ export default function Home() {
               transform: translateY(0);
               border-color: rgba(15,23,42,0.08);
               box-shadow:
-                0 24px 60px rgba(15,23,42,0.10),
-                0 2px 10px rgba(15,23,42,0.04);
+                0 26px 66px rgba(15,23,42,0.12),
+                0 0 24px rgba(37,99,235,0.08);
             }
 
             60%, 68% {
               transform: translateY(-6px);
               border-color: rgba(37,99,235,0.52);
               box-shadow:
-                0 30px 74px rgba(37,99,235,0.18),
-                0 0 0 1px rgba(37,99,235,0.22);
+                0 34px 88px rgba(37,99,235,0.20),
+                0 0 0 1px rgba(37,99,235,0.22),
+                0 0 36px rgba(37,99,235,0.16);
             }
           }
 
@@ -731,52 +693,86 @@ export default function Home() {
               transform: translateY(0);
               border-color: rgba(15,23,42,0.08);
               box-shadow:
-                0 24px 60px rgba(15,23,42,0.10),
-                0 2px 10px rgba(15,23,42,0.04);
+                0 26px 66px rgba(15,23,42,0.12),
+                0 0 24px rgba(37,99,235,0.08);
             }
 
             80%, 88% {
               transform: translateY(-6px);
               border-color: rgba(37,99,235,0.52);
               box-shadow:
-                0 30px 74px rgba(37,99,235,0.18),
-                0 0 0 1px rgba(37,99,235,0.22);
+                0 34px 88px rgba(37,99,235,0.20),
+                0 0 0 1px rgba(37,99,235,0.22),
+                0 0 36px rgba(37,99,235,0.16);
             }
           }
 
-          .item-number {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 46px;
-            height: 46px;
-            border-radius: 50%;
-            background: #071b33;
-            color: #dbeafe;
-            font-weight: 900;
-            font-size: 14px;
-            margin-bottom: 18px;
-            box-shadow: 0 14px 30px rgba(7,27,51,0.18);
-            position: relative;
-            z-index: 2;
+          @keyframes scanBaseOne {
+            0%, 12%, 28%, 100% { opacity: 0; }
+            16%, 24% { opacity: 1; }
           }
 
-          .focus-item h3 {
-            margin: 0 0 14px;
-            color: #071b33;
-            font-size: 28px;
-            letter-spacing: -0.8px;
-            position: relative;
-            z-index: 2;
+          @keyframes scanBaseTwo {
+            0%, 34%, 50%, 100% { opacity: 0; }
+            38%, 46% { opacity: 1; }
           }
 
-          .focus-item p {
-            margin: 0;
-            color: #4b5563;
-            line-height: 1.75;
-            font-size: 16px;
-            position: relative;
-            z-index: 2;
+          @keyframes scanBaseThree {
+            0%, 56%, 72%, 100% { opacity: 0; }
+            60%, 68% { opacity: 1; }
+          }
+
+          @keyframes scanBaseFour {
+            0%, 76%, 92%, 100% { opacity: 0; }
+            80%, 88% { opacity: 1; }
+          }
+
+          @keyframes scanMoveOne {
+            0%, 15% { left: -34%; opacity: 0; }
+            16% { left: -34%; opacity: 1; }
+            24% { left: 100%; opacity: 1; }
+            28%, 100% { left: 100%; opacity: 0; }
+          }
+
+          @keyframes scanMoveTwo {
+            0%, 37% { left: -34%; opacity: 0; }
+            38% { left: -34%; opacity: 1; }
+            46% { left: 100%; opacity: 1; }
+            50%, 100% { left: 100%; opacity: 0; }
+          }
+
+          @keyframes scanMoveThree {
+            0%, 59% { left: -34%; opacity: 0; }
+            60% { left: -34%; opacity: 1; }
+            68% { left: 100%; opacity: 1; }
+            72%, 100% { left: 100%; opacity: 0; }
+          }
+
+          @keyframes scanMoveFour {
+            0%, 79% { left: -34%; opacity: 0; }
+            80% { left: -34%; opacity: 1; }
+            88% { left: 100%; opacity: 1; }
+            92%, 100% { left: 100%; opacity: 0; }
+          }
+
+          @keyframes diagnosticGlowOne {
+            0%, 12%, 28%, 100% { opacity: 0; }
+            16%, 23% { opacity: 1; }
+          }
+
+          @keyframes diagnosticGlowTwo {
+            0%, 34%, 50%, 100% { opacity: 0; }
+            38%, 46% { opacity: 1; }
+          }
+
+          @keyframes diagnosticGlowThree {
+            0%, 56%, 72%, 100% { opacity: 0; }
+            60%, 68% { opacity: 1; }
+          }
+
+          @keyframes diagnosticGlowFour {
+            0%, 76%, 92%, 100% { opacity: 0; }
+            80%, 88% { opacity: 1; }
           }
 
           .charger-wrap {
@@ -1209,44 +1205,6 @@ export default function Home() {
               strokeLinejoin="round"
             />
 
-            <line
-              className="connector-one-line"
-              x1="488"
-              y1="528"
-              x2="314"
-              y2="454"
-              stroke="#2563eb"
-              strokeWidth="3"
-              strokeLinecap="round"
-            />
-
-            <line
-              className="connector-one-pulse"
-              x1="488"
-              y1="528"
-              x2="314"
-              y2="454"
-              stroke="#ffffff"
-              strokeWidth="4"
-              strokeLinecap="round"
-            />
-
-            <circle
-              className="connector-one-dot"
-              cx="488"
-              cy="528"
-              r="6"
-              fill="#2563eb"
-            />
-
-            <circle
-              className="connector-one-dot"
-              cx="314"
-              cy="454"
-              r="6"
-              fill="#2563eb"
-            />
-
             <g>
               <circle r="22" fill="rgba(147,197,253,0.12)">
                 <animateMotion
@@ -1276,9 +1234,7 @@ export default function Home() {
 
           {focusItems.map((item) => (
             <article key={item.title} className={`focus-item ${item.className}`}>
-              {item.className === "item-one" && (
-                <div className="diagnostic-scan" aria-hidden="true" />
-              )}
+              <div className="diagnostic-scan" aria-hidden="true" />
 
               <div className="item-number">{item.number}</div>
               <h3>{item.title}</h3>
