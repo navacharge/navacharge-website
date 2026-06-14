@@ -230,11 +230,7 @@ export default function Home() {
             zIndex: 2,
           }}
         >
-          <div
-            style={{
-              maxWidth: "700px",
-            }}
-          >
+          <div style={{ maxWidth: "700px" }}>
             <p
               style={{
                 color: "#dbeafe",
@@ -466,20 +462,20 @@ export default function Home() {
           }
 
           .connector-one-line {
-            opacity: 0.30;
-            filter: drop-shadow(0 0 10px rgba(37,99,235,0.28));
+            opacity: 0.32;
+            filter: drop-shadow(0 0 10px rgba(37,99,235,0.30));
             animation: connectorOne 12s ease-in-out infinite;
           }
 
           .connector-one-dot {
             opacity: 0.42;
-            filter: drop-shadow(0 0 12px rgba(37,99,235,0.42));
+            filter: drop-shadow(0 0 12px rgba(37,99,235,0.45));
             animation: connectorOne 12s ease-in-out infinite;
           }
 
           @keyframes connectorOne {
             0%, 12%, 28%, 100% {
-              opacity: 0.30;
+              opacity: 0.32;
             }
 
             16%, 23% {
@@ -503,35 +499,152 @@ export default function Home() {
           }
 
           .focus-item.item-one {
-  top: 80px;
-  left: clamp(-220px, calc(24px - ((100vw - 1280px) / 2)), 24px);
+            top: 80px;
+            left: clamp(-220px, calc(24px - ((100vw - 1280px) / 2)), 24px);
 
-  width: min(580px, 46vw);
-  padding: 32px;
+            width: min(580px, 46vw);
+            padding: 32px;
 
-  outline: 1px solid rgba(37,99,235,0.42);
-  outline-offset: 0px;
+            outline: 1px solid rgba(37,99,235,0.42);
+            outline-offset: 0px;
 
-  box-shadow:
-    0 26px 66px rgba(15,23,42,0.12),
-    0 0 24px rgba(37,99,235,0.08);
+            box-shadow:
+              0 26px 66px rgba(15,23,42,0.12),
+              0 0 24px rgba(37,99,235,0.08);
 
-  animation: highlightOne 12s ease-in-out infinite;
-}
+            animation: highlightOne 12s ease-in-out infinite;
+          }
 
-.focus-item.item-one h3 {
-  font-size: 28px;
-}
+          .focus-item.item-one h3 {
+            font-size: 28px;
+          }
 
-.focus-item.item-one p {
-  font-size: 16px;
-  line-height: 1.72;
-}
+          .focus-item.item-one p {
+            font-size: 16px;
+            line-height: 1.72;
+          }
 
           .focus-item.item-one .item-number {
             background: #2563eb;
             color: #ffffff;
             box-shadow: 0 14px 34px rgba(37,99,235,0.34);
+          }
+
+          .banner-car-track {
+            position: absolute;
+            top: -32px;
+            left: 28px;
+            right: 28px;
+            height: 28px;
+            pointer-events: none;
+            z-index: 8;
+          }
+
+          .banner-car-track::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 8px;
+            height: 2px;
+            border-radius: 999px;
+            background: linear-gradient(
+              90deg,
+              rgba(37,99,235,0.12),
+              rgba(37,99,235,0.42),
+              rgba(37,99,235,0.12)
+            );
+            box-shadow: 0 0 14px rgba(37,99,235,0.16);
+          }
+
+          .tesla-car {
+            position: absolute;
+            left: 0;
+            bottom: 5px;
+            width: 58px;
+            height: 20px;
+            animation: driveBannerOne 12s ease-in-out infinite;
+            filter: drop-shadow(0 8px 10px rgba(15,23,42,0.20));
+          }
+
+          .tesla-car-body {
+            position: absolute;
+            left: 2px;
+            bottom: 3px;
+            width: 54px;
+            height: 13px;
+            border-radius: 18px 24px 12px 12px;
+            background: linear-gradient(180deg, #f8fafc 0%, #cbd5e1 100%);
+            border: 1px solid rgba(15,23,42,0.18);
+            overflow: hidden;
+          }
+
+          .tesla-car-body::before {
+            content: "";
+            position: absolute;
+            left: 17px;
+            top: 1px;
+            width: 24px;
+            height: 8px;
+            border-radius: 12px 14px 4px 4px;
+            background: linear-gradient(180deg, #93c5fd 0%, #1e3a8a 100%);
+            opacity: 0.95;
+          }
+
+          .tesla-car-body::after {
+            content: "";
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            width: 6px;
+            height: 3px;
+            border-radius: 999px;
+            background: #38bdf8;
+            box-shadow: 0 0 8px rgba(56,189,248,0.75);
+          }
+
+          .tesla-wheel {
+            position: absolute;
+            bottom: 0;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #0f172a;
+            border: 2px solid #64748b;
+          }
+
+          .tesla-wheel.front {
+            right: 8px;
+          }
+
+          .tesla-wheel.back {
+            left: 9px;
+          }
+
+          @keyframes driveBannerOne {
+            0%, 12% {
+              left: 0;
+              opacity: 0;
+              transform: translateY(0);
+            }
+
+            16% {
+              left: 0;
+              opacity: 1;
+              transform: translateY(-1px);
+            }
+
+            28% {
+              left: calc(100% - 58px);
+              opacity: 1;
+              transform: translateY(-1px);
+            }
+
+            34%, 100% {
+              left: calc(100% - 58px);
+              opacity: 0;
+              transform: translateY(0);
+            }
           }
 
           .focus-item.item-two {
@@ -958,6 +1071,10 @@ export default function Home() {
               animation: none !important;
             }
 
+            .banner-car-track {
+              display: none;
+            }
+
             .charger-wrap {
               position: relative;
               left: auto;
@@ -1084,20 +1201,29 @@ export default function Home() {
               strokeLinejoin="round"
             />
 
-            <path
+            <line
               className="connector-one-line"
-              d="M500 540 C430 540 380 500 330 455"
+              x1="500"
+              y1="540"
+              x2="300"
+              y2="455"
               stroke="#2563eb"
               strokeWidth="3"
               strokeLinecap="round"
-              strokeLinejoin="round"
-              fill="none"
             />
 
             <circle
               className="connector-one-dot"
               cx="500"
               cy="540"
+              r="7"
+              fill="#2563eb"
+            />
+
+            <circle
+              className="connector-one-dot"
+              cx="300"
+              cy="455"
               r="7"
               fill="#2563eb"
             />
@@ -1131,6 +1257,16 @@ export default function Home() {
 
           {focusItems.map((item) => (
             <article key={item.title} className={`focus-item ${item.className}`}>
+              {item.className === "item-one" && (
+                <div className="banner-car-track" aria-hidden="true">
+                  <div className="tesla-car">
+                    <div className="tesla-car-body" />
+                    <div className="tesla-wheel back" />
+                    <div className="tesla-wheel front" />
+                  </div>
+                </div>
+              )}
+
               <div className="item-number">{item.number}</div>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
